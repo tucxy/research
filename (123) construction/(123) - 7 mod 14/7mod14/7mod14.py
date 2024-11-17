@@ -7,7 +7,7 @@ def gvpath(i):
         return 'C:\\Users\\Danny\\Desktop\\Git\\research'
     else: 
         return False
-sys.path.append(gvpath(1)) # here is the path with GVIS
+sys.path.append(gvpath(0)) # here is the path with GVIS
 import graph_visualization
 from graph_visualization import visualize
 from itertools import combinations
@@ -120,6 +120,94 @@ def trees(n):
 
     return all_trees
 
+# Define the template dictionary
+import networkx as nx
+
+templates = {
+    # T-(1,2)
+    "T-(2,1)": nx.path_graph(2),
+    
+    # T-(3,1) and T-(3,2)
+    "T-(3,1)": nx.path_graph(3),
+    "T-(3,2)": nx.Graph([(1, 2), (2, 3), (2, 4)]),  # Star-like structure
+    
+    # T-(4,1), T-(4,2), T-(4,3)
+    "T-(4,1)": nx.path_graph(4),
+    "T-(4,2)": nx.Graph([(1, 2), (2, 3), (2, 4), (2, 5)]),  # Star-like with 4 edges
+    "T-(4,3)": nx.Graph([(1, 2), (2, 3), (2, 4)]),  # Branching at vertex 2
+    
+    # T-(5,1), T-(5,2), T-(5,3), T-(5,4)
+    "T-(5,1)": nx.path_graph(5),
+    "T-(5,2)": nx.Graph([(1, 2), (2, 3), (2, 4), (4, 5)]),  # Star with a branch
+    "T-(5,3)": nx.Graph([(1, 2), (2, 3), (2, 4), (3, 5)]),  # Similar branching
+    "T-(5,4)": nx.Graph([(1, 2), (2, 3), (3, 4), (4, 5)]),  # Y-like
+    
+    # T-(6,1) to T-(6,11)
+    "T-(6,1)": nx.path_graph(6),
+    "T-(6,2)": nx.Graph([(1, 2), (2, 3), (3, 4), (3, 5), (3, 6)]),  # Branching at 3
+    "T-(6,3)": nx.Graph([(1, 2), (2, 3), (3, 4), (4, 5), (4, 6)]),  # Y-structure
+    "T-(6,4)": nx.Graph([(1, 2), (2, 3), (2, 4), (4, 5), (4, 6)]),  # Extended star
+    "T-(6,5)": nx.Graph([(1, 2), (2, 3), (3, 4), (3, 5), (3, 6)]),  # Star-like
+    "T-(6,6)": nx.Graph([(1, 2), (2, 3), (3, 4), (4, 5), (4, 6)]),  # Star in the middle
+    "T-(6,7)": nx.Graph([(1, 2), (1, 3), (1, 4), (4, 5), (4, 6)]),  # Double star
+    "T-(6,8)": nx.Graph([(1, 2), (2, 3), (3, 4), (3, 5), (5, 6)]),  # Deep Y
+    "T-(6,9)": nx.Graph([(1, 2), (2, 3), (2, 4), (3, 5), (4, 6)]),  # Hexagonal branching
+    "T-(6,10)": nx.Graph([(1, 2), (2, 3), (3, 4), (3, 5), (3, 6)]),  # Star at 3
+    "T-(6,11)": nx.Graph([(1, 2), (1, 3), (1, 4), (1, 5), (1, 6)]),  # Perfect star
+}
+
+# Verify that all templates are defined
+templates.keys()
+
+
+# Add vertex labels (v_{i}) to the template graphs
+for template_name, graph in templates.items():
+    nx.set_node_attributes(graph, {node: f"v_{node + 1}" for node in graph.nodes}, "label")
+
+
+def find_isomorphism_and_map(graphs, templates):
+    """
+    Matches each component of each graph in `graphs` to a template graph and maps vertices.
+    
+    Parameters:
+    - graphs: List of NetworkX graphs to process.
+    - templates: Dictionary of template graphs keyed by their names (e.g., "T_(1,1)").
+    
+    Returns:
+    - A dictionary where keys are the graph indices and values are lists of mappings for each component.
+      Each mapping includes the template name and the vertex bijection.
+    """
+    result = []
+    
+    for G in graphs:
+        components = list(nx.connected_components(G))
+        graph_mapping = []
+        
+        for component in components:
+            subgraph = G.subgraph(component)
+            matched_template = None
+            bijection = None
+            
+            for template_name, template_graph in templates.items():
+                # Check isomorphism and get the bijection
+                GM = nx.isomorphism.GraphMatcher(subgraph, template_graph)
+                if GM.is_isomorphic():
+                    matched_template = template_name
+                    bijection = GM.mapping  # Mapping from subgraph nodes to template nodes
+                    break
+            
+            if matched_template and bijection:
+                # Translate template labels (v_{i}) to subgraph labels via the bijection
+                template_labels = nx.get_node_attributes(templates[matched_template], "label")
+                mapped_labels = {template_labels[k]: v for k, v in bijection.items() if k in template_labels}
+                graph_mapping.append((matched_template, mapped_labels))
+            else:
+                print(f"No matching template found for component: {component}")
+        
+        result.append(graph_mapping)
+    
+    return result
+
 #notebook
 t = 2
 inc = 14*(t-1)
@@ -136,6 +224,7 @@ G4 = merge(path([0,4,9,15,8,16,7]),  path([1,11]))
 
 F_61_1 = [ G1, G2, G3, G4] #defines the decomposition 'object' a list of graph labelings
 visualize(14*t+7, F_61_1,  '(61)-1',  'C:\\Users\\baneg\\OneDrive\\Desktop\\Git\\Python\\Research\\7 (mod 14)\\texgraph')
+find_isomorphism_and_map(F_61_1, templates)
 
 #*(61)-2
 G1 = merge(path([1,2,4,6,9,12]), path([6,7]),  path([ 14,15]))
