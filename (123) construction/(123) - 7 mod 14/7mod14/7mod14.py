@@ -120,40 +120,42 @@ def trees(n):
 
     return all_trees
 
-# Define the template dictionary
-import networkx as nx
-
 templates = {
-    # T-(1,2)
-    "T-(2,1)": nx.path_graph(2),
+    #T_{2}
+    "T-(2,1)": nx.Graph([(1, 2)]), #1-path
     
-    # T-(3,1) and T-(3,2)
-    "T-(3,1)": nx.path_graph(3),
-    "T-(3,2)": nx.Graph([(1, 2), (2, 3), (2, 4)]),  # Star-like structure
+    # T_{3}
+    "T-(3,1)": nx.Graph([(1, 2), (2, 3)]), #2-path
     
-    # T-(4,1), T-(4,2), T-(4,3)
-    "T-(4,1)": nx.path_graph(4),
-    "T-(4,2)": nx.Graph([(1, 2), (2, 3), (2, 4), (2, 5)]),  # Star-like with 4 edges
-    "T-(4,3)": nx.Graph([(1, 2), (2, 3), (2, 4)]),  # Branching at vertex 2
+    #T_{4}
+    "T-(4,1)": nx.Graph([(1, 2), (2, 3), (3, 4)]), #3-path
+    "T-(4,2)": nx.Graph([(1, 2), (2, 3), (2, 4)]),  #3-star
     
-    # T-(5,1), T-(5,2), T-(5,3), T-(5,4)
-    "T-(5,1)": nx.path_graph(5),
-    "T-(5,2)": nx.Graph([(1, 2), (2, 3), (2, 4), (4, 5)]),  # Star with a branch
-    "T-(5,3)": nx.Graph([(1, 2), (2, 3), (2, 4), (3, 5)]),  # Similar branching
-    "T-(5,4)": nx.Graph([(1, 2), (2, 3), (3, 4), (4, 5)]),  # Y-like
+    #T_{5}
+    "T-(5,1)": nx.Graph([(1, 2), (2, 3), (3, 4), (4, 5)]), #4-path
+    "T-(5,2)": nx.Graph([(1, 2), (2, 3), (3, 4), (2, 5)]),  #3-path a branch
+    "T-(5,3)": nx.Graph([(1, 2), (2, 3), (2, 4), (2, 5)]),  #4-star
     
-    # T-(6,1) to T-(6,11)
-    "T-(6,1)": nx.path_graph(6),
-    "T-(6,2)": nx.Graph([(1, 2), (2, 3), (3, 4), (3, 5), (3, 6)]),  # Branching at 3
-    "T-(6,3)": nx.Graph([(1, 2), (2, 3), (3, 4), (4, 5), (4, 6)]),  # Y-structure
-    "T-(6,4)": nx.Graph([(1, 2), (2, 3), (2, 4), (4, 5), (4, 6)]),  # Extended star
-    "T-(6,5)": nx.Graph([(1, 2), (2, 3), (3, 4), (3, 5), (3, 6)]),  # Star-like
-    "T-(6,6)": nx.Graph([(1, 2), (2, 3), (3, 4), (4, 5), (4, 6)]),  # Star in the middle
-    "T-(6,7)": nx.Graph([(1, 2), (1, 3), (1, 4), (4, 5), (4, 6)]),  # Double star
-    "T-(6,8)": nx.Graph([(1, 2), (2, 3), (3, 4), (3, 5), (5, 6)]),  # Deep Y
-    "T-(6,9)": nx.Graph([(1, 2), (2, 3), (2, 4), (3, 5), (4, 6)]),  # Hexagonal branching
-    "T-(6,10)": nx.Graph([(1, 2), (2, 3), (3, 4), (3, 5), (3, 6)]),  # Star at 3
-    "T-(6,11)": nx.Graph([(1, 2), (1, 3), (1, 4), (1, 5), (1, 6)]),  # Perfect star
+    #T_{6}
+    "T-(6,1)": nx.Graph([(1, 2), (2, 3), (3, 4), (4, 5), (5, 6)]), #5-path
+    "T-(6,2)": nx.Graph([(1, 2), (2, 3), (3, 4), (4, 5), (2, 6)]),  #4-path with branch on v2
+    "T-(6,3)": nx.Graph([(1, 2), (2, 3), (3, 4), (4, 5), (3, 6)]),  #4-path with branch in middle
+    "T-(6,4)": nx.Graph([(1, 2), (2, 3), (2, 4), (4, 5), (4, 6)]),  #4-path with two branches
+    "T-(6,5)": nx.Graph([(1, 2), (2, 3), (3, 4), (2, 5), (2, 6)]),  #4-star with 1 leaf extended (1)
+    "T-(6,6)": nx.Graph([(1, 2), (2, 3), (2, 4), (2, 5), (2, 6)]),  #5-star
+    #T_{7}
+    "T-(7,1)": nx.Graph([(1, 2), (2, 3), (3, 4), (4, 5), (5, 6), (6, 7)]), #6-path
+    "T-(7,2)": nx.Graph([(1, 2), (2, 3), (3, 4), (4, 5), (5, 6), (2, 7)]), #5-path with branch on v2
+    "T-(7,3)": nx.Graph([(1, 2), (2, 3), (3, 4), (4, 5), (5, 6), (3, 7)]), #5-path with branch on v3
+    "T-(7,4)": nx.Graph([(1, 2), (2, 3), (3, 4), (4, 5), (2, 6), (2, 7)]), #4-star with 1 leaf extended (2)
+    "T-(7,5)": nx.Graph([(1, 2), (2, 3), (3, 4), (4, 5), (3, 6), (3, 7)]), #4-star with 2 leaves extended (1)
+    "T-(7,6)": nx.Graph([(1, 2), (2, 3), (3, 4), (4, 5), (3, 6), (6, 7)]), #3-star with 3 leaves extended (1)
+    "T-(7,7)": nx.Graph([(1, 2), (2, 3), (3, 4), (4, 5), (2, 6), (3, 7)]), #4-path with two branches one in middle
+    "T-(7,8)": nx.Graph([(1, 2), (2, 3), (3, 4), (4, 5), (2, 6), (4, 7)]), #4-path with two branches none in middle
+    "T-(7,9)": nx.Graph([(1, 2), (2, 3), (3, 5), (3, 7), (2, 4), (2, 6)]), #5-star with two branches on one leaf
+    "T-(7,10)": nx.Graph([(1, 2), (2, 3), (3, 4), (2, 5), (2, 6), (2, 7)]), #5-star with one leaf extended
+    "T-(7,11)": nx.Graph([(1, 2), (2, 3), (2, 4), (2, 5), (2, 6), (2, 7)]),  #6-star
+
 }
 
 # Verify that all templates are defined
@@ -162,52 +164,71 @@ templates.keys()
 
 # Add vertex labels (v_{i}) to the template graphs
 for template_name, graph in templates.items():
-    nx.set_node_attributes(graph, {node: f"v_{node + 1}" for node in graph.nodes}, "label")
+    nx.set_node_attributes(graph, {node: f"v_{node}" for node in graph.nodes}, "label")
 
+#print(templates)
 
 def find_isomorphism_and_map(graphs, templates):
     """
     Matches each component of each graph in `graphs` to a template graph and maps vertices.
-    
+
     Parameters:
     - graphs: List of NetworkX graphs to process.
-    - templates: Dictionary of template graphs keyed by their names (e.g., "T_(1,1)").
-    
+    - templates: Dictionary of template graphs keyed by their names.
+
     Returns:
-    - A dictionary where keys are the graph indices and values are lists of mappings for each component.
-      Each mapping includes the template name and the vertex bijection.
+    - A list of lists containing bijection dictionaries for each component of each graph.
     """
     result = []
-    
+
     for G in graphs:
         components = list(nx.connected_components(G))
-        graph_mapping = []
-        
+        graph_bijections = []
+
         for component in components:
             subgraph = G.subgraph(component)
-            matched_template = None
             bijection = None
-            
-            for template_name, template_graph in templates.items():
-                # Check isomorphism and get the bijection
+
+            for template_graph in templates.values():
                 GM = nx.isomorphism.GraphMatcher(subgraph, template_graph)
                 if GM.is_isomorphic():
-                    matched_template = template_name
-                    bijection = GM.mapping  # Mapping from subgraph nodes to template nodes
+                    bijection = GM.mapping
                     break
-            
-            if matched_template and bijection:
-                # Translate template labels (v_{i}) to subgraph labels via the bijection
-                template_labels = nx.get_node_attributes(templates[matched_template], "label")
-                mapped_labels = {template_labels[k]: v for k, v in bijection.items() if k in template_labels}
-                graph_mapping.append((matched_template, mapped_labels))
+
+            if bijection:
+                graph_bijections.append(bijection)
             else:
-                print(f"No matching template found for component: {component}")
-        
-        result.append(graph_mapping)
-    
+                graph_bijections.append(None)
+
+        result.append(graph_bijections)
+
     return result
 
+def generate_disjoint_unions(mapping_result):
+    """
+    Generate disjoint union of tuples for each graph using the bijection dictionaries.
+    
+    Parameters:
+    - mapping_result: List of bijection dictionaries for each graph.
+    
+    Returns:
+    - List of strings representing the disjoint union of tuples for each graph.
+    """
+    result = []
+
+    for graph_bijections in mapping_result:
+        components_as_tuples = []
+        
+        for bijection in graph_bijections:
+            if bijection is not None:
+                # Sort by values in the bijection and create a tuple of keys
+                sorted_keys = [key for key, _ in sorted(bijection.items(), key=lambda item: item[1])]
+                components_as_tuples.append(f"({','.join(map(str, sorted_keys))})")
+        
+        # Join all components with '\\sqcup'
+        result.append("\\sqcup".join(components_as_tuples))
+    
+    return result
 #notebook
 t = 2
 inc = 14*(t-1)
@@ -223,8 +244,8 @@ G3  = merge(path([8,11,12,10,7,5,6]),  path([1,3]))
 G4 = merge(path([0,4,9,15,8,16,7]),  path([1,11]))
 
 F_61_1 = [ G1, G2, G3, G4] #defines the decomposition 'object' a list of graph labelings
-visualize(14*t+7, F_61_1,  '(61)-1',  'C:\\Users\\baneg\\OneDrive\\Desktop\\Git\\Python\\Research\\7 (mod 14)\\texgraph')
-find_isomorphism_and_map(F_61_1, templates)
+
+#visualize(14*t+7, F_61_1,  '(61)-1',  'C:\\Users\\baneg\\OneDrive\\Desktop\\Git\\Python\\Research\\7 (mod 14)\\texgraph')
 
 #*(61)-2
 G1 = merge(path([1,2,4,6,9,12]), path([6,7]),  path([ 14,15]))
@@ -306,8 +327,18 @@ G3 = merge(star(3, [0,1,5]), path([8,5,4,7]), path([12,14]))
 G4 = merge(star(9, [4,18,15]),  path([7,15,8,12]), path([1,11]))
 
 F_61_10 = [G1, G2, G3, G4]
-#visualize(14*t+7, F_61_10,  '(61)-10',  'C:\\Users\\baneg\\OneDrive\\Desktop\\Git\\Python\\Research\\7 (mod 14)\\texgraph')
+mapping_result = find_isomorphism_and_map(F_61_10, templates)
+disjoint_unions = generate_disjoint_unions(mapping_result)
 
+# Print the disjoint unions
+for i, union in enumerate(disjoint_unions):
+    print(f"{union}")
+
+visualize(14*t+7, F_61_10,  '(61)-10',  'C:\\Users\\baneg\\OneDrive\\Desktop\\Git\\Python\\Research\\7 (mod 14)\\texgraph')
+
+# Print the disjoint unions
+for i, union in enumerate(disjoint_unions):
+    print(f"Graph {i + 1}: {union}")
 
 #! (52)
 
@@ -657,5 +688,60 @@ G4 = merge(star(1, [11]), star(8, [14,16]),path([0,9]),path([3,10]),path([13,17]
 
 F_211111_1 = [ G1, G2, G3, G4]
 #visualize(14*t+7, F_211111_1,  '(211111)-1',  'C:\\Users\\baneg\\OneDrive\\Desktop\\Git\\Python\\Research\\7 (mod 14)\\texgraph')
+
+#new notebook
+def generate_latex_table(designs, names):
+    """
+    Generate a LaTeX table for a list of graph designs, scaled to fit the page width.
+
+    Parameters:
+    - designs: List of graph lists where each list represents a design.
+    - names: List of names corresponding to each design.
+
+    Returns:
+    - A string containing the LaTeX table.
+    """
+    if len(designs) != len(names):
+        raise ValueError("The number of designs must match the number of names.")
+    
+    table_rows = []
+    
+    for name, design in zip(names, designs):
+        # Generate disjoint unions for the design
+        mapping_result = find_isomorphism_and_map(design, templates)
+        disjoint_unions = generate_disjoint_unions(mapping_result)
+        
+        # Format disjoint unions for LaTeX, wrapping each in $$ for math mode
+        tabular_content = " \\\\ \n        ".join([f"${union}$" for union in disjoint_unions])
+        table_rows.append(f"    ${name}$ & \\begin{{tabular}}{{@{{}}l@{{}}}} {tabular_content} \\end{{tabular}}")
+    
+    # Build table content with two columns
+    formatted_rows = []
+    for i in range(0, len(table_rows), 2):
+        if i + 1 < len(table_rows):  # Pair rows for two-column format
+            formatted_rows.append(f"{table_rows[i]} & {table_rows[i + 1]} \\\\\n\\hline")
+        else:  # Handle odd number of rows
+            formatted_rows.append(f"{table_rows[i]} & \\\\ \n\\hline")
+    
+    # Combine rows into a LaTeX table
+    table = "\\resizebox{\\textwidth}{!}{%\n\\begin{tabular}{|c|c|c|c|}\n\\hline\n"
+    table += "Design Name & Graph Decomposition & Design Name & Graph Decomposition \\\\\n\\hline\n"
+    table += "\n".join(formatted_rows)
+    table += "\n\\end{tabular}%\n}"
+    
+    return table
+
+# Example usage
+designs = [
+    F_61_1, F_61_2, F_61_3, F_61_4, F_61_5, F_61_6, F_61_7, F_61_8, F_61_9, F_61_10,
+    F_52_1, F_52_2, F_52_3, F_52_4, F_52_5, F_52_6, F_43_1, F_43_2, F_43_3, F_43_4, 
+    F_43_5, F_43_6, F_511_1, F_511_2, F_511_3, F_511_4, F_511_5, F_511_6, F_421_1, 
+    F_421_2, F_421_3, F_331_1, F_331_2, F_331_3, F_322_1, F_322_2, F_3211_1, F_3211_2, 
+    F_4111_1, F_4111_2, F_4111_3, F_2221_1, F_31111_1, F_31111_2, F_22111_1, F_211111_1
+]
+names = [f"F_{{{i}}}" for i in range(1, 47)]
+
+latex_table = generate_latex_table(designs, names)
+print(latex_table)
 
 #^ done up to here
