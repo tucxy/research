@@ -7,7 +7,7 @@ def gvpath(i):
         return 'C:\\Users\\Danny\\Desktop\\Git\\research'
     else: 
         return False
-sys.path.append(gvpath(0)) # here is the path with GVIS
+sys.path.append(gvpath(1)) # here is the path with GVIS
 import graph_visualization
 from graph_visualization import visualize
 from itertools import combinations
@@ -327,18 +327,7 @@ G3 = merge(star(3, [0,1,5]), path([8,5,4,7]), path([12,14]))
 G4 = merge(star(9, [4,18,15]),  path([7,15,8,12]), path([1,11]))
 
 F_61_10 = [G1, G2, G3, G4]
-mapping_result = find_isomorphism_and_map(F_61_10, templates)
-disjoint_unions = generate_disjoint_unions(mapping_result)
-
-# Print the disjoint unions
-for i, union in enumerate(disjoint_unions):
-    print(f"{union}")
-
-visualize(14*t+7, F_61_10,  '(61)-10',  'C:\\Users\\baneg\\OneDrive\\Desktop\\Git\\Python\\Research\\7 (mod 14)\\texgraph')
-
-# Print the disjoint unions
-for i, union in enumerate(disjoint_unions):
-    print(f"Graph {i + 1}: {union}")
+#visualize(14*t+7, F_61_10,  '(61)-10',  'C:\\Users\\baneg\\OneDrive\\Desktop\\Git\\Python\\Research\\7 (mod 14)\\texgraph')
 
 #! (52)
 
