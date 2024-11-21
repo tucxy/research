@@ -7,7 +7,8 @@ def gvpath(i):
         return 'C:\\Users\\Danny\\Desktop\\Git\\research'
     else: 
         return False
-sys.path.append(gvpath(0)) # here is the path with GVIS
+sys.path.append(gvpath(1)) # here is the path with GVIS
+from pygtikz import viz
 from graph_visualization import visualize
 from itertools import combinations
 import math
@@ -235,10 +236,41 @@ inc = 14*(t-1)
 
 #square with a leaf and two paths
 
-G1 = merge(cycle([2,1,3,0]),path([1,4]),path([11,10]),path([22,66]))
-G2 = merge(cycle([0,10,6,11]),path([10,5]),path([3,33]),path([4,66]))
-G3 = merge(cycle([4,44,3,55]),path([2,44]),path([1,11]),path([5,66]))
-G4 = merge(cycle([2,22,1,33]),path([0,22]),path([5,55]),path([6,66]))
+# Example usage
+def custom_edge_length(node1, node2):
+    if isinstance(node1, str) and isinstance(node2,int):
+        return node1
+    elif isinstance(node2, str)and isinstance(node1,int):
+        return node2
+    elif isinstance(node2, str)and isinstance(node1,str):
+        return 2
+    return abs(node1 - node2)
 
-D1 = [ G1, G2, G3, G4]
-visualize(14*t+7, D1,  '(2221)-1',  'C:\\Users\\baneg\\OneDrive\\Desktop\\Git\\research\\Dalibor project\\7(mod 14)\\tex')
+# Define a custom edge sublabel function
+def custom_edge_sublabel(node1, node2):
+    if isinstance(node1, str) and isinstance(node2,int):
+        return node2 % 2
+    elif isinstance(node2, str)and isinstance(node1,int):
+        return node1 % 2
+    elif isinstance(node2, str)and isinstance(node1,str):
+        return 1
+    return abs(node1 + node2) % 2
+
+# Define a custom vertex sublabel function
+def custom_vertex_sublabel(node):
+    if isinstance(node, str):
+        return ""
+    return node % 2
+
+G1 = merge(cycle([0,"7k+3","7k+5","7k+4"]),path([0,2]),path([3,4]),path([5,"7k+8"]))
+
+G2 = merge(cycle([0,7,1,9]),path([1,6]),path([4,8]),path([2,5]))
+
+# Pass custom functions or leave as None for default behavior
+viz(
+    [G1,G2],
+    edge_length_func=custom_edge_length,
+    edge_sublabel_func=custom_edge_sublabel,
+    vertex_sublabel_func=custom_vertex_sublabel,
+    save_info=['G1', 'C:\\Users\\Danny\\Desktop\\Git\\research\\Dalibor project\\7(mod 14)\\tex']
+)

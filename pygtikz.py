@@ -234,49 +234,49 @@ def save_as_latex(graphs, pos_list, save_info, colored_elements,
         f.write("\\begin{document}\n")
         f.write("\\begin{tikzpicture}\n")
 
-        for G, pos in zip(graphs, pos_list):
+        for i, (G, pos) in enumerate(zip(graphs, pos_list), start=1):
+            graph_name = f"G{i}"  # Name for the graph
+
             # Nodes
             for node, (x, y) in pos.items():
-                y = -y  # Reflect the y-coordinate
-
+                y = -y  # Reflect the y-coordinate for TikZ
                 color = get_tikz_color(colored_elements.get((G, "node", node), (0, 0, 0)))
                 label_color = get_tikz_color(colored_elements.get((G, "node_label", node), (0, 0, 0)))
 
-                vertex_label = f"\\textcolor{{{label_color}}}{{$\\text{{{node}}}$}}" if show_vertex_labels else ""
-                vertex_sublabel_color = get_tikz_color(colored_elements.get((G, "vertex_sublabel", node), (0, 0, 0)))
-                vertex_sublabel = G.nodes[node].get("sublabel", "")
-                vertex_sublabel = f"\\textcolor{{{vertex_sublabel_color}}}{{{vertex_sublabel}}}" if show_vertex_sublabels else ""
+                # Handle labels and subscripts
+                vertex_label = f"{node}" if show_vertex_labels else ""
+                vertex_sublabel = G.nodes[node].get("sublabel", "") if show_vertex_sublabels else ""
+                label_with_subscript = f"{vertex_label}_{{{vertex_sublabel}}}" if vertex_sublabel else vertex_label
 
-                combined_label = f"label=above:{{{vertex_label} {vertex_sublabel}}}" if vertex_label or vertex_sublabel else ""
+                # Wrap in math mode
+                math_label = f"\\textcolor{{{label_color}}}{{${label_with_subscript}$}}"
 
-                f.write(f"\\node[fill={color}, circle, inner sep=2pt, {combined_label}] "
-                        f"({G}N{node}) at ({x / 100},{y / 100}) {{}};\n")
+                # Node naming convention: GiNj
+                f.write(f"\\node[fill={color}, circle, inner sep=2pt, label=above:{{{math_label}}}] "
+                        f"({graph_name}N{node}) at ({x / 100},{y / 100}) {{}};\n")
 
             # Edges
             for edge in G.edges():
-                x1, y1 = pos[edge[0]]
-                x2, y2 = pos[edge[1]]
-                y1, y2 = -y1, -y2
-
                 edge_color = get_tikz_color(colored_elements.get((G, "edge", edge), (0, 0, 0)))
-
-                f.write(f"\\draw[draw={edge_color}, shorten >=3pt, shorten <=3pt] ({x1 / 100},{y1 / 100}) -- ({x2 / 100},{y2 / 100});\n")
-
                 edge_label_color = get_tikz_color(colored_elements.get((G, "edge_label", edge), (0, 0, 0)))
-                edge_label = G.edges[edge].get("label", "")
-                edge_label = f"\\textcolor{{{edge_label_color}}}{{{edge_label}}}" if show_edge_labels and edge_label else ""
+                edge_label = G.edges[edge].get("label", "") if show_edge_labels else ""
+                edge_sublabel = G.edges[edge].get("sublabel", "") if show_edge_sublabels else ""
 
-                if edge_label:
-                    label_x, label_y = (x1 + x2) / 2, (y1 + y2) / 2
-                    f.write(f"\\node[above, text={edge_label_color}] at ({label_x / 100},{label_y / 100}) {{{edge_label}}};\n")
+                # Handle labels and subscripts
+                edge_label_with_subscript = f"{edge_label}_{{{edge_sublabel}}}" if edge_sublabel else edge_label
 
-                edge_sublabel_color = get_tikz_color(colored_elements.get((G, "edge_sublabel", edge), (0, 0, 0)))
-                edge_sublabel = G.edges[edge].get("sublabel", "")
-                edge_sublabel = f"\\textcolor{{{edge_sublabel_color}}}{{{edge_sublabel}}}" if show_edge_sublabels and edge_sublabel else ""
+                # Wrap in math mode
+                math_edge_label = f"\\textcolor{{{edge_label_color}}}{{${edge_label_with_subscript}$}}"
 
-                if edge_sublabel:
-                    sublabel_x, sublabel_y = (x1 + x2) / 2, (y1 + y2) / 2
-                    f.write(f"\\node[below, text={edge_sublabel_color}] at ({sublabel_x / 100},{sublabel_y / 100}) {{{edge_sublabel}}};\n")
+                # Define the edge using node names
+                f.write(f"\\draw[draw={edge_color}, shorten >=3pt, shorten <=3pt] "
+                        f"({graph_name}N{edge[0]}) -- ({graph_name}N{edge[1]})")
+
+                # Add labels if they exist
+                if edge_label or edge_sublabel:
+                    f.write(f" node[midway, above] {{{math_edge_label}}};\n")
+                else:
+                    f.write(";\n")
 
         f.write("\\end{tikzpicture}\n")
         f.write("\\end{document}\n")
@@ -311,6 +311,7 @@ def viz(graphs, mod=None, edge_length_func=None, edge_sublabel_func=None, vertex
     selected_node = None
     initial_graph_position = None
     graph_dragging = False
+    graph_being_dragged = None
     right_tab_visible = True
     paintbrush_color = None
 
@@ -333,8 +334,8 @@ def viz(graphs, mod=None, edge_length_func=None, edge_sublabel_func=None, vertex
         ("Save", lambda: True, (WIDTH + 20, 20)),
         ("Vertex Labels", lambda: show_vertex_labels, (WIDTH + 20, 90)),
         ("Edge Labels", lambda: show_edge_labels, (WIDTH + 20, 160)),
-        ("Vertex Subscript Labels", lambda: show_vertex_sublabels, (WIDTH + 20, 230)),
-        ("Edge Subscript Labels", lambda: show_edge_sublabels, (WIDTH + 20, 300)),
+        ("Vertex Sublabels", lambda: show_vertex_sublabels, (WIDTH + 20, 230)),
+        ("Edge Sublabels", lambda: show_edge_sublabels, (WIDTH + 20, 300)),
         ("Grid", lambda: show_grid, (WIDTH + 20, 370)),
     ]
 
@@ -348,7 +349,6 @@ def viz(graphs, mod=None, edge_length_func=None, edge_sublabel_func=None, vertex
             elif event.type == pygame.MOUSEBUTTONDOWN:
                 if event.button == 1:  # Left click
                     for G, pos in zip(graphs, pos_list):
-                        # Handle node selection for dragging
                         for node, (x, y) in pos.items():
                             if (event.pos[0] - x) ** 2 + (event.pos[1] - y) ** 2 < 100:
                                 if paintbrush_color:  # Color the node
@@ -356,38 +356,26 @@ def viz(graphs, mod=None, edge_length_func=None, edge_sublabel_func=None, vertex
                                 else:
                                     selected_node = (G, node)
                                 break
-
-                        # Handle paintbrush coloring for edges and labels
-                        if paintbrush_color and not selected_node:
-                            for edge in G.edges():
-                                mid_x = (pos[edge[0]][0] + pos[edge[1]][0]) / 2
-                                mid_y = (pos[edge[0]][1] + pos[edge[1]][1]) / 2
-                                if (event.pos[0] - mid_x) ** 2 + (event.pos[1] - mid_y) ** 2 < 100:
+                        for edge in G.edges():
+                            mid_x = (pos[edge[0]][0] + pos[edge[1]][0]) / 2
+                            mid_y = (pos[edge[0]][1] + pos[edge[1]][1]) / 2
+                            if (event.pos[0] - mid_x) ** 2 + (event.pos[1] - mid_y) ** 2 < 100:
+                                if paintbrush_color:  # Color the edge
                                     colored_elements[(G, "edge", edge)] = paintbrush_color
-                                    break
-                            for node, (x, y) in pos.items():
-                                if (event.pos[0] - (x + 8)) ** 2 + (event.pos[1] - (y - 5)) ** 2 < 100:
-                                    colored_elements[(G, "node_label", node)] = paintbrush_color
-                                    break
-                            for edge in G.edges():
-                                mid_x = (pos[edge[0]][0] + pos[edge[1]][0]) / 2
-                                mid_y = (pos[edge[0]][1] + pos[edge[1]][1]) / 2
-                                if (event.pos[0] - mid_x) ** 2 + (event.pos[1] - mid_y) ** 2 < 100:
+                                break
+                        for edge in G.edges():
+                            mid_x = (pos[edge[0]][0] + pos[edge[1]][0]) / 2
+                            mid_y = (pos[edge[0]][1] + pos[edge[1]][1]) / 2
+                            if (event.pos[0] - mid_x) ** 2 + (event.pos[1] - mid_y) ** 2 < 100:
+                                if paintbrush_color:  # Color the edge label
                                     colored_elements[(G, "edge_label", edge)] = paintbrush_color
-                                    break
-
-                    # Palette color selection
-                    for i, (x, y) in enumerate(palette_positions):
-                        if x <= event.pos[0] <= x + 20 and y <= event.pos[1] <= y + 20:
-                            paintbrush_color = palette_colors[i]
-                            break
-
-                    # Mouse icon to deactivate paintbrush
-                    if mouse_icon_position[0] <= event.pos[0] <= mouse_icon_position[0] + 40 and mouse_icon_position[1] <= event.pos[1] <= mouse_icon_position[1] + 40:
-                        paintbrush_color = None
-                        break
-
-                    # Button functionality
+                                break
+                        for node, (x, y) in pos.items():
+                            if (event.pos[0] - (x + 8)) ** 2 + (event.pos[1] - (y - 5)) ** 2 < 100:
+                                if paintbrush_color:  # Color the vertex label
+                                    colored_elements[(G, "node_label", node)] = paintbrush_color
+                                break
+                    # Button and palette interaction
                     for label, state_getter, position in button_positions:
                         rect = pygame.Rect(*position, 140, 50)
                         if rect.collidepoint(event.pos):
@@ -406,23 +394,38 @@ def viz(graphs, mod=None, edge_length_func=None, edge_sublabel_func=None, vertex
                                 show_vertex_labels = not show_vertex_labels
                             elif label == "Edge Labels":
                                 show_edge_labels = not show_edge_labels
-                            elif label == "Vertex Subscript Labels":
+                            elif label == "Vertex Sublabels":
                                 show_vertex_sublabels = not show_vertex_sublabels
-                            elif label == "Edge Subscript Labels":
+                            elif label == "Edge Sublabels":
                                 show_edge_sublabels = not show_edge_sublabels
                             elif label == "Grid":
                                 show_grid = not show_grid
-
+                            break
+                    for i, (x, y) in enumerate(palette_positions):
+                        if x <= event.pos[0] <= x + 20 and y <= event.pos[1] <= y + 20:
+                            paintbrush_color = palette_colors[i]
+                            break
+                    if mouse_icon_position[0] <= event.pos[0] <= mouse_icon_position[0] + 40 and mouse_icon_position[1] <= event.pos[1] <= mouse_icon_position[1] + 40:
+                        paintbrush_color = None
+                        break
                 elif event.button == 3:  # Right click
                     if not paintbrush_color:
-                        initial_graph_position = event.pos
-                        graph_dragging = True
+                        for i, (G, pos) in enumerate(zip(graphs, pos_list)):
+                            for node, (x, y) in pos.items():
+                                if (event.pos[0] - x) ** 2 + (event.pos[1] - y) ** 2 < 100:
+                                    graph_being_dragged = i  # Set the graph being dragged
+                                    initial_graph_position = event.pos
+                                    graph_dragging = True
+                                    break
+                            if graph_being_dragged is not None:
+                                break
 
             elif event.type == pygame.MOUSEBUTTONUP:
                 if event.button == 1:  # Left click
                     selected_node = None
                 elif event.button == 3:  # Right click
                     graph_dragging = False
+                    graph_being_dragged = None
 
             elif event.type == pygame.MOUSEMOTION:
                 if not paintbrush_color:
@@ -431,12 +434,12 @@ def viz(graphs, mod=None, edge_length_func=None, edge_sublabel_func=None, vertex
                         for g_pos, g in zip(pos_list, graphs):
                             if g == G:
                                 g_pos[node] = event.pos
-                    elif graph_dragging and initial_graph_position:
+                    elif graph_dragging and graph_being_dragged is not None:
                         dx = event.pos[0] - initial_graph_position[0]
                         dy = event.pos[1] - initial_graph_position[1]
-                        for pos in pos_list:
-                            for node in pos:
-                                pos[node] = (pos[node][0] + dx, pos[node][1] + dy)
+                        pos = pos_list[graph_being_dragged]
+                        for node in pos:
+                            pos[node] = (pos[node][0] + dx, pos[node][1] + dy)
                         initial_graph_position = event.pos
 
         screen.fill((255, 255, 255))
@@ -480,6 +483,9 @@ def viz(graphs, mod=None, edge_length_func=None, edge_sublabel_func=None, vertex
 
 
 
+
+
+
 # Example usage
 if __name__ == "__main__":
     # Define a custom edge length function
@@ -513,6 +519,6 @@ if __name__ == "__main__":
         edge_length_func=custom_edge_length,
         edge_sublabel_func=custom_edge_sublabel,
         vertex_sublabel_func=custom_vertex_sublabel,
-        save_info=['graph test', 'C:\\Users\\baneg\\OneDrive\\Desktop\\Git\\research\\tuxtexfiles']
+        save_info=['graph test', 'C:\\Users\\Danny\\Desktop\\Git\\research\\pygtikz test files']
     )
 
