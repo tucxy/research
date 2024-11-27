@@ -269,7 +269,7 @@ def save_as_latex(graphs, pos_list, save_info, colored_elements,
                 math_edge_label = f"\\textcolor{{{edge_label_color}}}{{${edge_label_with_subscript}$}}"
 
                 # Define the edge using node names
-                f.write(f"\\draw[draw={edge_color}, shorten >=3pt, shorten <=3pt] "
+                f.write(f"\\draw[draw={edge_color}, shorten >=0pt, shorten <=0pt] "
                         f"({graph_name}N{edge[0]}) -- ({graph_name}N{edge[1]})")
 
                 # Add labels if they exist
@@ -519,6 +519,6 @@ if __name__ == "__main__":
         edge_length_func=custom_edge_length,
         edge_sublabel_func=custom_edge_sublabel,
         vertex_sublabel_func=custom_vertex_sublabel,
-        save_info=['graph test', 'C:\\Users\\Danny\\Desktop\\Git\\research\\pygtikz test files']
+        save_info=['graph test', 'C:\\Users\\baneg\\OneDrive\\Desktop\\Git\\research\\pygtikz test files']
     )
 

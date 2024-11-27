@@ -203,31 +203,149 @@ def find_isomorphism_and_map(graphs, templates):
 
     return result
 
-def generate_disjoint_unions(mapping_result):
+def generate_disjoint_unions(mapping_result, designs):
     """
     Generate disjoint union of tuples for each graph using the bijection dictionaries.
-    
+    Preserve the order of numbers within each tuple while sorting the tuples.
+
     Parameters:
     - mapping_result: List of bijection dictionaries for each graph.
-    
+    - designs: List of graphs corresponding to mapping_result.
+
     Returns:
     - List of strings representing the disjoint union of tuples for each graph.
     """
     result = []
 
-    for graph_bijections in mapping_result:
-        components_as_tuples = []
+    for graph_bijections, design in zip(mapping_result, designs):
+        components_with_templates = []
         
         for bijection in graph_bijections:
             if bijection is not None:
-                # Sort by values in the bijection and create a tuple of keys
-                sorted_keys = [key for key, _ in sorted(bijection.items(), key=lambda item: item[1])]
-                components_as_tuples.append(f"({','.join(map(str, sorted_keys))})")
+                # Create a tuple of component nodes (preserve the order of the nodes)
+                component_nodes = tuple(bijection.keys())
+
+                # Identify template match
+                matched_templates = [
+                    (name, template) for name, template in templates.items()
+                    if nx.is_isomorphic(design.subgraph(component_nodes), template)
+                ]
+                
+                if matched_templates:
+                    template_name, _ = matched_templates[0]
+                    n, m = map(int, template_name.split("T-(")[1].strip(")").split(","))
+                    components_with_templates.append((component_nodes, (n, m)))
+                else:
+                    # No template matched; append as unmatched component
+                    components_with_templates.append((component_nodes, (0, float('inf'))))
         
-        # Join all components with '\\sqcup'
-        result.append("\\sqcup".join(components_as_tuples))
-    
+        # Sort components by the specified criteria
+        sorted_components = sorted(
+            components_with_templates,
+            key=lambda x: (-x[1][0], x[1][1])  # By node count descending, then second index ascending
+        )
+
+        # Format sorted tuples for LaTeX while preserving order within each tuple
+        result.append("\\sqcup".join(
+            f"({','.join(map(str, tpl[0]))})" for tpl in sorted_components
+        ))
+
     return result
+
+
+def generate_names_first_graph_ordered(designs, templates):
+    """
+    Generate ordered names for the first graph in each design list, representing disjoint unions of trees,
+    formatted for LaTeX as bold math expressions.
+
+    Parameters:
+    - designs: List of graph lists where each list represents a design.
+    - templates: Dictionary of template graphs keyed by their names.
+
+    Returns:
+    - A list of strings representing the disjoint union of templates for the first graph in each design.
+    """
+    def format_template(name, count):
+        # Extract the tuple (i, j) from the name, e.g., "T-(7,1)"
+        n, m = map(int, name.split("T-(")[1].strip(")").split(","))
+        formatted = f"\\mathbf{{T_{{{n}}}^{{{m}}}}}"
+        return f"{count}{formatted}" if count > 1 else formatted
+
+    names = []
+    for design in designs:
+        # Process only the first graph in the list
+        G = design[0]
+        
+        # Identify components and match each to a template
+        components = list(nx.connected_components(G))
+        template_counts = {}
+
+        for component in components:
+            subgraph = G.subgraph(component)
+            matched_templates = [
+                name for name, template in templates.items()
+                if nx.is_isomorphic(subgraph, template)
+            ]
+
+            if matched_templates:
+                template_name = matched_templates[0]
+                template_counts[template_name] = template_counts.get(template_name, 0) + 1
+        
+        # Sort templates by the number of nodes (descending) and second index (ascending)
+        def sort_key(template_name):
+            n, m = map(int, template_name.split("T-(")[1].strip(")").split(","))
+            return (-n, m)  # Sort by node count descending, then by second value ascending
+        
+        sorted_templates = sorted(template_counts.items(), key=lambda x: sort_key(x[0]))
+        
+        # Format the disjoint union string with LaTeX representation
+        disjoint_union = " \\sqcup ".join(
+            format_template(name, count) for name, count in sorted_templates
+        )
+        names.append(disjoint_union)
+    
+    return names
+
+def generate_latex_table(designs, names):
+    """
+    Generate a LaTeX table for a list of graph designs, scaled to fit the page width.
+
+    Parameters:
+    - designs: List of graph lists where each list represents a design.
+    - names: List of names corresponding to each design.
+
+    Returns:
+    - A string containing the LaTeX table.
+    """
+    if len(designs) != len(names):
+        raise ValueError("The number of designs must match the number of names.")
+    
+    table_rows = []
+    
+    for name, design in zip(names, designs):
+        # Generate disjoint unions for the design
+        mapping_result = find_isomorphism_and_map(design, templates)
+        disjoint_unions = generate_disjoint_unions(mapping_result, design)
+        
+        # Format disjoint unions for LaTeX, wrapping each in $$ for math mode
+        tabular_content = " \\\\ \n        ".join([f"${union}$" for union in disjoint_unions])
+        table_rows.append(f"    ${name}$ & \\begin{{tabular}}{{@{{}}l@{{}}}} {tabular_content} \\end{{tabular}}")
+    
+    # Build table content with two columns
+    formatted_rows = []
+    for i in range(0, len(table_rows), 2):
+        if i + 1 < len(table_rows):  # Pair rows for two-column format
+            formatted_rows.append(f"{table_rows[i]} & {table_rows[i + 1]} \\\\\n\\hline")
+        else:  # Handle odd number of rows
+            formatted_rows.append(f"{table_rows[i]} & \\\\ \n\\hline")
+    
+    # Combine rows into a LaTeX table
+    table = "\\resizebox{\\textwidth}{!}{%\n\\begin{tabular}{|c|c|c|c|}\n\\hline\n"
+    table += "Design Name & Graph Decomposition & Design Name & Graph Decomposition \\\\\n\\hline\n"
+    table += "\n".join(formatted_rows)
+    table += "\n\\end{tabular}%\n}"
+    
+    return table
 #notebook
 t = 2
 inc = 14*(t-1)
@@ -243,7 +361,7 @@ G4 = merge(path([math.inf,4,7,10,8,6,5]),  path([15,16]))
 G5 = merge(path([0,4,9,15,8,16,7]),  path([1,11]))
 
 F_61_1 = [ G1, G2, G3, G4, G5] #defines the decomposition 'object' a list of graph labelings
-visualize(14*t+7, F_61_1,  '(61)-1',  'C:\\Users\\baneg\\OneDrive\\Desktop\\Git\\Python\\Research\\8 (mod 14)\\texgraph')
+#visualize(14*t+7, F_61_1,  '(61)-1',  'C:\\Users\\baneg\\OneDrive\\Desktop\\Git\\Python\\Research\\8 (mod 14)\\texgraph')
 
 #*(61)-2
 G1 = merge(path([8,math.inf, 2,4,5,3]),path([4,1]),  path([12,15]))
@@ -490,7 +608,7 @@ G4 = merge(path([6,8,10,7]), path([11,10,12]), path([13,16]),path([9,math.inf]))
 G5 = merge(path([4,8,0,6]), path([5,0,7]), path([1,11]),path([3,12]))
 
 F_511_3 = [ G1, G2, G3, G4, G5]
-visualize(14*t+7, F_511_3,  '(511)-3',  'C:\\Users\\baneg\\OneDrive\\Desktop\\Git\\Python\\Research\\8 (mod 14)\\texgraph')
+#visualize(14*t+7, F_511_3,  '(511)-3',  'C:\\Users\\baneg\\OneDrive\\Desktop\\Git\\Python\\Research\\8 (mod 14)\\texgraph')
 
 #*(511)-4
 G1 = merge(path([5,4,2,3]), path([7,4,2,1]),  path([8,11]),path([18,math.inf]))
@@ -728,51 +846,11 @@ G4 = merge(path([math.inf,17,20]),  path([13,14]),path([5,7]),path([10,11]),path
 G5 = merge(path([0,9,4]), path([2,10,3]),path([6,12]),path([7,17]),path([1,5]))
 
 F_211111_1 = [ G1, G2, G3, G4, G5]
-#visualize(14*t+7, F_211111_1,  '(14*t+71111)-1',  'C:\\Users\\baneg\\OneDrive\\Desktop\\Git\\Python\\Research\\8 (mod 14)\\texgraph')
+visualize(14*t+7, F_211111_1,  '(14*t+71111)-1',  'C:\\Users\\baneg\\OneDrive\\Desktop\\Git\\Python\\Research\\8 (mod 14)\\texgraph')
 #& above here is generalized
 #^ done up to here
 # notebook 2
 
-def generate_latex_table(designs, names):
-    """
-    Generate a LaTeX table for a list of graph designs, scaled to fit the page width.
-
-    Parameters:
-    - designs: List of graph lists where each list represents a design.
-    - names: List of names corresponding to each design.
-
-    Returns:
-    - A string containing the LaTeX table.
-    """
-    if len(designs) != len(names):
-        raise ValueError("The number of designs must match the number of names.")
-    
-    table_rows = []
-    
-    for name, design in zip(names, designs):
-        # Generate disjoint unions for the design
-        mapping_result = find_isomorphism_and_map(design, templates)
-        disjoint_unions = generate_disjoint_unions(mapping_result)
-        
-        # Format disjoint unions for LaTeX, wrapping each in $$ for math mode
-        tabular_content = " \\\\ \n        ".join([f"${union}$" for union in disjoint_unions])
-        table_rows.append(f"    ${name}$ & \\begin{{tabular}}{{@{{}}l@{{}}}} {tabular_content} \\end{{tabular}}")
-    
-    # Build table content with two columns
-    formatted_rows = []
-    for i in range(0, len(table_rows), 2):
-        if i + 1 < len(table_rows):  # Pair rows for two-column format
-            formatted_rows.append(f"{table_rows[i]} & {table_rows[i + 1]} \\\\\n\\hline")
-        else:  # Handle odd number of rows
-            formatted_rows.append(f"{table_rows[i]} & \\\\ \n\\hline")
-    
-    # Combine rows into a LaTeX table
-    table = "\\resizebox{\\textwidth}{!}{%\n\\begin{tabular}{|c|c|c|c|}\n\\hline\n"
-    table += "Design Name & Graph Decomposition & Design Name & Graph Decomposition \\\\\n\\hline\n"
-    table += "\n".join(formatted_rows)
-    table += "\n\\end{tabular}%\n}"
-    
-    return table
 
 # Example usage
 designs = [
@@ -782,7 +860,8 @@ designs = [
     F_421_2, F_421_3, F_331_1, F_331_2, F_331_3, F_322_1, F_322_2, F_3211_1, F_3211_2, 
     F_4111_1, F_4111_2, F_4111_3, F_2221_1, F_31111_1, F_31111_2, F_22111_1, F_211111_1
 ]
-names = [f"F_{{{i}}}" for i in range(1, 47)]
+names = generate_names_first_graph_ordered(designs, templates)
+print(names)
 
 latex_table = generate_latex_table(designs, names)
 print(latex_table)
