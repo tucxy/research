@@ -200,7 +200,6 @@ def draw_graph(mod, screen, G, pos, edge_length_func, edge_sublabel_func, vertex
                 screen.blit(sub_text, (pos[node][0] + 8, pos[node][1] - 5))
 
 
-
 def get_tikz_color(rgb):
     """Convert RGB values to TikZ default colors."""
     color_map = {
@@ -505,7 +504,7 @@ if __name__ == "__main__":
         if isinstance(node, str):
             return None
         return node % 7
-
+    
     G1 = nx.Graph()
     G1.add_edges_from([(0, 1), (1, "sigma male"), (2, 3)])
     

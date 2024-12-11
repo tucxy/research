@@ -861,7 +861,7 @@ designs = [
     F_4111_1, F_4111_2, F_4111_3, F_2221_1, F_31111_1, F_31111_2, F_22111_1, F_211111_1
 ]
 names = generate_names_first_graph_ordered(designs, templates)
-print(names)
+#print(names)
 
 latex_table = generate_latex_table(designs, names)
-print(latex_table)
+#print(latex_table)

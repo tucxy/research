@@ -131,9 +131,9 @@ def length(a,b):
 
 def custom_edge_length(node1, node2):
         if isinstance(node1, str) or isinstance(node2, str):
-            return "NaN"
+            return " "
         return abs(node1 *node2)
 
 G1  = path(["a",3,"sigma male grindset",6,9])
-viz([G1],edge_length_func=custom_edge_length)
+viz([G1])
 
