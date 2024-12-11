@@ -516,50 +516,50 @@ For each $G_{i}$ we provide a $\rho$-tripartite labeling on the left and a $1$-r
 
     % C_{3}
     \node[draw,circle] (0) at (0,0) {0};
-    \node[draw, circle]  (6) at (-60: 2 cm) {6};
-    \node[draw, circle] (11) at ($(6) + (-120:2cm)$) {13};
+    \node[draw, circle]  (6) at (-60: 3 cm) {6};
+    \node[draw, circle] (11) at ($(6) + (-120:3cm)$) {13};
 
     \draw (0)--(11) node [draw = none, midway,left,sloped, fill = none, rotate=90] {$2$};
     \draw (0)--(6) node [draw = none, midway,above right,sloped, fill = none, rotate=60] {$6$};
     \draw (11)--(6) node [draw = none, midway,below right,sloped, fill = none, rotate=-60] {$7(7)$};
     % sticks
 % Adding three line segments with nodes
-\node[draw, circle] (7) at ($(6) + (1, 0)$) {12};
-\node[draw, circle] (4) at ($(0) + (2, 0)$) {7};
+\node[draw, circle] (7) at ($(6) + (1.5, 0)$) {12};
+\node[draw, circle] (4) at ($(0) + (3, 0)$) {7};
 \draw (7)--(4) node [draw = none, midway,left,sloped, fill = none, rotate=90] {$5$};
 
-\node[draw, circle] (1) at ($(0) + (3, 0)$) {5};
-\node[draw, circle] (10) at ($(6) + (2, 0)$) {9};
+\node[draw, circle] (1) at ($(4) + (1.5, 0)$) {5};
+\node[draw, circle] (10) at ($(7) + (1.5, 0)$) {9};
 \draw (10)--(1) node [draw = none, midway, left,sloped, fill = none, rotate=90] {$4$};
 
-\node[draw, circle] (3) at ($(6) + (3, 0)$) {11};
-\node[draw, circle] (2) at ($(0) + (4, 0)$) {8};
+\node[draw, circle] (3) at ($(10) + (1.5, 0)$) {11};
+\node[draw, circle] (2) at ($(1) + (1.5, 0)$) {8};
 \draw (2)--(3) node [draw = none, midway,left,sloped, fill = none, rotate=90] {$3$};
 
-\node[draw, circle] (12) at ($(6) + (4, 0)$) {2};
-\node[draw, circle] (5) at ($(0) + (5, 0)$) {1};
+\node[draw, circle] (12) at ($(3) + (1.5, 0)$) {2};
+\node[draw, circle] (5) at ($(2) + (1.5, 0)$) {1};
 \draw (5)--(12) node [draw = none, midway,left,sloped, fill = none, rotate=90] {$1$};
 
-\begin{scope}[shift={(8,0)}] % shift right
+\begin{scope}[shift={(10,0)}] % shift right
     \node[draw,circle] (0) at (0,0) {0};
-    \node[draw, circle]  (6) at (-60: 2 cm) {6};
-    \node[draw, circle] (11) at ($(6) + (-120:2cm)$) {11};
+    \node[draw, circle]  (6) at (-60: 3 cm) {6};
+    \node[draw, circle] (11) at ($(6) + (-120:3cm)$) {11};
 
     \draw (0)--(11) node [draw = none, midway,left,sloped, fill = none, rotate=90] {$2$};
     \draw (0)--(6) node [draw = none, midway,above right,sloped, fill = none, rotate=60] {$6$};
     \draw (11)--(6) node [draw = none, midway,below right,sloped, fill = none, rotate=-60] {$5(5)$};
     % sticks
 % Adding three line segments with nodes
-\node[draw, circle] (7) at ($(6) + (1, 0)$) {7};
-\node[draw, circle] (4) at ($(0) + (2, 0)$) {4};
+\node[draw, circle] (7) at ($(6) + (1.5, 0)$) {7};
+\node[draw, circle] (4) at ($(0) + (3, 0)$) {4};
 \draw (7)--(4) node [draw = none, midway,left,sloped, fill = none, rotate=90] {$3$};
 
-\node[draw, circle] (1) at ($(6) + (2, 0)$) {1};
-\node[draw, circle] (10) at ($(11) + (3, 0)$) {10};
+\node[draw, circle] (1) at ($(7) + (1.5, 0)$) {1};
+\node[draw, circle] (10) at ($(11) + (4, 0)$) {10};
 \draw (10)--(1) node [draw = none, near start, right,sloped, fill = none, rotate=90] {$4(9)$};
 
 \node[draw, circle] (3) at ($(6) + (3, 0)$) {3};
-\node[draw, circle] (2) at ($(0) + (4, 0)$) {2};
+\node[draw, circle] (2) at ($(0) + (5, 0)$) {2};
 \draw (2)--(3) node [draw = none, midway,left,sloped, fill = none, rotate=90] {$1$};
 
 \node[draw, circle] (12) at ($(6) + (4, 0)$) {$\infty$};
@@ -648,52 +648,50 @@ For each $G_{i}$ we provide a $\rho$-tripartite labeling on the left and a $1$-r
 \begin{figure}[ht]
     \centering
 \begin{tikzpicture}[scale=0.6]
-    \tikzstyle{every node}=[draw,circle,fill=black,minimum size=4pt,
-                                inner sep=0pt]
 
 % C_{3}
-\draw (0,0) node (0) [label=above:{\color{red}$0$}]{};
-\node  (6) at (-60: 2 cm) [label=below right:{\color{blue}$6$}]{};
-\node (11) at ($(6) + (-120:2cm)$) [label=below:{\color{dgreen}$13$}]{};
+\node[draw, circle] (0) at (0,0) {0};
+\node[draw, circle]  (6) at (-60: 3 cm) {6};
+\node[draw, circle] (11) at ($(6) + (-120:3cm)$){13};
 
 \draw (0)--(11) node [draw = none, midway,left,sloped, fill = none, rotate=90] {$2$};
 \draw (0)--(6) node [draw = none, midway,above right,sloped, fill = none, rotate=60] {$6$};
 \draw (11)--(6) node [draw = none, midway,below right,sloped, fill = none, rotate=-60] {$7(7)$};
     % sticks
 % Adding three line segments with nodes
-\node (4) at ($(0) + (2, 0)$) [label=above:{\color{red}$7$}]{};
-\node (2) at ($(0) + (3, 0)$) [label=above:{\color{red}$8$}]{};
-\node (1) at ($(6) + (2, 0)$) [label=below:{\color{blue}$12$}]{};
-\node (8) at ($(0) + (4, 0)$) [label=above:{\color{red}$9$}]{};
+\node[draw, circle] (4) at ($(0) + (2, 0)$) {7};
+\node[draw, circle] (2) at ($(0) + (3.5, 0)$) {8};
+\node[draw, circle] (1) at ($(6) + (2, 0)$) {12};
+\node[draw, circle] (8) at ($(0) + (5, 0)$) {9};
 \draw (1)--(4) node [draw = none, midway,left,sloped, fill = none, rotate=60] {$5$};
 \draw (1)--(2) node [draw = none, near end,left,sloped, fill = none, rotate=90] {$4$};
 \draw (1)--(8) node [draw = none, midway,right,sloped, fill = none, rotate=-60] {$3$};
 
-\node (12) at ($(0) + (5, 0)$) [label=above:{\color{red}$1$}]{};
-\node (3) at ($(6) + (4, 0)$) [label=below:{\color{blue}$2$}]{};
+\node[draw, circle] (12) at ($(0) + (6.5, 0)$) {1};
+\node[draw, circle] (3) at ($(6) + (5, 0)$)  {2};
 \draw (3)--(12) node [draw = none, midway,right,sloped, fill = none, rotate=90] {$1$};
 
-\begin{scope}[shift={(8,0)}] % shift right
+\begin{scope}[shift={(10,0)}] % shift right
     % C_{3}
-\draw (0,0) node (0) [label=above:{\color{red}$0$}]{};
-\node  (6) at (-60: 2 cm) [label=below right:{\color{blue}$6$}]{};
-\node (11) at ($(6) + (-120:2cm)$) [label=below:{\color{dgreen}$11$}]{};
+\node[draw, circle] (0) at (0,0) {0};
+\node[draw, circle]  (6) at (-60: 2 cm) {6};
+\node[draw, circle] (11) at ($(6) + (-120:2cm)$) {11};
 
 \draw (0)--(11) node [draw = none, midway,left,sloped, fill = none, rotate=90] {$2$};
 \draw (0)--(6) node [draw = none, midway,above right,sloped, fill = none, rotate=60] {$6$};
 \draw (11)--(6) node [draw = none, midway,below right,sloped, fill = none, rotate=-60] {$5(5)$};
     % sticks
 % Adding three line segments with nodes
-\node (4) at ($(6) + (1, 0)$) [label=below:{\color{blue}$4$}]{};
-\node (2) at ($(6) + (2, 0)$) [label=below:{\color{blue}$2$}]{};
-\node (1) at ($(0) + (3, 0)$) [label=above:{\color{red}$1$}]{};
-\node (8) at ($(6) + (3, 0)$) [label=below:{\color{blue}$\infty$}]{};
+\node[draw, circle] (4) at ($(6) + (1, 0)$) {4};
+\node[draw, circle] (2) at ($(6) + (2, 0)$) {2};
+\node[draw, circle] (1) at ($(0) + (3, 0)$) {1};
+\node[draw, circle] (8) at ($(6) + (3, 0)$) {$\infty$};
 \draw (1)--(4) node [draw = none, midway,above left,sloped, fill = none, rotate=-60] {$3$};
 \draw (1)--(2) node [draw = none, midway,left,sloped, fill = none, rotate=90] {$1$};
 \draw (1)--(8) node [draw = none, midway,right,sloped, fill = none, rotate=60] {$\infty$};
 
-\node (12) at ($(11) + (5, 0)$) [label=below:{\color{dgreen}$12$}]{};
-\node (3) at ($(6) + (4, 0)$) [label=above:{\color{blue}$3$}]{};
+\node[draw, circle] (12) at ($(11) + (5, 0)$) {12};
+\node[draw, circle] (3) at ($(6) + (4, 0)$) {3};
 \draw (3)--(12) node [draw = none, midway,right,sloped, fill = none, rotate=-90] {$4(9)$};
 
 \end{scope}
