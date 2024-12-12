@@ -508,7 +508,6 @@
 
 \newpage
 \section{Labelings}\label{sec:another}
-% G3,G4%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 For each $G_{i}$ we provide a $\rho$-tripartite labeling on the left and a $1$-rotational $\rho$-tripartite labeling on the right.
 \begin{figure}[ht]
     \centering
@@ -540,7 +539,7 @@ For each $G_{i}$ we provide a $\rho$-tripartite labeling on the left and a $1$-r
 \node[draw, circle] (5) at ($(2) + (1.5, 0)$) {1};
 \draw (5)--(12) node [draw = none, midway,left,sloped, fill = none, rotate=90] {$1$};
 
-\begin{scope}[shift={(10,0)}] % shift right
+\begin{scope}[shift={(13,0)}] % shift right
     \node[draw,circle] (0) at (0,0) {0};
     \node[draw, circle]  (6) at (-60: 3 cm) {6};
     \node[draw, circle] (11) at ($(6) + (-120:3cm)$) {11};
@@ -555,25 +554,24 @@ For each $G_{i}$ we provide a $\rho$-tripartite labeling on the left and a $1$-r
 \draw (7)--(4) node [draw = none, midway,left,sloped, fill = none, rotate=90] {$3$};
 
 \node[draw, circle] (1) at ($(7) + (1.5, 0)$) {1};
-\node[draw, circle] (10) at ($(11) + (4, 0)$) {10};
-\draw (10)--(1) node [draw = none, near start, right,sloped, fill = none, rotate=90] {$4(9)$};
+\node[draw, circle] (10) at ($(11) + (4.5, 0)$) {10};
+\draw (10)--(1) node [draw = none, midway, left,sloped, fill = none, rotate=-90] {$4(9)$};
 
-\node[draw, circle] (3) at ($(6) + (3, 0)$) {3};
-\node[draw, circle] (2) at ($(0) + (5, 0)$) {2};
+\node[draw, circle] (3) at ($(6) + (4.5, 0)$) {3};
+\node[draw, circle] (2) at ($(0) + (6, 0)$) {2};
 \draw (2)--(3) node [draw = none, midway,left,sloped, fill = none, rotate=90] {$1$};
 
-\node[draw, circle] (12) at ($(6) + (4, 0)$) {$\infty$};
-\node[draw, circle] (5) at ($(0) + (5, 0)$) {5};
+\node[draw, circle] (12) at ($(6) + (6, 0)$) {$\infty$};
+\node[draw, circle] (5) at ($(0) + (7.5, 0)$) {5};
 \draw (5)--(12) node [draw = none, midway,left,sloped, fill = none, rotate=90] {$\infty$};
 
 \end{scope}
 \useasboundingbox (current bounding box.south west) rectangle (current bounding box.north east);
 %key
-\begin{scope}[shift={(current bounding box.west)}, shift={(-3,1.85)}, every node/.style={draw=none, fill=none}]
-    \draw (0,0) node (A) {\textcolor{red}{$A$}};
-    \draw  (-90: 1.73 cm) node (B) {\textcolor{blue}{$B$}};
-    \draw  (-90: 3.46 cm) node (C) {\textcolor{dgreen}{$C$}};
-    
+\begin{scope}[shift={(current bounding box.center)}, shift={(0,2.65)}]
+    \node (A) at (0,0) {A};
+    \node (B) at (0,-1.73) {B};
+    \node (C) at (0,-3.46) {\textcolor{dgreen}{$C$}};
 \end{scope}
 
 \end{tikzpicture}
@@ -586,58 +584,57 @@ For each $G_{i}$ we provide a $\rho$-tripartite labeling on the left and a $1$-r
 \begin{tikzpicture}[scale=0.6]
 
     \node[draw, circle] (02) at (0,0) {0};
-    \node[draw, circle]  (62) at (-60: 2 cm) {6};
-    \node[draw, circle] (112) at ($(62) + (-120:2cm)$) {13};
+    \node[draw, circle]  (62) at (-60: 3 cm) {6};
+    \node[draw, circle] (112) at ($(62) + (-120:3cm)$) {13};
 
     \draw (02)--(112) node [draw = none, midway,left,sloped, fill = none, rotate=90] {$2$};
     \draw (02)--(62) node [draw = none, midway,above right,sloped, fill = none, rotate=60] {$6$};
     \draw (112)--(62) node [draw = none, midway,below right,sloped, fill = none, rotate=-60] {$7(7)$};
 
     \node[draw, circle] (42) at ($(62) + (2, 0)$) {12};
-    \node[draw, circle] (72) at ($(42) + (120:2cm)$) {7};
-    \node[draw, circle] (52) at ($(42) + (60:2cm)$) {8};
+    \node[draw, circle] (72) at ($(42) + (120:3cm)$) {7};
+    \node[draw, circle] (52) at ($(42) + (60:3cm)$) {8};
     \draw (42)--(72) node [draw = none, midway,left,sloped, fill = none, rotate=60] {$5$};
     \draw (42)--(52) node [draw = none, midway,left,sloped, fill = none, rotate=-60] {$4$};
 
-    \node[draw, circle] (1) at ($(02) + (5, 0)$) {1};
-    \node[draw, circle] (10) at ($(62) + (4, 0)$) {4};
+    \node[draw, circle] (1) at ($(02) + (6.5, 0)$) {1};
+    \node[draw, circle] (10) at ($(62) + (5, 0)$) {4};
     \draw (10)--(1) node [draw = none, midway, left,sloped, fill = none, rotate=90] {$3$};
 
-    \node[draw, circle] (92) at ($(62) + (5, 0)$) {3};
-    \node[draw, circle] (22) at ($(02) + (6, 0)$) {2};
+    \node[draw, circle] (92) at ($(62) + (6.5, 0)$) {3};
+    \node[draw, circle] (22) at ($(02) + (8, 0)$) {2};
     \draw (22)--(92) node [draw = none, midway,left,sloped, fill = none, rotate=90] {$1$};
 %1-rotational
-    \begin{scope}[shift={(8,0)}] % shift right
+    \begin{scope}[shift={(13,0)}] % shift right
     \node[draw, circle] (02) at (0,0) {0};
-    \node[draw, circle] (62) at (-60: 2 cm) {6};
-    \node[draw, circle] (112) at ($(62) + (-120:2cm)$) {11};
+    \node[draw, circle] (62) at (-60: 3 cm) {6};
+    \node[draw, circle] (112) at ($(62) + (-120:3cm)$) {11};
 
     \draw (02)--(112) node [draw = none, midway,left,sloped, fill = none, rotate=90] {$2$};
     \draw (02)--(62) node [draw = none, midway,above right,sloped, fill = none, rotate=60] {$6$};
     \draw (112)--(62) node [draw = none, midway,below right,sloped, fill = none, rotate=-60] {$5(5)$};
 
-    \node[draw, circle] (42) at ($(02) + (3, 0)$) {4};
-    \node[draw, circle] (72) at ($(42) + (-120:2cm)$) {7};
-    \node[draw, circle]  (52) at ($(42) + (-60:2cm)$) {5};
+    \node[draw, circle] (42) at ($(02) + (5, 0)$) {4};
+    \node[draw, circle] (72) at ($(42) + (-120:3cm)$) {7};
+    \node[draw, circle]  (52) at ($(42) + (-60:3cm)$) {5};
     \draw (42)--(72) node [draw = none, midway,above left,sloped, fill = none, rotate=-60] {$3$};
     \draw (42)--(52) node [draw = none, midway,above right,sloped, fill = none, rotate=60] {$1$};
 
-    \node[draw, circle] (1) at ($(62) + (4, 0)$) {1};
-    \node[draw, circle] (10) at ($(112) + (5, 0)$) {10};
-    \draw (10)--(1) node [draw = none, near start, left,sloped, fill = none, rotate=90] {$4(9)$};
+    \node[draw, circle] (1) at ($(52) + (1.5, 0)$) {1};
+    \node[draw, circle] (10) at ($(112) + (8, 0)$) {10};
+    \draw (10)--(1) node [draw = none, midway, left,sloped, fill = none, rotate=-90] {$4(9)$};
 
-    \node[draw, circle] (92) at ($(62) + (5, 0)$) {$\infty$};
-    \node[draw, circle] (22) at ($(02) + (6, 0)$) {2};
+    \node[draw, circle] (92) at ($(1) + (1.5, 0)$) {$\infty$};
+    \node[draw, circle] (22) at ($(4) + (6.5, 0)$) {2};
     \draw (22)--(92) node [draw = none, midway,left,sloped, fill = none, rotate=90] {$\infty$};
     
     \end{scope}
     \useasboundingbox (current bounding box.south west) rectangle (current bounding box.north east);
     %key
-    \begin{scope}[shift={(current bounding box.west)}, shift={(-2.6,1.85)}, every node/.style={draw=none, fill=none}] % shift right
-    \draw (0,0) node (A) {\textcolor{red}{$A$}};
-    \node  (B) at (-90: 1.73 cm) {\textcolor{blue}{$B$}};
-    \node  (C) at (-90: 3.46 cm) {\textcolor{dgreen}{$C$}};
-    
+    \begin{scope}[shift={(current bounding box.center)}, shift={(0,2.65)}]
+        \node (A) at (0,0) {A};
+        \node (B) at (0,-1.73) {B};
+        \node (C) at (0,-3.46) {\textcolor{dgreen}{$C$}};
     \end{scope}
 
 \end{tikzpicture}
@@ -664,44 +661,43 @@ For each $G_{i}$ we provide a $\rho$-tripartite labeling on the left and a $1$-r
 \node[draw, circle] (1) at ($(6) + (2, 0)$) {12};
 \node[draw, circle] (8) at ($(0) + (5, 0)$) {9};
 \draw (1)--(4) node [draw = none, midway,left,sloped, fill = none, rotate=60] {$5$};
-\draw (1)--(2) node [draw = none, near end,left,sloped, fill = none, rotate=90] {$4$};
+\draw (1)--(2) node [draw = none, midway,left,sloped, fill = none, rotate=90] {$4$};
 \draw (1)--(8) node [draw = none, midway,right,sloped, fill = none, rotate=-60] {$3$};
 
 \node[draw, circle] (12) at ($(0) + (6.5, 0)$) {1};
 \node[draw, circle] (3) at ($(6) + (5, 0)$)  {2};
 \draw (3)--(12) node [draw = none, midway,right,sloped, fill = none, rotate=90] {$1$};
 
-\begin{scope}[shift={(10,0)}] % shift right
+\begin{scope}[shift={(13,0)}] % shift right
     % C_{3}
 \node[draw, circle] (0) at (0,0) {0};
-\node[draw, circle]  (6) at (-60: 2 cm) {6};
-\node[draw, circle] (11) at ($(6) + (-120:2cm)$) {11};
+\node[draw, circle]  (6) at (-60: 3 cm) {6};
+\node[draw, circle] (11) at ($(6) + (-120:3cm)$) {11};
 
 \draw (0)--(11) node [draw = none, midway,left,sloped, fill = none, rotate=90] {$2$};
 \draw (0)--(6) node [draw = none, midway,above right,sloped, fill = none, rotate=60] {$6$};
 \draw (11)--(6) node [draw = none, midway,below right,sloped, fill = none, rotate=-60] {$5(5)$};
     % sticks
 % Adding three line segments with nodes
-\node[draw, circle] (4) at ($(6) + (1, 0)$) {4};
-\node[draw, circle] (2) at ($(6) + (2, 0)$) {2};
-\node[draw, circle] (1) at ($(0) + (3, 0)$) {1};
-\node[draw, circle] (8) at ($(6) + (3, 0)$) {$\infty$};
+\node[draw, circle] (4) at ($(6) + (1.5, 0)$) {4};
+\node[draw, circle] (2) at ($(6) + (3, 0)$) {2};
+\node[draw, circle] (1) at ($(0) + (4.5, 0)$) {1};
+\node[draw, circle] (8) at ($(6) + (4.5, 0)$) {$\infty$};
 \draw (1)--(4) node [draw = none, midway,above left,sloped, fill = none, rotate=-60] {$3$};
 \draw (1)--(2) node [draw = none, midway,left,sloped, fill = none, rotate=90] {$1$};
 \draw (1)--(8) node [draw = none, midway,right,sloped, fill = none, rotate=60] {$\infty$};
 
-\node[draw, circle] (12) at ($(11) + (5, 0)$) {12};
-\node[draw, circle] (3) at ($(6) + (4, 0)$) {3};
+\node[draw, circle] (12) at ($(11) + (7.5, 0)$) {12};
+\node[draw, circle] (3) at ($(6) + (6, 0)$) {3};
 \draw (3)--(12) node [draw = none, midway,right,sloped, fill = none, rotate=-90] {$4(9)$};
 
 \end{scope}
 \useasboundingbox (current bounding box.south west) rectangle (current bounding box.north east);
 %key
-\begin{scope}[shift={(current bounding box.west)}, shift={(-2.6,1.85)}, every node/.style={draw=none, fill=none}] 
-    \draw (0,0) node (A) {\textcolor{red}{$A$}};
-    \node  (B) at (-90: 1.73 cm) {\textcolor{blue}{$B$}};
-    \node  (C) at (-90: 3.46 cm) {\textcolor{dgreen}{$C$}};
-    
+\begin{scope}[shift={(current bounding box.center)}, shift={(0,2.65)}]
+    \node (A) at (0,0) {A};
+    \node (B) at (0,-1.73) {B};
+    \node (C) at (0,-3.46) {\textcolor{dgreen}{$C$}};
 \end{scope}
 
 \end{tikzpicture}
@@ -712,59 +708,56 @@ For each $G_{i}$ we provide a $\rho$-tripartite labeling on the left and a $1$-r
 \begin{figure}[ht]
     \centering
 \begin{tikzpicture}[scale=0.6]
-    \tikzstyle{every node}=[draw,circle,fill=black,minimum size=4pt,
-                                inner sep=0pt]
 
-    \draw (0,0) node (02) [label=above:{\color{red}$0$}]{};
-    \node  (62) at (-60: 2 cm) [label=below:{\color{blue}$6$}]{};
-    \node (112) at ($(62) + (-120:2cm)$) [label=below:{\color{dgreen}$13$}]{};
+    \node[draw, circle] (02) at (0,0) {0};
+    \node[draw, circle]  (62) at (-60: 3 cm){6};
+    \node[draw, circle] (112) at ($(62) + (-120:3cm)$){13};
 
     \draw (02)--(112) node [draw = none, midway,left,sloped, fill = none, rotate=90] {$2$};
     \draw (02)--(62) node [draw = none, midway,above right,sloped, fill = none, rotate=60] {$6$};
     \draw (112)--(62) node [draw = none, midway,below right,sloped, fill = none, rotate=-60] {$7(7)$};
 
     % Repeat of additional line segments
-    \node (32) at ($(62) + (2, 0)$) [label=below:{\color{blue}$12$}]{};
-    \node (122) at ($(32) + (60:2cm)$) [label=above:{\color{red}$8$}]{};
-    \node  (22) at ($(32) + (120:2cm)$) [label=above:{\color{red}$7$}]{};
-    \draw (32)--(122) node [draw = none, midway,left,sloped, fill = none, rotate=-60] {$4$};
+    \node[draw, circle] (32) at ($(62) + (2, 0)$){12};
+    \node[draw, circle] (122) at ($(32) + (60:3cm)$){8};
+    \node[draw, circle]  (22) at ($(32) + (120:3cm)$){7};
+    \draw[draw, circle] (32)--(122) node [draw = none, midway,left,sloped, fill = none, rotate=-60] {$4$};
     \draw (32)--(22) node [draw = none, midway,left,sloped, fill = none, rotate=60] {$5$};
     %
-    \node (1b) at ($(62) + (5, 0)$) [label=below:{\color{blue}$4$}]{};
-    \node (42) at ($(1b) + (120:2cm)$) [label=above:{\color{red}$1$}]{};
-    \node (82) at ($(1b) + (60:2cm)$) [label=above:{\color{red}$3$}]{};
+    \node[draw, circle] (1b) at ($(62) + (6.5, 0)$){4};
+    \node[draw, circle] (42) at ($(1b) + (120:3cm)$){1};
+    \node[draw, circle] (82) at ($(1b) + (60:3cm)$){3};
     \draw (1b)--(42) node [draw = none, midway,left,sloped, fill = none, rotate=60] {$3$};
     \draw (1b)--(82) node [draw = none, midway,left,sloped, fill = none, rotate=-60] {$1$};
 
-\begin{scope}[shift={(9,0)}] % shift right
-    \draw (0,0) node (02) [label=above:{\color{red}$0$}]{};
-    \node  (62) at (-60: 2 cm) [label=below:{\color{blue}$6$}]{};
-    \node (112) at ($(62) + (-120:2cm)$) [label=below:{\color{dgreen}$11$}]{};
+\begin{scope}[shift={(13,0)}] % shift right
+    \node[draw, circle] (02) at (0,0) {0};
+    \node[draw, circle]  (62) at (-60: 3 cm){6};
+    \node[draw, circle] (112) at ($(62) + (-120:3cm)$){11};
 
     \draw (02)--(112) node [draw = none, midway,left,sloped, fill = none, rotate=90] {$2$};
     \draw (02)--(62) node [draw = none, midway,above right,sloped, fill = none, rotate=60] {$6$};
     \draw (112)--(62) node [draw = none, midway,below right,sloped, fill = none, rotate=-60] {$5(5)$};
 
     % Repeat of additional line segments
-    \node (32) at ($(62) + (2, 0)$) [label=below:{\color{blue}$3$}]{};
-    \node (122) at ($(32) + (-120:2cm)$) [label=below:{\color{dgreen}$12$}]{};
-    \node  (22) at ($(32) + (120:2cm)$) [label=above:{\color{red}$2$}]{};
-    \draw (32)--(122) node [draw = none, midway,below right,sloped, fill = none, rotate=-60] {$4(9)$};
-    \draw (32)--(22) node [draw = none, midway,above right,sloped, fill = none, rotate=60] {$1$};
+    \node[draw, circle] (32) at ($(62) + (2, 0)$){3};
+    \node[draw, circle] (122) at ($(112) + (3.5,0)$){12};
+    \node[draw, circle]  (22) at ($(02) + (3.5,0)$){2};
+    \draw (32)--(122) node [draw = none, midway,left, fill = none] {$4(9)$};
+    \draw (32)--(22) node [draw = none, midway,left, fill = none] {$1$};
     %
-    \node (1b) at ($(02) + (5, 0)$) [label=above:{\color{red}$1$}]{};
-    \node (42) at ($(1b) + (-120:2cm)$) [label=below:{\color{blue}$4$}]{};
-    \node (82) at ($(1b) + (-60:2cm)$) [label=below:{\color{blue}$\infty$}]{};
+    \node[draw, circle] (1b) at ($(02) + (7, 0)$){1};
+    \node[draw, circle] (42) at ($(1b) + (-120:3cm)$){4};
+    \node[draw, circle] (82) at ($(1b) + (-60:3cm)$){$\infty$};
     \draw (1b)--(42) node [draw = none, midway,above left,sloped, fill = none, rotate=-60] {$3$};
-    \draw (1b)--(82) node [draw = none, midway,above right,sloped, fill = none, rotate=60] {$\infty$};
+    \draw (1b)--(82) node [draw = none, midway,below left,sloped, fill = none, rotate=60] {$\infty$};
     \end{scope}
     \useasboundingbox (current bounding box.south west) rectangle (current bounding box.north east);
 %key
-\begin{scope}[shift={(current bounding box.west)}, shift={(-2.6,1.85)}, every node/.style={draw=none, fill=none}] 
-    \draw (0,0) node (A) {\textcolor{red}{$A$}};
-    \node  (B) at (-90: 1.73 cm) {\textcolor{blue}{$B$}};
-    \node  (C) at (-90: 3.46 cm) {\textcolor{dgreen}{$C$}};
-    
+\begin{scope}[shift={(current bounding box.center)}, shift={(0,2.65)}]
+    \node (A) at (0,0) {A};
+    \node (B) at (0,-1.73) {B};
+    \node (C) at (0,-3.46) {\textcolor{dgreen}{$C$}};
 \end{scope}
 
 \end{tikzpicture}
@@ -776,59 +769,56 @@ For each $G_{i}$ we provide a $\rho$-tripartite labeling on the left and a $1$-r
 \begin{figure}[ht]
     \centering
 \begin{tikzpicture}[scale=0.6]
-    \tikzstyle{every node}=[draw,circle,fill=black,minimum size=4pt,
-                                inner sep=0pt]
 
-    \draw (0,0) node (02) [label=above:{\color{red}$0$}]{};
-    \node  (62) at (-60: 2 cm) [label=below:{\color{blue}$6$}]{};
-    \node (112) at ($(62) + (-120:2cm)$) [label=below:{\color{dgreen}$13$}]{};
+    \node[draw, circle] (02) at (0,0) {0};
+    \node[draw, circle]  (62) at (-60: 3 cm) {6};
+    \node[draw, circle] (112) at ($(62) + (-120:3cm)$) {13};
 
     \draw (02)--(112) node [draw = none, midway,left,sloped, fill = none, rotate=90] {$2$};
     \draw (02)--(62) node [draw = none, midway,above right,sloped, fill = none, rotate=60] {$6$};
     \draw (112)--(62) node [draw = none, midway,below right,sloped, fill = none, rotate=-60] {$7(7)$};
     % Repeat of additional line segments
-    \node (32) at ($(62) + (1.5, 0)$) [label=below:{\color{blue}$12$}]{};
-    \node (122) at ($(32) + (120:2cm)$) [label=above:{\color{red}$7$}]{};
-    \node  (22) at ($(32) + (60:2cm)$) [label=above:{\color{red}$8$}]{};
-    \node  (92) at ($(22) + (-60:2cm)$) [label=below:{\color{blue}$11$}]{};
+    \node[draw, circle] (32) at ($(62) + (2, 0)$) {12};
+    \node[draw, circle] (122) at ($(32) + (120:3cm)$) {7};
+    \node[draw, circle]  (22) at ($(32) + (60:3cm)$) {8};
+    \node[draw, circle]  (92) at ($(22) + (-60:3cm)$) {11};
     \draw (32)--(122) node [draw = none, midway,left,sloped, fill = none, rotate=60] {$5$};
     \draw (32)--(22) node [draw = none, midway,left,sloped, fill = none, rotate=-60] {$4$};
     \draw (92)--(22) node [draw = none, midway,left,sloped, fill = none, rotate=60] {$3$};
 
-    \node (42) at ($(62) + (5, 0)$) [label=below:{\color{blue}$2$}]{};
-    \node (1b) at ($(02) + (6, 0)$) [label=above:{\color{red}$1$}]{};
+    \node[draw, circle] (42) at ($(62) + (6.5, 0)$) {2};
+    \node[draw, circle] (1b) at ($(02) + (8, 0)$) {1};
     \draw (42)--(1b) node [draw = none, midway,left,sloped, fill = none, rotate=90] {$1$};
     %
-\begin{scope}[shift={(8,0)}] 
-    \draw (0,0) node (02) [label=above:{\color{red}$0$}]{};
-    \node  (62) at (-60: 2 cm) [label=below:{\color{blue}$6$}]{};
-    \node (112) at ($(62) + (-120:2cm)$) [label=below:{\color{dgreen}$11$}]{};
+\begin{scope}[shift={(13,0)}] 
+    \node[draw, circle] (02) at (0,0) {0};
+    \node[draw, circle]  (62) at (-60: 3 cm) {6};
+    \node[draw, circle] (112) at ($(62) + (-120:3cm)$) {11};
 
     \draw (02)--(112) node [draw = none, midway,left,sloped, fill = none, rotate=90] {$2$};
     \draw (02)--(62) node [draw = none, midway,above right,sloped, fill = none, rotate=60] {$6$};
     \draw (112)--(62) node [draw = none, midway,below right,sloped, fill = none, rotate=-60] {$5(5)$};
     % Repeat of additional line segments
-    \node (32) at ($(62) + (1, 0)$) [label=below:{\color{blue}$3$}]{};
-    \node (122) at ($(32) + (-60:2cm)$) [label=below:{\color{dgreen}$12$}]{};
-    \node  (22) at ($(32) + (60:2cm)$) [label=above:{\color{red}$2$}]{};
-    \node  (92) at ($(22) + (-60:2cm)$) [label=below:{\color{blue}$\infty$}]{};
+    \node[draw, circle] (32) at ($(62) + (1.5, 0)$) {3};
+    \node[draw, circle] (122) at ($(32) + (-60:3cm)$) {12};
+    \node[draw, circle]  (22) at ($(32) + (60:3cm)$) {2};
+    \node[draw, circle]  (92) at ($(22) + (-60:3cm)$) {$\infty$};
     \draw (32)--(122) node [draw = none, midway,right,sloped, fill = none, rotate=60] {$4(9)$};
     \draw (32)--(22) node [draw = none, midway,above left,sloped, fill = none, rotate=-60] {$1$};
     \draw (92)--(22) node [draw = none, midway,above right,sloped, fill = none, rotate=60] {$\infty$};
 
-    \node (42) at ($(62) + (4, 0)$) [label=below:{\color{blue}$4$}]{};
-    \node (1b) at ($(02) + (5, 0)$) [label=above:{\color{red}$1$}]{};
+    \node[draw, circle] (42) at ($(62) + (6, 0)$) {4};
+    \node[draw, circle] (1b) at ($(02) + (7.5, 0)$) {1};
     \draw (42)--(1b) node [draw = none, midway,right,sloped, fill = none, rotate=90] {$3$};
     
 \end{scope}     
 \useasboundingbox (current bounding box.south west) rectangle (current bounding box.north east);
     %key
-\begin{scope}[shift={(current bounding box.west)}, shift={(-2.6,1.85)}, every node/.style={draw=none, fill=none}] 
-    \draw (0,0) node (A) {\textcolor{red}{$A$}};
-    \node  (B) at (-90: 1.73 cm) {\textcolor{blue}{$B$}};
-    \node  (C) at (-90: 3.46 cm) {\textcolor{dgreen}{$C$}};
-    
-\end{scope}
+    \begin{scope}[shift={(current bounding box.center)}, shift={(0,2.65)}]
+        \node (A) at (0,0) {A};
+        \node (B) at (0,-1.73) {B};
+        \node (C) at (0,-3.46) {\textcolor{dgreen}{$C$}};
+    \end{scope}
 
 \end{tikzpicture}
 \caption{Labeled $G_{5}$}
