@@ -160,5 +160,4 @@ if __name__ == "__main__":
         edge_sublabel_func=custom_edge_sublabel, #opt.
         vertex_sublabel_func=custom_vertex_sublabel, #opt.
         save_info=['graph test', 'C:\\Users\\baneg\\OneDrive\\Desktop\\Git\\research\\pygtikz test files'] #opt.
-    )
-
+    ) #under save_info enter the PATH where you wish to save the .tex file in
