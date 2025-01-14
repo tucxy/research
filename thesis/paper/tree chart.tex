@@ -1,0 +1,160 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{graphicx}  % For including external images
+\usepackage{standalone}  % For including standalone files
+\usepackage{youngtab}  % For tables
+\usepackage{array}  % For \extrarowheight support
+
+\begin{document}
+
+\vspace{5pt}
+% Globally set minimum row height and padding
+\renewcommand{\arraystretch}{2.75}  % Adjusts the vertical space between rows (default is 1)
+
+% Set vertical padding with \extrarowheight
+\setlength{\extrarowheight}{20pt}  % Adds extra vertical space between rows
+
+% Set horizontal padding
+\setlength{\tabcolsep}{10pt}  % Adjust horizontal cell padding
+
+% Set table border thickness
+\setlength{\arrayrulewidth}{0.5mm}  % Set border thickness
+
+% Define a new column type with fixed width and height
+\newcolumntype{C}{>{\centering\arraybackslash}m{3.2cm}}  % Fixed width of 3cm, adjustable height via m{}
+\resizebox{\textwidth}{!}{
+
+\begin{tabular}{|C|C|C|C|}
+    \hline
+    \begin{minipage}[b][2.4cm][b]{\linewidth} % Use bottom alignment for both graph and label
+        \centering
+        \input{standard/T-(1,1)/T-(1,1).tex} \\[-0.1cm] % Adjust space between graph and label
+        \hspace{-3.25cm}
+        {$\mathbf{T_{2}^{1}}$} % Consistent label placement
+    \end{minipage} & 
+    \begin{minipage}[b][2.4cm][b]{\linewidth}
+        \centering
+        \input{standard/T-(2,1)/T-(2,1).tex} \\[-0.1cm]
+        \hspace{-3.25cm}{$\mathbf{T_{3}^{1}}$}
+    \end{minipage} & 
+    \begin{minipage}[b][2.4cm][b]{\linewidth}
+        \centering
+        \input{standard/T-(3,1)/T-(3,1).tex} \\[-0.1cm]
+        \hspace{-3.25cm}{$\mathbf{T_{4}^{1}}$}
+    \end{minipage} & 
+    \begin{minipage}[b][2.4cm][b]{\linewidth}
+        \centering
+        \input{standard/T-(3,2)/T-(3,2).tex} \\[-0.1cm]
+        \hspace{-3.25cm}{$\mathbf{T_{4}^{2}}$}
+    \end{minipage} \\
+    \hline
+    \begin{minipage}[b][2.4cm][b]{\linewidth}
+        \centering
+        \input{standard/T-(4,1)/T-(4,1).tex} \\[-0.1cm]
+        \hspace{-3.25cm}{$\mathbf{T_{5}^{1}}$}
+    \end{minipage} & 
+    \begin{minipage}[b][2.4cm][b]{\linewidth}
+        \centering
+        \input{standard/T-(4,2)/T-(4,2).tex} \\[-0.1cm]
+        \hspace{-3.25cm}{$\mathbf{T_{5}^{2}}$}
+    \end{minipage} & 
+    \begin{minipage}[b][2.4cm][b]{\linewidth}
+        \centering
+        \input{standard/T-(4,3)/T-(4,3).tex} \\[-0.1cm]
+        \hspace{-3.25cm}{$\mathbf{T_{5}^{3}}$}
+    \end{minipage} & 
+    \begin{minipage}[b][2.4cm][b]{\linewidth}
+        \centering
+        \input{standard/T-(5,1)/T-(5,1).tex} \\[-0.1cm]
+        \hspace{-3.25cm}{$\mathbf{T_{6}^{1}}$}
+    \end{minipage} \\
+    \hline
+    \begin{minipage}[b][2.4cm][b]{\linewidth}
+        \centering
+        \input{standard/T-(5,2)/T-(5,2).tex} \\[-0.1cm]
+        \hspace{-3.25cm}{$\mathbf{T_{6}^{2}}$}
+    \end{minipage} & 
+    \begin{minipage}[b][2.4cm][b]{\linewidth}
+        \centering
+        \input{standard/T-(5,3)/T-(5,3).tex} \\[-0.1cm]
+        \hspace{-3.25cm}{$\mathbf{T_{6}^{3}}$}
+    \end{minipage} & 
+    \begin{minipage}[b][2.4cm][b]{\linewidth}
+        \centering
+        \input{standard/T-(5,4)/T-(5,4).tex} \\[-0.1cm]
+        \hspace{-3.25cm}{$\mathbf{T_{6}^{4}}$}
+    \end{minipage} & 
+    \begin{minipage}[b][2.4cm][b]{\linewidth}
+        \centering
+        \input{standard/T-(5,5)/T-(5,5).tex} \\[-0.1cm]
+        \hspace{-3.25cm}{$\mathbf{T_{6}^{5}}$}
+    \end{minipage} \\
+    \hline
+    \begin{minipage}[b][2.4cm][b]{\linewidth}
+        \centering
+        \input{standard/T-(5,6)/T-(5,6).tex} \\[-0.1cm]
+        \hspace{-3.25cm}{$\mathbf{T_{6}^{6}}$}
+    \end{minipage} & 
+    \begin{minipage}[b][2.4cm][b]{\linewidth}
+        \centering
+        \input{standard/T-(6,1)/T-(6,1).tex} \\[-0.1cm]
+        \hspace{-3.25cm}{$\mathbf{T_{7}^{1}}$}
+    \end{minipage} & 
+    \begin{minipage}[b][2.4cm][b]{\linewidth}
+        \centering
+        \input{standard/T-(6,2)/T-(6,2).tex} \\[-0.1cm]
+        \hspace{-3.25cm}{$\mathbf{T_{7}^{2}}$}
+    \end{minipage} & 
+    \begin{minipage}[b][2.4cm][b]{\linewidth}
+        \centering
+        \input{standard/T-(6,3)/T-(6,3).tex} \\[-0.1cm]
+        \hspace{-3.25cm}{$\mathbf{T_{7}^{3}}$}
+    \end{minipage} \\
+    \hline
+    \begin{minipage}[b][2.4cm][b]{\linewidth}
+        \centering
+        \input{standard/T-(6,4)/T-(6,4).tex} \\[-0.1cm]
+        \hspace{-3.25cm}{$\mathbf{T_{7}^{4}}$}
+    \end{minipage} & 
+    \begin{minipage}[b][2.4cm][b]{\linewidth}
+        \centering
+        \input{standard/T-(6,5)/T-(6,5).tex} \\[-0.1cm]
+        \hspace{-3.25cm}{$\mathbf{T_{7}^{5}}$}
+    \end{minipage} & 
+    \begin{minipage}[b][2.4cm][b]{\linewidth}
+        \centering
+        \input{standard/T-(6,6)/T-(6,6).tex} \\[-0.1cm]
+        \hspace{-3.25cm}{$\mathbf{T_{7}^{6}}$}
+    \end{minipage} & 
+    \begin{minipage}[b][2.4cm][b]{\linewidth}
+        \centering
+        \input{standard/T-(6,7)/T-(6,7).tex} \\[-0.1cm]
+        \hspace{-3.25cm}{$\mathbf{T_{7}^{7}}$}
+    \end{minipage} \\
+    \hline
+    \begin{minipage}[b][2.4cm][b]{\linewidth}
+        \centering
+        \input{standard/T-(6,8)/T-(6,8).tex} \\[-0.1cm]
+        \hspace{-3.25cm}{$\mathbf{T_{7}^{8}}$}
+    \end{minipage} & 
+    \begin{minipage}[b][2.4cm][b]{\linewidth}
+        \centering
+        \input{standard/T-(6,9)/T-(6,9).tex} \\[-0.1cm]
+        \hspace{-3.25cm}{$\mathbf{T_{7}^{9}}$}
+    \end{minipage} & 
+    \begin{minipage}[b][2.4cm][b]{\linewidth}
+        \centering
+        \input{standard/T-(6,10)/T-(6,10).tex} \\[-0.1cm]
+        \hspace{-3.25cm}{$\mathbf{T_{7}^{10}}$}
+    \end{minipage} & 
+    \begin{minipage}[b][2.4cm][b]{\linewidth}
+        \centering
+        \input{standard/T-(6,11)/T-(6,11).tex} \\[-0.1cm]
+        \hspace{-3.25cm}{$\mathbf{T_{7}^{11}}$}
+    \end{minipage} \\
+    \hline
+\end{tabular}}
+
+
+
+\end{document}
