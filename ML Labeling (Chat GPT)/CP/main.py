@@ -1,9 +1,17 @@
 import networkx as nx
 import sys
-sys.path.append('C:\\Users\\baneg\\OneDrive\\Desktop\\Git\\research\\tikzgrapher\\tikzgrapher.py') #enter PATH of tikzgrapher.py
-from tikzgrapher import viz
+import os
 from itertools import combinations
 import math
+
+from CP import sigmapm_graph_labeling, solve_123_labeling
+
+
+
+sys.path.append(r"C:\Users\baneg\OneDrive\Desktop\Git\research\tikzgrapher")
+sys.path.append(r"C:\Users\baneg\OneDrive\Desktop\Git\research")
+from tikzgrapher import viz
+#* graph creation tools *#
 
 # how to merge two graphs:
 '''
@@ -123,38 +131,21 @@ def trees(n):
 
 '''-----------------------------------------------------------------------------------'''
 
-#notebook
-if __name__ == "__main__":
-    #Define a custom edge length function
-    def custom_edge_length(node1, node2):
-        if isinstance(node1, str) or isinstance(node2, str):
-            return ";)"
-        return abs(node1 - node2)
+# Create a bipartite test graph
+G = merge(star(0,[1,2,3,4,5]),path([6,7,8]))
 
-    #Define a custom edge sublabel function
-    def custom_edge_sublabel(node1, node2):
-        if isinstance(node1, str) or isinstance(node2, str):
-            return None
-        return (node1 + node2) % 5
+# Solve for a valid labeling
+labeled_G = solve_123_labeling(G)
+def rename_nodes_by_labels(graph):
+    """Rename nodes based on their assigned labels."""
+    mapping = {node: graph.nodes[node].get("label", node) for node in graph.nodes()}  # Handles missing labels
+    return nx.relabel_nodes(graph, mapping)
 
-    #Define a custom vertex sublabel function
-    def custom_vertex_sublabel(node):
-        if isinstance(node, str):
-            return None
-        return node % 18
-    
-    #using standard Networkx methods for example. Graphs are induced by edges here.
-    G1 = merge(star(6,[0,1,2,3]),path([8,0,7]),path([5,3,4]))
-    G2 = merge(star(0,[6,7,8]),path([1,6,2]),star(9,[10,11,12]))
-    
-    # Pass custom functions or leave as None for default behavior
-        #opt. means optional and #req means required
+labeled_G = rename_nodes_by_labels(labeled_G)
+viz([labeled_G])
 
-    viz(
-        [G1, G2], #must pass a list, [G1] or [G1,G2] ... 
-        mod=14, #opt.
-        edge_length_func=custom_edge_length, #opt.
-        edge_sublabel_func=custom_edge_sublabel, #opt.
-        vertex_sublabel_func=custom_vertex_sublabel, #opt.
-        save_info=['graph test', 'C:\\Users\\baneg\\OneDrive\\Desktop\\Git\\research\\pygtikz test files'] #opt.
-    ) #under save_info enter the PATH where you wish to save the .tex file in
+if labeled_G:
+    for node, data in labeled_G.nodes(data=True):
+        print(f"Node {node}: Label {data['label']}")
+else:
+    print("No valid labeling found.")

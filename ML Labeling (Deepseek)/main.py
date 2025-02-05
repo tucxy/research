@@ -1,9 +1,14 @@
 import networkx as nx
 import sys
-sys.path.append('C:\\Users\\baneg\\OneDrive\\Desktop\\Git\\research\\tikzgrapher\\tikzgrapher.py') #enter PATH of tikzgrapher.py
-from tikzgrapher import viz
+import os
 from itertools import combinations
 import math
+
+from genetic_algorithm import GeneticAlgorithm
+sys.path.append(r"C:\Users\baneg\OneDrive\Desktop\Git\research\tikzgrapher")
+from tikzgrapher import viz
+
+#* graph creation tools *#
 
 # how to merge two graphs:
 '''
@@ -122,39 +127,35 @@ def trees(n):
     return all_trees
 
 '''-----------------------------------------------------------------------------------'''
+#training notebook
 
-#notebook
+def find_sigma_labeling(graph):
+    """Find a σ^{+-}-labeling using a pure genetic algorithm."""
+    ga = GeneticAlgorithm(graph)
+    best_labeling = ga.evolve()
+    return ga.get_labeled_graph(best_labeling)
+
+def rename_nodes_by_labels(graph):
+    """Rename nodes based on their assigned labels."""
+    mapping = {node: graph.nodes[node].get("label", node) for node in graph.nodes()}  # Handles missing labels
+    return nx.relabel_nodes(graph, mapping)
+
 if __name__ == "__main__":
-    #Define a custom edge length function
-    def custom_edge_length(node1, node2):
-        if isinstance(node1, str) or isinstance(node2, str):
-            return ";)"
-        return abs(node1 - node2)
+    graph = path([0,1,2,3,4,5,6])
+    labeled_graph = find_sigma_labeling(graph)
 
-    #Define a custom edge sublabel function
-    def custom_edge_sublabel(node1, node2):
-        if isinstance(node1, str) or isinstance(node2, str):
-            return None
-        return (node1 + node2) % 5
+    # Ensure labels are integers
+    for node in labeled_graph.nodes():
+        if "label" in labeled_graph.nodes[node]:  # Prevents KeyError
+            labeled_graph.nodes[node]["label"] = int(labeled_graph.nodes[node]["label"])
 
-    #Define a custom vertex sublabel function
-    def custom_vertex_sublabel(node):
-        if isinstance(node, str):
-            return None
-        return node % 18
-    
-    #using standard Networkx methods for example. Graphs are induced by edges here.
-    G1 = merge(star(6,[0,1,2,3]),path([8,0,7]),path([5,3,4]))
-    G2 = merge(star(0,[6,7,8]),path([1,6,2]),star(9,[10,11,12]))
-    
-    # Pass custom functions or leave as None for default behavior
-        #opt. means optional and #req means required
+    print("Labeled Graph:")
+    print(nx.get_node_attributes(labeled_graph, "label"))
 
-    viz(
-        [G1, G2], #must pass a list, [G1] or [G1,G2] ... 
-        mod=14, #opt.
-        edge_length_func=custom_edge_length, #opt.
-        edge_sublabel_func=custom_edge_sublabel, #opt.
-        vertex_sublabel_func=custom_vertex_sublabel, #opt.
-        save_info=['graph test', 'C:\\Users\\baneg\\OneDrive\\Desktop\\Git\\research\\pygtikz test files'] #opt.
-    ) #under save_info enter the PATH where you wish to save the .tex file in
+    # Rename nodes based on labels
+    labeled_graph = rename_nodes_by_labels(labeled_graph)
+
+    try:
+        viz([labeled_graph])
+    except Exception as e:
+        print(f"Visualization error: {e}")

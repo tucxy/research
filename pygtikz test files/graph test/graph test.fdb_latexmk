@@ -1,9 +1,8 @@
 # Fdb version 4
-["pdflatex"] 1732686910.84979 "c:/Users/baneg/OneDrive/Desktop/Git/research/pygtikz test files/graph test/graph test.tex" "graph test.pdf" "graph test" 1732686911.86444 0
-  "c:/Users/baneg/OneDrive/Desktop/Git/research/pygtikz test files/graph test/graph test.tex" 1732686910 1891 9fd40fba2ec08da8a29986870594e69a ""
+["pdflatex"] 1737698574.89697 "c:/Users/baneg/OneDrive/Desktop/Git/research/pygtikz test files/graph test/graph test.tex" "graph test.pdf" "graph test" 1737698576.61705 0
+  "c:/Users/baneg/OneDrive/Desktop/Git/research/pygtikz test files/graph test/graph test.tex" 1737698572 3946 a14850d189a12b10454bf6ff66719e18 ""
   "c:/texlive/2023/texmf-dist/fonts/map/fontname/texfonts.map" 1706146327 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "c:/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1706144016 1004 54797486969f23fa377b128694d548df ""
-  "c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb" 1706144016 36299 5f9df58c2139e7edcf37c8fca4bd384d ""
   "c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1706144016 35752 024fb6c41858982481f6968b5fc26508 ""
   "c:/texlive/2023/texmf-dist/tex/context/base/mkii/supp-pdf.mkii" 1706148342 71627 94eb9990bed73c364d7f53f960cc8c5b ""
   "c:/texlive/2023/texmf-dist/tex/generic/iftex/ifluatex.sty" 1706147019 492 1994775aa15b0d1289725a0b1bbc2d4c ""
@@ -101,8 +100,8 @@
   "c:/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1706151784 5035139 e8cdab388a5f122f6094769190400852 ""
   "c:/texlive/2023/texmf-var/web2c/pdftex/pdflatex.fmt" 1706151986 8210992 50eca61535bfacacd4d39eb1fcf3b582 ""
   "c:/texlive/2023/texmf.cnf" 1706151766 713 e69b156964470283e0530f5060668171 ""
-  "graph test.aux" 1732686911 32 3985256e7290058c681f74d7a3565a19 "pdflatex"
-  "graph test.tex" 1732686910 1891 9fd40fba2ec08da8a29986870594e69a ""
+  "graph test.aux" 1737698576 32 3985256e7290058c681f74d7a3565a19 "pdflatex"
+  "graph test.tex" 1737698572 3946 a14850d189a12b10454bf6ff66719e18 ""
   (generated)
   "graph test.aux"
   "graph test.log"
