@@ -38,6 +38,9 @@ INPUT c:/texlive/2023/texmf-dist/tex/latex/amsmath/amsgen.sty
 INPUT c:/texlive/2023/texmf-dist/tex/latex/amsmath/amsbsy.sty
 INPUT c:/texlive/2023/texmf-dist/tex/latex/amsmath/amsbsy.sty
 INPUT c:/texlive/2023/texmf-dist/tex/latex/amsmath/amsopn.sty
+INPUT c:/texlive/2023/texmf-dist/tex/generic/mathabx/mathabx.sty
+INPUT c:/texlive/2023/texmf-dist/tex/generic/mathabx/mathabx.sty
+INPUT c:/texlive/2023/texmf-dist/tex/generic/mathabx/mathabx.dcl
 INPUT c:/texlive/2023/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
 INPUT c:/texlive/2023/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
 INPUT c:/texlive/2023/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
@@ -155,6 +158,8 @@ INPUT c:/texlive/2023/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandler
 INPUT c:/texlive/2023/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
 INPUT c:/texlive/2023/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarytopaths.code.tex
 INPUT c:/texlive/2023/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarytopaths.code.tex
+INPUT c:/texlive/2023/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarypositioning.code.tex
+INPUT c:/texlive/2023/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarypositioning.code.tex
 INPUT c:/texlive/2023/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 INPUT c:/texlive/2023/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 INPUT ./graph test.aux
@@ -172,7 +177,39 @@ INPUT c:/texlive/2023/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 INPUT c:/texlive/2023/texmf-dist/fonts/map/fontname/texfonts.map
 INPUT c:/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
 INPUT c:/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
+INPUT c:/texlive/2023/texmf-dist/fonts/tfm/public/mathabx/matha10.tfm
+INPUT c:/texlive/2023/texmf-dist/fonts/tfm/public/mathabx/matha7.tfm
+INPUT c:/texlive/2023/texmf-dist/fonts/tfm/public/mathabx/matha5.tfm
+INPUT c:/texlive/2023/texmf-dist/fonts/tfm/public/mathabx/mathb10.tfm
+INPUT c:/texlive/2023/texmf-dist/fonts/tfm/public/mathabx/mathb7.tfm
+INPUT c:/texlive/2023/texmf-dist/fonts/tfm/public/mathabx/mathb5.tfm
+INPUT c:/texlive/2023/texmf-dist/fonts/tfm/public/mathabx/mathx10.tfm
+INPUT c:/texlive/2023/texmf-dist/fonts/tfm/public/mathabx/mathx10.tfm
+INPUT c:/texlive/2023/texmf-dist/fonts/tfm/public/mathabx/mathx10.tfm
+INPUT c:/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
+INPUT c:/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmr8.tfm
+INPUT c:/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmr6.tfm
+INPUT c:/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmmi12.tfm
+INPUT c:/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmmi8.tfm
+INPUT c:/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmmi6.tfm
+INPUT c:/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm
+INPUT c:/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmsy8.tfm
+INPUT c:/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmsy6.tfm
+INPUT c:/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmex10.tfm
+INPUT c:/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm
+INPUT c:/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
+INPUT c:/texlive/2023/texmf-dist/fonts/tfm/public/mathabx/matha12.tfm
+INPUT c:/texlive/2023/texmf-dist/fonts/tfm/public/mathabx/matha8.tfm
+INPUT c:/texlive/2023/texmf-dist/fonts/tfm/public/mathabx/matha6.tfm
+INPUT c:/texlive/2023/texmf-dist/fonts/tfm/public/mathabx/mathb12.tfm
+INPUT c:/texlive/2023/texmf-dist/fonts/tfm/public/mathabx/mathb8.tfm
+INPUT c:/texlive/2023/texmf-dist/fonts/tfm/public/mathabx/mathb6.tfm
+INPUT c:/texlive/2023/texmf-dist/fonts/tfm/public/mathabx/mathx10.tfm
+INPUT c:/texlive/2023/texmf-dist/fonts/tfm/public/mathabx/mathx10.tfm
+INPUT c:/texlive/2023/texmf-dist/fonts/tfm/public/mathabx/mathx10.tfm
 OUTPUT graph test.pdf
 INPUT c:/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map
 INPUT graph test.aux
 INPUT c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb
+INPUT c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb
+INPUT c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb

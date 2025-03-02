@@ -144,14 +144,15 @@ if __name__ == "__main__":
         return node % 18
     
     #using standard Networkx methods for example. Graphs are induced by edges here.
-    G1 = merge(star(6,[0,1,2,3]),path([8,0,7]),path([5,3,4]))
-    G2 = merge(star(0,[6,7,8]),path([1,6,2]),star(9,[10,11,12]))
+    G1 = star(11,[1,2,3,4,5,6])
+    G2 = path([10,0])
+    
     
     # Pass custom functions or leave as None for default behavior
         #opt. means optional and #req means required
 
     viz(
-        [G1, G2], #must pass a list, [G1] or [G1,G2] ... 
+        [G1,G2], #must pass a list, [G1] or [G1,G2] ... 
         mod=14, #opt.
         edge_length_func=custom_edge_length, #opt.
         edge_sublabel_func=custom_edge_sublabel, #opt.

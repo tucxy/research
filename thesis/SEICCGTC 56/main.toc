@@ -1,0 +1,6 @@
+\beamer@sectionintoc {1}{Forest Graphs}{3}{0}{1}
+\beamer@sectionintoc {2}{Decompositions and Designs}{7}{0}{2}
+\beamer@sectionintoc {3}{Edge Length and Decompositions}{28}{0}{3}
+\beamer@sectionintoc {4}{$\sigma ^{+-}$-labelings}{39}{0}{4}
+\beamer@sectionintoc {5}{$n\equiv 7\text { or }8\ (\mathrm {mod}\ 14)$}{50}{0}{5}
+\beamer@sectionintoc {6}{$K_{1,7}\sqcup P_{2}$}{63}{0}{6}

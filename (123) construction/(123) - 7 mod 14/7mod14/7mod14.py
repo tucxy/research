@@ -334,19 +334,34 @@ def generate_latex_table(designs, names):
     
     # Build table content with two columns
     formatted_rows = []
+    row_counter = 1  # To keep track of row numbers
+    
     for i in range(0, len(table_rows), 2):
         if i + 1 < len(table_rows):  # Pair rows for two-column format
-            formatted_rows.append(f"{table_rows[i]} & {table_rows[i + 1]} \\\\\n\\hline")
+            formatted_rows.append(
+                f"{table_rows[i]} & {table_rows[i + 1]} \\\\"
+                f"\n\\hline % row {row_counter}"
+            )
         else:  # Handle odd number of rows
-            formatted_rows.append(f"{table_rows[i]} & \\\\ \n\\hline")
+            formatted_rows.append(
+                f"{table_rows[i]} & \\\\ "
+                f"\n\\hline % row {row_counter}"
+            )
+        row_counter += 1
     
     # Combine rows into a LaTeX table
-    table = "\\resizebox{\\textwidth}{!}{%\n\\begin{tabular}{|c|c|c|c|}\n\\hline\n"
-    table += "Design Name & Graph Decomposition & Design Name & Graph Decomposition \\\\\n\\hline\n"
+    table = (
+        "\\resizebox{\\textwidth}{!}{%\n"
+        "\\begin{tabular}{|c|c|c|c|}\n"
+        "\\hline\n"
+        "Design Name & Graph Decomposition & Design Name & Graph Decomposition \\\\\n"
+        "\\hline\n"
+    )
     table += "\n".join(formatted_rows)
     table += "\n\\end{tabular}%\n}"
     
     return table
+
 
 #notebook
 t = 2
@@ -825,15 +840,29 @@ def generate_latex_table(designs, names):
     
     # Build table content with two columns
     formatted_rows = []
+    row_counter = 1  # To keep track of row numbers
+    
     for i in range(0, len(table_rows), 2):
         if i + 1 < len(table_rows):  # Pair rows for two-column format
-            formatted_rows.append(f"{table_rows[i]} & {table_rows[i + 1]} \\\\\n\\hline")
+            formatted_rows.append(
+                f"{table_rows[i]} & {table_rows[i + 1]} \\\\"
+                f"\n\\hline % row {row_counter+1}"
+            )
         else:  # Handle odd number of rows
-            formatted_rows.append(f"{table_rows[i]} & \\\\ \n\\hline")
+            formatted_rows.append(
+                f"{table_rows[i]} & \\\\ "
+                f"\n\\hline % row {row_counter+1}"
+            )
+        row_counter += 1
     
     # Combine rows into a LaTeX table
-    table = "\\resizebox{\\textwidth}{!}{%\n\\begin{tabular}{|c|c|c|c|}\n\\hline\n"
-    table += "Design Name & Graph Decomposition & Design Name & Graph Decomposition \\\\\n\\hline\n"
+    table = (
+        "\\resizebox{\\textwidth}{!}{%\n"
+        "\\begin{tabular}{|c|c|c|c|}\n"
+        "\\hline\n"
+        "Design Name & Graph Decomposition & Design Name & Graph Decomposition \\\\\n"
+        "\\hline % row 1\n"
+    )
     table += "\n".join(formatted_rows)
     table += "\n\\end{tabular}%\n}"
     
@@ -851,6 +880,6 @@ names = generate_names_first_graph_ordered(designs, templates)
 #print(names)
 
 latex_table = generate_latex_table(designs, names)
-#print(latex_table)
+print(latex_table)
 
 #^ done up to here
