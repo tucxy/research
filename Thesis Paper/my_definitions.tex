@@ -1,0 +1,100 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Custom definitions
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{amsmath,amsfonts,amssymb}
+\newcommand{\C}{{\mathrm{c}}}
+
+\newcommand{\COS}{{\mathrm{cos}}}
+\newcommand{\SIN}{{\mathrm{sin}}}
+\newcommand{\DOF}{{\mathrm{dof}}}
+\newcommand{\MSEC}{\mu{\mathrm{s}}}
+\newcommand{\NS}{\mathrm{ns}}
+\newcommand{\PPM}{{\mathrm{ppm}}}
+\newcommand{\ENR}{{\mathrm{GeV}}}
+\newcommand{\MOM}{{\mathrm{GeV/c}}}
+
+\newcommand{\CONT}{\noindent}
+\newcommand{\FIG}{Fig.\ }
+\newcommand{\FIGS}{Figs.\ }
+\newcommand{\SEC}{Sec.\ }
+\newcommand{\SECS}{Secs.\ }
+\newcommand{\TAB}{Table }
+\newcommand{\TABS}{Tables }
+\newcommand{\EQ}{Eq.\ }
+\newcommand{\EQS}{Eqs.\ }
+\newcommand{\APP}{Appendix }
+\newcommand{\APPS}{Appendices }
+\newcommand{\CHP}{Chapter }
+\newcommand{\CHPS}{Chapters }
+
+\newcommand{\OFF}{\emph{G2off}~}
+\newcommand{\TOO}{\emph{G2Too}~}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\kk}{\ensuremath{\Bbbk}} % Generic field symbol
+\newcommand{\CC}{\ensuremath{\mathbb{C}}} % Complex numbers
+\newcommand{\FF}{\ensuremath{\mathbb{F}}} % Field
+\newcommand{\NN}{\ensuremath{\mathbb{N}}} % Natural numbers
+\newcommand{\QQ}{\ensuremath{\mathbb{Q}}} % Rational numbers
+\newcommand{\RR}{\ensuremath{\mathbb{R}}} % Real numbers
+\newcommand{\ZZ}{\ensuremath{\mathbb{Z}}} % Integers
+
+%%% Commands for Common Mathematical Sets and Spaces
+\newcommand{\MM}{\ensuremath{\mathcal{M}}} % Set of matrices
+\newcommand{\TT}{\ensuremath{\mathcal{T}}} % Topological space
+\newcommand{\BB}{\ensuremath{\mathcal{B}}} % Basis or perhaps block
+\newcommand{\VV}{\ensuremath{\mathcal{V}}} % Vector space
+\newcommand{\WW}{\ensuremath{\mathcal{W}}} % Another vector space
+\newcommand{\UU}{\ensuremath{\mathcal{U}}} % Another vector space
+\newcommand{\PP}{\ensuremath{\mathcal{P}}} % Power set
+\newcommand{\GG}{\ensuremath{\mathcal{G}}} % fancy G
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Textclass specific LaTeX commands.
+
+\usepackage{float}
+\usepackage{amsfonts,amsmath,amsthm,amssymb,wasysym,latexsym,mathtools}
+\usepackage{verbatim,graphicx,rotating}
+\usepackage{enumerate,multirow,caption,subcaption,tabu,array,tabularx,longtable}
+\usepackage{tikz,tkz-graph}
+%\usetikzlibrary{calc}
+\usepackage{caption}
+%\usepackage{tikz-network}
+%\usepackage[demo]{graphicx}
+\usepackage[makeroom]{cancel}
+\usepackage{colortbl,color,xcolor}
+\usetikzlibrary{shapes}
+\tikzstyle{vertex}=[circle, draw, inner sep=1pt, fill, minimum size=4pt]
+\newcommand{\vertex}{\node[vertex]}
+
+%custom environments
+\theoremstyle{plain}
+\newtheorem{thm}{\protect\theoremname}[section]
+  \theoremstyle{definition}
+  \newtheorem{definition}[thm]{Definition}
+  \theoremstyle{plain}
+  \newtheorem{problem}[thm]{Problem}
+  \theoremstyle{plain}
+  \newtheorem{conjecture}[thm]{Conjecture}
+  \theoremstyle{plain}
+  \newtheorem{lemma}[thm]{Lemma}
+  \newtheorem{observation}[thm]{Observation}
+  \newtheorem{corollary}[thm]{Corollary}
+  \newtheorem{construction}[thm]{Construction}
+  \newtheorem{algorithm}[thm]{Algorithm}
+ %% \newtheorem{case}{\normalfont Case}
+  \newtheorem{example}[thm]{Example}
+\newcounter{case}[thm]
+
+  \providecommand{\conjecturename}{Conjecture}
+  \providecommand{\lemmaname}{Lemma}
+  \providecommand{\problemname}{Problem}
+\providecommand{\theoremname}{Theorem}
+\newcommand{\noun}[1]{\textsc{#1}}
+
+%%%%%%%%%%%%
+
+\usepackage{graphicx}
+\usepackage{array}
+\usepackage{standalone}
+\usepackage{amsmath}
+\usepackage{longtable} % Ensures column widths persist after page breaks
+\usepackage{caption} % Allows captioning outside figures

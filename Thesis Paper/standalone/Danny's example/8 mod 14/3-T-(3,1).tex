@@ -1,0 +1,11 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\begin{document}
+\begin{tikzpicture}[every node/.style={draw, circle, fill=black, minimum size=2pt, inner sep=0pt}]
+\node[fill=black, label=below:{$11$}] (G1N1) at (6,4.5) {};
+\node[fill=black, label=below:{$12$}] (G1N0) at (6.5,4.5) {};
+\node[fill=black, label=below:{$15$}] (G1N2) at (7,4.5) {};
+\draw (G1N0) -- (G1N1);
+\draw (G1N0) -- (G1N2);
+\end{tikzpicture}
+\end{document}

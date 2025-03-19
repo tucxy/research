@@ -1,0 +1,72 @@
+\documentclass{article}
+
+\usepackage{graphicx}
+\usepackage{array}
+\usepackage{standalone}
+\usepackage{amsmath}
+\usepackage{longtable} % Ensures column widths persist after page breaks
+\usepackage{caption} % Allows captioning outside figures
+
+\begin{document}
+\renewcommand{\arraystretch}{1.2} % Keep row spacing consistent
+\setlength{\tabcolsep}{8pt} % Keep column spacing consistent
+{\def\arraystretch{1.2}%
+    \begin{longtable}{|c|c|} % Forces same width after first page
+        \hline
+        Forest & Vertex Labels \\
+        \hline
+            $\mathbf{T_{7}^{1}} \sqcup \mathbf{T_{2}^{1}}$ & \begin{tabular}{@{}l@{}} $(0,6,1,5,2,9,7)\sqcup(3,4)$ \end{tabular} \\ \hline
+    $\mathbf{T_{7}^{3}} \sqcup \mathbf{T_{2}^{1}}$ & \begin{tabular}{@{}l@{}} $(9,2,5,1,6,0,3)\sqcup(8,7)$ \end{tabular} \\ \hline
+    $\mathbf{T_{7}^{2}} \sqcup \mathbf{T_{2}^{1}}$ & \begin{tabular}{@{}l@{}} $(9,2,5,1,6,0,4)\sqcup(8,7)$ \end{tabular} \\ \hline
+    $\mathbf{T_{7}^{4}} \sqcup \mathbf{T_{2}^{1}}$ & \begin{tabular}{@{}l@{}} $(5,1,4,2,9,6,7)\sqcup(10,11)$ \end{tabular} \\ \hline
+    $\mathbf{T_{7}^{5}} \sqcup \mathbf{T_{2}^{1}}$ & \begin{tabular}{@{}l@{}} $(3,8,1,4,2,5,7)\sqcup(9,10)$ \end{tabular} \\ \hline
+    $\mathbf{T_{7}^{8}} \sqcup \mathbf{T_{2}^{1}}$ & \begin{tabular}{@{}l@{}} $(7,8,1,6,0,4,3)\sqcup(9,11)$ \end{tabular} \\ \hline
+    $\mathbf{T_{7}^{9}} \sqcup \mathbf{T_{2}^{1}}$ & \begin{tabular}{@{}l@{}} $(8,1,6,3,4,5,7)\sqcup(9,10)$ \end{tabular} \\ \hline
+    $\mathbf{T_{7}^{10}} \sqcup \mathbf{T_{2}^{1}}$ & \begin{tabular}{@{}l@{}} $(6,1,5,3,8,4,7)\sqcup(9,10)$ \end{tabular} \\ \hline
+    $\mathbf{T_{7}^{6}} \sqcup \mathbf{T_{2}^{1}}$ & \begin{tabular}{@{}l@{}} $(5,11,9,10,6,12,7)\sqcup(8,1)$ \end{tabular} \\ \hline
+    $\mathbf{T_{7}^{7}} \sqcup \mathbf{T_{2}^{1}}$ & \begin{tabular}{@{}l@{}} $(4,8,1,6,0,5,3)\sqcup(9,10)$ \end{tabular} \\ \hline
+    $\mathbf{T_{6}^{1}} \sqcup \mathbf{T_{3}^{1}}$ & \begin{tabular}{@{}l@{}} $(0,6,1,5,2,9)\sqcup(11,10,12)$ \end{tabular} \\ \hline
+    $\mathbf{T_{6}^{2}} \sqcup \mathbf{T_{3}^{1}}$ & \begin{tabular}{@{}l@{}} $(3,6,1,8,4,0)\sqcup(10,9,11)$ \end{tabular} \\ \hline
+    $\mathbf{T_{6}^{3}} \sqcup \mathbf{T_{3}^{1}}$ & \begin{tabular}{@{}l@{}} $(5,11,9,12,7,10)\sqcup(1,8,4)$ \end{tabular} \\ \hline
+    $\mathbf{T_{6}^{4}} \sqcup \mathbf{T_{3}^{1}}$ & \begin{tabular}{@{}l@{}} $(3,8,4,1,6,7)\sqcup(10,9,11)$ \end{tabular} \\ \hline
+    $\mathbf{T_{6}^{5}} \sqcup \mathbf{T_{3}^{1}}$ & \begin{tabular}{@{}l@{}} $(5,1,8,3,4,7)\sqcup(10,9,11)$ \end{tabular} \\ \hline
+    $\mathbf{T_{6}^{6}} \sqcup \mathbf{T_{3}^{1}}$ & \begin{tabular}{@{}l@{}} $(4,1,8,5,6,7)\sqcup(10,9,11)$ \end{tabular} \\ \hline
+    $\mathbf{T_{5}^{1}} \sqcup \mathbf{T_{4}^{1}}$ & \begin{tabular}{@{}l@{}} $(0,6,1,5,2)\sqcup(9,8,10,3)$ \end{tabular} \\ \hline
+    $\mathbf{T_{5}^{2}} \sqcup \mathbf{T_{4}^{1}}$ & \begin{tabular}{@{}l@{}} $(7,1,8,5,6)\sqcup(0,4,2,3)$ \end{tabular} \\ \hline
+    $\mathbf{T_{5}^{2}} \sqcup \mathbf{T_{4}^{2}}$ & \begin{tabular}{@{}l@{}} $(7,1,8,4,6)\sqcup(10,9,11,12)$ \end{tabular} \\ \hline
+    $\mathbf{T_{5}^{3}} \sqcup \mathbf{T_{4}^{1}}$ & \begin{tabular}{@{}l@{}} $(6,0,3,4,5)\sqcup(8,7,9,2)$ \end{tabular} \\ \hline
+    $\mathbf{T_{5}^{1}} \sqcup \mathbf{T_{4}^{2}}$ & \begin{tabular}{@{}l@{}} $(4,8,1,7,2)\sqcup(10,9,11,12)$ \end{tabular} \\ \hline
+    $\mathbf{T_{5}^{3}} \sqcup \mathbf{T_{4}^{2}}$ & \begin{tabular}{@{}l@{}} $(6,0,3,4,5)\sqcup(8,9,2,7)$ \end{tabular} \\ \hline
+    $\mathbf{T_{6}^{1}} \sqcup 2\mathbf{T_{2}^{1}}$ & \begin{tabular}{@{}l@{}} $(0,6,1,5,2,9)\sqcup(8,10)\sqcup(3,4)$ \end{tabular} \\ \hline
+    $\mathbf{T_{6}^{2}} \sqcup 2\mathbf{T_{2}^{1}}$ & \begin{tabular}{@{}l@{}} $(3,6,1,8,4,0)\sqcup(5,7)\sqcup(9,10)$ \end{tabular} \\ \hline
+    $\mathbf{T_{6}^{5}} \sqcup 2\mathbf{T_{2}^{1}}$ & \begin{tabular}{@{}l@{}} $(4,1,8,3,5,7)\sqcup(0,2)\sqcup(9,10)$ \end{tabular} \\ \hline
+    $\mathbf{T_{6}^{4}} \sqcup 2\mathbf{T_{2}^{1}}$ & \begin{tabular}{@{}l@{}} $(5,8,4,1,6,7)\sqcup(0,2)\sqcup(9,10)$ \end{tabular} \\ \hline
+    $\mathbf{T_{6}^{3}} \sqcup 2\mathbf{T_{2}^{1}}$ & \begin{tabular}{@{}l@{}} $(5,11,9,12,7,10)\sqcup(8,1)\sqcup(0,4)$ \end{tabular} \\ \hline
+    $\mathbf{T_{6}^{6}} \sqcup 2\mathbf{T_{2}^{1}}$ & \begin{tabular}{@{}l@{}} $(4,1,8,5,6,7)\sqcup(2,3)\sqcup(9,11)$ \end{tabular} \\ \hline
+    $\mathbf{T_{5}^{1}} \sqcup \mathbf{T_{3}^{1}} \sqcup \mathbf{T_{2}^{1}}$ & \begin{tabular}{@{}l@{}} $(0,6,1,5,2)\sqcup(8,10,9)\sqcup(11,4)$ \end{tabular} \\ \hline
+    $\mathbf{T_{5}^{2}} \sqcup \mathbf{T_{3}^{1}} \sqcup \mathbf{T_{2}^{1}}$ & \begin{tabular}{@{}l@{}} $(7,1,8,5,6)\sqcup(10,9,11)\sqcup(0,4)$ \end{tabular} \\ \hline
+    $\mathbf{T_{5}^{3}} \sqcup \mathbf{T_{3}^{1}} \sqcup \mathbf{T_{2}^{1}}$ & \begin{tabular}{@{}l@{}} $(6,0,3,4,5)\sqcup(1,8,7)\sqcup(9,11)$ \end{tabular} \\ \hline
+    $2\mathbf{T_{4}^{1}} \sqcup \mathbf{T_{2}^{1}}$ & \begin{tabular}{@{}l@{}} $(0,6,1,5)\sqcup(2,9,7,10)\sqcup(3,4)$ \end{tabular} \\ \hline
+    $\mathbf{T_{4}^{1}} \sqcup \mathbf{T_{4}^{2}} \sqcup \mathbf{T_{2}^{1}}$ & \begin{tabular}{@{}l@{}} $(11,9,10,7)\sqcup(4,0,5,6)\sqcup(8,1)$ \end{tabular} \\ \hline
+    $2\mathbf{T_{4}^{2}} \sqcup \mathbf{T_{2}^{1}}$ & \begin{tabular}{@{}l@{}} $(4,0,5,6)\sqcup(10,9,11,12)\sqcup(8,1)$ \end{tabular} \\ \hline
+    $\mathbf{T_{4}^{1}} \sqcup 2\mathbf{T_{3}^{1}}$ & \begin{tabular}{@{}l@{}} $(0,6,1,5)\sqcup(8,10,9)\sqcup(11,4,7)$ \end{tabular} \\ \hline
+    $\mathbf{T_{4}^{2}} \sqcup 2\mathbf{T_{3}^{1}}$ & \begin{tabular}{@{}l@{}} $(4,0,5,6)\sqcup(1,8,7)\sqcup(11,9,12)$ \end{tabular} \\ \hline
+    $\mathbf{T_{4}^{1}} \sqcup \mathbf{T_{3}^{1}} \sqcup 2\mathbf{T_{2}^{1}}$ & \begin{tabular}{@{}l@{}} $(0,6,1,5)\sqcup(8,10,7)\sqcup(11,4)\sqcup(2,3)$ \end{tabular} \\ \hline
+    $\mathbf{T_{4}^{2}} \sqcup \mathbf{T_{3}^{1}} \sqcup 2\mathbf{T_{2}^{1}}$ & \begin{tabular}{@{}l@{}} $(4,0,5,6)\sqcup(11,9,12)\sqcup(2,3)\sqcup(8,1)$ \end{tabular} \\ \hline
+    $\mathbf{T_{5}^{1}} \sqcup 3\mathbf{T_{2}^{1}}$ & \begin{tabular}{@{}l@{}} $(0,6,1,5,2)\sqcup(10,3)\sqcup(9,7)\sqcup(11,12)$ \end{tabular} \\ \hline
+    $\mathbf{T_{5}^{2}} \sqcup 3\mathbf{T_{2}^{1}}$ & \begin{tabular}{@{}l@{}} $(6,1,8,4,7)\sqcup(3,5)\sqcup(9,12)\sqcup(10,11)$ \end{tabular} \\ \hline
+    $\mathbf{T_{5}^{3}} \sqcup 3\mathbf{T_{2}^{1}}$ & \begin{tabular}{@{}l@{}} $(3,0,4,5,6)\sqcup(8,1)\sqcup(10,11)\sqcup(9,7)$ \end{tabular} \\ \hline
+    $3\mathbf{T_{3}^{1}} \sqcup \mathbf{T_{2}^{1}}$ & \begin{tabular}{@{}l@{}} $(0,6,1)\sqcup(4,8,5)\sqcup(2,9,7)\sqcup(10,11)$ \end{tabular} \\ \hline
+    $\mathbf{T_{4}^{1}} \sqcup 4\mathbf{T_{2}^{1}}$ & \begin{tabular}{@{}l@{}} $(0,6,1,5)\sqcup(9,2)\sqcup(8,10)\sqcup(4,7)\sqcup(11,12)$ \end{tabular} \\ \hline
+    $\mathbf{T_{4}^{2}} \sqcup 4\mathbf{T_{2}^{1}}$ & \begin{tabular}{@{}l@{}} $(4,0,5,6)\sqcup(2,3)\sqcup(9,11)\sqcup(8,1)\sqcup(10,7)$ \end{tabular} \\ \hline
+    $2\mathbf{T_{3}^{1}} \sqcup 3\mathbf{T_{2}^{1}}$ & \begin{tabular}{@{}l@{}} $(0,6,1)\sqcup(4,8,5)\sqcup(10,3)\sqcup(9,7)\sqcup(11,12)$ \end{tabular} \\ \hline
+    $\mathbf{T_{3}^{1}} \sqcup 5\mathbf{T_{2}^{1}}$ & \begin{tabular}{@{}l@{}} $(0,6,1)\sqcup(8,4)\sqcup(2,5)\sqcup(10,3)\sqcup(9,7)\sqcup(11,12)$ \end{tabular} \\ \hline
+    \end{longtable}%
+}
+\vspace{-4mm}
+\begin{center}
+    \captionof{figure}{$\sigma^{+-}$-labelings for forests with 7 edges}
+    \label{fig:sigma plus minus}
+\end{center}
+
+\end{document}

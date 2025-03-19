@@ -1,0 +1,70 @@
+\chapter{$n\equiv 0,1\pmod{14}$}
+\label{intro_chapter}
+
+In this section, we use established graph labeling techniques to construct the $G$-decompositions of $K_n$ when $n \equiv 0 \textrm{ or } 1 \pmod{14}$. 
+
+
+
+\begin{definition}[(Rosa \cite{bib:rosa})] \label{def:rho} 
+ Let $G$ be a graph with $m$ edges.  A \textit{$\rho$-labeling} of $G$ is an injection $f: V(G) \rightarrow \{0,1,2, \dots, 2m\}$ that induces a bijective \textit{length function $\ell: E(G) \rightarrow \{1,2, \dots, m\}$} where 
+    $$
+    \ell(uv) = \text{min}\{|f(u)-f(v)|,2m+1-|f(u)-f(v)|\},
+    $$
+for all  $uv \in E(G)$.
+\end{definition}
+
+Rosa showed that a $\rho$-labeling of a graph $G$ with $m$ edges and a cyclic $G$-decomposition of $K_{2m+1}$ are equivalent, which the next thm shows. Later, Rosa, his students, and colleagues began considering more restrictive types of $\rho$-labeling to address decomposing complete graphs of more orders. Definitions of these labelings and related results follow.
+
+\begin{thm}[(Rosa \cite{bib:rosa})]\label{thm:Rhosa}  
+Let $G$ be a graph with $m$ edges.  There exists a cyclic $G$-decomposition of $K_{2m+1}$ if and only if $G$ admits a $\rho$-labeling.
+\end{thm}
+
+\begin{definition}[(Rosa \cite{bib:rosa})] \label{def:sigma} 
+A $\sigma$-labeling of a graph $G$ is a $\rho$-labeling such that $\ell(uv) = |f(u) - f(v)|$ for all $uv \in E(G).$
+\end{definition}
+
+\begin{definition}[(El-Zanati, Vanden Eynden \cite{cyclicbipart})] \label{def:rho and sigma ordered def} 
+A $\rho$- or $\sigma$-labeling of a bipartite graph $G$ with bipartition $(A,B)$ is called an \emph{ordered} $\rho$- or $\sigma$-labeling and denoted $\rho^+,\sigma^+$, respectively, if $f(a) < f(b)$ for each edge $ab$ with $a \in A$ and $b \in B$.
+\end{definition}
+
+\begin{thm}[(El-Zanati, Vanden Eynden \cite{cyclicbipart})] \label{thm:rho plus}
+Let $G$ be a graph with $m$ edges which has a $\rho^+$-labeling.  Then $G$ decomposes $K_{2mk+1}$ for all positive integers $k$.
+\end{thm}
+
+\begin{definition}[(Freyberg, Tran \cite{tran})] \label{def:sigma plus minus} 
+A $\sigma^{+-}$-\emph{labeling} of a bipartite graph $G$ with $m$ edges and bipartition $(A,B)$ is a $\sigma^+$-labeling with the property that $f(a) - f(b) \neq m$ for all $a \in A$ and $b \in B$, and $f(v) \not\in \{2m,2m-1\}$ for any $v\in V(G)$.
+\end{definition}
+
+\begin{thm}[(Freyberg, Tran \cite{tran})] \label{thm:sigma plus minus}
+Let $G$ be a graph with $m$ edges and a $\sigma^{+-}$-labeling such that the edge of length $m$ is a pendant. Then there exists a $G$-decomposition of both $K_{2mk}$ and $K_{2mk+1}$ for every positive integer $k$.
+\end{thm}
+
+Figure \ref{fig:sigma plus minus} gives a $\sigma^{+-}$-labeling of every forest with 7 edges. The vertex labels of each connected component with $k$ vertices are given as a $k$-tuple, $(v_1,\dots ,v_k)$ corresponding to the vertices $v_1, \dots, v_k$ given in Figure \ref{fig:catalog}. We leave it to the reader to infer the bipartition $(A,B)$. 
+\begin{example}
+    A $\sigma^{+-}$-labeling of $\mathbf{T_{6}^{6}}\sqcup 2\mathbf{T_{2}^{1}}$ is shown in Figure \ref{fig:sigma label ex}. The vertices labeled $1,2$ and $9$ belong to $A$, and the others belong to $B$. The lengths of each edge are indicated on the edge.
+    \begin{figure}[H]
+        \centering
+        \includegraphics[scale=1.0]{standalone/sigma label ex1.pdf}
+         \includegraphics[scale=1.0]{standalone/sigma label ex2.pdf}
+        \caption{$\sigma^{+-}$-labeling of $\mathbf{T_{6}^{6}}\sqcup 2\mathbf{T_{2}^{1}}$}
+        \label{fig:sigma label ex}
+    \end{figure}
+\end{example}
+ The labelings given in Figure \ref{fig:sigma plus minus} along with thm \ref{thm:sigma plus minus} are enough to prove the following thm. \newpage 
+
+ %\begin{figure}[H]
+ %   \centering
+ %   \includegraphics[scale=1.1]{0,1(mod 14).pdf}
+ %   \caption{$\sigma^{+-}$-labelings for forests with 7 edges}
+ %  \label{fig:sigma plus minus}
+%\end{figure}
+% or
+
+\resize{\input{standalone/0,1(mod 14) long.tex}}{}
+
+\begin{thm}\label{thm:0 or 1 mod 14}
+    Let $F$ be a forest with $7$ edges. There exists an $F$-decomposition of $K_n$ whenever $n \equiv 0 \; \textrm{or} \; 1 \pmod{14}.$
+\end{thm}
+\begin{proof}
+    The proof follows from thm \ref{thm:sigma plus minus} and the labelings given in Figure \ref{fig:sigma plus minus}.
+\end{proof}

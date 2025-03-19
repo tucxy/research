@@ -1,0 +1,17 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\begin{document}
+\begin{tikzpicture}[every node/.style={draw, circle, fill=black, minimum size=2pt, inner sep=0pt}]
+\node[fill=black, label=above left:{$0$}] (G1N4) at (162:0.5) {};
+\node[fill=black, label={[yshift=2pt]above left:{$2$}}] (G1N0) at (90:0) {};
+\node[fill=black, label=above right:{$1$}] (G1N5) at (18:0.5) {};
+\node[fill=black, label=above:{$3$}] (G1N1) at (90:0.5) {};
+\node[fill=black, label=below left:{$4$}] (G1N3) at (234:0.5) {};
+\node[fill=black, label=below right:{$5$}] (G1N2) at (306:0.5) {};
+\draw (G1N0) -- (G1N1);
+\draw (G1N0) -- (G1N2);
+\draw (G1N0) -- (G1N3);
+\draw (G1N0) -- (G1N4);
+\draw (G1N0) -- (G1N5);
+\end{tikzpicture}
+\end{document}
