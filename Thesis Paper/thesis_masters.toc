@@ -4,8 +4,12 @@
 \contentsline {chapter}{List of Tables}{v}{chapter*.4}%
 \contentsline {chapter}{List of Figures}{vi}{chapter*.5}%
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}%
-\contentsline {chapter}{\numberline {2}$n\equiv 0,1\pmod {14}$}{4}{chapter.2}%
-\contentsline {chapter}{\numberline {3}Conclusion and Discussion}{9}{chapter.3}%
-\contentsline {chapter}{\appnumberline {A}Glossary and Acronyms}{10}{appendix.A}%
-\contentsline {section}{\numberline {A.1}Glossary}{10}{section.A.1}%
-\contentsline {section}{\numberline {A.2}Acronyms}{10}{section.A.2}%
+\contentsline {chapter}{\numberline {2}$\mathbf {n\equiv 0,1\textbf {(mod 14)}}$}{4}{chapter.2}%
+\contentsline {chapter}{\numberline {3}$\mathbf {T_{7}^{11}\sqcup T_{2}^{1}}$}{13}{chapter.3}%
+\contentsline {chapter}{\numberline {4}Additional charts}{16}{chapter.4}%
+\contentsline {section}{\numberline {4.1}$\mathbf {T_{7}^{11}}\sqcup \mathbf {T_{2}^{1}}$-decompositions of $K_{21}$ and $K_{22}$}{19}{section.4.1}%
+\contentsline {chapter}{References}{21}{chapter*.15}%
+\contentsline {chapter}{\numberline {5}Conclusion and Discussion}{22}{chapter.5}%
+\contentsline {chapter}{\appnumberline {A}Glossary and Acronyms}{23}{appendix.A}%
+\contentsline {section}{\numberline {A.1}Glossary}{23}{section.A.1}%
+\contentsline {section}{\numberline {A.2}Acronyms}{23}{section.A.2}%

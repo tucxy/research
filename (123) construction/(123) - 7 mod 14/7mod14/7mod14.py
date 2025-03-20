@@ -5,9 +5,12 @@ def gvpath(i):
         return 'C:\\Users\\baneg\\OneDrive\\Desktop\\Git\\Python\\Research\\Graph Theory'
     if i == 1:
         return 'C:\\Users\\Danny\\Desktop\\Git\\research'
+    if i == 2:
+        return r'C:\Users\baneg\Desktop\git\research'
     else: 
         return False
-sys.path.append(gvpath(0)) # here is the path with GVIS
+    
+sys.path.append(gvpath(2)) # here is the path with GVIS
 import graph_visualization
 from graph_visualization import visualize
 from itertools import combinations
@@ -253,7 +256,6 @@ def generate_disjoint_unions(mapping_result, designs):
 
     return result
 
-
 def generate_names_first_graph_ordered(designs, templates):
     """
     Generate ordered names for the first graph in each design list, representing disjoint unions of trees,
@@ -361,7 +363,6 @@ def generate_latex_table(designs, names):
     table += "\n\\end{tabular}%\n}"
     
     return table
-
 
 #notebook
 t = 2
@@ -868,6 +869,43 @@ def generate_latex_table(designs, names):
     
     return table
 
+def generate_single_column_longtable(designs, names):
+    """
+    Generate a LaTeX longtable for graph decompositions in a single column format.
+
+    Parameters:
+    - designs: list of design graph lists
+    - names: list of LaTeX-formatted names (strings)
+
+    Returns:
+    - LaTeX longtable as a string
+    """
+    if len(designs) != len(names):
+        raise ValueError("The number of designs must match the number of names.")
+    
+    rows = []
+
+    for name, design in zip(names, designs):
+        mapping_result = find_isomorphism_and_map(design, templates)
+        disjoint_unions = generate_disjoint_unions(mapping_result, design)
+        formatted_decomps = " \\\\ \n".join(f"${du}$" for du in disjoint_unions)
+        rows.append(
+            f"\\textbf{{${name}$}} \\\\ \n"
+            f"{formatted_decomps} \\\\ \n\\hline"
+        )
+    
+    table = (
+        "\\begin{longtable}{|p{0.95\\textwidth}|}\n"
+        "\\hline\n"
+        "\\endfirsthead\n"
+        "\\hline\n"
+        "\\endhead\n"
+        + "\n".join(rows) +
+        "\n\\end{longtable}"
+    )
+
+    return table
+
 # Example usage
 designs = [
     F_61_1, F_61_2, F_61_3, F_61_4, F_61_5, F_61_6, F_61_7, F_61_8, F_61_9, F_61_10,
@@ -876,10 +914,13 @@ designs = [
     F_421_2, F_421_3, F_331_1, F_331_2, F_331_3, F_322_1, F_322_2, F_3211_1, F_3211_2, 
     F_4111_1, F_4111_2, F_4111_3, F_2221_1, F_31111_1, F_31111_2, F_22111_1, F_211111_1
 ]
+
 names = generate_names_first_graph_ordered(designs, templates)
 #print(names)
 
 latex_table = generate_latex_table(designs, names)
-print(latex_table)
+onecoltable = generate_single_column_longtable(designs, names)
+print(onecoltable)
+
 
 #^ done up to here
