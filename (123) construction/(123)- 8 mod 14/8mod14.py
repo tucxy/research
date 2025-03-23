@@ -5,9 +5,11 @@ def gvpath(i):
         return 'C:\\Users\\baneg\\OneDrive\\Desktop\\Git\\Python\\Research\\Graph Theory'
     if i == 1:
         return 'C:\\Users\\Danny\\Desktop\\Git\\research'
+    if i == 2:
+        return r'C:\Users\baneg\Desktop\git\research'
     else: 
         return False
-sys.path.append(gvpath(0)) # here is the path with GVIS
+sys.path.append(gvpath(2)) # here is the path with GVIS
 from graph_visualization import visualize
 from itertools import combinations
 import math
@@ -252,7 +254,6 @@ def generate_disjoint_unions(mapping_result, designs):
 
     return result
 
-
 def generate_names_first_graph_ordered(designs, templates):
     """
     Generate ordered names for the first graph in each design list, representing disjoint unions of trees,
@@ -345,6 +346,45 @@ def generate_latex_table(designs, names):
     table += "\n".join(formatted_rows)
     table += "\n\\end{tabular}%\n}"
     
+    return table
+
+def generate_two_column_longtable(designs, names):
+    """
+    Generate a LaTeX longtable for graph decompositions in two columns.
+
+    Parameters:
+    - designs: list of design graph lists
+    - names: list of LaTeX-formatted names (strings)
+
+    Returns:
+    - LaTeX longtable as a string
+    """
+    if len(designs) != len(names):
+        raise ValueError("The number of designs must match the number of names.")
+
+    rows = []
+    for name, design in zip(names, designs):
+        mapping_result = find_isomorphism_and_map(design, templates)
+        disjoint_unions = generate_disjoint_unions(mapping_result, design)
+        formatted_decomps = " \\\\ \n".join(f"${du}$" for du in disjoint_unions)
+        rows.append(
+            f"${name}$ & \\begin{{tabular}}{{c}}\n{formatted_decomps}\n\\end{{tabular}} \\\\ \n\\hline"
+        )
+
+    table = (
+        "\\begin{longtable}{|c|c|}\n"
+        "\\hline\n"
+        "Design Name & Graph Decomposition \\\\\n"
+        "\\hline\n"
+        "\\endfirsthead\n"
+        "\\hline\n"
+        "Design Name & Graph Decomposition \\\\\n"
+        "\\hline\n"
+        "\\endhead\n"
+        + "\n".join(rows) +
+        "\n\\end{longtable}"
+    )
+
     return table
 #notebook
 t = 2
@@ -864,4 +904,6 @@ names = generate_names_first_graph_ordered(designs, templates)
 #print(names)
 
 latex_table = generate_latex_table(designs, names)
-#print(latex_table)
+
+latex2col = generate_two_column_longtable(designs, names)
+print(latex2col)

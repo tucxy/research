@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.18)  19 MAR 2025 16:36
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.18)  20 MAR 2025 16:27
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -918,7 +918,7 @@ LaTeX Warning: Reference `fig:catalog' on page 1 undefined on input line 11.
 
 LaTeX Warning: Reference `sec:7 or 8 mod 14' on page 1 undefined on input line 11.
 
-<standalone/tree chart.pdf, id=150, 365.01169pt x 408.23819pt>
+<standalone/tree chart.pdf, id=152, 365.01169pt x 408.23819pt>
 File: standalone/tree chart.pdf Graphic file (type pdf)
 <use standalone/tree chart.pdf>
 Package pdftex.def Info: standalone/tree chart.pdf  used on input line 15.
@@ -1001,12 +1001,12 @@ See the caption package documentation for explanation.
 
 LaTeX Warning: Reference `fig:catalog' on page 5 undefined on input line 42.
 
-<standalone/sigma label ex1.pdf, id=212, 97.03452pt x 94.66064pt>
+<standalone/sigma label ex1.pdf, id=214, 97.03452pt x 94.66064pt>
 File: standalone/sigma label ex1.pdf Graphic file (type pdf)
 <use standalone/sigma label ex1.pdf>
 Package pdftex.def Info: standalone/sigma label ex1.pdf  used on input line 47.
 (pdftex.def)             Requested size: 97.03427pt x 94.6604pt.
-<standalone/sigma label ex2.pdf, id=213, 52.66878pt x 45.03726pt>
+<standalone/sigma label ex2.pdf, id=215, 52.66878pt x 45.03726pt>
 File: standalone/sigma label ex2.pdf Graphic file (type pdf)
 <use standalone/sigma label ex2.pdf>
 Package pdftex.def Info: standalone/sigma label ex2.pdf  used on input line 48.
@@ -1025,11 +1025,24 @@ See the caption package documentation for explanation.
 \openout2 = `"7,8(mod 14).aux"'.
 
  (./7,8(mod 14).tex
+Chapter 3.
 
-LaTeX Warning: Reference `fig:7mod14' on page 8 undefined on input line 14.
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1.
 
 
-LaTeX Warning: Reference `sec:star' on page 8 undefined on input line 14.
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\equiv' on input line 1.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1.
+
+
+LaTeX Warning: Reference `fig:7mod14' on page 8 undefined on input line 16.
+
+
+LaTeX Warning: Reference `sec:star' on page 8 undefined on input line 16.
 
 
 
@@ -1037,20 +1050,21 @@ LaTeX Warning: Reference `sec:star' on page 8 undefined on input line 14.
 
 
 
+
 ]
-
-LaTeX Warning: Reference `fig:8mod14' on page 9 undefined on input line 59.
-
-
 
 [9]
 
+LaTeX Warning: Reference `fig:8mod14' on page 10 undefined on input line 61.
+
+
+
 [10]
 
-LaTeX Warning: Reference `fig:7mod14' on page 11 undefined on input line 98.
+LaTeX Warning: Reference `fig:7mod14' on page 11 undefined on input line 100.
 
 
-LaTeX Warning: Reference `fig:8mod14' on page 11 undefined on input line 98.
+LaTeX Warning: Reference `fig:8mod14' on page 11 undefined on input line 100.
 
 
 
@@ -1060,7 +1074,7 @@ LaTeX Warning: Reference `fig:8mod14' on page 11 undefined on input line 98.
 \openout2 = `"special case.aux"'.
 
  (./special case.tex
-Chapter 3.
+Chapter 4.
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1.
@@ -1124,94 +1138,44 @@ Underfull \hbox (badness 10000) in paragraph at lines 57--60
 \openout2 = `"Additional Charts.aux"'.
 
  (./Additional Charts.tex
-Chapter 4.
-(./standalone/7(mod 14) pt 1.tex)
-
-[16
+Chapter 5.
+(./standalone/7m14chart.tex [16
 
 
 
 
-]
-Overfull \vbox (198.53925pt too high) has occurred while \output is active []
+] [17] [18] [19] [20] [21]
 
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 351.
+See the caption package documentation for explanation.
 
+)
 
-[17] (./standalone/7(mod 14) pt 2.tex)
-Overfull \hbox (3.65627pt too wide) in paragraph at lines 9--10
-[][] 
- []
+[22] (./standalone/8m14chart.tex [23] [24] [25] [26] [27] [28] [29]
 
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 397.
+See the caption package documentation for explanation.
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 13.
+)
 
+[30] (./standalone/K21.tex) (./standalone/K22.tex)
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 13.
+[31]
 
+[32])
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 13.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\sqcup' on input line 13.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 13.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 13.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 13.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 13.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 13.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 13.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 13.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 13.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 13.
-
-(./standalone/K21.tex) (./standalone/K22.tex)
-
-[18]
-
-[19]
-
-[20])
-
-[21
+[33
 
 ]
 \openout2 = `conclusion.aux'.
 
  (./conclusion.tex
-Chapter 5.
+Chapter 6.
 )
 
-[22
+[34
 
 
 
@@ -1265,7 +1229,7 @@ Overfull \hbox (25.19998pt too wide) in alignment at lines 57--61
 
 )
 
-[23
+[35
 
 
 
@@ -1280,22 +1244,22 @@ L3 programming layer <2025-01-18>
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `thesis_masters.out' has not changed.
-(rerunfilecheck)             Checksum: E9BB5AD3057D3B484803C90970EF3293;1924.
+(rerunfilecheck)             Checksum: FBEF8CE949EB2472C9A8C0D12D4FA9C8;1785.
  )
 (\end occurred when \ifnum on line 25 was incomplete) 
 Here is how much of TeX's memory you used:
- 29943 strings out of 473190
- 575963 string characters out of 5719979
- 1090971 words of memory out of 5000000
- 52379 multiletter control sequences out of 15000+600000
- 588276 words of font info for 155 fonts, out of 8000000 for 9000
+ 29924 strings out of 473190
+ 575458 string characters out of 5719979
+ 1091114 words of memory out of 5000000
+ 52352 multiletter control sequences out of 15000+600000
+ 582049 words of font info for 128 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  100i,19n,96p,791b,1330s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb>
-Output written on thesis_masters.pdf (31 pages, 313483 bytes).
+Output written on thesis_masters.pdf (43 pages, 328432 bytes).
 PDF statistics:
- 462 PDF objects out of 1000 (max. 8388607)
- 374 compressed objects within 4 object streams
- 88 named destinations out of 1000 (max. 500000)
+ 520 PDF objects out of 1000 (max. 8388607)
+ 419 compressed objects within 5 object streams
+ 102 named destinations out of 1000 (max. 500000)
  148 words of extra memory for PDF output out of 10000 (max. 10000000)
 

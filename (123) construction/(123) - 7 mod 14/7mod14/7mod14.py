@@ -869,9 +869,9 @@ def generate_latex_table(designs, names):
     
     return table
 
-def generate_single_column_longtable(designs, names):
+def generate_two_column_longtable(designs, names):
     """
-    Generate a LaTeX longtable for graph decompositions in a single column format.
+    Generate a LaTeX longtable for graph decompositions in two columns.
 
     Parameters:
     - designs: list of design graph lists
@@ -882,22 +882,24 @@ def generate_single_column_longtable(designs, names):
     """
     if len(designs) != len(names):
         raise ValueError("The number of designs must match the number of names.")
-    
-    rows = []
 
+    rows = []
     for name, design in zip(names, designs):
         mapping_result = find_isomorphism_and_map(design, templates)
         disjoint_unions = generate_disjoint_unions(mapping_result, design)
         formatted_decomps = " \\\\ \n".join(f"${du}$" for du in disjoint_unions)
         rows.append(
-            f"\\textbf{{${name}$}} \\\\ \n"
-            f"{formatted_decomps} \\\\ \n\\hline"
+            f"${name}$ & \\begin{{tabular}}{{c}}\n{formatted_decomps}\n\\end{{tabular}} \\\\ \n\\hline"
         )
-    
+
     table = (
-        "\\begin{longtable}{|p{0.95\\textwidth}|}\n"
+        "\\begin{longtable}{|c|c|}\n"
+        "\\hline\n"
+        "Design Name & Graph Decomposition \\\\\n"
         "\\hline\n"
         "\\endfirsthead\n"
+        "\\hline\n"
+        "Design Name & Graph Decomposition \\\\\n"
         "\\hline\n"
         "\\endhead\n"
         + "\n".join(rows) +
@@ -905,6 +907,7 @@ def generate_single_column_longtable(designs, names):
     )
 
     return table
+
 
 # Example usage
 designs = [
@@ -919,7 +922,7 @@ names = generate_names_first_graph_ordered(designs, templates)
 #print(names)
 
 latex_table = generate_latex_table(designs, names)
-onecoltable = generate_single_column_longtable(designs, names)
+onecoltable = generate_two_column_longtable(designs, names)
 print(onecoltable)
 
 

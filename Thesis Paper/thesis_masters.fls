@@ -702,43 +702,12 @@ OUTPUT Additional Charts.aux
 INPUT ./Additional Charts.tex
 INPUT ./Additional Charts.tex
 INPUT Additional Charts.tex
-INPUT ./standalone/7(mod 14) pt 1.tex
-INPUT ./standalone/7(mod 14) pt 1.tex
-INPUT ./standalone/7(mod 14) pt 1.tex
-INPUT ./standalone/7(mod 14) pt 1.tex
-INPUT standalone/7(mod 14) pt 1.tex
-INPUT ./standalone/7(mod 14) pt 2.tex
-INPUT ./standalone/7(mod 14) pt 2.tex
-INPUT ./standalone/7(mod 14) pt 2.tex
-INPUT ./standalone/7(mod 14) pt 2.tex
-INPUT standalone/7(mod 14) pt 2.tex
-INPUT c:/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmmi12.tfm
-INPUT c:/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm
-INPUT c:/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmex10.tfm
-INPUT c:/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
-INPUT c:/texlive/2025/texmf-dist/fonts/tfm/public/rsfs/rsfs10.tfm
-INPUT c:/texlive/2025/texmf-dist/fonts/tfm/public/rsfs/rsfs10.tfm
-INPUT c:/texlive/2025/texmf-dist/fonts/tfm/public/rsfs/rsfs7.tfm
-INPUT c:/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
-INPUT c:/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
-INPUT c:/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam7.tfm
-INPUT c:/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
-INPUT c:/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
-INPUT c:/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
-INPUT c:/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm
-INPUT c:/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmbx7.tfm
-INPUT c:/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmmib10.tfm
-INPUT c:/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmmib10.tfm
-INPUT c:/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmmib7.tfm
-INPUT c:/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmbsy10.tfm
-INPUT c:/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmbsy10.tfm
-INPUT c:/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy7.tfm
-INPUT c:/texlive/2025/texmf-dist/fonts/tfm/public/wasy/wasy10.tfm
-INPUT c:/texlive/2025/texmf-dist/fonts/tfm/public/wasy/wasy10.tfm
-INPUT c:/texlive/2025/texmf-dist/fonts/tfm/public/wasy/wasy7.tfm
-INPUT c:/texlive/2025/texmf-dist/fonts/tfm/public/latex-fonts/lasy10.tfm
-INPUT c:/texlive/2025/texmf-dist/fonts/tfm/public/latex-fonts/lasy10.tfm
-INPUT c:/texlive/2025/texmf-dist/fonts/tfm/public/latex-fonts/lasy7.tfm
+INPUT ./standalone/7m14chart.tex
+INPUT ./standalone/7m14chart.tex
+INPUT standalone/7m14chart.tex
+INPUT ./standalone/8m14chart.tex
+INPUT ./standalone/8m14chart.tex
+INPUT standalone/8m14chart.tex
 INPUT ./standalone/K21.tex
 INPUT ./standalone/K21.tex
 INPUT ./standalone/K21.tex
