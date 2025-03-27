@@ -1,8 +1,8 @@
 # Fdb version 4
-["pdflatex"] 1743107514.63674 "c:/Users/baneg/Desktop/git/research/Thesis Paper/standalone/7m14chart.tex" "7m14chart.pdf" "7m14chart" 1743107516.91762 0
-  "7m14chart.aux" 1743107516 775 00b6dbc8e5e61e326db36a926afc2c9c "pdflatex"
-  "7m14chart.tex" 1743107510 16243 e18760a88f6d3c7d50fab41576d0b2a5 ""
-  "c:/Users/baneg/Desktop/git/research/Thesis Paper/standalone/7m14chart.tex" 1743107510 16243 e18760a88f6d3c7d50fab41576d0b2a5 ""
+["pdflatex"] 1743113153.99135 "c:/Users/baneg/Desktop/git/research/Thesis Paper/K21long.tex" "K21long.pdf" "K21long" 1743113156.26654 0
+  "K21long.aux" 1743113156 313 430d76bbd6dbce4185ae55b4b9570cca "pdflatex"
+  "K21long.tex" 1743113150 2295 0067f76417146b06aded6430a4dfeb93 ""
+  "c:/Users/baneg/Desktop/git/research/Thesis Paper/K21long.tex" 1743113150 2295 0067f76417146b06aded6430a4dfeb93 ""
   "c:/texlive/2025/texmf-dist/fonts/map/fontname/texfonts.map" 1742273017 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "c:/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1742271038 1004 54797486969f23fa377b128694d548df ""
   "c:/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm" 1742271917 1328 c834bbb027764024c09d3d2bf908b5f0 ""
@@ -12,6 +12,7 @@
   "c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb" 1742271038 32007 e8fa0078355f39467039935974716569 ""
   "c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb" 1742271038 36299 5f9df58c2139e7edcf37c8fca4bd384d ""
   "c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1742271038 35752 024fb6c41858982481f6968b5fc26508 ""
+  "c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb" 1742271038 32762 7fee39e011c23b3589931effd97b9702 ""
   "c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1742271038 32569 5e5ddc8df908dea60932f3c484a54c0d ""
   "c:/texlive/2025/texmf-dist/tex/context/base/mkii/supp-pdf.mkii" 1742274647 71627 94eb9990bed73c364d7f53f960cc8c5b ""
   "c:/texlive/2025/texmf-dist/tex/generic/iftex/ifluatex.sty" 1742273576 492 1994775aa15b0d1289725a0b1bbc2d4c ""
@@ -130,7 +131,7 @@
   "c:/texlive/2025/texmf-var/web2c/pdftex/pdflatex.fmt" 1742277566 3346130 9a826a9cf56decbfdac133ecc9c5426c ""
   "c:/texlive/2025/texmf.cnf" 1742277318 713 e69b156964470283e0530f5060668171 ""
   (generated)
-  "7m14chart.aux"
-  "7m14chart.log"
-  "7m14chart.pdf"
+  "K21long.aux"
+  "K21long.log"
+  "K21long.pdf"
   (rewritten before read)
