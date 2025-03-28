@@ -1,9 +1,9 @@
-PWD c:/Users/baneg/OneDrive/Desktop/Git/research/Thesis Paper/standalone
+PWD c:/Users/baneg/OneDrive/Desktop/Git/research/Thesis Paper
 INPUT c:/texlive/2023/texmf.cnf
 INPUT c:/texlive/2023/texmf-dist/web2c/texmf.cnf
 INPUT c:/texlive/2023/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT c:/Users/baneg/OneDrive/Desktop/Git/research/Thesis Paper/standalone/8m14chart.tex
-OUTPUT 8m14chart.log
+INPUT c:/Users/baneg/OneDrive/Desktop/Git/research/Thesis Paper/K22long.tex
+OUTPUT K22long.log
 INPUT c:/texlive/2023/texmf-dist/tex/latex/base/article.cls
 INPUT c:/texlive/2023/texmf-dist/tex/latex/base/article.cls
 INPUT c:/texlive/2023/texmf-dist/tex/latex/base/size10.clo
@@ -203,10 +203,10 @@ INPUT c:/texlive/2023/texmf-dist/tex/latex/caption/ltcaption.sty
 INPUT c:/texlive/2023/texmf-dist/tex/latex/caption/ltcaption.sty
 INPUT c:/texlive/2023/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 INPUT c:/texlive/2023/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
-INPUT ./8m14chart.aux
-INPUT ./8m14chart.aux
-INPUT 8m14chart.aux
-OUTPUT 8m14chart.aux
+INPUT ./K22long.aux
+INPUT ./K22long.aux
+INPUT K22long.aux
+OUTPUT K22long.aux
 INPUT c:/texlive/2023/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 INPUT c:/texlive/2023/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 INPUT c:/texlive/2023/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
@@ -221,11 +221,12 @@ INPUT c:/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
 INPUT c:/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm
 INPUT c:/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmbx7.tfm
 INPUT c:/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmbx5.tfm
-OUTPUT 8m14chart.pdf
+OUTPUT K22long.pdf
 INPUT c:/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map
-INPUT 8m14chart.aux
+INPUT K22long.aux
 INPUT c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 INPUT c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb
 INPUT c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb
 INPUT c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb
+INPUT c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb
 INPUT c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb

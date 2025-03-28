@@ -1,0 +1,69 @@
+\documentclass{article}
+\usepackage{tikz}
+\usepackage{graphicx}  % For including external images
+\usepackage{standalone}  % For including standalone files
+\usepackage{youngtab}  % For tables
+\usepackage{array}  % For \extrarowheight support
+\usepackage{amsmath}
+\usepackage{longtable}  % For multi-page tables
+\usepackage{adjustbox}
+\usepackage{float}
+\usepackage{caption} % Allows captioning outside figures
+
+\begin{document}
+
+\begin{longtable}{|c|c|c|c|}
+    \hline
+    \caption{A $\mathbf{T_{7}^{11}\sqcup T_{2}^{1}}$-decomposition of $K_{22}$}\\
+    \endfoot
+    
+    \hline
+    \caption{A $\mathbf{T_{7}^{11}\sqcup T_{2}^{1}}$-decomposition of $K_{22}$}\\
+    \endlastfoot
+
+    \hline
+    No. & Block & No. & Block \\
+    \hline
+    \endfirsthead
+
+    \hline
+    No. & Block & No. & Block \\
+    \hline
+    \endhead
+
+    $1$ & $(15,14,16,17,18,19,20)\sqcup(0,2)$  &     $2$ & $(13,15,16,17,18,19,20)\sqcup(0,6)$  \\
+\hline
+    $3$ & $(8,16,12,17,18,19,20)\sqcup(9,3)$  &     $4$ & $(8,17,9,11,18,19,20)\sqcup(16,0)$  \\
+\hline
+    $5$ & $(8,18,9,11,13,19,20)\sqcup(0,1)$  &     $6$ & $(8,19,10,11,12,13,20)\sqcup(0,15)$  \\
+\hline
+    $7$ & $(8,1,9,10,11,12,13)\sqcup(6,\infty)$  &     $8$ & $(1,2,9,10,11,12,13)\sqcup(14,7)$  \\
+\hline
+    $9$ & $(0,3,2,6,11,12,13)\sqcup(8,7)$  &     $10$ & $(0,4,2,3,11,12,13)\sqcup(8,9)$  \\
+\hline
+    $11$ & $(0,5,2,3,4,12,13)\sqcup(9,10)$  &     $12$ & $(1,6,2,4,5,12,13)\sqcup(15,7)$  \\
+\hline
+    $13$ & $(1,7,2,3,4,5,6)\sqcup(13,\infty)$  &     $14$ & $(3,8,4,5,6,14,20)\sqcup(12,15)$  \\
+\hline
+    $15$ & $(4,9,5,6,14,15,20)\sqcup(16,7)$  &     $16$ & $(15,10,4,5,6,16,20)\sqcup(0,18)$  \\
+\hline
+    $17$ & $(15,11,0,5,6,16,20)\sqcup(17,1)$  &     $18$ & $(14,12,0,11,17,18,20)\sqcup(8,2)$  \\
+\hline
+    $19$ & $(16,13,0,11,12,17,20)\sqcup(1,19)$  &     $20$ & $(1,14,2,3,4,5,6)\sqcup(20,7)$  \\
+\hline
+    $21$ & $(1,15,2,3,4,5,6)\sqcup(19,7)$  &     $22$ & $(1,16,2,3,4,5,6)\sqcup(17,7)$  \\
+\hline
+    $23$ & $(0,17,2,3,4,5,6)\sqcup(11,14)$  &     $24$ & $(1,18,2,3,4,5,6)\sqcup(10,14)$  \\
+\hline
+    $25$ & $(0,19,2,3,4,5,6)\sqcup(13,14)$  &     $26$ & $(0,20,2,3,4,5,6)\sqcup(10,11)$  \\
+\hline
+    $27$ & $(9,7,0,10,11,12,13)\sqcup(20,\infty)$  &     $28$ & $(10,8,0,11,12,13,15)\sqcup(1,4)$  \\
+\hline
+    $29$ & $(11,9,0,12,13,16,19)\sqcup(1,5)$  &     $30$ & $(12,10,0,3,13,17,18)\sqcup(1,20)$  \\
+\hline
+    $31$ & $(0,\infty,1,2,3,4,5)\sqcup(18,7)$  &     $32$ & $(14,\infty,15,16,17,18,19)\sqcup(1,3)$  \\
+\hline
+    $33$ & $(7,\infty,8,9,10,11,12)\sqcup(0,14)$  & & \\
+\hline
+\end{longtable}
+\end{document}

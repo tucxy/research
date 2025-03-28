@@ -1,8 +1,8 @@
 # Fdb version 4
-["pdflatex"] 1743114420.5025 "c:/Users/baneg/OneDrive/Desktop/Git/research/Thesis Paper/K21long.tex" "K21long.pdf" "K21long" 1743114421.56351 0
-  "K21long.aux" 1743114421 375 65e8f082d951eea2fae048be623ce7e9 "pdflatex"
-  "K21long.tex" 1743114417 2475 3e1075d7d9b8c2f4ab0ed184a9b2b457 ""
-  "c:/Users/baneg/OneDrive/Desktop/Git/research/Thesis Paper/K21long.tex" 1743114417 2475 3e1075d7d9b8c2f4ab0ed184a9b2b457 ""
+["pdflatex"] 1743114543.27407 "c:/Users/baneg/OneDrive/Desktop/Git/research/Thesis Paper/K22long.tex" "K22long.pdf" "K22long" 1743114544.34118 0
+  "K22long.aux" 1743114544 375 eef39172ac72525b676ae26bbefce82f "pdflatex"
+  "K22long.tex" 1743114541 2641 46cec3c81aca077084e0e45203d358f9 ""
+  "c:/Users/baneg/OneDrive/Desktop/Git/research/Thesis Paper/K22long.tex" 1743114541 2641 46cec3c81aca077084e0e45203d358f9 ""
   "c:/texlive/2023/texmf-dist/fonts/map/fontname/texfonts.map" 1706146327 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "c:/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1706144016 1004 54797486969f23fa377b128694d548df ""
   "c:/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm" 1706145131 1328 c834bbb027764024c09d3d2bf908b5f0 ""
@@ -131,7 +131,7 @@
   "c:/texlive/2023/texmf-var/web2c/pdftex/pdflatex.fmt" 1706151986 8210992 50eca61535bfacacd4d39eb1fcf3b582 ""
   "c:/texlive/2023/texmf.cnf" 1706151766 713 e69b156964470283e0530f5060668171 ""
   (generated)
-  "K21long.aux"
-  "K21long.log"
-  "K21long.pdf"
+  "K22long.aux"
+  "K22long.log"
+  "K22long.pdf"
   (rewritten before read)
