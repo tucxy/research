@@ -8,28 +8,28 @@
 \usepackage{longtable}  % For multi-page tables
 \usepackage{adjustbox}
 \usepackage{float}
-\usepackage{caption} % Allows captioning outside figures
+\usepackage{caption}
 
 \begin{document}
 
-\label{fig:7mod14}
 \begin{longtable}{|c|c|}
-    \hline
-    \caption{(1-2-3)-labelings}\\
-    \endfoot
-    
-    \hline
-    \caption{(1-2-3)-labelings}\\
-    \endlastfoot
-
     \hline
     Forest & Labeling \\
     \hline
     \endfirsthead
+    
     \hline
     Forest & Labeling \\
     \hline
     \endhead
+    
+    \hline
+    \caption{(1-2-3)-labelings} \\
+    \endfoot
+    
+    \hline
+    \caption{(1-2-3)-labelings} \label{tab:(1-2-3)}\\
+    \endlastfoot
 
         $\mathbf{T_{7}^{1}} \sqcup \mathbf{T_{2}^{1}}$ & \begin{tabular}{c}
         $(0,1,2,4,6,9,12)\sqcup(13,14)$ \\ 
@@ -354,4 +354,5 @@
         \end{tabular} \\
         \hline
         \end{longtable}
+        
 \end{document}

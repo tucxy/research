@@ -1,5 +1,4 @@
-\chapter{$\mathbf{n\equiv 0,1\textbf{(mod 14)}}$}
-\label{cyclic}
+\chapter{$\mathbf{n\equiv 0,1\textbf{(mod 14)}}$} \label{chap:0,1(mod 14)}
 
 In this section, we use established graph labeling techniques to construct the $G$-decompositions of $K_n$ when $n \equiv 0 \textrm{ or } 1 \pmod{14}$. 
 
@@ -39,7 +38,7 @@ A $\sigma^{+-}$-\emph{labeling} of a bipartite graph $G$ with $m$ edges and bipa
 Let $G$ be a graph with $m$ edges and a $\sigma^{+-}$-labeling such that the edge of length $m$ is a pendant. Then there exists a $G$-decomposition of both $K_{2mk}$ and $K_{2mk+1}$ for every positive integer $k$.
 \end{thm}
 
-Figure \ref{fig:sigma plus minus} gives a $\sigma^{+-}$-labeling of every forest with 7 edges. The vertex labels of each connected component with $k$ vertices are given as a $k$-tuple, $(v_1,\dots ,v_k)$ corresponding to the vertices $v_1, \dots, v_k$ given in Figure \ref{fig:catalog}. We leave it to the reader to infer the bipartition $(A,B)$. 
+Figure \ref{tab:sigmapm} gives a $\sigma^{+-}$-labeling of every forest with 7 edges. The vertex labels of each connected component with $k$ vertices are given as a $k$-tuple, $(v_1,\dots ,v_k)$ corresponding to the vertices $v_1, \dots, v_k$ given in Figure \ref{fig:catalog}. We leave it to the reader to infer the bipartition $(A,B)$. 
 \begin{example}
     A $\sigma^{+-}$-labeling of $\mathbf{T_{6}^{6}}\sqcup 2\mathbf{T_{2}^{1}}$ is shown in Figure \ref{fig:sigma label ex}. The vertices labeled $1,2$ and $9$ belong to $A$, and the others belong to $B$. The lengths of each edge are indicated on the edge.
     \begin{figure}[H]
@@ -50,13 +49,13 @@ Figure \ref{fig:sigma plus minus} gives a $\sigma^{+-}$-labeling of every forest
         \label{fig:sigma label ex}
     \end{figure}
 \end{example}
- The labelings given in Figure \ref{fig:sigma plus minus} along with thm \ref{thm:sigma plus minus} are enough to prove the following thm.
+ The labelings given in Figure \ref{tab:sigmapm} along with thm \ref{thm:sigma plus minus} are enough to prove the following thm.
 
  %\begin{figure}[H]
  %   \centering
  %   \includegraphics[scale=1.1]{0,1(mod 14).pdf}
  %   \caption{$\sigma^{+-}$-labelings for forests with 7 edges}
- %  \label{fig:sigma plus minus}
+ %  \label{tab:sigmapm}
 %\end{figure}
 % or
 \newpage
@@ -66,5 +65,5 @@ Figure \ref{fig:sigma plus minus} gives a $\sigma^{+-}$-labeling of every forest
     Let $F$ be a forest with $7$ edges. There exists an $F$-decomposition of $K_n$ whenever $n \equiv 0 \; \textrm{or} \; 1 \pmod{14}.$
 \end{thm}
 \begin{proof}
-    The proof follows from thm \ref{thm:sigma plus minus} and the labelings given in Figure \ref{fig:sigma plus minus}.
+    The proof follows from thm \ref{thm:sigma plus minus} and the labelings given in Figure \ref{tab:sigmapm}.
 \end{proof}

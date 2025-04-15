@@ -1,4 +1,4 @@
-\chapter{$\mathbf{n\equiv 7,8\textbf{(mod 14)}}$}
+\chapter{$\mathbf{n\equiv 7,8\textbf{(mod 14)}}$} \label{chap:7,8 (mod 14)}
 
 In this section, we use our own constructions based on the same edge length definition as in the previous section. The first one addresses the $n \equiv 7 \pmod{14}$ case.
 
@@ -13,7 +13,7 @@ In this section, we use our own constructions based on the same edge length defi
         \item $$ \bigcup_{uv\in E(3G)} \{(f(u)\; \textbf{mod } 7,f(v)\; \textbf{mod } 7)\}= \bigcup_{i=0}^{6} \bigcup_{j=1}^{3} \{(i,i+j \; \textbf{mod } 7)\}.$$
     \end{enumerate}
 \end{definition}
-Notice that the second condition of a (1-2-3)-labeling says that $3G$ contains exactly $7$ edges of each of the lengths $1,2$, and $3$. Furthermore, no two edges of the same length have the same end labels when reduced modulo $7.$ A (1-2-3) labeling of every forest with $7$ edges with the exception of $\mathbf{T_{7}^{11}}\sqcup\mathbf{T_{2}^{1}}$ is given in Figure \ref{fig:7mod14}. This exceptional forest does not admit such a labeling and is dealt with in Section \ref{sec:star}.
+Notice that the second condition of a (1-2-3)-labeling says that $3G$ contains exactly $7$ edges of each of the lengths $1,2$, and $3$. Furthermore, no two edges of the same length have the same end labels when reduced modulo $7.$ A (1-2-3) labeling of every forest with $7$ edges with the exception of $\mathbf{T_{7}^{11}}\sqcup\mathbf{T_{2}^{1}}$ is given in Figure \ref{tab:(1-2-3)}. This exceptional forest does not admit such a labeling and is dealt with in Section \ref{chap:special case}.
 
 \begin{thm}\label{thm:1-2-3 plus rho}
     Let $G$ be a bipartite graph with $7$ edges. If $3G$ admits a ($1$-$2$-$3$)-labeling and $G$ admits a $\rho^{+}$-labeling, then $G$ decomposes $K_{14k+7}$ for every $k\geq1.$
@@ -58,7 +58,7 @@ To address the $n \equiv 8 \pmod{14}$ case, we define the following labeling.
         \item  $$ \bigcup_{uv\in E(4G)} \{(f(u)\; \textbf{mod } 7,f(v)\; \textbf{mod } 7)\}= \bigcup_{i=0}^{6} \bigcup_{j=1}^{3} \{(i,i+j \; \textbf{mod } 7), (i,\infty)\}.$$
     \end{enumerate}
 \end{definition}
-Notice that the second condition of a 1-rotational (1-2-3)-labeling says that $4G$ contains exactly $7$ edges of each of the lengths $1,2,3$, and $\infty$. Furthermore, no two edges of the same length have the same end labels when reduced modulo $7.$ A 1-rotational (1-2-3)-labeling of every forest with $7$ edges with the exception of $\mathbf{T_{7}^{11}}\sqcup\mathbf{T_{2}^{1}}$ is given in Figure \ref{fig:8mod14}. 
+Notice that the second condition of a 1-rotational (1-2-3)-labeling says that $4G$ contains exactly $7$ edges of each of the lengths $1,2,3$, and $\infty$. Furthermore, no two edges of the same length have the same end labels when reduced modulo $7.$ A 1-rotational (1-2-3)-labeling of every forest with $7$ edges with the exception of $\mathbf{T_{7}^{11}}\sqcup\mathbf{T_{2}^{1}}$ is given in Figure \ref{tab:1-rot(1-2-3)}. 
 
 \begin{thm}\label{thm:1-2-3 1-rot plus rho}
     Let $G$ be a bipartite graph with $7$ edges. If $4G$ admits a $1$-rotational  $(1$-$2$-$3)$-labeling and $G$ admits a $\rho^{+}$-labeling, then $G$ decomposes $K_{14k+8}$ for every $k\geq1.$
@@ -97,7 +97,7 @@ We are now able to state the main thm of this section.
     Let $F$ be a forest with $7$ edges and $F \not \cong \mathbf{T_{7}^{11}}\sqcup\mathbf{T_{2}^{1}}$. There exists an $F$-decomposition of $K_n$ whenever $n \equiv 7 \textrm{ or } 8 \pmod{14}$ and $n \geq 21.$
 \end{thm}
 \begin{proof}
-    If $n \equiv 7 \pmod{14},$ a (1-2-3)-labeling of $3F$ can be found in Figure \ref{fig:7mod14}. On the other hand, if $n \equiv 8 \pmod{14}$, then a 1-rotational (1-2-3)-labeling of $4F$ can be found in Figure \ref{fig:8mod14}. In either case, a $\rho^{+}$-labeling of $F$ can be found in Figure \ref{fig:sigma plus minus} (recall that a $\sigma^{+-}$-labeling is a $\rho^{+}$-labeling). The result now follows from Theorems \ref{thm:1-2-3 plus rho} and \ref{thm:1-2-3 1-rot plus rho}.
+    If $n \equiv 7 \pmod{14},$ a (1-2-3)-labeling of $3F$ can be found in Figure \ref{tab:(1-2-3)}. On the other hand, if $n \equiv 8 \pmod{14}$, then a 1-rotational (1-2-3)-labeling of $4F$ can be found in Figure \ref{tab:1-rot(1-2-3)}. In either case, a $\rho^{+}$-labeling of $F$ can be found in Figure \ref{tab:sigmapm} (recall that a $\sigma^{+-}$-labeling is a $\rho^{+}$-labeling). The result now follows from Theorems \ref{thm:1-2-3 plus rho} and \ref{thm:1-2-3 1-rot plus rho}.
 \end{proof}
 %%
 \begin{example}

@@ -83,15 +83,15 @@ frey0031@d.umn.edu]
 
 \begin{document}
 \begin{abstract}
- Let $K$ be a graph and $G$ a subgraph of $K$. If $E(K)$ can be partitioned into edge-disjoint copies of $G$, we call the partition a $G$-decomposition of $K$ and say that $G$ decomposes $K.$ There are 47 forests with exactly 7 edges. We prove that every one decomposes the complete graph $K_{n}$ if and only if $n \equiv 0 \textrm{ or }1\pmod{7}.$
+ Let $K$ be a graph and $G$ a subgraph of $K$. If $E(K)$ can be partitioned into edge-disjoint copies of $G$, we call the partition a $G$-decomposition of $K$ and say that $G$ decomposes $K.$ There are 47 forests with exactly 7 edges. We show that every one decomposes the complete graph $K_{n}$ if and only if $n \equiv 0 \textrm{ or }1\pmod{7}.$
 \end{abstract}
 %%%%%%%%%%%5
 \section{Introduction}
 A \textit{$G$-decomposition} of a graph $K$ is a set of mutually edge-disjoint subgraphs of $K$ which are isomorphic to a given graph $G$. If such a set exists we say that $K$ \textit{allows} a $G$-decomposition, and if $K\cong K_{n}$ we sometimes call the decomposition a \textit{$G$-design of order $n$}.
 
-$G$-decompositions are a longstanding topic in combinatorics, graph theory, and design theory, with roots tracing back to at least the 19th century. The work of Rosa and Kotzig in the 1960s on what are now known as graph labelings laid the foundation for the modern treatment of such problems. Using adaptations of these labelings alongside techniques from design theory, numerous papers have since been published on $G$-decompositions. This work is a natural continuation of Freyberg and Peters' recent paper on decomposing complete graphs into forests with six edges \cite{bib:Peters}. Their paper also includes a summary of $G$-decompositions for graphs $G$ with less than 7 edges.
+$G$-decompositions are a longstanding topic in combinatorics, graph theory, and design theory, with roots tracing back to at least the 19th century. The work of Rosa and Kotzig in the 1960s on what are now known as graph labelings laid the foundation for the modern treatment of such problems. Using adaptations of these labelings alongside techniques from design theory, numerous papers have since been published on $G$-decompositions. This work is a natural continuation of a recent paper by Freyberg and Peters on decomposing complete graphs into forests with 6 edges \cite{bib:Peters}. Their paper also includes a summary of $G$-decompositions for graphs $G$ with less than 7 edges.
 
-Every connected component of a forest with 7 edges is a tree with 6 or less edges. All such trees are cataloged in Figure \ref{fig:catalog}. We use the naming convention $\mathbf{T_{j}^i}$ to denote the $i^{\textrm{th}}$ tree with $j$ vertices. For each tree $\mathbf{T_{j}^i}$, the names of the vertices, $v_t$ for $1 \leq t \leq j,$ will be referred to in the decompositions described in Section \ref{sec:7 or 8 mod 14}.
+Every connected component of a forest with 7 edges is a tree with 6 or less edges. All such trees are cataloged in Figure \ref{fig:catalog}. We use the naming convention $\mathbf{T_{j}^i}$ to denote the $i^{\textrm{th}}$ tree with $j$ vertices. For each tree $\mathbf{T_{j}^i}$, the names of the vertices, $v_t$ for $1 \leq t \leq j$ given in Figure \ref{fig:catalog}, will be referred to in the decompositions described in Section \ref{sec:7 or 8 mod 14}.
 
 \begin{figure}[]
 \centering
@@ -102,10 +102,10 @@ Every connected component of a forest with 7 edges is a tree with 6 or less edge
 The next theorem gives the necessary conditions for the existence of a $G$-decomposition of $K_n$ when $G$ is a graph with 7 edges.
 
 \begin{theorem}
-  If $G$ is a graph with $7$ edges and a $G$-decomposition of $K_n$ exists, then $n \equiv 0,1,7, \textrm{or} \; 8 \pmod{14}.$  
+  If $G$ is a graph with $7$ edges and a $G$-decomposition of $K_n$ exists, then $n \equiv 0 \textrm{ or }  1 \pmod{7}.$  
 \end{theorem}
 \begin{proof}
-    If a $G$-decomposition exists, then $7 | \binom{n}{2}$ which immediately implies $n \equiv 0,1,7, \textrm{or} \; 8 \pmod{14}.$
+    If a $G$-decomposition exists, then $7 | \binom{n}{2}$ which immediately implies $n \equiv 0 \textrm{ or }  1 \pmod{7}.$
 \end{proof}
 
 In this article, we only consider simple graphs without isolated vertices. There are $47$ non-isomorphic forests with $7$ edges. Section \ref{sec:0 or 1 mod 14} treats all $47$ forests when $n \equiv 0 \textrm{ or } 1 \pmod{14}$. Section \ref{sec:7 or 8 mod 14} applies to all the forests when $n \equiv 7 \textrm{ or } 8 \pmod{14}$ with the lone exception of $F \cong \mathbf{T_{7}^{11}}\sqcup\mathbf{T_{2}^{1}},$ which  is solved for those values of $n$ in Section \ref{sec:star}. 
@@ -151,7 +151,7 @@ A $\sigma^{+-}$-\emph{labeling} of a bipartite graph $G$ with $m$ edges and bipa
 Let $G$ be a graph with $m$ edges and a $\sigma^{+-}$-labeling such that the edge of length $m$ is a pendant. Then there exists a $G$-decomposition of both $K_{2mk}$ and $K_{2mk+1}$ for every positive integer $k$.
 \end{theorem}
 
-Figure \ref{fig:sigma plus minus} gives a $\sigma^{+-}$-labeling of every forest with 7 edges. The vertex labels of each connected component with $k$ vertices are given as a $k$-tuple, $(v_1,\dots ,v_k)$ corresponding to the vertices $v_1, \dots, v_k$ given in Figure \ref{fig:catalog}. We leave it to the reader to infer the bipartition $(A,B)$. 
+Table \ref{tab:sigmapm} gives a $\sigma^{+-}$-labeling of every forest with 7 edges. The vertex labels of each connected component with $k$ vertices are given as a $k$-tuple, $(v_1,\dots ,v_k)$ corresponding to the vertices $v_1, \dots, v_k$ given in Figure \ref{fig:catalog}. We leave it to the reader to infer the bipartition $(A,B)$. 
 \begin{exm}
     A $\sigma^{+-}$-labeling of $\mathbf{T_{6}^{6}}\sqcup 2\mathbf{T_{2}^{1}}$ is shown in Figure \ref{fig:sigma label ex}. The vertices labeled $1,2$ and $9$ belong to $A$, and the others belong to $B$. The lengths of each edge are indicated on the edge.
     \begin{figure}[H]
@@ -162,24 +162,24 @@ Figure \ref{fig:sigma plus minus} gives a $\sigma^{+-}$-labeling of every forest
         \label{fig:sigma label ex}
     \end{figure}
 \end{exm}
- The labelings given in Figure \ref{fig:sigma plus minus} along with Theorem \ref{thm:sigma plus minus} are enough to prove the following theorem. \newpage 
+ The labelings given in Table \ref{tab:sigmapm} along with Theorem \ref{thm:sigma plus minus} are enough to prove the following theorem. \newpage
 
  %\begin{figure}[H]
  %   \centering
  %   \includegraphics[scale=1.1]{0,1(mod 14).pdf}
  %   \caption{$\sigma^{+-}$-labelings for forests with 7 edges}
- %  \label{fig:sigma plus minus}
-%\end{figure}
-% or
+ %  \label{tab:sigmapm}
+ %\end{figure}
+ % or
+ 
 \input{0,1(mod 14) long.tex}
 
 \begin{theorem}\label{thm:0 or 1 mod 14}
     Let $F$ be a forest with $7$ edges. There exists an $F$-decomposition of $K_n$ whenever $n \equiv 0 \; \textrm{or} \; 1 \pmod{14}.$
 \end{theorem}
 \begin{proof}
-    The proof follows from Theorem \ref{thm:sigma plus minus} and the labelings given in Figure \ref{fig:sigma plus minus}.
+    The proof follows from Theorem \ref{thm:sigma plus minus} and the labelings given in Table \ref{tab:sigmapm}.
 \end{proof}
-\newpage
 %%%%%%%%%%%%%%%%
 \section{$n \equiv 7 \textrm{ or } 8 \pmod{14}$} \label{sec:7 or 8 mod 14}
 %Bryan text
@@ -190,13 +190,13 @@ In this section, we use our own constructions based on the same edge length defi
     \begin{enumerate}
         \item $f(u) \neq f(v)$ whenever $u$ and $v$ belong to the same connected component, 
         \item[] and
-        %\item there are exactly $7$ edges of length $i$ for each $i \in \{1,2,3\}$, and
+       %\item there are exactly $7$ edges of length $i$ for each $i \in \{1,2,3\}$, and
        % \item if two edges $u_1v_1$ and $u_2v_2$ are of length $i$ and $u_1 \equiv v_1 \pmod7$, then $u_2 \not \equiv v_2 \pmod7.$
-      %  \item when $f$ is reduced modulo $7$, there is exactly one edge of length $j$, for $j \in \{1,2,3\}$, of the form $\{i,i+j\}$ for $i \in \{0,\dots,6\}.$
+       % \item when $f$ is reduced modulo $7$, there is exactly one edge of length $j$, for $j \in \{1,2,3\}$, of the form $\{i,i+j\}$ for $i \in \{0,\dots,6\}.$
         \item $$ \bigcup_{uv\in E(3G)} \{(f(u)\; \textbf{mod } 7,f(v)\; \textbf{mod } 7)\}= \bigcup_{i=0}^{6} \bigcup_{j=1}^{3} \{(i,i+j \; \textbf{mod } 7)\}.$$
     \end{enumerate}
 \end{dnt}
-Notice that the second condition of a (1-2-3)-labeling says that $3G$ contains exactly $7$ edges of each of the lengths $1,2$, and $3$. Furthermore, no two edges of the same length have the same end labels when reduced modulo $7.$ A (1-2-3) labeling of every forest with $7$ edges with the exception of $\mathbf{T_{7}^{11}}\sqcup\mathbf{T_{2}^{1}}$ is given in Figure \ref{fig:7mod14}. This exceptional forest does not admit such a labeling and is dealt with in Section \ref{sec:star}.
+Notice that the second condition of a (1-2-3)-labeling says that $3G$ contains exactly $7$ edges of each of the lengths $1,2$, and $3$. Furthermore, no two edges of the same length have the same end labels when reduced modulo $7.$ A (1-2-3) labeling of every forest with $7$ edges with the exception of $\mathbf{T_{7}^{11}}\sqcup\mathbf{T_{2}^{1}}$ is given in Table \ref{tab:(1-2-3)}. This exceptional forest does not admit such a labeling and is dealt with in Section \ref{sec:star}.
 
 \begin{theorem}\label{thm:1-2-3 plus rho}
     Let $G$ be a bipartite graph with $7$ edges. If $3G$ admits a ($1$-$2$-$3$)-labeling and $G$ admits a $\rho^{+}$-labeling, then $G$ decomposes $K_{14k+7}$ for every $k\geq1.$
@@ -237,11 +237,11 @@ To address the $n \equiv 8 \pmod{14}$ case, we define the following labeling.
     \begin{enumerate}
         \item $f(u) \neq f(v)$ whenever $u$ and $v$ belong to the same connected component, 
         \item[] and
-%\item when the integer values of $f$ are reduced modulo $7$, there is exactly one edge of length $j$, for $j \in \{1,2,3\}$, of the form $\{i,i+j\}$ for $i \in \{0,\dots,6\},$ and exactly one edge of length $\infty$ of the form $\{i,\infty\}$ for $i \in \{0,\dots,6\}.$
+    %\item when the integer values of $f$ are reduced modulo $7$, there is exactly one edge of length $j$, for $j \in \{1,2,3\}$, of the form $\{i,i+j\}$ for $i \in \{0,\dots,6\},$ and exactly one edge of length $\infty$ of the form $\{i,\infty\}$ for $i \in \{0,\dots,6\}.$
         \item  $$ \bigcup_{uv\in E(4G)} \{(f(u)\; \textbf{mod } 7,f(v)\; \textbf{mod } 7)\}= \bigcup_{i=0}^{6} \bigcup_{j=1}^{3} \{(i,i+j \; \textbf{mod } 7), (i,\infty)\}.$$
     \end{enumerate}
 \end{dnt}
-Notice that the second condition of a 1-rotational (1-2-3)-labeling says that $4G$ contains exactly $7$ edges of each of the lengths $1,2,3$, and $\infty$. Furthermore, no two edges of the same length have the same end labels when reduced modulo $7.$ A 1-rotational (1-2-3)-labeling of every forest with $7$ edges with the exception of $\mathbf{T_{7}^{11}}\sqcup\mathbf{T_{2}^{1}}$ is given in Figure \ref{fig:8mod14}. 
+Notice that the second condition of a 1-rotational (1-2-3)-labeling says that $4G$ contains exactly $7$ edges of each of the lengths $1,2,3$, and $\infty$. Furthermore, no two edges of the same length have the same end labels when reduced modulo $7.$ A 1-rotational (1-2-3)-labeling of every forest with $7$ edges with the exception of $\mathbf{T_{7}^{11}}\sqcup\mathbf{T_{2}^{1}}$ is given in Figure \ref{tab:1rot(1-2-3)}. 
 
 \begin{theorem}\label{thm:1-2-3 1-rot plus rho}
     Let $G$ be a bipartite graph with $7$ edges. If $4G$ admits a $1$-rotational  $(1$-$2$-$3)$-labeling and $G$ admits a $\rho^{+}$-labeling, then $G$ decomposes $K_{14k+8}$ for every $k\geq1.$
@@ -280,13 +280,13 @@ We are now able to state the main theorem of this section.
     Let $F$ be a forest with $7$ edges and $F \not \cong \mathbf{T_{7}^{11}}\sqcup\mathbf{T_{2}^{1}}$. There exists an $F$-decomposition of $K_n$ whenever $n \equiv 7 \textrm{ or } 8 \pmod{14}$ and $n \geq 21.$
 \end{theorem}
 \begin{proof}
-    If $n \equiv 7 \pmod{14},$ a (1-2-3)-labeling of $3F$ can be found in Figure \ref{fig:7mod14}. On the other hand, if $n \equiv 8 \pmod{14}$, then a 1-rotational (1-2-3)-labeling of $4F$ can be found in Figure \ref{fig:8mod14}. In either case, a $\rho^{+}$-labeling of $F$ can be found in Figure \ref{fig:sigma plus minus} (recall that a $\sigma^{+-}$-labeling is a $\rho^{+}$-labeling). The result now follows from Theorems \ref{thm:1-2-3 plus rho} and \ref{thm:1-2-3 1-rot plus rho}. 
+    If $n \equiv 7 \pmod{14},$ a (1-2-3)-labeling of $3F$ can be found in Table \ref{tab:(1-2-3)}. On the other hand, if $n \equiv 8 \pmod{14}$, then a 1-rotational (1-2-3)-labeling of $4F$ can be found in Table \ref{tab:1-rot(1-2-3)}. In either case, a $\rho^{+}$-labeling of $F$ can be found in Table \ref{tab:sigmapm} (recall that a $\sigma^{+-}$-labeling is a $\rho^{+}$-labeling). The result now follows from Theorems \ref{thm:1-2-3 plus rho} and \ref{thm:1-2-3 1-rot plus rho}. 
 \end{proof}
 %%
 \begin{exm}
 We illustrate the constructions in the previous two theorems by finding an $F$-decomposition of $K_{35}$ and $K_{36}$ for the forest graph $F \cong \mathbf{T_{6}^{6}} \sqcup \mathbf{T_{3}^{1}}$. 
 \newpage
-\noindent Here are excerpts from the preceding tables for $\mathbf{T_{6}^{6}} \sqcup \mathbf{T_{3}^{1}}$
+\noindent Below are excerpts from the preceding tables that give the necessary labelings of $\mathbf{T_{6}^{6}} \sqcup \mathbf{T_{3}^{1}}$.
 
 \begin{figure}[H]
 \centering
@@ -295,7 +295,7 @@ We illustrate the constructions in the previous two theorems by finding an $F$-d
         \label{fig:example chart}
 \end{figure}
 
-The $\rho^{+}$ labelings obtained by stretching the $\sigma^{+-}$ labeling are bottommost labelings in the following generating presentations and are developed by $1$.
+These labelings are then transformed and developed as demonstrated in Figure \ref{fig:example chart} to complete the design.
 \end{exm}
 
 %\begin{figure}[h]
@@ -314,7 +314,6 @@ The $\rho^{+}$ labelings obtained by stretching the $\sigma^{+-}$ labeling are b
 %    \caption{A $\sigma^{+-}$-labeling of $\mathbf{T_{6}^{6}} \sqcup \mathbf{T_{3}^{1}}\sim (4,1,8,5,6,7)\sqcup (10,9,11)$}
 %    \label{fig:union_files}
 %\end{figure}
-    
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[H]
@@ -414,10 +413,10 @@ The $\rho^{+}$ labelings obtained by stretching the $\sigma^{+-}$ labeling are b
 
     \end{scope}
     \end{tikzpicture}
-    \caption{A $\sigma^{+-}$-labeling of $F \cong\mathbf{T_{6}^{6}} \sqcup \mathbf{T_{3}^{1}}$ (left) and generating presentations for the $F$-decomposition of $K_{n}$ where $n=35$ (middle) and $n=36$ (right)}
-    \label{fig:7mod14example}
+    \caption{A $\sigma^{+-}$-labeling of $F \cong\mathbf{T_{6}^{6}} \sqcup \mathbf{T_{3}^{1}}$ (left) and generating presentations for the $F$-decomposition of $K_{35}$ (middle) and $K_{36}$ (right)}
+    \label{tab:(1-2-3)example}
 \end{figure}
-%%%%%%%%%%%%%%%%
+%%%%%%
 \newpage
 \section{$\mathbf{T_{7}^{11}}\sqcup\mathbf{T_{2}^{1}}$ -decompositions of $K_{n}$ for $n\equiv\,7,8\,\pmod{14}$} \label{sec:star}
 %Danny
@@ -435,7 +434,9 @@ We show that $\mathbf{T_{7}^{11}}\sqcup\mathbf{T_{2}^{1}}$ decomposes $K_{n}$ fo
 \end{theorem}
 
 \begin{proof}
-     Figures 8 and 9 show $\mathbf{T_{7}^{11}}\sqcup\mathbf{T_{2}^{1}}$-decompositions of $K_{21}$ and $K_{22}$, respectively.  %The table will contain ad-hoc decompositions of $K_{21}$ and $K_{22}$. The construction for $K_{21}$ results from plucking edges off of Pauline Cain's $7$-star decomposition of $K_{21}$ and mixing them around, and The construction for $K_{22}$ results from adding three stars centered at $\infty$ and three lone paths beginning at $\infty$. Once again, edges are plucked off and mixed around to make this work.
+     Figures \ref{tab:starpathK21} and \ref{tab:starpathK22} show $\mathbf{T_{7}^{11}}\sqcup\mathbf{T_{2}^{1}}$-decompositions of $K_{21}$ and $K_{22}$, respectively.  
+     
+     %The table will contain ad-hoc decompositions of $K_{21}$ and $K_{22}$. The construction for $K_{21}$ results from plucking edges off of Pauline Cain's $7$-star decomposition of $K_{21}$ and mixing them around, and The construction for $K_{22}$ results from adding three stars centered at $\infty$ and three lone paths beginning at $\infty$. Once again, edges are plucked off and mixed around to make this work.
 \end{proof}
 
 \begin{theorem} \label{thm:K_n,7}
@@ -443,28 +444,38 @@ We show that $\mathbf{T_{7}^{11}}\sqcup\mathbf{T_{2}^{1}}$ decomposes $K_{n}$ fo
 \end{theorem}
 
 \begin{proof}
-    Take the partite set of $n$ nodes to be $\ZZ_{n}$ and color them white. Then, take the other partite set of $7$ nodes to be $\ZZ_{7}$ and color them black. Notice that $|E(K_{n,7})|=|\ZZ_{n}\oplus \ZZ_{7}|=7n$. So let us refer to edges of $K_{n,7}$ as elements of $\ZZ_{n}\oplus \ZZ_{7}$ and vice versa. Note that since $n\geq 2, (1,0)\neq (0,0)$.
+    Consider $K_{n,7}$ where $n\geq 2$. Take the partite set of $n$ vertices to be $\ZZ_{n}$ and color them white. Similarly, take the partite set of $7$ vertices to be $K_{7}$ and color them black. Naturally we refer to \textit{white-black} vertices $uv$ in $K_{n,7}$ via $(u,v)\in \ZZ_{n}\times\ZZ_{7}$ and vice versa. Finally, let $E_{i}=\{(i,0)\}\sqcup (\{i+1\}\times \{1,\hdots,6\})$ and $G_{i}\subset K_{n,7}$ be the subgraph induced by $E_{i}$ for each $i\in \ZZ_{n}$. Note that $G_{i}\cong \mathbf{T_{7}^{11}}\sqcup\mathbf{T_{2}^{1}}$ for all $i\in \ZZ_{n}$.
     \\
     
-    \noindent Now, let $E_{i}= (i,0)+\{(0,0),(1,1),(1,2),\hdots,(1,6)\}$ for each $i\in \ZZ_{n}$ and $F_{i}$ be the subgraph induced by $E_{i}$. Since each $F_{i}$ contains a path $(i,0)$ which is vertex disjoint from the star centered at the white $i+1$, it must be isomorphic to $\mathbf{T_{7}^{11}}\sqcup\mathbf{T_{2}^{1}}$.
-    \\
+    \noindent Notice that $E_{i}\cap E_{j}=\emptyset$ if $i\neq j$, so all distinct $G_{i}$'s are pairwise edge disjoint. Lastly, we have that
+    
+    $$\bigcup_{i\in \ZZ_{n}} E_{i}=[\bigcup_{i\in \ZZ_{n}} \{(i,0)\}]\sqcup [\bigcup_{i\in \ZZ_{n}} (\{i+1\}\times \{1,\hdots, 6\})]$$
+    
+    $$=[\ZZ_{n}\times \{0\}]\sqcup [\ZZ_{n}\times \{1,\hdots, 6\}]=\ZZ_{n}\times \ZZ_{7}.$$
+    
+    \noindent So $G_{0}\sqcup \cdots \sqcup G_{n-1}=K_{n,7}$ and $\{G_{i}\mid i\in \ZZ_{n}\}$ is a $\mathbf{T_{7}^{11}}\sqcup\mathbf{T_{2}^{1}}-$decomposition of $K_{n,7}$. Furthermore, it is generated by developing the white nodes of $G_{0}$ by $1$.
+    
+\end{proof}
+
+\begin{figure}
+    \centering
+    \input{starpath}
+    \caption{$G_{0}$ in a generating presentation of the $\mathbf{T_{7}^{11}}\sqcup\mathbf{T_{2}^{1}}$-decomposition of $K_{n,7}$}
+    \label{fig:enter-label}
+\end{figure}
+
+%old proof:
+
+    %Take the partite set of $n$ nodes to be $\ZZ_{n}$ and color them white. Then, take the other partite set of $7$ nodes to be $\ZZ_{7}$ and color them black. Notice that $|E(K_{n,7})|=|\ZZ_{n}\oplus \ZZ_{7}|=7n$. So let us refer to edges of $K_{n,7}$ as elements of $\ZZ_{n}\oplus \ZZ_{7}$ and vice versa. Note that since $n\geq 2, (1,0)\neq (0,0)$.
+
+    %Now, let $E_{i}= (i,0)+\{(0,0),(1,1),(1,2),\hdots,(1,6)\}$ for each $i\in \ZZ_{n}$ and $F_{i}$ be the subgraph induced by $E_{i}$. Since each $F_{i}$ contains a path $(i,0)$ which is vertex disjoint from the star centered at the white $i+1$, it must be isomorphic to $\mathbf{T_{7}^{11}}\sqcup\mathbf{T_{2}^{1}}$.
+
     %note to self: originally I thought of E_i's as (i,0) + (\{(0,0)\}\cup [(1,0)+[\langle (0,1)\rangle\setminus \{(0,0)\}]])
 
     %the union expression at the end is messy. However, the point of using groups here is basically that when we use generator notation we can swallow things up to get simpler things in terms of generators and it works out nicely here.
     
-    \noindent Suppose that there exist distinct $i,j\in \ZZ_{n}$ such that $E_{i}\cap E_{j}\neq \emptyset$. But then we have that $(i,0)=(j,0)$ or $(i+1,a)=(j+1,b)$ for some $a,b\in \ZZ_{7}$, which is impossible. So all distinct $E_{i}$'s are pairwise disjoint, and therefore all distinct $F_{i}$'s are pairwise edge-disjoint. Lastly, $\bigcup_{i\in \ZZ_{n}} E_{i}=\langle (1,0)\rangle + [\{(0,0)\}\cup [(1,0)+\langle (0,1)\rangle] \setminus \{(1,0)\}]=\langle (1,0)\rangle + \langle (0,1)\rangle = \langle (1,0),(0,1)\rangle = \ZZ_{n}\oplus \ZZ_{7}$. Therefore, $\bigcup_{i\in \ZZ_{n}} F_{i} = K_{n,7}$. 
-    \\
-    
-    \noindent Thus, $\{F_{i}\mid i\in \ZZ_{n}\}$ is a $\mathbf{T_{7}^{11}}\sqcup\mathbf{T_{2}^{1}}-$decomposition of $K_{n,7}$. Furthermore, This decomposition is generated by developing the white nodes of $F_{0}$ by $1$.
-\end{proof}
+    %\noindent Suppose that there exist distinct $i,j\in \ZZ_{n}$ such that $E_{i}\cap E_{j}\neq \emptyset$. But then we have that $(i,0)=(j,0)$ or $(i+1,a)=(j+1,b)$ for some $a,b\in \ZZ_{7}$, which is impossible. So all distinct $E_{i}$'s are pairwise disjoint, and therefore all distinct $F_{i}$'s are pairwise edge-disjoint. Lastly, $\bigcup_{i\in \ZZ_{n}} E_{i}=\langle (1,0)\rangle + [\{(0,0)\}\cup [(1,0)+\langle (0,1)\rangle] \setminus \{(1,0)\}]=\langle (1,0)\rangle + \langle (0,1)\rangle = \langle (1,0),(0,1)\rangle = \ZZ_{n}\oplus \ZZ_{7}$. Therefore, $\bigcup_{i\in \ZZ_{n}} F_{i} = K_{n,7}$. \\
 \newpage
-\begin{figure}
-    \centering
-    \input{starpath}
-    \caption{A generating presentation of the $\mathbf{T_{7}^{11}}\sqcup\mathbf{T_{2}^{1}}$-decomposition of $K_{n,7}$}
-    \label{fig:enter-label}
-\end{figure}
-
 \begin{cor}\label{cor:starpathbi}
     $\mathbf{T_{7}^{11}}\sqcup\mathbf{T_{2}^{1}}$ decomposes $K_{22,14}$, $K_{21,14},\text{ and }K_{14,14}$.
 \end{cor}
@@ -481,50 +492,11 @@ $\mathbf{T_{7}^{11}}\sqcup\mathbf{T_{2}^{1}}$ decomposes $K_{14}$ by Theorem \re
 \newline\newline
 Therefore, $\mathbf{T_{7}^{11}}\sqcup\mathbf{T_{2}^{1}}$ decomposes the join of $(t-1)$ copies of $K_{14}$ with each other and $1$ copy of $K_{21}$, which is isomorphic to $K_{14t+7}$. Similarly $\mathbf{T_{7}^{11}}\sqcup\mathbf{T_{2}^{1}}$ decomposes the join of $(t-1)$ copies of $K_{14}$ with each other and $1$ copy of $K_{22}$ which is isomorphic to $K_{14t+8}$.
 \end{proof}
-%%%%%%%%%%
-\newpage
-\section{(1-2-3)-labelings and 1-rotational (1-2-3)-labelings}
-%table: 7 (mod14)
-\begin{figure}[H]
-\centering
-    \includegraphics[scale=0.9]{7(mod 14).pdf}
-    \caption{(1-2-3)-labelings}
-    \label{fig:7mod14}
-\end{figure}
-%table 8 (mod 14)
-\newpage
-\begin{figure}[H]
-    \centering
-    \includegraphics[scale=0.9]{8(mod 14).pdf}
-    \caption{1-rotational (1-2-3)-labelings}
-    \label{fig:8mod14}
-\end{figure}
-\newpage
-\begin{figure}
-\input{7(mod 14) pt 1}
-\end{figure}
-\newpage
-\begin{figure}
-\scalebox{1}{\input{7(mod 14) pt 2}}
-\caption{(1-2-3)-labelings}
-\end{figure}
+%%%%%%%%%
 
+%%%%%%%%%
 
-\section{$\mathbf{T_{7}^{11}}\sqcup\mathbf{T_{2}^{1}}$-decompositions of $K_{21}$ and $K_{22}$}
-%K21 chart
-\begin{figure}[H]
-    \input{K21}
-    \caption{A $\mathbf{T_{7}^{11}}\sqcup\mathbf{T_{2}^{1}}$-decomposition of $K_{21}$}
-    \label{fig:K21}
-\end{figure}
-%K22 chart
-\begin{figure}[H]
-    \input{K22}
-    \caption{A $\mathbf{T_{7}^{11}}\sqcup\mathbf{T_{2}^{1}}$-decomposition of $K_{22}$}
-    \label{fig:K22}
-\end{figure}
-\newpage
-%%%%%%%%%%%
+%%%%%%%%%
 \begin{thebibliography}{20}
 
 \bibitem{bib:Cain}
@@ -566,6 +538,20 @@ In: Theory of Graphs (Intl. Symp. Rome 1966), Gordon and Breach, Dunod, Paris,
 
 \end{thebibliography}
 
+% appendix
+\section{Appendix}
 
+\subsection{(1-2-3)-labelings}
+%table: 7 (mod14)
+    \input{7m14}
+\subsection{1-rotational (1-2-3)-labelings}
+%table 8 (mod 14)
+    \input{8m14}
+\subsection{$\mathbf{T_{7}^{11}}\sqcup\mathbf{T_{2}^{1}}$-decomposition of $K_{21}$ and $K_{22}$}
+%K21 chart
+    \input{K21}
+\newpage
+%K22 chart
+    \input{K22}
 \end{document}
 
