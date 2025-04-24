@@ -2,9 +2,9 @@
 
 \section{Fundamentals of Graph Theory}
 
-Graph Theory is the study of objects called \textit{vertices} or \textit{nodes} and their relationships which we call \textit{edges}. An edge between vertices $u$ and $v$ is typically denoted via $uv$ or $(u,v)$. A graph $G$ is completely defined by an ordered pair $G = (V,E)$ where $V$ is the set of all vertices in $G$ and $E$ is the set of all edges between vertices in $G$. These sets are sometimes refered to as $V(G)$ and $E(G)$, respectively.
+Graph Theory is the study of objects called \textit{vertices} or \textit{nodes} and their relationships which we call \textit{edges}. An edge between vertices $u$ and $v$ is typically denoted $uv$ or $(u,v)$. A graph $G$ is formally defined as an ordered pair $G = (V,E)$ where $V$ is the set of all vertices in $G$ and $E$ is the set of all edges between vertices in $G$. These sets are sometimes refered to as $V(G)$ and $E(G)$, respectively.
 
-We call $G$ a simple graph if (1) there is at most 1 edge between any two vertices, (2) there are no edges from a vertex to itself and (3) all edges have no directionality to them, meaning $uv=vu$ for any edge $uv\in E(G)$. For the rest of this paper all graphs are finite simple graphs, but note that unions and subgraphs are defined the same way for directed graphs and infinite graphs.
+$G$ is called a \textit{simple graph} if: (1) there is at most 1 edge between any two vertices, (2) there are no edges from a vertex to itself and (3) all edges have no directionality to them, meaning $uv=vu$ for any edge $uv\in E(G)$. For the rest of this paper all graphs are finite simple graphs, but note that unions and subgraphs are defined the same way for directed graphs and infinite graphs.
 
 Graphs are more intuitive to work with through their visual representations instead of their formal definitions. Let the simple graph $G$ where $V(G)=\{A,B,C,D,E,a,b,c,\newline d, e\}$ and $E(G)=\{Aa,Bb,Cc,Dd,Ee,AB,BC,CD,DE,EA,ac,ce,eb,bd,da\}$. G is often called the \textit{Petersen} graph. It's unwieldy when described formally, yet its visual representation is very easy to understand.
 
@@ -235,7 +235,7 @@ The figure below shows $K$ and it's color-coded subgraphs.
 Next, we will talk about two important operations done on graphs.
 
 \begin{definition}[Graph Union]
-The union of two graphs $G$ and $H$ is simply the graph resulting from the union of their vertices and the union of their edges and is denoted $G\cup H$; $G\cup H=(V(G)\cup V(H),E(G)\cup E(H))$. If $G$ and $H$ are vertex disjoint, we denote their union via $G\sqcup H$ and call it a \textit{disjoint union} of $G$ and $H$.
+The union of two graphs $G$ and $H$ is simply the graph resulting from the union of their vertices and the union of their edges and is denoted $G\cup H$; $G\cup H=(V(G)\cup V(H),E(G)\cup E(H))$. If $G$ and $H$ are edge-disjoint, we denote their union via $G\sqcup H$ and call it a \textit{disjoint union} of $G$ and $H$.
 \end{definition}
 
 Here is an example of a union and a disjoint union of graphs. Let $G=(\{a,b,c,d\},\{ab,\newline bc,cd,da\}),H=(\{a,b,c\},\{ab,bc,ca\}),\text{ and }K=(\{A,B,C\},\{AB,BC,CA\})$ Then:
@@ -732,7 +732,7 @@ Any disjoint union of tree graphs is called a \textit{forest} graph. These graph
     \label{fig:galaxy_close}
     \end{figure}
     
-We have now defined a few very important families of graphs which we will refer to throughout the rest of this paper. We generally don't explicitly define every graph by its vertices and edges and simply refer to it as some member of one family or say this it is isomorphic to one. This is much more efficient and concise than listing out all vertices and edges as we did in the beginning of this chapter.
+We have now defined a few important families of graphs which we will refer to throughout the rest of this paper. We generally don't explicitly define every graph by its vertices and edges and simply refer to it as some member of one family or say this it is isomorphic to one. This is much more efficient and concise than listing out all vertices and edges as we did in the beginning of this chapter.
 
 We are now ready to move on and introduce graph decompositions, the objects which are the subject of this project.
   

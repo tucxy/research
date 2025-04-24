@@ -1,6 +1,11 @@
 \chapter{Additional Results} \label{chap:Additional Results}
 
-Recall the definition of a (1-2-3)-labeling of $3G$ and a 1-rotational (1-2-3)-labeling of $4G$. When first solving the $7,8\pmod{14}$ cases, we used (8-9-10)-labelings allowing for wraparound edges for all forests except $\mathbf{T_{7}^{11}\sqcup T_{2}^{1}}$. We did this so that we could simply use the $\sigma^{+-}$ labeling of each forest to complete the decompositions.
+We present two main additional results produced by work done on this project. (1) Wraparound edge mappings that preserve length and (2) Galaxy graph decompositions of multipartite graphs.
+
+\section{Wraparound edge mappings that preserve length}
+Initially when I found labelings to take care of the $n\equiv 7,8\pmod{14}$ cases, we used lengths $8,9,10$, and I mistakenly did not have all edges be short edges (non-wraparound edges). This meant they didn't generalize via the permutation $v\mapsto v+1$ for $K_{14t+7}$ and $K_{14t+8}$ where $t>1$. In an effort to not have to find 90 completely new labelings (I did later have to anyways), I tried to find a new way to map wraparound edges in my labelings. I was successful but it was very messy, and this caused us to pivot to using lengths $1,2,3$ since a larger percent of edges with those lengths are short edges.
+
+Note that this is very preliminary. In order to implement these mappings sucessfully, one has to ensure that new vertices wont collide with currently existing vertices elsewhere in the labelings. Because there was a pivot, this was not investigated and perhaps remains an open problem as a result of this project.
 
 
 

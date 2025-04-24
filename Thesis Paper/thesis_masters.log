@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.18)  15 APR 2025 06:01
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.18)  23 APR 2025 18:25
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -304,6 +304,44 @@ Package bm Info: No bold for \U/rsfs/m/n, using \pmb.
 Package bm Info: No bold for \U/msa/m/n, using \pmb.
 Package bm Info: No bold for \U/msb/m/n, using \pmb.
 LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 149.
+) (c:/texlive/2025/texmf-dist/tex/latex/fundus-calligra/calligra.sty
+Package: calligra 2012/04/10 v1.9 LaTeX package calligra
+) (c:/texlive/2025/texmf-dist/tex/latex/psnfss/palatino.sty
+Package: palatino 2020/03/25 PSNFSS-v9.3 (SPQR) 
+) (c:/texlive/2025/texmf-dist/tex/latex/lm/lmodern.sty
+Package: lmodern 2015/05/01 v1.6.1 Latin Modern Fonts
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/cmr/m/n --> OT1/lmr/m/n on input line 22.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `normal'
+(Font)                  OML/cmm/m/it --> OML/lmm/m/it on input line 23.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
+(Font)                  OMS/cmsy/m/n --> OMS/lmsy/m/n on input line 24.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
+(Font)                  OMX/cmex/m/n --> OMX/lmex/m/n on input line 25.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 26.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `bold'
+(Font)                  OML/cmm/b/it --> OML/lmm/b/it on input line 27.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
+(Font)                  OMS/cmsy/b/n --> OMS/lmsy/b/n on input line 28.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
+(Font)                  OMX/cmex/m/n --> OMX/lmex/m/n on input line 29.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 31.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
+(Font)                  OT1/cmss/m/n --> OT1/lmss/m/n on input line 32.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/cmr/m/it --> OT1/lmr/m/it on input line 33.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
+(Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 34.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 35.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  OT1/cmss/bx/n --> OT1/lmss/bx/n on input line 36.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/cmr/bx/it --> OT1/lmr/bx/it on input line 37.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+(Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 38.
 ) (c:/texlive/2025/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count311
@@ -775,7 +813,11 @@ Package: ifoddpage 2022/10/18 v1.2 Conditionals for odd/even page detection
 \gincltex@box=\box104
 ) (c:/texlive/2025/texmf-dist/tex/latex/filemod/filemod-expmin.sty
 Package: filemod-expmin 2011/09/19 v1.2 Get and compare file modification times (expandable; minimal)
-))) (c:/texlive/2025/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+)))
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 18.
+ (c:/texlive/2025/texmf-dist/tex/latex/lm/ot1lmr.fd
+File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+) (c:/texlive/2025/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count366
 \l__pdf_internal_box=\box105
@@ -839,11 +881,14 @@ Underfull \vbox (badness 10000) detected at line 34
 [1
 
 
-{c:/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+{c:/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{c:/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}]
 Copyright
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 34.
+(c:/texlive/2025/texmf-dist/tex/latex/lm/ts1lmr.fd
+File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
 
-
-[2{c:/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
+[2{c:/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}]
 Acknowledgements
 (./acknowledge.tex)
 
@@ -856,6 +901,24 @@ Dedication
 [2
 
 ] (./abstract.tex
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 5.
+ (c:/texlive/2025/texmf-dist/tex/latex/lm/omllmm.fd
+File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 5.
+ (c:/texlive/2025/texmf-dist/tex/latex/lm/omslmsy.fd
+File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 5.
+ (c:/texlive/2025/texmf-dist/tex/latex/lm/omxlmex.fd
+File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10.95> on input line 5.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <8> on input line 5.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <6> on input line 5.
 LaTeX Font Info:    Trying to load font information for U+rsfs on input line 5.
  (c:/texlive/2025/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
@@ -879,7 +942,7 @@ File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 Abstract
 
 
-[3] (./thesis_masters.toc
+[3{c:/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{c:/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}] (./thesis_masters.toc
 
 [4
 
@@ -930,20 +993,30 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has b
                    \relax 
 l.151 \end{definition}
                        [2]
-Overfull \hbox (3.41817pt too wide) in paragraph at lines 241--242
-[]\OT1/cmr/m/n/10.95 Here is an ex-am-ple of a union and a dis-joint union of graphs. Let $\OML/cmm/m/it/10.95 G \OT1/cmr/m/n/10.95 = (\OMS/cmsy/m/n/10.95 f\OML/cmm/m/it/10.95 a; b; c; d\OMS/cmsy/m/n/10.95 g\OML/cmm/m/it/10.95 ; \OMS/cmsy/m/n/10.95 f\OML/cmm/m/it/10.95 ab; [] 
+Overfull \hbox (3.41696pt too wide) in paragraph at lines 241--242
+[]\OT1/lmr/m/n/10.95 Here is an ex-am-ple of a union and a dis-joint union of graphs. Let $\OML/lmm/m/it/10.95 G \OT1/lmr/m/n/10.95 = (\OMS/lmsy/m/n/10.95 f\OML/lmm/m/it/10.95 a; b; c; d\OMS/lmsy/m/n/10.95 g\OML/lmm/m/it/10.95 ; \OMS/lmsy/m/n/10.95 f\OML/lmm/m/it/10.95 ab; [] 
  []
 
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <14.4> on input line 250.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10> on input line 250.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <7> on input line 250.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <17.28> on input line 260.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <12> on input line 260.
 
 
 [3]
-Overfull \hbox (19.99556pt too wide) in paragraph at lines 353--354
-[]\OT1/cmr/m/n/10.95 Here is an ex-am-ple. Let $\OML/cmm/m/it/10.95 G \OT1/cmr/m/n/10.95 = (\OMS/cmsy/m/n/10.95 f\OML/cmm/m/it/10.95 a; b; c\OMS/cmsy/m/n/10.95 g\OML/cmm/m/it/10.95 ; \OMS/cmsy/m/n/10.95 f\OML/cmm/m/it/10.95 ab; bc; ca\OMS/cmsy/m/n/10.95 g\OT1/cmr/m/n/10.95 )$ and $\OML/cmm/m/it/10.95 H \OT1/cmr/m/n/10.95 = (\OMS/cmsy/m/n/10.95 f\OML/cmm/m/it/10.95 A; B; C\OMS/cmsy/m/n/10.95 g\OML/cmm/m/it/10.95 ; \OMS/cmsy/m/n/10.95 f\OML/cmm/m/it/10.95 AB; BC; CA\OMS/cmsy/m/n/10.95 g\OT1/cmr/m/n/10.95 )$,
+Overfull \hbox (19.99606pt too wide) in paragraph at lines 353--354
+[]\OT1/lmr/m/n/10.95 Here is an ex-am-ple. Let $\OML/lmm/m/it/10.95 G \OT1/lmr/m/n/10.95 = (\OMS/lmsy/m/n/10.95 f\OML/lmm/m/it/10.95 a; b; c\OMS/lmsy/m/n/10.95 g\OML/lmm/m/it/10.95 ; \OMS/lmsy/m/n/10.95 f\OML/lmm/m/it/10.95 ab; bc; ca\OMS/lmsy/m/n/10.95 g\OT1/lmr/m/n/10.95 )$ and $\OML/lmm/m/it/10.95 H \OT1/lmr/m/n/10.95 = (\OMS/lmsy/m/n/10.95 f\OML/lmm/m/it/10.95 A; B; C\OMS/lmsy/m/n/10.95 g\OML/lmm/m/it/10.95 ; \OMS/lmsy/m/n/10.95 f\OML/lmm/m/it/10.95 AB; BC; CA\OMS/lmsy/m/n/10.95 g\OT1/lmr/m/n/10.95 )$,
  []
 
 
 
-[4]
+[4{c:/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}]
 
 [5]
 
@@ -958,11 +1031,6 @@ Overfull \hbox (19.99556pt too wide) in paragraph at lines 353--354
 
  (./intro.tex
 Chapter 2.
-<standalone/tree chart.pdf, id=279, 365.01169pt x 408.23819pt>
-File: standalone/tree chart.pdf Graphic file (type pdf)
-<use standalone/tree chart.pdf>
-Package pdftex.def Info: standalone/tree chart.pdf  used on input line 15.
-(pdftex.def)             Requested size: 365.01079pt x 408.23718pt.
 
 
 [10
@@ -971,15 +1039,39 @@ Package pdftex.def Info: standalone/tree chart.pdf  used on input line 15.
 
 
 ]
-Overfull \hbox (7.75537pt too wide) in paragraph at lines 21--22
-[]\OT1/cmr/m/n/10.95 The next the-o-rem gives the nec-es-sary con-di-tions for the ex-is-tence of a $\OML/cmm/m/it/10.95 G$\OT1/cmr/m/n/10.95 -decomposition
+Underfull \hbox (badness 10000) in paragraph at lines 89--91
+
  []
 
 
 
-[11 <./standalone/tree chart.pdf>])
+[11]
 
 [12]
+
+[13]
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5> on input line 235.
+
+
+[14]
+
+[15]
+<standalone/tree chart.pdf, id=346, 365.01169pt x 408.23819pt>
+File: standalone/tree chart.pdf Graphic file (type pdf)
+<use standalone/tree chart.pdf>
+Package pdftex.def Info: standalone/tree chart.pdf  used on input line 351.
+(pdftex.def)             Requested size: 328.50748pt x 367.41096pt.
+
+Overfull \hbox (7.7555pt too wide) in paragraph at lines 357--358
+[]\OT1/lmr/m/n/10.95 The next the-o-rem gives the nec-es-sary con-di-tions for the ex-is-tence of a $\OML/lmm/m/it/10.95 G$\OT1/lmr/m/n/10.95 -decomposition
+ []
+
+
+
+[16 <./standalone/tree chart.pdf>])
+
+[17]
 \openout2 = `"0,1(mod 14).aux"'.
 
  (./0,1(mod 14).tex
@@ -996,39 +1088,33 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1.
 
-
-Overfull \hbox (27.04242pt too wide) in paragraph at lines 3--4
-\OT1/cmr/m/n/10.95 In this sec-tion, we use es-tab-lished graph la-bel-ing tech-niques to con-struct the $\OML/cmm/m/it/10.95 G$\OT1/cmr/m/n/10.95 -decompositions
- []
-
-
-Overfull \hbox (4.84315pt too wide) in paragraph at lines 15--16
-[]\OT1/cmr/m/n/10.95 Rosa showed that a $\OML/cmm/m/it/10.95 ^^Z$\OT1/cmr/m/n/10.95 -labeling of a graph $\OML/cmm/m/it/10.95 G$ \OT1/cmr/m/n/10.95 with $\OML/cmm/m/it/10.95 m$ \OT1/cmr/m/n/10.95 edges and a cyclic $\OML/cmm/m/it/10.95 G$\OT1/cmr/m/n/10.95 -decomposition
- []
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <24.88> on input line 1.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <20.74> on input line 1.
 
 
-
-[13
+[18
 
 
 
 
 ]
-<standalone/sigma label ex1.pdf, id=344, 97.03452pt x 94.66064pt>
+<standalone/sigma label ex1.pdf, id=406, 97.03452pt x 94.66064pt>
 File: standalone/sigma label ex1.pdf Graphic file (type pdf)
 <use standalone/sigma label ex1.pdf>
 Package pdftex.def Info: standalone/sigma label ex1.pdf  used on input line 46.
 (pdftex.def)             Requested size: 97.03427pt x 94.6604pt.
-<standalone/sigma label ex2.pdf, id=345, 52.66878pt x 45.03726pt>
+<standalone/sigma label ex2.pdf, id=407, 52.66878pt x 45.03726pt>
 File: standalone/sigma label ex2.pdf Graphic file (type pdf)
 <use standalone/sigma label ex2.pdf>
 Package pdftex.def Info: standalone/sigma label ex2.pdf  used on input line 47.
 (pdftex.def)             Requested size: 52.66864pt x 45.03712pt.
 
 
-[14 <./standalone/sigma label ex1.pdf> <./standalone/sigma label ex2.pdf>] (./standalone/0,1(mod 14) long.tex [15]))
+[19 <./standalone/sigma label ex1.pdf> <./standalone/sigma label ex2.pdf>] (./standalone/0,1(mod 14) long.tex [20]))
 
-[16]
+[21]
 \openout2 = `"7,8(mod 14).aux"'.
 
  (./7,8(mod 14).tex
@@ -1047,20 +1133,20 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 
 
 
-[17
+[22
 
 
 
 
 ]
 
-[18]
+[23]
 
-[19]
+[24]
 
-[20] (./standalone/Danny's example/chart.tex) (./standalone/Danny's example/Sigma/T-(6,6).tex) (./standalone/Danny's example/Sigma/T-(3,1).tex) (./standalone/Danny's example/7 mod 14/1-T-(6,6).tex) (./standalone/Danny's example/7 mod 14/1-T-(3,1).tex) (./standalone/Danny's example/7 mod 14/2-T-(6,6).tex) (./standalone/Danny's example/7 mod 14/2-T-(3,1).tex) (./standalone/Danny's example/7 mod 14/3-T-(6,6).tex) (./standalone/Danny's example/7 mod 14/3-T-(3,1).tex) (./standalone/Danny's example/7 mod 14/4-T-(6,6).tex) (./standalone/Danny's example/7 mod 14/4-T-(3,1).tex) (./standalone/Danny's example/7 mod 14/5-T-(6,6).tex) (./standalone/Danny's example/7 mod 14/5-T-(3,1).tex) (./standalone/Danny's example/8 mod 14/1-T-(6,6).tex) (./standalone/Danny's example/8 mod 14/1-T-(3,1).tex) (./standalone/Danny's example/8 mod 14/2-T-(6,6).tex) (./standalone/Danny's example/8 mod 14/2-T-(3,1).tex) (./standalone/Danny's example/8 mod 14/3-T-(6,6).tex) (./standalone/Danny's example/8 mod 14/3-T-(3,1).tex) (./standalone/Danny's example/8 mod 14/4-T-(6,6).tex) (./standalone/Danny's example/8 mod 14/4-T-(3,1).tex) (./standalone/Danny's example/8 mod 14/5-T-(6,6).tex) (./standalone/Danny's example/8 mod 14/5-T-(3,1).tex) (./standalone/Danny's example/8 mod 14/6-T-(6,6).tex) (./standalone/Danny's example/8 mod 14/6-T-(3,1).tex))
+[25] (./standalone/Danny's example/chart.tex) (./standalone/Danny's example/Sigma/T-(6,6).tex) (./standalone/Danny's example/Sigma/T-(3,1).tex) (./standalone/Danny's example/7 mod 14/1-T-(6,6).tex) (./standalone/Danny's example/7 mod 14/1-T-(3,1).tex) (./standalone/Danny's example/7 mod 14/2-T-(6,6).tex) (./standalone/Danny's example/7 mod 14/2-T-(3,1).tex) (./standalone/Danny's example/7 mod 14/3-T-(6,6).tex) (./standalone/Danny's example/7 mod 14/3-T-(3,1).tex) (./standalone/Danny's example/7 mod 14/4-T-(6,6).tex) (./standalone/Danny's example/7 mod 14/4-T-(3,1).tex) (./standalone/Danny's example/7 mod 14/5-T-(6,6).tex) (./standalone/Danny's example/7 mod 14/5-T-(3,1).tex) (./standalone/Danny's example/8 mod 14/1-T-(6,6).tex) (./standalone/Danny's example/8 mod 14/1-T-(3,1).tex) (./standalone/Danny's example/8 mod 14/2-T-(6,6).tex) (./standalone/Danny's example/8 mod 14/2-T-(3,1).tex) (./standalone/Danny's example/8 mod 14/3-T-(6,6).tex) (./standalone/Danny's example/8 mod 14/3-T-(3,1).tex) (./standalone/Danny's example/8 mod 14/4-T-(6,6).tex) (./standalone/Danny's example/8 mod 14/4-T-(3,1).tex) (./standalone/Danny's example/8 mod 14/5-T-(6,6).tex) (./standalone/Danny's example/8 mod 14/5-T-(3,1).tex) (./standalone/Danny's example/8 mod 14/6-T-(6,6).tex) (./standalone/Danny's example/8 mod 14/6-T-(3,1).tex))
 
-[21]
+[26]
 \openout2 = `"special case.aux"'.
 
  (./special case.tex
@@ -1095,14 +1181,14 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 
 
 
-[22
+[27
 
 
 
 
 ] (./standalone/starpath.tex)
-Overfull \hbox (2.21138pt too wide) detected at line 33
-[] \OML/cmm/m/it/10.95 E[] \OT1/cmr/m/n/10.95 = [[]\OMS/cmsy/m/n/10.95 f\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 i; \OT1/cmr/m/n/10.95 0)\OMS/cmsy/m/n/10.95 g\OT1/cmr/m/n/10.95 ] \OMS/cmsy/m/n/10.95 t \OT1/cmr/m/n/10.95 [[](\OMS/cmsy/m/n/10.95 f\OML/cmm/m/it/10.95 i \OT1/cmr/m/n/10.95 + 1\OMS/cmsy/m/n/10.95 g ^^B f\OT1/cmr/m/n/10.95 1\OML/cmm/m/it/10.95 ; [] ; \OT1/cmr/m/n/10.95 6\OMS/cmsy/m/n/10.95 g\OT1/cmr/m/n/10.95 )] = [\U/msb/m/n/10.95 Z[] \OMS/cmsy/m/n/10.95 ^^B f\OT1/cmr/m/n/10.95 0\OMS/cmsy/m/n/10.95 g\OT1/cmr/m/n/10.95 ] \OMS/cmsy/m/n/10.95 t \OT1/cmr/m/n/10.95 [\U/msb/m/n/10.95 Z[] \OMS/cmsy/m/n/10.95 ^^B f\OT1/cmr/m/n/10.95 1\OML/cmm/m/it/10.95 ; [] ; \OT1/cmr/m/n/10.95 6\OMS/cmsy/m/n/10.95 g\OT1/cmr/m/n/10.95 ] = \U/msb/m/n/10.95 Z[] \OMS/cmsy/m/n/10.95 ^^B \U/msb/m/n/10.95 Z[]
+Overfull \hbox (2.43118pt too wide) detected at line 33
+[] \OML/lmm/m/it/10.95 E[] \OT1/lmr/m/n/10.95 = [[]\OMS/lmsy/m/n/10.95 f\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 i; \OT1/lmr/m/n/10.95 0)\OMS/lmsy/m/n/10.95 g\OT1/lmr/m/n/10.95 ] \OMS/lmsy/m/n/10.95 t \OT1/lmr/m/n/10.95 [[](\OMS/lmsy/m/n/10.95 f\OML/lmm/m/it/10.95 i \OT1/lmr/m/n/10.95 + 1\OMS/lmsy/m/n/10.95 g ^^B f\OT1/lmr/m/n/10.95 1\OML/lmm/m/it/10.95 ; [] ; \OT1/lmr/m/n/10.95 6\OMS/lmsy/m/n/10.95 g\OT1/lmr/m/n/10.95 )] = [\U/msb/m/n/10.95 Z[] \OMS/lmsy/m/n/10.95 ^^B f\OT1/lmr/m/n/10.95 0\OMS/lmsy/m/n/10.95 g\OT1/lmr/m/n/10.95 ] \OMS/lmsy/m/n/10.95 t \OT1/lmr/m/n/10.95 [\U/msb/m/n/10.95 Z[] \OMS/lmsy/m/n/10.95 ^^B f\OT1/lmr/m/n/10.95 1\OML/lmm/m/it/10.95 ; [] ; \OT1/lmr/m/n/10.95 6\OMS/lmsy/m/n/10.95 g\OT1/lmr/m/n/10.95 ] = \U/msb/m/n/10.95 Z[] \OMS/lmsy/m/n/10.95 ^^B \U/msb/m/n/10.95 Z[]
  []
 
 
@@ -1112,16 +1198,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 62--65
 
 
 
-[23])
+[28])
 
-[24]
+[29]
 \openout2 = `"Additional Results.aux"'.
 
  (./Additional Results.tex
 Chapter 6.
 )
 
-[25
+[30
 
 
 
@@ -1133,7 +1219,7 @@ Chapter 6.
 Chapter 7.
 )
 
-[26
+[31
 
 
 
@@ -1143,22 +1229,26 @@ Chapter 7.
 
  (./Appendix.tex
 Chapter 8.
-(./standalone/7m14.tex [27
+(./standalone/7m14.tex [32
 
 
 
 
-] [28] [29] [30] [31] [32])
+] [33] [34] [35] [36] [37])
 
-[33] (./standalone/8m14.tex [34] [35] [36] [37] [38] [39] [40])
+[38] (./standalone/8m14.tex [39] [40] [41] [42] [43] [44] [45])
 
-[41] (./standalone/K21.tex) (./standalone/K22.tex [42])
+[46] (./standalone/K21.tex) (./standalone/K22.tex [47])
 
-[43])
+[48]
+LaTeX Font Info:    Trying to load font information for OT1+lmtt on input line 21.
+ (c:/texlive/2025/texmf-dist/tex/latex/lm/ot1lmtt.fd
+File: ot1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+))
 
-[44
+[49
 
-]
+{c:/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-rmtt.enc}]
 No file thesis_masters.bbl.
 \openout2 = `app_glossary.aux'.
 
@@ -1207,7 +1297,7 @@ Overfull \hbox (25.19998pt too wide) in alignment at lines 57--61
 
 )
 
-[45
+[50
 
 
 
@@ -1218,22 +1308,22 @@ LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
 Package rerunfilecheck Info: File `thesis_masters.out' has not changed.
-(rerunfilecheck)             Checksum: D456DA1FF56555F1B3B61F58952A8803;2386.
+(rerunfilecheck)             Checksum: E6C2999E804AEB4BCDFDA35D20E38FC5;3085.
  )
 (\end occurred when \ifnum on line 25 was incomplete) 
 Here is how much of TeX's memory you used:
- 30533 strings out of 473190
- 584524 string characters out of 5719979
- 1101428 words of memory out of 5000000
- 52898 multiletter control sequences out of 15000+600000
- 588276 words of font info for 155 fonts, out of 8000000 for 9000
+ 30911 strings out of 473190
+ 592130 string characters out of 5719979
+ 1103476 words of memory out of 5000000
+ 53201 multiletter control sequences out of 15000+600000
+ 665162 words of font info for 176 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 100i,19n,96p,945b,1329s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb>
-Output written on thesis_masters.pdf (54 pages, 386487 bytes).
+ 100i,19n,96p,1080b,1329s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmbx8.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmex10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi6.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi8.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr17.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr6.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr8.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmri10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy8.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmtt10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on thesis_masters.pdf (59 pages, 519154 bytes).
 PDF statistics:
- 672 PDF objects out of 1000 (max. 8388607)
- 555 compressed objects within 6 object streams
- 145 named destinations out of 1000 (max. 500000)
- 180 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 747 PDF objects out of 1000 (max. 8388607)
+ 622 compressed objects within 7 object streams
+ 164 named destinations out of 1000 (max. 500000)
+ 212 words of extra memory for PDF output out of 10000 (max. 10000000)
 

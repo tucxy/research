@@ -14,14 +14,18 @@
 \contentsline {figure}{\numberline {1.13}{\ignorespaces A forest on 9 vertices}}{9}{figure.caption.18}%
 \contentsline {figure}{\numberline {1.14}{\ignorespaces The $(K_{1,6},K_{1,7})$-Galaxy}}{9}{figure.caption.19}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces trees with less than seven edges}}{11}{figure.caption.20}%
+\contentsline {figure}{\numberline {2.1}{\ignorespaces $\{G_{1},G_{2}\}$ is a decomposition of $K_{4}$}}{10}{figure.caption.20}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces $\{G_{1},G_{2}\}$ is a $P_{3}$-decomposition of $K_{4}$ or a $P_{3}$-design of order $4$}}{12}{figure.caption.21}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces $K_{5}$ with lengths colored}}{14}{figure.caption.22}%
+\contentsline {figure}{\numberline {2.4}{\ignorespaces A cyclic $P_{3}$-decomposition of $K_{5}$}}{15}{figure.caption.23}%
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Trees with less than seven edges}}{16}{figure.caption.24}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces $\sigma ^{+-}$-labeling of $\mathbf {T_{6}^{6}}\sqcup 2\mathbf {T_{2}^{1}}$}}{14}{figure.caption.21}%
+\contentsline {figure}{\numberline {3.1}{\ignorespaces $\sigma ^{+-}$-labeling of $\mathbf {T_{6}^{6}}\sqcup 2\mathbf {T_{2}^{1}}$}}{19}{figure.caption.25}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Labelings for $\mathbf {T_{6}^{6}} \sqcup \mathbf {T_{3}^{1}}$}}{21}{figure.caption.22}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces A $\sigma ^{+-}$-labeling of $F \cong \mathbf {T_{6}^{6}} \sqcup \mathbf {T_{3}^{1}}$ (left) and generating presentations for the $F$-decomposition of $K_{n}$ where $n=35$ (middle) and $n=36$ (right)}}{21}{figure.caption.23}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Labelings for $\mathbf {T_{6}^{6}} \sqcup \mathbf {T_{3}^{1}}$}}{26}{figure.caption.26}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces A $\sigma ^{+-}$-labeling of $F \cong \mathbf {T_{6}^{6}} \sqcup \mathbf {T_{3}^{1}}$ (left) and generating presentations for the $F$-decomposition of $K_{n}$ where $n=35$ (middle) and $n=36$ (right)}}{26}{figure.caption.27}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces $G_{0}$ in a generating presentation of the $\mathbf {T_{7}^{11}}\sqcup \mathbf {T_{2}^{1}}-$decomposition of $K_{n,7}$.}}{23}{figure.caption.24}%
+\contentsline {figure}{\numberline {5.1}{\ignorespaces $G_{0}$ in a generating presentation of the $\mathbf {T_{7}^{11}}\sqcup \mathbf {T_{2}^{1}}-$decomposition of $K_{n,7}$.}}{28}{figure.caption.28}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
