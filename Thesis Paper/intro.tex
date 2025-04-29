@@ -340,15 +340,15 @@ Lastly, some basic observations about a general $G$ with $m$ edges and $K_{n}$. 
 
 Now, for $r=0$ or $1$, if a certain labeling of a graph $G$ on $m$ edges exists, there exists a $G$-decomposition of $K_{2mt+r}$ for $t\geq 1$. However, if $r\neq 0,1$, one labeling will not suffice and other techniques are needed to prove that $G$ decomposes $K_{2mt+r}$ for $t\geq 1$. These labelings and techniques are defined as they are needed in the proceeding chapters. Finally, we are ready to introduce the focus of this project.
 \section{Seven edge forests}
-As stated earlier, this project continues on Freyberg and Peters' work on six edge forests by asking the same question about seven edge forests:
+This project continues on Freyberg and Peters' work on six edge forests by asking the same question about seven edge forests:
 \begin{center}
   Let $F$ be a forest on seven edges. For which $n$ does $F$ decompose $K_{n}$? 
 \end{center}
-Every component of a forest on seven edges is a tree on six or less edges. These trees are cataloged in Figure \ref{fig:catalog}. We use the naming convention $\mathbf{T_{j}^i}$ to denote the $i^{\textrm{th}}$ tree with $j$ vertices and we index the vertices $v_{1}$ through $v_{j}$ for each tree as specified below.
+The spectrum problem for the matching $\mathbf{7T_{2}^{11}}$ was solved by de Werra in $1970$. Every component of a forest on seven edges is a tree on six or less edges which are cataloged in Figure \ref{fig:catalog}. We use the naming convention $\mathbf{T_{j}^i}$ to denote the $i^{\textrm{th}}$ tree with $j$ vertices and we index the vertices $v_{1}$ through $v_{j}$ for each tree as specified below.
 
 \begin{figure}[H]
 \begin{center}
-\includegraphics[scale=0.9]{standalone/tree chart.pdf}
+\includegraphics[scale=0.85]{standalone/tree chart.pdf}
 \end{center}
 \caption{Trees with less than seven edges}
 \label{fig:catalog}
@@ -365,9 +365,7 @@ The next theorem gives the necessary conditions for the existence of a $G$-decom
     If a $G$-decomposition of $K_{n}$ exists, then $n$ is idempotent modulo $2(7)=14$ by Theorem \ref{thm:Kncondition} which immediately implies that $n \equiv 0,1,7, \textrm{or} \; 8 \pmod{14}$ since those are all the idempotents in $\ZZ_{14}$.
 \end{proof}
 
-For this project, we do not define the graph on one vertex to be a tree. This means that any connected component in a forest has at least one edge and we also require there to be at least two connected components. There are $47$ such forests with $7$ edges up to isomorphism. The the spectrum problem for the matching $\mathbf{7T_{2}^{11}}$ on $7$ edges was solved by de Werra in 1970. Therefore, we need only consider the remaining 46 trees in the subsequent chapters.
-
-Chapter \ref{chap:0,1(mod 14)} handles all decomposing $K_{n}$ into all $47$ forests when $n \equiv 0 \textrm{ or } 1 \pmod{14}$. Chapter \ref{chap:7,8 (mod 14)} applies to all the forests when $n \equiv 7 \textrm{ or } 8 \pmod{14}$ with the lone exception of $\mathbf{T_{7}^{11}}\sqcup\mathbf{T_{2}^{1}},$ which is solved for those values of $n$ in Chapter \ref{chap:special case}.
+For this project, we do not define the graph on one vertex to be a tree. This means that any connected component in a forest has at least one edge and we also require there to be at least two connected components. There are $47$ such forests with $7$ edges up to isomorphism.  As stated previously, the matching on seven edges is solved, so only the remaining $46$ trees need be considered in the subsequent chapters. Chapter \ref{chap:0,1(mod 14)} handles all decomposing $K_{n}$ into all $47$ forests when $n \equiv 0 \textrm{ or } 1 \pmod{14}$. Chapter \ref{chap:7,8 (mod 14)} applies to all the forests when $n \equiv 7 \textrm{ or } 8 \pmod{14}$ with the lone exception of $\mathbf{T_{7}^{11}}\sqcup\mathbf{T_{2}^{1}},$ which is solved for those values of $n$ in Chapter \ref{chap:special case}.
 
 After proving the main result of this project, we provide a couple of additional results in Chapter \ref{chap:Additional Results}: (1) An edge mapping depending on $t$ that preserves length for wraparound edges in  $2m+r$ to $2mt+r$ at each step $t\mapsto t+1$. (2) Galaxy decompositions of complete multipartite graphs. These two results conclude this thesis project, and produce some open questions.
 
