@@ -1,8 +1,317 @@
 \chapter{$\mathbf{n\equiv 0,1\textbf{(mod 14)}}$} \label{chap:0,1(mod 14)}
 
-To begin this section, we define some established graph labelings and theorems that go along with them in order to construct the seven edge forest decompositions of $K_n$ where $n \equiv 0 \textrm{ or } 1 \pmod{14}$. 
+To begin this chapter, we extend intuition developed in the Introduction to present some machinery specific to $K_{n}$ where $n\equiv 0,1\pmod{14}$. This informs the formal definitions and theorems to take care of this case.
 
+\section{Construction for $n\equiv 0,1 \pmod{14}$}\label{sec:0,1constr}
+$K_{1}$ and $K_{2}$ don't have enough vertices to contain a forest on seven edges. So $K_{14}$ and $K_{15}$ are the base graphs for $K_{n}$ where $n \equiv 0 \textrm{ or } 1 \pmod{14}$, respectively. We will only show how to decompose these graphs, and then later explain how we can extend these strategies to the rest of their families.
 
+\begin{figure}[H]
+    \begin{center}
+        \begin{tikzpicture}[scale=2]
+            % styles for dots and labels
+            \tikzset{
+              dot/.style={circle, fill=black, minimum size=2pt, inner sep=0pt},
+              lbl/.style={draw=none, fill=none, inner sep=0pt, anchor=center}
+            }
+          
+            % Outer circle in blue
+            \draw[blue, thick] (0,0) circle (1);
+          
+            % Nodes (dots) and labels outside
+            \foreach \i in {0,...,13} {
+              \pgfmathtruncatemacro{\angle}{90 - \i*360/14}
+              \node[dot] (n\i) at (\angle:1) {};
+              \node[lbl] at (\angle:1.1) {\i};
+            }
+          
+            % Edges colored by minimal distance
+            \foreach \i in {0,...,13} {
+              \foreach \j in {0,...,13} {
+                \ifnum\j>\i\relax
+                  \pgfmathtruncatemacro{\d}{mod(\j-\i,14)}
+                  \pgfmathtruncatemacro{\dmin}{min(\d,14-\d)}
+                  \ifnum\dmin=1   \draw[blue,   thick] (n\i) -- (n\j); \fi
+                  \ifnum\dmin=2   \draw[red,    thick] (n\i) -- (n\j); \fi
+                  \ifnum\dmin=3   \draw[green,  thick] (n\i) -- (n\j); \fi
+                  \ifnum\dmin=4   \draw[orange, thick] (n\i) -- (n\j); \fi
+                  \ifnum\dmin=5   \draw[purple, thick] (n\i) -- (n\j); \fi
+                  \ifnum\dmin=6   \draw[brown,  thick] (n\i) -- (n\j); \fi
+                  \ifnum\dmin=7   \draw[cyan,   thick] (n\i) -- (n\j); \fi
+                \fi
+              }
+            }
+          
+    
+      \begin{scope}[shift={(3,0)}]
+        % outer circle
+        \draw[blue, thick] (0,0) circle (1);
+    
+        % nodes and labels
+        \foreach \i in {0,...,14} {
+          \pgfmathtruncatemacro{\angle}{90 - \i*360/15}
+          \node[dot] (n\i) at (\angle:1) {};
+          \node[lbl] at (\angle:1.1) {\i};
+        }
+    
+        % edges colored by minimal distance
+        \foreach \i in {0,...,14} {
+          \foreach \j in {0,...,14} {
+            \ifnum\j>\i\relax
+              \pgfmathtruncatemacro{\d}{mod(\j-\i,15)}
+              \pgfmathtruncatemacro{\dmin}{min(\d,15-\d)}
+              \ifnum\dmin=1   \draw[blue,   thick] (n\i) -- (n\j); \fi
+              \ifnum\dmin=2   \draw[red,    thick] (n\i) -- (n\j); \fi
+              \ifnum\dmin=3   \draw[green,  thick] (n\i) -- (n\j); \fi
+              \ifnum\dmin=4   \draw[orange, thick] (n\i) -- (n\j); \fi
+              \ifnum\dmin=5   \draw[purple, thick] (n\i) -- (n\j); \fi
+              \ifnum\dmin=6   \draw[brown,  thick] (n\i) -- (n\j); \fi
+              \ifnum\dmin=7   \draw[cyan,   thick] (n\i) -- (n\j); \fi
+            \fi
+          }
+        }
+      \end{scope}
+      
+            
+    \end{tikzpicture}
+    \end{center}
+\caption{$K_{14}$ (left) and $K_{15}$ (right) with edges colored by length}
+\label{fig:K14K15colored}
+\end{figure}
+
+Both $K_{14}$ and $K_{15}$ both only have edges with lengths \textcolor{blue}{1} through \textcolor{cyan}{7}, however, there is important distinction in counting edges of one length $K_{14}$ versus counting them in $K_{15}$. The \textcolor{cyan}{cyan} edges have length \textcolor{cyan}{7}, and convieniently because of the way these graphs are drawn in the figure above, we can easily count them as they form the innermost spoke of the graphs. Because these graphs are so similar we can use one labeling to deal with both at the same time! However, we must be very careful.
+
+In $K_{14}$ there are only 7 edges of length \textcolor{cyan}{7} and 14 edges of all other lengths, yet in $K_{15}$ there are 15 edges of length \textcolor{cyan}{7} along with 15 edges of all other lengths. it turns out this pattern generalizes. For $K_{n}$ where\newline
+
+\textbf{n is odd:} There are $n$ edges of lengths 1 through $\frac{n-1}{2}$
+
+\textbf{n is even:} There are $n$ edges of lengths 1 up to $\frac{n}{2}$, and then $\frac{n}{2}$ edges of length $\frac{n}{2}\newline$.
+
+This is why our labeling of $P_{3}$ to decompose $K_{5}$ in the Introduction worked so easily. Because there are the same number of edges of every length (in that case $n=5$ edges of lengths 1 and 2). The same applies here for $K_{15}$, we just label our seven edge forests so that we get all seven lengths and we can generate the entire decomposition through developing the nodes by $1$ repeatedly. 
+
+But notice that if we repeatedly develop nodes of the same labeling in $K_{14}$ (assuming we don't use the vertex $14$) we would \textit{overcount} length \textcolor{cyan}{7} edges. There is a simple remedy for this where we redefine some aspects of our labeling when using it for the $K_{14}$.
+
+Take $V(K_{14})$ to be $\ZZ_{13}\cup \{\infty\}$, and label all edges via the length function modulo $13$ except for edges incident to $\infty$ which will refer to as length $\infty$. Now, in the context of our labelings, we define developing nodes by $1$ in a slightly different fashion effectively fixing the $\infty$ vertex. We redefine length and development of vertices in $K_{14}$ as follows:
+
+$$\ell(uv)=\begin{cases}\min\{|u-v|,13-|u-v|\}, & u,v\neq \infty, \\ \infty, & u\text{ or }v=\infty \end{cases} \text{ and }v\mapsto 
+\begin{cases}
+  v+1,&v\in\mathbb{Z}_{13},\\
+  \infty,        &v=\infty.
+  \end{cases}$$
+If we do this, we will have $n-1$ (13 in our case) edges of lengths $1$ through $6$ as well as $\infty$, since the infinity node will have all $n=13$ edges of length $\infty$ to nodes in $\ZZ_{13}$ incident to it. So if we partition the edges by length, we can now cyclically generate all edges of $K_{15}$ and $K_{14}$! In the context of our labeling of $K_{14}$ and $K_{15}$ we will (1) simply generate the develop by $1$ to generate the decomposition for $K_{15}$ and then (2) relabel the leaf on the pendant edge of length \textcolor{cyan}{7} $\infty$ and use the new machinery defined above to develop the nodes by $1$ repeatedly and get $K_{13}\vee K_{1}$ which is isomorphic to $K_{14}$.
+
+\begin{figure}[H]
+  \begin{center}
+  \begin{tikzpicture}[scale=2]
+    \tikzset{
+      dot/.style={circle, fill=black, minimum size=2pt, inner sep=0pt},
+      lbl/.style={draw=none, fill=none, inner sep=0pt, anchor=center}
+    }
+  
+    % Outer circle
+    \draw[blue, thick] (0,0) circle (1);
+  
+    % Z_{13} nodes
+    \foreach \i in {0,...,12} {
+      \pgfmathtruncatemacro{\angle}{90 - \i*360/13}
+      \node[dot] (n\i) at (\angle:1) {};
+      \node[lbl] at (\angle:1.1) {\i};
+    }
+  
+    % Define infinity coordinate
+    \coordinate (inf) at (0,0);
+  
+    % Edges among Z_{13} vertices
+    \foreach \i in {0,...,12} {
+      \foreach \j in {0,...,12} {
+        \ifnum\j>\i\relax
+          \pgfmathtruncatemacro{\d}{mod(\j-\i,13)}
+          \pgfmathtruncatemacro{\dmin}{min(\d,13-\d)}
+          \ifnum\dmin=1   \draw[blue,   thick] (n\i) -- (n\j); \fi
+          \ifnum\dmin=2   \draw[red,    thick] (n\i) -- (n\j); \fi
+          \ifnum\dmin=3   \draw[green,  thick] (n\i) -- (n\j); \fi
+          \ifnum\dmin=4   \draw[orange, thick] (n\i) -- (n\j); \fi
+          \ifnum\dmin=5   \draw[purple, thick] (n\i) -- (n\j); \fi
+          \ifnum\dmin=6   \draw[brown,  thick] (n\i) -- (n\j); \fi
+        \fi
+      }
+    }
+  
+    % Edges from infinity
+    \foreach \i in {0,...,12} {
+      \draw[cyan, thick] (inf) -- (n\i);
+    }
+  
+    % Infinity label with white circular background
+    \node[circle, fill=white, draw=black, inner sep=1pt] at (inf) {$\infty$};
+
+    \node[draw=none, fill=none] at (1.5, 0) {$\LARGE \cong$};
+
+    \begin{scope}[shift={(3,0)}]
+      % styles for dots and labels
+      \tikzset{
+        dot/.style={circle, fill=black, minimum size=2pt, inner sep=0pt},
+        lbl/.style={draw=none, fill=none, inner sep=0pt, anchor=center}
+      }
+    
+      % Outer circle in blue
+      \draw[blue, thick] (0,0) circle (1);
+    
+      % Nodes (dots) and labels outside
+      \foreach \i in {0,...,13} {
+        \pgfmathtruncatemacro{\angle}{90 - \i*360/14}
+        \node[dot] (n\i) at (\angle:1) {};
+        \node[lbl] at (\angle:1.1) {\i};
+      }
+    
+      % Edges colored by minimal distance
+      \foreach \i in {0,...,13} {
+        \foreach \j in {0,...,13} {
+          \ifnum\j>\i\relax
+            \pgfmathtruncatemacro{\d}{mod(\j-\i,14)}
+            \pgfmathtruncatemacro{\dmin}{min(\d,14-\d)}
+            \ifnum\dmin=1   \draw[blue,   thick] (n\i) -- (n\j); \fi
+            \ifnum\dmin=2   \draw[red,    thick] (n\i) -- (n\j); \fi
+            \ifnum\dmin=3   \draw[green,  thick] (n\i) -- (n\j); \fi
+            \ifnum\dmin=4   \draw[orange, thick] (n\i) -- (n\j); \fi
+            \ifnum\dmin=5   \draw[purple, thick] (n\i) -- (n\j); \fi
+            \ifnum\dmin=6   \draw[brown,  thick] (n\i) -- (n\j); \fi
+            \ifnum\dmin=7   \draw[cyan,   thick] (n\i) -- (n\j); \fi
+          \fi
+        }
+      }
+    \end{scope}
+  
+  \end{tikzpicture}
+  \end{center}
+  \caption{$K_{13}\vee K_{1}$ is isomorphic to $K_{14}$}
+  \label{fig:K13infty}
+\end{figure}
+
+  
+
+Now, notice that if we use this strategy, we must ensure that we only use nodes in $\ZZ_{2m-2}$ which is $\ZZ_{13}$ in our case. We must also have a bipartition and another restriction which is given in the formal definition of the labeling in the results section of this chapter. However, we will give a small example here before defining things formally.
+
+\begin{figure}[H]
+  \begin{center}
+  \begin{tikzpicture}[scale=1.5]
+    % styles for dots and labels
+    \tikzset{
+      dot/.style={circle, fill=black, minimum size=2pt, inner sep=0pt},
+      lbl/.style={draw=none, fill=none, inner sep=0pt, anchor=center}
+    }
+  
+    % Outer circle in blue
+    %\draw[blue, thick] (0,0) circle (1);
+  
+    % Nodes (dots) and labels outside
+    \foreach \i in {0,...,14} {
+      \pgfmathtruncatemacro{\angle}{90 - \i*360/15}
+      \node[dot] (n\i) at (\angle:1) {};
+      \node[lbl] at (\angle:1.1) {\i};
+    }
+  
+    % Draw the forest: path (8,9) and star at 0–{2,3,4,5,6,7}
+    % Path edge (8)--(9) has length 1 → blue
+    \draw[blue, thick] (n8) -- (n9);
+  
+    % Star edges from 0 to 2..7, colored by minimal cyclic distance
+    % 0--2: d=2 → red
+    \draw[red,   thick] (n0) -- (n2);
+    % 0--3: d=3 → green
+    \draw[green, thick] (n0) -- (n3);
+    % 0--4: d=4 → orange
+    \draw[orange,thick] (n0) -- (n4);
+    % 0--5: d=5 → purple
+    \draw[purple,thick] (n0) -- (n5);
+    % 0--6: d=6 → brown
+    \draw[brown, thick] (n0) -- (n6);
+    % 0--7: d=7 → cyan
+    \draw[cyan,  thick] (n0) -- (n7);
+
+    \begin{scope}[shift={(-3,0)}]
+      \tikzset{
+        dot/.style={circle, fill=black, minimum size=2pt, inner sep=0pt},
+        infdot/.style={circle, draw=black, fill=white, minimum size=4pt, inner sep=0pt},
+        lbl/.style={draw=none, fill=none, inner sep=0pt, anchor=center}
+      }
+    
+      % Z_{13} nodes and labels
+      \foreach \i in {0,...,12} {
+        \pgfmathtruncatemacro{\angle}{90 - \i*360/13}
+        \node[dot] (n\i) at (\angle:1) {};
+        \node[lbl] at (\angle:1.1) {\i};
+      }
+    
+      % infinity coordinate
+      \coordinate (inf) at (0,0);
+    
+      % path (8,9) in blue (length 1)
+      \draw[blue, thick] (n8) -- (n9);
+    
+      % star at 0→{1,2,3,4,5,∞}
+      \draw[red,    thick] (n0)  -- (n2);   % length 2
+      \draw[green,  thick] (n0)  -- (n3);   % length 3
+      \draw[orange, thick] (n0)  -- (n4);   % length 4
+      \draw[purple, thick] (n0)  -- (n5);   % length 5
+      \draw[brown, thick] (n0)   -- (n6);   % Length 6
+      \draw[cyan,   thick] (n0)  -- (inf);  % ∞-edge
+    
+      % draw infinity on top
+      \node[infdot] at (inf) {};
+      \node[lbl]    at (0,-0.25) {$\infty$};
+    \end{scope}    
+
+    \begin{scope}[shift={(-6,0)}]
+        \tikzset{
+          dot/.style={circle, fill=black, minimum size=4pt, inner sep=0pt},
+          lbl/.style={draw=none, fill=none, inner sep=0pt, anchor=center}
+        }
+        
+        % Nodes as solid black dots with labels outside
+        \node[dot,label=above:3]      (3)  at (90:0.5)    {};
+        \node[dot,label=above:4]      (4)  at (30:0.5)    {};
+        \node[dot,label=below:7]      (7)  at (330:0.5)   {};
+        \node[dot,label=below:6]      (6)  at (270:0.5)   {};
+        \node[dot,label=below:5]      (5)  at (210:0.5)   {};
+        \node[dot,label=above:2]      (2)  at (150:0.5)   {};
+        % center vertex
+        \node[dot,label={[xshift=3pt]above left:0}] (0) at (0,0) {}; (0)  at (0,0) {};
+        % 2-path vertices
+        \node[dot,label=above:8]      (8)  at (-0.75,0.25) {};
+        \node[dot,label=below:9]      (9)  at (-0.75,-0.25){};
+        
+        % Edges colored by length in K_{15}:
+        % path (8)--(9): |9-8|=1 → blue
+        \draw[blue,   thick] (8) -- (9);
+        % star at 0–{3,4,7,6,5,2}
+        % 0--3: |3-0|=3 → green
+        \draw[green, thick] (0) -- (3);
+        % 0--4: |4-0|=4 → orange
+        \draw[orange,thick] (0) -- (4);
+        % 0--7: |7-0|=7 → cyan
+        \draw[cyan,  thick] (0) -- (7);
+        % 0--6: |6-0|=6 → brown
+        \draw[brown, thick] (0) -- (6);
+        % 0--5: |5-0|=5 → purple
+        \draw[purple,thick] (0) -- (5);
+        % 0--2: |2-0|=2 → red
+        \draw[red,    thick] (0) -- (2);
+
+        \node[draw=none, fill=none] at (1.25, 0) {$\LARGE \mapsto$};
+    \end{scope}
+  
+  \end{tikzpicture}
+  \end{center}
+
+  \caption{A labeling (left) that gives the $\mathbf{T_{7}^{11}\sqcup T_{2}^{11}}$-decomposition of $K_{14}$ (middle) and $K_{15}$ (right), respectively, when developed by $1$. The leaf $7$ in the pendant edge \textcolor{cyan}{$(0,7)$} (of length \textcolor{cyan}{7} modulo 14 and 15) is relabeled as $\infty$ for $K_{14}$}
+
+  \label{fig:01decompexample}
+\end{figure}
+
+  It turns out that we can actually just replicate this process at each step $t\mapsto t+1$ for $K_{14t}$ and $K_{14t+1}$ for new lengths that come $7$ at a time if we add some restrictions. We formally define sufficiently restrictive labelings in the next section that allow us to develop vertices and get certain decompositions.
+\section{Results for $n\equiv 0,1 \pmod{14}$}\label{sec:0,1results}
+
+We begin with the original $\rho$-labeling of a bipartite graph $G$ on $m$ edges which uses lengths modulo $2m$ (in $K_{2m}$). 
 
 \begin{definition}[(Rosa \cite{bib:rosa})] \label{def:rho} 
  Let $G$ be a graph with $m$ edges.  A \textit{$\rho$-labeling} of $G$ is an injection $f: V(G) \rightarrow \{0,1,2, \dots, 2m\}$ that induces a bijective \textit{length function $\ell: E(G) \rightarrow \{1,2, \dots, m\}$} where 
@@ -12,7 +321,7 @@ To begin this section, we define some established graph labelings and theorems t
 for all  $uv \in E(G)$.
 \end{definition}
 
-Rosa showed that if a $\rho$-labeling of a graph $G$ with $m$ edges exists, then a cyclic $G$-decomposition of $K_{2m+1}$ exists, which is presented formally later. Later, Rosa and his peers began studying more restrictive types of $\rho$-labelings to decompose more complete graphs. Next, we define some of these labelings and associated with them.
+Rosa showed that if a $\rho$-labeling of a graph $G$ with $m$ edges exists, then a cyclic $G$-decomposition of $K_{2m+1}$ exists, which is presented formally later. Later, Rosa and his peers began studying more restrictive types of $\rho$-labelings to decompose more complete graphs. Next, we define some of these labelings and theorems associated with them.
 
 \begin{thm}[(Rosa \cite{bib:rosa})]\label{thm:Rhosa}  
 Let $G$ be a graph with $m$ edges.  There exists a cyclic $G$-decomposition of $K_{2m+1}$ if and only if $G$ admits a $\rho$-labeling.

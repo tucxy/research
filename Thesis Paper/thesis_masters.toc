@@ -11,13 +11,17 @@
 \contentsline {section}{\numberline {2.2}Graph labeling}{13}{section.2.2}%
 \contentsline {section}{\numberline {2.3}Seven edge forests}{16}{section.2.3}%
 \contentsline {chapter}{\numberline {3}$\mathbf {n\equiv 0,1\textbf {(mod 14)}}$}{18}{chapter.3}%
-\contentsline {chapter}{\numberline {4}$\mathbf {n\equiv 7,8\textbf {(mod 14)}}$}{22}{chapter.4}%
-\contentsline {chapter}{\numberline {5}$\mathbf {T_{7}^{11}\sqcup T_{2}^{1}}$}{27}{chapter.5}%
-\contentsline {chapter}{\numberline {6}Additional Results}{30}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Wraparound edge mappings that preserve length}{30}{section.6.1}%
-\contentsline {chapter}{\numberline {7}Conclusion and Discussion}{31}{chapter.7}%
-\contentsline {chapter}{\numberline {8}Appendix}{32}{chapter.8}%
-\contentsline {chapter}{References}{49}{chapter*.29}%
-\contentsline {chapter}{\appnumberline {A}Glossary and Acronyms}{50}{appendix.A}%
-\contentsline {section}{\numberline {A.1}Glossary}{50}{section.A.1}%
-\contentsline {section}{\numberline {A.2}Acronyms}{50}{section.A.2}%
+\contentsline {section}{\numberline {3.1}Construction for $n\equiv 0,1 \pmod {14}$}{18}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Results for $n\equiv 0,1 \pmod {14}$}{21}{section.3.2}%
+\contentsline {chapter}{\numberline {4}$\mathbf {n\equiv 7,8\textbf {(mod 14)}}$}{25}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Construction}{25}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Results}{28}{section.4.2}%
+\contentsline {chapter}{\numberline {5}$\mathbf {T_{7}^{11}\sqcup T_{2}^{1}}$}{33}{chapter.5}%
+\contentsline {chapter}{\numberline {6}Additional Results}{36}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Wraparound edge mappings that preserve length}{36}{section.6.1}%
+\contentsline {chapter}{\numberline {7}Conclusion and Discussion}{37}{chapter.7}%
+\contentsline {chapter}{\numberline {8}Appendix}{38}{chapter.8}%
+\contentsline {chapter}{References}{55}{chapter*.35}%
+\contentsline {chapter}{\appnumberline {A}Glossary and Acronyms}{56}{appendix.A}%
+\contentsline {section}{\numberline {A.1}Glossary}{56}{section.A.1}%
+\contentsline {section}{\numberline {A.2}Acronyms}{56}{section.A.2}%

@@ -1,6 +1,452 @@
 \chapter{$\mathbf{n\equiv 7,8\textbf{(mod 14)}}$} \label{chap:7,8 (mod 14)}
+In this chapter, we will use our own constructions based on edge lengths in $K_{n}$ where $n \equiv 7\text{ or }8 \pmod{14}$. We begin by describing our construction and then later formallize these ideas in the results section.
+\section{Construction}\label{sec:7,8constr}
+The minimum number of vertices in a forest on seven edges is $9$ (like in $\mathbf{T_{7}^{11}\sqcup T_{2}^{1}}$) but $K_{7}$ and $K_{8}$ each have less vertices than that, so none of our forests could be a subgraph of either one. For this reason, $K_{21}$ and $K_{22}$ are the base graphs for decomposing $K_{n}$ where $n\equiv 7\text{ and }8$, respectively, into seven edge forests.
+\begin{figure}[H]
+    \begin{center}
+      \begin{tikzpicture}[scale=2,
+        dot/.style={circle, fill=black, minimum size=2pt, inner sep=0pt},
+        lbl/.style={draw=none, fill=none, inner sep=0pt, anchor=center}
+      ]
+  
+          \draw[blue, thick] (0,0) circle (1);
+          \foreach \i in {0,...,20} {
+            \pgfmathtruncatemacro{\angle}{90 - \i*360/21}
+            \node[dot] (a\i) at (\angle:1) {};
+            \node[lbl] at (\angle:1.1) {\i};
+          }
+          \foreach \i in {0,...,20} {
+            \foreach \j in {0,...,20} {
+              \ifnum\j>\i\relax
+                \pgfmathtruncatemacro{\d}{mod(\j-\i,21)}
+                \pgfmathtruncatemacro{\dmin}{min(\d,21-\d)}
+                \ifnum\dmin=1   \draw[blue,   thick] (a\i) -- (a\j); \fi
+                \ifnum\dmin=2   \draw[red,    thick] (a\i) -- (a\j); \fi
+                \ifnum\dmin=3   \draw[green,  thick] (a\i) -- (a\j); \fi
+                \ifnum\dmin=4   \draw[orange, thick] (a\i) -- (a\j); \fi
+                \ifnum\dmin=5   \draw[purple, thick] (a\i) -- (a\j); \fi
+                \ifnum\dmin=6   \draw[brown,  thick] (a\i) -- (a\j); \fi
+                \ifnum\dmin=7   \draw[pink,   thick] (a\i) -- (a\j); \fi
+                \ifnum\dmin=8   \draw[magenta,thick] (a\i) -- (a\j); \fi
+                \ifnum\dmin=9   \draw[gray,   thick] (a\i) -- (a\j); \fi
+                \ifnum\dmin=10  \draw[cyan,   thick] (a\i) -- (a\j); \fi
+              \fi
+            }
+          }
+  
+        % K_22
+        \begin{scope}[shift={(3.5,0)}]
+          \draw[blue, thick] (0,0) circle (1);
+          \foreach \i in {0,...,21} {
+            \pgfmathtruncatemacro{\angle}{90 - \i*360/22}
+            \node[dot] (b\i) at (\angle:1) {};
+            \node[lbl] at (\angle:1.1) {\i};
+          }
+          \foreach \i in {0,...,21} {
+            \foreach \j in {0,...,21} {
+              \ifnum\j>\i\relax
+                \pgfmathtruncatemacro{\d}{mod(\j-\i,22)}
+                \pgfmathtruncatemacro{\dmin}{min(\d,22-\d)}
+                \ifnum\dmin=1   \draw[blue,   thick] (b\i) -- (b\j); \fi
+                \ifnum\dmin=2   \draw[red,    thick] (b\i) -- (b\j); \fi
+                \ifnum\dmin=3   \draw[green,  thick] (b\i) -- (b\j); \fi
+                \ifnum\dmin=4   \draw[orange, thick] (b\i) -- (b\j); \fi
+                \ifnum\dmin=5   \draw[purple, thick] (b\i) -- (b\j); \fi
+                \ifnum\dmin=6   \draw[brown,  thick] (b\i) -- (b\j); \fi
+                \ifnum\dmin=7   \draw[pink,   thick] (b\i) -- (b\j); \fi
+                \ifnum\dmin=8   \draw[magenta,thick] (b\i) -- (b\j); \fi
+                \ifnum\dmin=9   \draw[gray,   thick] (b\i) -- (b\j); \fi
+                \ifnum\dmin=10  \draw[teal,   thick] (b\i) -- (b\j); \fi
+                \ifnum\dmin=11  \draw[cyan,   thick] (b\i) -- (b\j); \fi
+              \fi
+            }
+          }
+        \end{scope}
+  
+      \end{tikzpicture}
+    \end{center}
+    \caption{$K_{21}$ (left) and $K_{22}$ (right) with edges colored by length.}
+    \label{fig:K21K22colored}
+  \end{figure}
+  Here is problem with this case relative to our forests on seven edges. $K_{21}$ has lengths \textcolor{blue}{1} through \textcolor{cyan}{10} and $K_{21}$ has lengths \textcolor{blue}{1} through \textcolor{cyan}{11}. So the number of distinct lengths in the base graphs is no longer $7$. Furthermore, $K_{22}$ has one more length than $K_{21}$. This means we cannot just fit $7$ distinct lengths on a single labeling and collect all edges when we develop the vertices by $1$. However, new lengths still come $7$ at a time at each step $t\mapsto t+1$: $K_{14t+7}$ and $K_{14t+8}$ have lengths in $\{1,\hdots 10\}\cup \cdots\cup\{7t-3,\hdots,3+7t\}$ and $\{1,\hdots 11\}\cup \cdots\cup\{7t-2,\hdots,4+7t\}$, respectively.
 
-In this section, we will use our own constructions based on edge lengths in $K_{n}$ where $n \equiv 7\text{ or }8 \pmod{14}$. We start with the case where $n\equiv 7\pmod{14}$. 
+  If we could just take care of lengths $\{1,2,3\}$ and $\{1,2,3,\infty \}$, respectively, we could just use some rosa-type labeling to collect each of the remaining lengths using some rosa-type labeling, since $7$ lengths will remain. Before we think about that, recall that in $K_{22}$ there will only be $11$ edges of length $11$. We want to make sure we are wary of that as well. We want the number of each length to be the same to generate them with a labeling.
+
+ So, we redefine length of edges and development for vertices in $K_{22}$:
+$$\ell(uv)=\begin{cases}\min\{|u-v|,21-|u-v|\}, & u,v\neq \infty, \\ \infty, & u\text{ or }v=\infty \end{cases} \text{ and }v\mapsto 
+\begin{cases}
+  v+1,&v\in\mathbb{Z}_{n-1},\\
+  \infty,        &v=\infty.
+  \end{cases}$$
+  If we do this, we will have $21$ edges of lengths $1$ through $6$ as well as $\infty$, since the infinity node will have all $21$ edges of length $\infty$ to nodes in $\ZZ_{21}$ incident to it. So if we partition the edges by these notions of length, we can now cyclically generate all edges of $K_{21}$ and $K_{22}$ with labelings. Now the only problem is that there are still $10$ and $11$ distinct lengths in $K_{21}$ and $K_{21}$, respectively.
+
+  \begin{figure}[H]
+    \begin{center}
+      \begin{tikzpicture}[scale=2]
+        \tikzset{
+          dot/.style={circle, fill=black, minimum size=2pt, inner sep=0pt},
+          lbl/.style={draw=none, fill=none, inner sep=0pt, anchor=center}
+        }
+  
+        % — Left: K_{21} ∪ {∞} —
+        \begin{scope}
+          % outer circle for reference
+          \draw[blue, thick] (0,0) circle (1);
+  
+          % Z_{21} nodes
+          \foreach \i in {0,...,20} {
+            \pgfmathtruncatemacro{\angle}{90 - \i*360/21}
+            \node[dot] (a\i) at (\angle:1) {};
+            \node[lbl] at (\angle:1.1) {\i};
+          }
+  
+          % define infinity
+          \coordinate (inf) at (0,0);
+  
+          % edges among Z_{21}
+          \foreach \i in {0,...,20} {
+            \foreach \j in {0,...,20} {
+              \ifnum\j>\i\relax
+                \pgfmathtruncatemacro{\d}{mod(\j-\i,21)}
+                \pgfmathtruncatemacro{\dmin}{min(\d,21-\d)}
+                \ifnum\dmin=1   \draw[blue,   thick] (a\i) -- (a\j); \fi
+                \ifnum\dmin=2   \draw[red,    thick] (a\i) -- (a\j); \fi
+                \ifnum\dmin=3   \draw[green,  thick] (a\i) -- (a\j); \fi
+                \ifnum\dmin=4   \draw[orange, thick] (a\i) -- (a\j); \fi
+                \ifnum\dmin=5   \draw[purple, thick] (a\i) -- (a\j); \fi
+                \ifnum\dmin=6   \draw[brown,  thick] (a\i) -- (a\j); \fi
+                \ifnum\dmin=7   \draw[pink,   thick] (a\i) -- (a\j); \fi
+                \ifnum\dmin=8   \draw[magenta,thick] (a\i) -- (a\j); \fi
+                \ifnum\dmin=9   \draw[gray,   thick] (a\i) -- (a\j); \fi
+                \ifnum\dmin=10  \draw[teal,   thick] (a\i) -- (a\j); \fi
+              \fi
+            }
+          }
+  
+          % ∞-edges in cyan
+          \foreach \i in {0,...,20} {
+            \draw[cyan, thick] (inf) -- (a\i);
+          }
+  
+          % infinity label on white background
+          \node[circle, fill=white, draw=black, inner sep=1pt] at (inf) {$\infty$};
+        \end{scope}
+  
+        % isomorphism arrow
+        \node at (1.5,0) {$\Large\cong$};
+  
+        % — Right: K_{22} —
+        \begin{scope}[shift={(3,0)}]
+          % outer circle
+          \draw[blue, thick] (0,0) circle (1);
+  
+          % Z_{22} nodes
+          \foreach \i in {0,...,21} {
+            \pgfmathtruncatemacro{\angle}{90 - \i*360/22}
+            \node[dot] (b\i) at (\angle:1) {};
+            \node[lbl] at (\angle:1.1) {\i};
+          }
+  
+          % edges colored by minimal distance
+          \foreach \i in {0,...,21} {
+            \foreach \j in {0,...,21} {
+              \ifnum\j>\i\relax
+                \pgfmathtruncatemacro{\d}{mod(\j-\i,22)}
+                \pgfmathtruncatemacro{\dmin}{min(\d,22-\d)}
+                \ifnum\dmin=1   \draw[blue,   thick] (b\i) -- (b\j); \fi
+                \ifnum\dmin=2   \draw[red,    thick] (b\i) -- (b\j); \fi
+                \ifnum\dmin=3   \draw[green,  thick] (b\i) -- (b\j); \fi
+                \ifnum\dmin=4   \draw[orange, thick] (b\i) -- (b\j); \fi
+                \ifnum\dmin=5   \draw[purple, thick] (b\i) -- (b\j); \fi
+                \ifnum\dmin=6   \draw[brown,  thick] (b\i) -- (b\j); \fi
+                \ifnum\dmin=7   \draw[pink,   thick] (b\i) -- (b\j); \fi
+                \ifnum\dmin=8   \draw[magenta,thick] (b\i) -- (b\j); \fi
+                \ifnum\dmin=9   \draw[gray,   thick] (b\i) -- (b\j); \fi
+                \ifnum\dmin=10  \draw[teal,   thick] (b\i) -- (b\j); \fi
+                \ifnum\dmin=11  \draw[cyan,   thick] (b\i) -- (b\j); \fi
+              \fi
+            }
+          }
+        \end{scope}
+  
+      \end{tikzpicture}
+    \end{center}
+    \caption{$K_{21}\vee K_{1}$ is isomorphic to $K_{22}$ (right)}
+    \label{fig:K21K22infty}
+  \end{figure}
+
+  Now, let's begin by looking at $K_{21}$. How can we collect $21$ edges of length $1,2,\text{ and }3$? Well, what if we have some labelings that generate $21$ distinct edges of length $8,9\text{ and }10$ between them? What if we can do something similar for $K_{22}$ with edges of lengths $1,2,3,\text{ and }\infty$? By imposing a new edge label on top of the standard length $\ell$, we can can achieve this. We define $\ell_{7}^{+}$ from $\ZZ_{21}\cup\{\infty\}\text{ to }\ZZ_{7}$ as follows
+  $$\ell_{7}^{+}(uv)=\begin{cases} u+v\textbf{ mod }14, & u,v\neq \infty\\ v, &u=\infty \end{cases}$$
+  Now, every edge has a standard length $\ell$ and an additive length $\ell_{7}^{+}$ modulo $7$. Previously, we partitioned the edges into sets $E_{i}$ of edges of length $i$ for each length $i\in \{1,\hdots, 10\}$ via the standard length function $\ell$. Now, within each set $E_{i}$ of length $i$, we have further partitioned the edges into sets $E_{i,j}$ of standard length $i$ and additive length $j$ modulo $7$. For example: the edge $(1,8)$ has length $\ell((1,8))=7$ and $\ell_{7}^{+}((1,8))=8+1 \textbf{ mod }7=2$, so $(1,8)\in E_{7,2}$. Here is a labeling of $\mathbf{T_{6}^{6}}\sqcup \mathbf{T_{3}^{1}}$ that utilizes this new partition.
+
+  \begin{figure}[H]
+    \begin{center}
+      
+      \begin{tikzpicture}[scale=1]
+        %-----------------------------------------column 1----------------------------------------------------------------
+        \tikzset{
+            dot/.style={circle, fill=black, minimum size=4pt, inner sep=0pt},
+            lbl/.style={draw=none, fill=none, inner sep=0pt, anchor=center}
+          }
+        % — Labeling 1 —
+        \begin{scope}
+          \matrix (arr1) [draw,
+                          anchor=east,
+                          matrix of nodes,
+                          nodes={minimum size=0.5cm, inner sep=0pt, anchor=center}
+                         ] at (-1.5,0) {
+            $\textcolor{blue}{1}_{3}$ & $\textcolor{blue}{1}_{5}$ & $\textcolor{blue}{1}_{2}$ \\
+            $\textcolor{red}{2}_{2}$  & $\textcolor{red}{2}_{6}$  & $\textcolor{green}{3}_{0}$ \\
+                                      & $\textcolor{green}{3}_{4}$ &                      \\
+          };
+  
+          \node[dot,label=above left:2] (C1)  at (0,0)    {};
+          \node[dot,label=above:0]      (L10) at (90:0.5)  {};
+          \node[dot,label=left:1]       (L11) at (162:0.5){};
+          \node[dot,label=left:3]       (L13) at (234:0.5){};
+          \node[dot,label=right:4]      (L14) at (306:0.5){};
+          \node[dot,label=right:5]      (L15) at (18:0.5) {};
+  
+          \draw[red,   thick]   (C1) -- (L10);
+          \draw[blue,  thick]   (C1) -- (L11);
+          \draw[blue,  thick]   (C1) -- (L13);
+          \draw[red,   thick]   (C1) -- (L14);
+          \draw[green, thick]   (C1) -- (L15);
+  
+          \node[dot,label=below:12] (P12) at (-0.5,-1) {};
+          \node[dot,label=below:11] (P11) at ( 0  ,-1) {};
+          \node[dot,label=below:14] (P14) at ( 0.5,-1) {};
+  
+          \draw[blue,  thick] (P12) -- (P11);
+          \draw[green, thick] (P11) -- (P14);
+
+          \node at (1.5,0) {\scriptsize $\overset{+7}{\longrightarrow}$};
+
+        \end{scope}
+  
+        % — Labeling 2 —
+        \begin{scope}[yshift=-3cm]
+          \matrix (arr2) [draw,
+                          anchor=east,
+                          matrix of nodes,
+                          nodes={minimum size=0.5cm, inner sep=0pt, anchor=center}
+                         ] at (-1.5,0) {
+            $\textcolor{blue}{1}_{4}$ & $\textcolor{blue}{1}_{6}$ & $\textcolor{red}{2}_{3}$ \\
+            $\textcolor{red}{2}_{0}$  & $\textcolor{red}{2}_{5}$  & $\textcolor{green}{3}_{1}$ \\
+                                      & $\textcolor{green}{3}_{6}$ &                      \\
+          };
+  
+          \node[dot,label=above left:6] (C2)  at (0,0)    {};
+          \node[dot,label=above:4]      (L24) at (90:0.5)  {};
+          \node[dot,label=left:5]       (L25) at (162:0.5){};
+          \node[dot,label=left:7]       (L27) at (234:0.5){};
+          \node[dot,label=right:8]      (L28) at (306:0.5){};
+          \node[dot,label=right:9]      (L29) at (18:0.5) {};
+  
+          \draw[red,   thick]   (C2) -- (L24);
+          \draw[blue,  thick]   (C2) -- (L25);
+          \draw[blue,  thick]   (C2) -- (L27);
+          \draw[red,   thick]   (C2) -- (L28);
+          \draw[green, thick]   (C2) -- (L29);
+  
+          \node[dot,label=below:14] (P214) at (-0.5,-1) {};
+          \node[dot,label=below:12] (P212) at ( 0  ,-1) {};
+          \node[dot,label=below:15] (P215) at ( 0.5,-1) {};
+  
+          \draw[red,   thick]   (P214) -- (P212);
+          \draw[green, thick]   (P212) -- (P215);
+          \node at (1.5,0) {\scriptsize $\overset{+7}{\longrightarrow}$};
+        \end{scope}
+  
+        % — Labeling 3 —
+        \begin{scope}[yshift=-6cm]
+          \matrix (arr3) [draw,
+                          anchor=east,
+                          matrix of nodes,
+                          nodes={minimum size=0.5cm, inner sep=0pt, anchor=center}
+                         ] at (-1.5,0) {
+            $\textcolor{blue}{1}_{0}$ & $\textcolor{blue}{1}_{1}$ & $\textcolor{red}{2}_{4}$ \\
+            $\textcolor{red}{2}_{1}$  & $\textcolor{green}{3}_{3}$ & $\textcolor{green}{3}_{2}$ \\
+                                      & $\textcolor{green}{3}_{5}$ &                      \\
+          };
+  
+          \node[dot,label=above left:3] (C3)  at (0,0)    {};
+          \node[dot,label=above:0]      (L30) at (90:0.5)  {};
+          \node[dot,label=left:1]       (L31) at (162:0.5){};
+          \node[dot,label=left:4]       (L34) at (234:0.5){};
+          \node[dot,label=right:5]      (L35) at (306:0.5){};
+          \node[dot,label=right:6]      (L36) at (18:0.5) {};
+  
+          \draw[green, thick]   (C3) -- (L30);
+          \draw[red,   thick]   (C3) -- (L31);
+          \draw[blue,  thick]   (C3) -- (L34);
+          \draw[red,   thick]   (C3) -- (L35);
+          \draw[green, thick]   (C3) -- (L36);
+  
+          \node[dot,label=below:11] (P311) at (-0.5,-1) {};
+          \node[dot,label=below:8]  (P38)  at ( 0  ,-1) {};
+          \node[dot,label=below:7]  (P37)  at ( 0.5,-1) {};
+  
+          \draw[green, thick] (P311) -- (P38);
+          \draw[blue,  thick] (P38)  -- (P37);
+          \node at (1.5,0) {\scriptsize $\overset{+7}{\longrightarrow}$};
+        \end{scope}
+
+        %-------------------------------------------column2-----------------------------------------------------------------
+        % — Labeling 1 —
+        \begin{scope}[shift={(3,0)}]
+            \node[dot,label=above left:9] (C1)  at (0,0)    {};
+          \node[dot,label=above:7]      (L10) at (90:0.5)  {};
+          \node[dot,label=left:8]       (L11) at (162:0.5){};
+          \node[dot,label=left:10]       (L13) at (234:0.5){};
+          \node[dot,label=right:11]      (L14) at (306:0.5){};
+          \node[dot,label=right:12]      (L15) at (18:0.5) {};
+  
+          \draw[red,   thick]   (C1) -- (L10);
+          \draw[blue,  thick]   (C1) -- (L11);
+          \draw[blue,  thick]   (C1) -- (L13);
+          \draw[red,   thick]   (C1) -- (L14);
+          \draw[green, thick]   (C1) -- (L15);
+  
+          \node[dot,label=below:19] (P12) at (-0.5,-1) {};
+          \node[dot,label=below:18] (P11) at ( 0  ,-1) {};
+          \node[dot,label=below:0] (P14) at ( 0.5,-1) {};
+  
+          \draw[blue,  thick] (P12) -- (P11);
+          \draw[green, thick] (P11) -- (P14);
+          \node at (1.5,0) {\scriptsize $\overset{+7}{\longrightarrow}$};
+        \end{scope}
+
+        % — Labeling 2 —
+        \begin{scope}[shift={(3,-3)}]
+            \node[dot,label=above left:13] (C2)  at (0,0)    {};
+            \node[dot,label=above:11]      (L24) at (90:0.5)  {};
+            \node[dot,label=left:12]       (L25) at (162:0.5){};
+            \node[dot,label=left:14]       (L27) at (234:0.5){};
+            \node[dot,label=right:15]      (L28) at (306:0.5){};
+            \node[dot,label=right:16]      (L29) at (18:0.5) {};
+    
+            \draw[red,   thick]   (C2) -- (L24);
+            \draw[blue,  thick]   (C2) -- (L25);
+            \draw[blue,  thick]   (C2) -- (L27);
+            \draw[red,   thick]   (C2) -- (L28);
+            \draw[green, thick]   (C2) -- (L29);
+    
+            \node[dot,label=below:0] (P214) at (-0.5,-1) {};
+            \node[dot,label=below:19] (P212) at ( 0  ,-1) {};
+            \node[dot,label=below:1] (P215) at ( 0.5,-1) {};
+    
+            \draw[red,   thick]   (P214) -- (P212);
+            \draw[green, thick]   (P212) -- (P215);
+            \node at (1.5,0) {\scriptsize $\overset{+7}{\longrightarrow}$};
+            \end{scope}
+
+            % — Labeling 3 —
+            \begin{scope}[shift={(3,-6)}]
+                \node[dot,label=above left:10] (C3)  at (0,0)    {};
+                \node[dot,label=above:7]      (L30) at (90:0.5)  {};
+                \node[dot,label=left:8]       (L31) at (162:0.5){};
+                \node[dot,label=left:11]       (L34) at (234:0.5){};
+                \node[dot,label=right:12]      (L35) at (306:0.5){};
+                \node[dot,label=right:13]      (L36) at (18:0.5) {};
+        
+                \draw[green, thick]   (C3) -- (L30);
+                \draw[red,   thick]   (C3) -- (L31);
+                \draw[blue,  thick]   (C3) -- (L34);
+                \draw[red,   thick]   (C3) -- (L35);
+                \draw[green, thick]   (C3) -- (L36);
+        
+                \node[dot,label=below:18] (P311) at (-0.5,-1) {};
+                \node[dot,label=below:16]  (P38)  at ( 0  ,-1) {};
+                \node[dot,label=below:14]  (P37)  at ( 0.5,-1) {};
+        
+                \draw[green, thick] (P311) -- (P38);
+                \draw[blue,  thick] (P38)  -- (P37);
+                \node at (1.5,0) {\scriptsize $\overset{+7}{\longrightarrow}$};
+                \end{scope}
+
+        %-------------------------------------------column2-----------------------------------------------------------------
+            % — Labeling 1 —
+            \begin{scope}[shift={(6,0)}]
+                \node[dot,label=above left:16] (C1)  at (0,0)    {};
+                \node[dot,label=above:14]      (L10) at (90:0.5)  {};
+                \node[dot,label=left:15]       (L11) at (162:0.5){};
+                \node[dot,label=left:17]       (L13) at (234:0.5){};
+                \node[dot,label=right:18]      (L14) at (306:0.5){};
+                \node[dot,label=right:19]      (L15) at (18:0.5) {};
+
+                \draw[red,   thick]   (C1) -- (L10);
+                \draw[blue,  thick]   (C1) -- (L11);
+                \draw[blue,  thick]   (C1) -- (L13);
+                \draw[red,   thick]   (C1) -- (L14);
+                \draw[green, thick]   (C1) -- (L15);
+
+                \node[dot,label=below:5] (P12) at (-0.5,-1) {};
+                \node[dot,label=below:4] (P11) at ( 0  ,-1) {};
+                \node[dot,label=below:7] (P14) at ( 0.5,-1) {};
+
+                \draw[blue,  thick] (P12) -- (P11);
+                \draw[green, thick] (P11) -- (P14);
+            \end{scope}
+
+            % — Labeling 2 —
+            \begin{scope}[shift={(6,-3)}]
+                \node[dot,label=above left:20] (C2)  at (0,0)    {};
+                \node[dot,label=above:18]      (L24) at (90:0.5)  {};
+                \node[dot,label=left:19]       (L25) at (162:0.5){};
+                \node[dot,label=left:0]       (L27) at (234:0.5){};
+                \node[dot,label=right:1]      (L28) at (306:0.5){};
+                \node[dot,label=right:2]      (L29) at (18:0.5) {};
+
+                \draw[red,   thick]   (C2) -- (L24);
+                \draw[blue,  thick]   (C2) -- (L25);
+                \draw[blue,  thick]   (C2) -- (L27);
+                \draw[red,   thick]   (C2) -- (L28);
+                \draw[green, thick]   (C2) -- (L29);
+
+                \node[dot,label=below:7] (P214) at (-0.5,-1) {};
+                \node[dot,label=below:5] (P212) at ( 0  ,-1) {};
+                \node[dot,label=below:8] (P215) at ( 0.5,-1) {};
+
+                \draw[red,   thick]   (P214) -- (P212);
+                \draw[green, thick]   (P212) -- (P215);
+                \end{scope}
+
+                % — Labeling 3 —
+                \begin{scope}[shift={(6,-6)}]
+                    \node[dot,label=above left:17] (C3)  at (0,0)    {};
+                    \node[dot,label=above:14]      (L30) at (90:0.5)  {};
+                    \node[dot,label=left:15]       (L31) at (162:0.5){};
+                    \node[dot,label=left:18]       (L34) at (234:0.5){};
+                    \node[dot,label=right:19]      (L35) at (306:0.5){};
+                    \node[dot,label=right:20]      (L36) at (18:0.5) {};
+            
+                    \draw[green, thick]   (C3) -- (L30);
+                    \draw[red,   thick]   (C3) -- (L31);
+                    \draw[blue,  thick]   (C3) -- (L34);
+                    \draw[red,   thick]   (C3) -- (L35);
+                    \draw[green, thick]   (C3) -- (L36);
+            
+                    \node[dot,label=below:4] (P311) at (-0.5,-1) {};
+                    \node[dot,label=below:2]  (P38)  at ( 0  ,-1) {};
+                    \node[dot,label=below:0]  (P37)  at ( 0.5,-1) {};
+            
+                    \draw[green, thick] (P311) -- (P38);
+                    \draw[blue,  thick] (P38)  -- (P37);
+                    \end{scope}
+
+
+
+      \end{tikzpicture}
+    \end{center}
+    \caption{Three labelings of $\mathbf{T_{6}^{6}}\sqcup \mathbf{T_{3}^{1}}$ (left column) that generate all edges of lengths $1,2,\text{ and }3$ in $K_{21}$ when developed by $7$ repeatedly.}
+    \label{fig:K21labelingex}
+  \end{figure}
+
+  The squares to the left of the labelings contain the standard lengths $\ell$ with the same colors we have been using, and then the new length $\ell_{7}^{+}$ in black as the subscript, for each of the seven edges in each labeling. If you look at each edge length, you will find that there is a representative for each equivalence class via $\ell_{7}^{+}$ somewhere exactly once across the three labelings.
+
+  Such $K_{n}$ are of the form $K_{14t+7}$ and $K_{14t+8}$ where $t\geq 1$. $K_{7}$ and $K_{8}$ only have $7$ and $8$ distinct vertices, respectively, and since the minimum number of distinct vertices a forest on seven edges (such as $\mathbf{T_{7}^{11}\sqcup T_{2}^{1}}$) has is $9$ vertices, it is impossible for any seven edge forest to even be a subgraph of $K_{7}$ and $K_{8}$. So $K_{21}$ and $K_{22}$ are the base graphs for $K_{n}$ where $n\equiv 7\text{ or }8\pmod{14}$.
+\section{Results}\label{sec:7,8result}
 
 \begin{definition}\label{def:1-2-3}
     Let $G$ be a graph with $7$ edges. A (1-2-3)-\emph{labeling} of $3G$ is an assignment $f$ of the integers $\{0,\dots,20\}$ to the vertices of $3G$ such that
@@ -102,13 +548,13 @@ We are now able to state the main thm of this section.
 \end{proof}
 %%
 \begin{example}
-We illustrate the constructions in the previous two thms by finding an $F$-decomposition of $K_{35}$ and $K_{36}$ for the forest graph $F \cong \mathbf{T_{6}^{6}} \sqcup \mathbf{T_{3}^{1}}$. 
-\newpage
+We illustrate the constructions in the previous two theorems by finding an $F$-decomposition of $K_{35}$ and $K_{36}$ for the forest graph $F \cong \mathbf{T_{6}^{6}} \sqcup \mathbf{T_{3}^{1}}$.\newline
+
 \noindent Here are excerpts from the preceding tables for $\mathbf{T_{6}^{6}} \sqcup \mathbf{T_{3}^{1}}$
 
 \begin{figure}[H]
 \centering
-        \scalebox{0.4}{\input{standalone/Danny's example/chart}}
+        \scalebox{0.6}{\input{standalone/Danny's example/chart}}
         \caption{Labelings for $\mathbf{T_{6}^{6}} \sqcup \mathbf{T_{3}^{1}}$}
         \label{fig:example chart}
 \end{figure}
