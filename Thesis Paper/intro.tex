@@ -198,7 +198,7 @@ Notice that for $K_{5}$, we only have lengths $1$ or $2$ as previously observed.
   \caption{$K_{5}$ with lengths colored}
   \label{fig:K5colored}
 \end{figure}
-Now, consider $P_{3}$. It has $2$ edges, and $K_{5}$ has $\binom{5}{2}=10$ edges. Since $2|10$, by Lemma \ref{lem:gencondition} its \textit{possible} that a $P_{3}$-decomposition of $K_{5}$ exists. Now since $P_{3}$ it has $2$ edges and there are $2$ lengths in $K_{5}$, what if we can just make sure each copy of $P_{3}$ has both a \textcolor{blue}{blue} edge and a \textcolor{red}{red} edge? How can we do that while ensuring that no edge is repeated?
+Now, consider $P_{3}$. It has $2$ edges, and $K_{5}$ has $\binom{5}{2}=10$ edges. Since $2|10$, by Lemma \ref{lem:gencondition} its \textit{possible} that a $P_{3}$-decomposition of $K_{5}$ exists. Now since $P_{3}$ has $2$ edges and there are $2$ lengths in $K_{5}$, what if we can just make sure each copy of $P_{3}$ has both a \textcolor{blue}{blue} edge and a \textcolor{red}{red} edge? How can we do that while ensuring that no edge is repeated?
 
 It turns out that if we take the vertices of $K_{n}$ to be $\ZZ_{n}$, adding $1$ (and therefore anything) modulo $n$ to the endpoints of an edge preserves it's length. We call the act of permuting vertices in this manner \textit{clicking} or \textit{developing}.
 
@@ -331,7 +331,7 @@ In the context of our problem with $P_{3}$ and $K_{5}$, this means that if we la
   \end{tikzpicture}
   \end{center}
   \caption{A cyclic $P_{3}$-decomposition of $K_{5}$}
-  \label{fig:K5colordecomp}
+  \label{fig:P3K5colordecomp}
 \end{figure}
 
 Nice and easy right? But that's just one complete graph that $P_{3}$ can decompose. Remember, that it is \textit{possible} that $P_{3}$ can decompose any $K_{n}$ where $n\equiv n^{2} \pmod{4}$ by Theorem \ref{thm:Kncondition}. This equivalent to saying $n=4t+r$ where $r$ is an idempotent in the ring $\ZZ_{4}$ and $t\geq 1$. The idempotents in $\ZZ_{4}$ are $0,1$. So this means $\ZZ_{5}$ is just a special case of $n$ where $n=4t+1$ where $t=1$. Luckily, even though these are infinite families, it is known that for each step $t\mapsto t+1$, new lengths come $2$ at a time. This means if we can somehow transform our labeling at each step to include the new lengths, we can maybe take care of the entire family $K_{4t+1}$. We want to fine tune our labeling to be able to weather this process. This is what graph labeling is all about. Note that if $r$ was not $0$ or $1$, we would need multiple labelings to take care of the whole family. This is explained later in this paper.

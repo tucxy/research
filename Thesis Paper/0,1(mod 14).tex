@@ -1,9 +1,12 @@
 \chapter{$\mathbf{n\equiv 0,1\textbf{(mod 14)}}$} \label{chap:0,1(mod 14)}
 
-To begin this chapter, we extend intuition developed in the Introduction to present some machinery specific to $K_{n}$ where $n\equiv 0,1\pmod{14}$. This informs the formal definitions and theorems to take care of this case.
+To begin this chapter, we extend intuition developed in the Introduction to present some machinery specific to $K_{n}$ where $n\equiv 0,1\pmod{14}$. This informs the formal definitions and theorems we use for this case.
 
 \section{Construction for $n\equiv 0,1 \pmod{14}$}\label{sec:0,1constr}
-$K_{1}$ and $K_{2}$ don't have enough vertices to contain a forest on seven edges. So $K_{14}$ and $K_{15}$ are the base graphs for $K_{n}$ where $n \equiv 0 \textrm{ or } 1 \pmod{14}$, respectively. We will only show how to decompose these graphs, and then later explain how we can extend these strategies to the rest of their families.
+$K_{1}$ and $K_{2}$ don't have enough vertices to contain a forest on seven edges. So $K_{14}$ and $K_{15}$ are the base graphs for $K_{n}$ where $n \equiv 0 \textrm{ or } 1 \pmod{14}$, respectively. We first show how to decompose $K_{14}$ and $K_{15}$ in subsection \ref{sec:0,1constr-pt1} and then show how to generalize this to their entire families in subsection \ref{sec:0,1constr-pt2}
+
+\subsection{$K_{14}$ and $K_{15}$}\label{sec:0,1constr-pt1}
+
 
 \begin{figure}[H]
     \begin{center}
@@ -86,18 +89,17 @@ In $K_{14}$ there are only 7 edges of length \textcolor{cyan}{7} and 14 edges of
 
 \textbf{n is even:} There are $n$ edges of lengths 1 up to $\frac{n}{2}$, and then $\frac{n}{2}$ edges of length $\frac{n}{2}\newline$.
 
-This is why our labeling of $P_{3}$ to decompose $K_{5}$ in the Introduction worked so easily. Because there are the same number of edges of every length (in that case $n=5$ edges of lengths 1 and 2). The same applies here for $K_{15}$, we just label our seven edge forests so that we get all seven lengths and we can generate the entire decomposition through developing the nodes by $1$ repeatedly. 
+This is why the labeling of $P_{3}$ in Figure \ref{fig:P3K5colordecomp} used to decompose $K_{5}$ in the Introduction worked so easily. $K_{5}$ has odd order, so there are $5$ edges of each length in $\{1,2\}$. The same applies here for $K_{15}$, we just label each $7$-edge forest $F$ so that it contains all seven lengths in $K_{15}$, and then developing the vertices by $1$ repeatedly generates the entire $F$-decomposition of $K_{15}$. 
 
-But notice that if we repeatedly develop nodes of the same labeling in $K_{14}$ (assuming we don't use the vertex $14$) we would \textit{overcount} length \textcolor{cyan}{7} edges. There is a simple remedy for this where we redefine some aspects of our labeling when using it for the $K_{14}$.
+But notice that if we repeatedly develop nodes of the same labeling of $F$ in $K_{14}$ (assuming we don't use the vertex $14$) we would \textit{overcount} length \textcolor{cyan}{7} edges. There is a simple remedy for this, but it requires a shift in perspective.
 
-Take $V(K_{14})$ to be $\ZZ_{13}\cup \{\infty\}$, and label all edges via the length function modulo $13$ except for edges incident to $\infty$ which will refer to as length $\infty$. Now, in the context of our labelings, we define developing nodes by $1$ in a slightly different fashion effectively fixing the $\infty$ vertex. We redefine length and development of vertices in $K_{14}$ as follows:
-
+Take $V(K_{14})$ to be $\ZZ_{13}\cup \{\infty\}$, and label all edges via the length function modulo $13$ except for edges incident to $\infty$ which will refer to as length $\infty$. Now redefine developing nodes by $1$ only to effectively fix the $\infty$ vertex so that $\infty\mapsto \infty+1=\infty$. Formally, let:
 $$\ell(uv)=\begin{cases}\min\{|u-v|,13-|u-v|\}, & u,v\neq \infty, \\ \infty, & u\text{ or }v=\infty \end{cases} \text{ and }v\mapsto 
 \begin{cases}
   v+1,&v\in\mathbb{Z}_{13},\\
   \infty,        &v=\infty.
   \end{cases}$$
-If we do this, we will have $n-1$ (13 in our case) edges of lengths $1$ through $6$ as well as $\infty$, since the infinity node will have all $n=13$ edges of length $\infty$ to nodes in $\ZZ_{13}$ incident to it. So if we partition the edges by length, we can now cyclically generate all edges of $K_{15}$ and $K_{14}$! In the context of our labeling of $K_{14}$ and $K_{15}$ we will (1) simply generate the develop by $1$ to generate the decomposition for $K_{15}$ and then (2) relabel the leaf on the pendant edge of length \textcolor{cyan}{7} $\infty$ and use the new machinery defined above to develop the nodes by $1$ repeatedly and get $K_{13}\vee K_{1}$ which is isomorphic to $K_{14}$.
+The reason for doing this is that we will now have $13$ edges of lengths $1$ through $6$ as well as $\infty$, since the infinity node will have all $13$ edges of length $\infty$ to nodes in $\ZZ_{13}$ incident to it. Now if we develop the endpoints of an edge with length $i$ by $1$ repeatedly, we will get all $13$ of a distinct edges of length $i$.
 
 \begin{figure}[H]
   \begin{center}
@@ -189,11 +191,11 @@ If we do this, we will have $n-1$ (13 in our case) edges of lengths $1$ through 
 
   
 
-Now, notice that if we use this strategy, we must ensure that we only use nodes in $\ZZ_{2m-2}$ which is $\ZZ_{13}$ in our case. We must also have a bipartition and another restriction which is given in the formal definition of the labeling in the results section of this chapter. However, we will give a small example here before defining things formally.
+Now, notice that if we use this new construction for $K_{14}$, we must ensure that we only use nodes in $\ZZ_{13}$. Here is an example.
 
 \begin{figure}[H]
   \begin{center}
-  \begin{tikzpicture}[scale=1.5]
+  \begin{tikzpicture}[scale=1.75]
     % styles for dots and labels
     \tikzset{
       dot/.style={circle, fill=black, minimum size=2pt, inner sep=0pt},
@@ -306,8 +308,144 @@ Now, notice that if we use this strategy, we must ensure that we only use nodes 
   \caption{A labeling (left) that gives the $\mathbf{T_{7}^{11}\sqcup T_{2}^{11}}$-decomposition of $K_{14}$ (middle) and $K_{15}$ (right), respectively, when developed by $1$. The leaf $7$ in the pendant edge \textcolor{cyan}{$(0,7)$} (of length \textcolor{cyan}{7} modulo 14 and 15) is relabeled as $\infty$ for $K_{14}$}
   \label{fig:01decompexample}
 \end{figure}
+\subsection{Stretching a labeling}\label{sec:0,1constr-pt2}
 
-  It turns out that we can actually just replicate this process at each step $t\mapsto t+1$ for $K_{14t}$ and $K_{14t+1}$ for new lengths that come $7$ at a time if we add some restrictions. We formally define sufficiently restrictive labelings in the next section that allow us to develop vertices and get certain decompositions.
+  Now, we have learned how to decompose $K_{14}$ and $K_{15}$, but what about the rest of the family? Well, $K_{14t}$ and $K_{14t+1}$ actually contain edges of lengths in 
+  $$\bigcup_{0\leq i< t} \{1+7i,\hdots,7+7i\}\text{ for }t\geq 1$$
+  This is because the maximal length in $K_{14t}$ and $K_{14t+1}$ is $\floor{\frac{14t+1}{2}}=7t$. Luckily, it turns out that we can actually just replicate this process we did for lengths $1$ through $7$ for each step $t\mapsto t+1$ for $K_{14t}$ and $K_{14t+1}$ for the new lengths that come $7$ at a time if we add some restrictions.
+
+  There are two types of edges in complete graphs. We call edges $uv$ of length $n-|u-v|$ \textit{wraparound edges}, and edges $ab$ of length $|a-b|$ \textit{short edges}. If we want to build a labeling that can generalize to an entire family of complete graphs, we need to understand how they would generalize as the order of the complete graph increases. Observe.
+  \begin{itemize}
+    \item[] In $K_{14(1)}$: $\ell((0,8))=\min\{|0-8|,14-|0-8|\}=\min\{8,6\}=6$.
+    \item[] In $K_{14(2)}$: $\ell((0,8))=\min\{|0-8|,28-|0-8|\}=\min\{8,20\}=8$.
+  \end{itemize}
+  There is a way to map labelings at each step to preserve length which is described in Chapter $\ref{chap:Additional Results}$, but it can get ugly. Luckily, there is a way to avoid this problem entirely. If we only use \textit{short edges} $uv$ which have length $|u-v|$ in $K_{13}$ for our labelings, then that edge will have length $|u-v|$ in every complete graph $K_{n}$ where $n>13$. Let $k>2$. We show another example below.
+  \begin{itemize}
+    \item[] In $K_{14(1)}$: $\ell((0,6))=\min\{|0-1|,14-|0-1|\}=\min\{1,13\}=1$.
+    \item[] In $K_{14(2)}$: $\ell((0,6))=\min\{|0-1|,28-|0-1|\}=\min\{1,27\}=1$.
+    \item[] $\vdots$
+    \item[] In $K_{14(k)}$: $\ell((0,6))=\min\{|0-6|,14k-|0-1|\}=\min\{1,27+14(k-2)\}=1$.
+  \end{itemize}
+
+  So we see that if we only use short edges, the length of edges in our labeling will be preserved as we scale up. So for that reason, we simply \textit{need} to only use them. However, another important feature is that if we only use short edges $uv$, we know WLOG that $v>u$ and so $|u-v|=v-u$. This introduces another extremely important mechanism at play in the labelings we define in the proceeding section of this chapter.
+
+  If we bundle the short edge requirement and the requirement that the maximal edge is a pendant edge with a new ordered bipartition $V(F)=A\sqcup B$ requirement on the vertices of a labeling $F$ such that all vertices $a\in A$ only have neighbors in $B$ which are larger than it, then we get a really nice property. All edges are now of the form $ab$ where $a\in A$ and $b\in B$ so that $a<b$ and so all such edges $ab$ have length $b-a$ modulo $13$. This means that if $\ell(ab)=l$ in $\ZZ_{13}$, then $b-a=l$ and so $(b+c)-a=l+c$. More importantly, if we then add any $c\in \ZZ_{14t}$ to all vertices in the larger partite set $B$ of our labeling, we will simply increase the lengths of all edges in our labeling by $c$ in $\ZZ_{14t}$ and $\ZZ_{14t+1}$ as a result of bundling these restrictions together!! We call the act of adding some constant to all vertices of the larger partite set $B$ of a labeling of this type \textit{stretching}.
+
+  Let $t>1$. Then for a labeling $F$ for $K_{14t+1}$ we simply develop our original labeling by $1$ to generate lengths in $\{1,\hdots,7\}$, then stretch that labeling by $7i$ and develop it by $1$ for each $0<i<t$, to generate all edges of $K_{14t+1}$. 
+  
+  Now, in the same labeling $F$ for $K_{14t}$, recall that there are only $7t$ edges of the maximal length $7t$. This means that we want to take it's vertices to be $\ZZ_{14t-1}\cup \{\infty\}$ and so now there are now $14t-1$ edges of length $7$ along with all lengths less than $7t$. So then we simply develop our original labeling by $1$ to generate lengths in $\{1,\hdots,7\}$, then stretch that labeling by $7i$ and develop it by $1$ for each $0<i<t$ \textbf{except} the last labeling which was stretched by $7(t-1)$ with lengths in $\{7t-6,\hdots,7t\}$. Since the pendant edge of length $7$ was stretched to be one of maximal length $7t$, it is still a pendant edge. So now we relabel the leaf as $\infty$ and so it's length becomes $\infty$. We then develop it by $1$ and have collected all edges in $K_{14t}$.
+
+  We show how the labeling from Figure \ref{fig:01decompexample} gives the $\mathbf{T_{7}^{11}\sqcup T_{2}^{11}}$-decomposition of $K_{14(2)}=K_{28}$.
+
+  \begin{figure}[H]
+    \begin{center}
+      \begin{tikzpicture}[scale=1.75]
+        \tikzset{
+          dot/.style={circle, fill=black, minimum size=2pt, inner sep=0pt},
+          infdot/.style={circle, draw=black, fill=white, minimum size=4pt, inner sep=0pt},
+          lbl/.style={draw=none, fill=none, inner sep=0pt, anchor=center}
+        }
+  
+        % — K_{29} labeling —
+        \foreach \i in {0,...,28} {
+          \pgfmathtruncatemacro{\angle}{90 - \i*360/29}
+          \node[dot] (n\i) at (\angle:1) {};
+          \node[lbl] at (\angle:1.1) {\i};
+        }
+        % forest on K29: path (8,9), star at 0→{2,3,4,5,6,7}
+        \draw[blue,   thick] (n8) -- (n9);
+        \draw[red,    thick] (n0) -- (n2);
+        \draw[green,  thick] (n0) -- (n3);
+        \draw[orange, thick] (n0) -- (n4);
+        \draw[purple, thick] (n0) -- (n5);
+        \draw[brown,  thick] (n0) -- (n6);
+        \draw[cyan,   thick] (n0) -- (n7);
+  
+        % — K_{27} ∪ {∞} labeling (shift left) —
+        \begin{scope}[shift={(-3,0)}]
+          \foreach \i in {0,...,26} {
+            \pgfmathtruncatemacro{\angle}{90 - \i*360/27}
+            \node[dot] (m\i) at (\angle:1) {};
+            \node[lbl] at (\angle:1.1) {\i};
+          }
+          \coordinate (inf) at (0,0);
+          \draw[blue, thick] (m8) -- (m9);
+          \draw[red,   thick] (m0) -- (m2);
+          \draw[green, thick] (m0) -- (m3);
+          \draw[orange,thick] (m0) -- (m4);
+          \draw[purple,thick] (m0) -- (m5);
+          \draw[brown, thick] (m0) -- (m6);
+          \draw[cyan,  thick] (m0) -- (m7);
+          \node[infdot] at (inf) {};
+          \node[lbl]    at (-0.25,0) {$\infty$};
+        \end{scope}
+  
+        % — K_{15} labeling (further shift left) —
+        \begin{scope}[shift={(-6,-1.5)}]
+          \node[dot,label=above:3] (a3) at (90:0.5)   {};
+          \node[dot,label=above:4] (a4) at (30:0.5)   {};
+          \node[dot,label=below:7] (a7) at (330:0.5)  {};
+          \node[dot,label=below:6] (a6) at (270:0.5)  {};
+          \node[dot,label=below:5] (a5) at (210:0.5)  {};
+          \node[dot,label=above:2] (a2) at (150:0.5)  {};
+          \node[dot,label={[xshift=3pt]above left:0}] (a0) at (0,0) {};
+          \node[dot,label=above:8] (a8) at (-0.75,0.25) {};
+          \node[dot,label=below:9] (a9) at (-0.75,-0.25){};
+          \draw[blue,   thick] (a8) -- (a9);
+          \draw[green, thick] (a0) -- (a3);
+          \draw[orange,thick] (a0) -- (a4);
+          \draw[cyan,  thick] (a0) -- (a7);
+          \draw[brown, thick] (a0) -- (a6);
+          \draw[purple,thick] (a0) -- (a5);
+          \draw[red,    thick] (a0) -- (a2);
+        \end{scope}
+  %--------------------------------------------row 2------------------------------------------------------------
+      \begin{scope}[shift={(-3,-3)}]
+        \foreach \i in {0,...,26} {
+          \pgfmathtruncatemacro{\angle}{90 - \i*360/27}
+          \node[dot] (m\i) at (\angle:1) {};
+          \node[lbl] at (\angle:1.1) {\i};
+        }
+        \coordinate (inf) at (0,0);
+        \draw[blue, thick] (m8) -- (m16);
+        \draw[red,   thick] (m0) -- (m9);
+        \draw[green, thick] (m0) -- (m10);
+        \draw[orange,thick] (m0) -- (m11);
+        \draw[purple,thick] (m0) -- (m12);
+        \draw[brown, thick] (m0) -- (m13);
+        \draw[cyan,  thick] (m0) -- (inf);
+        \node[infdot] at (inf) {};
+        \node[lbl]    at (-0.25,0) {$\infty$};
+      \end{scope}
+
+      % — K_{29} labeling —
+      \begin{scope}[shift={(0,-3)}]
+        \foreach \i in {0,...,28} {
+          \pgfmathtruncatemacro{\angle}{90 - \i*360/29}
+          \node[dot] (n\i) at (\angle:1) {};
+          \node[lbl] at (\angle:1.1) {\i};
+        }
+        % forest on K29: path (8,9), star at 0→{2,3,4,5,6,7}
+        \draw[blue,   thick] (n8) -- (n16);
+        \draw[red,    thick] (n0) -- (n9);
+        \draw[green,  thick] (n0) -- (n10);
+        \draw[orange, thick] (n0) -- (n11);
+        \draw[purple, thick] (n0) -- (n12);
+        \draw[brown,  thick] (n0) -- (n13);
+        \draw[cyan,   thick] (n0) -- (n14);
+
+      \end{scope}
+      
+
+      \end{tikzpicture}
+    \end{center}
+    \caption{Left: forest on $K_{29}$, middle: forest on $K_{27}\cup\{\infty\}$, right: forest on $K_{15}$, each with edges colored by minimal cyclic length.}
+    \label{fig:K29_K27_K15_forests}
+  \end{figure}
+
+  We will refer to this act of stretching a labeling in later sections. We now present all of these ideas formally as definitions and theorems in the next section.
+  
+  
 \section{Results for $n\equiv 0,1 \pmod{14}$}\label{sec:0,1results}
 
 We begin with the original $\rho$-labeling of a bipartite graph $G$ on $m$ edges which uses lengths modulo $2m$ (in $K_{2m}$). 

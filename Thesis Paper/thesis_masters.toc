@@ -12,16 +12,18 @@
 \contentsline {section}{\numberline {2.3}Seven edge forests}{16}{section.2.3}%
 \contentsline {chapter}{\numberline {3}$\mathbf {n\equiv 0,1\textbf {(mod 14)}}$}{18}{chapter.3}%
 \contentsline {section}{\numberline {3.1}Construction for $n\equiv 0,1 \pmod {14}$}{18}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Results for $n\equiv 0,1 \pmod {14}$}{21}{section.3.2}%
-\contentsline {chapter}{\numberline {4}$\mathbf {n\equiv 7,8\textbf {(mod 14)}}$}{25}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Construction}{25}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Results}{29}{section.4.2}%
-\contentsline {chapter}{\numberline {5}$\mathbf {T_{7}^{11}\sqcup T_{2}^{1}}$}{34}{chapter.5}%
-\contentsline {chapter}{\numberline {6}Additional Results}{37}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Wraparound edge mappings that preserve length}{37}{section.6.1}%
-\contentsline {chapter}{\numberline {7}Conclusion and Discussion}{38}{chapter.7}%
-\contentsline {chapter}{\numberline {8}Appendix}{39}{chapter.8}%
-\contentsline {chapter}{References}{56}{chapter*.35}%
-\contentsline {chapter}{\appnumberline {A}Glossary and Acronyms}{57}{appendix.A}%
-\contentsline {section}{\numberline {A.1}Glossary}{57}{section.A.1}%
-\contentsline {section}{\numberline {A.2}Acronyms}{57}{section.A.2}%
+\contentsline {subsection}{\numberline {3.1.1}$K_{14}$ and $K_{15}$}{19}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}Stretching a labeling}{21}{subsection.3.1.2}%
+\contentsline {section}{\numberline {3.2}Results for $n\equiv 0,1 \pmod {14}$}{24}{section.3.2}%
+\contentsline {chapter}{\numberline {4}$\mathbf {n\equiv 7,8\textbf {(mod 14)}}$}{28}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Construction}{28}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Results}{32}{section.4.2}%
+\contentsline {chapter}{\numberline {5}$\mathbf {T_{7}^{11}\sqcup T_{2}^{1}}$}{37}{chapter.5}%
+\contentsline {chapter}{\numberline {6}Additional Results}{40}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Wraparound edge mappings that preserve length}{40}{section.6.1}%
+\contentsline {chapter}{\numberline {7}Conclusion and Discussion}{41}{chapter.7}%
+\contentsline {chapter}{\numberline {8}Appendix}{42}{chapter.8}%
+\contentsline {chapter}{References}{59}{chapter*.36}%
+\contentsline {chapter}{\appnumberline {A}Glossary and Acronyms}{60}{appendix.A}%
+\contentsline {section}{\numberline {A.1}Glossary}{60}{section.A.1}%
+\contentsline {section}{\numberline {A.2}Acronyms}{60}{section.A.2}%
