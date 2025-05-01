@@ -1,0 +1,49 @@
+\begin{thebibliography}{1}
+
+\bibitem{Cain1974}
+P.~Cain.
+\newblock Decomposition of complete graphs into stars.
+\newblock {\em Bull. Austral. Math. Soc.}, 10:23--30, 1974.
+
+\bibitem{ElZanati2001}
+S.~I. El-Zanati and C.~Vanden Eynden.
+\newblock On the cyclic decomposition of complete graphs into bipartite graphs.
+\newblock {\em Australas. J. Combin.}, 24:209--219, 2001.
+
+\bibitem{ElZanati2009}
+S.~I. El-Zanati and C.~Vanden Eynden.
+\newblock On rosa-type labelings and cyclic graph decompositions.
+\newblock {\em Math. Slovaca}, 59:1--18, 2009.
+
+\bibitem{FreybergPeters2024}
+B.~Freyberg and R.~Peters.
+\newblock Decomposition of complete graphs into forests with six edges.
+\newblock {\em Discuss. Math. Graph Theory}, 34, 2024.
+\newblock in press.
+
+\bibitem{FreybergTran2020}
+B.~Freyberg and N.~Tran.
+\newblock Decomposition of complete graphs into bipartite unicyclic graphs with eight edges.
+\newblock {\em J. Combin. Math. Combin. Comput.}, 114:133--142, 2020.
+
+\bibitem{FroncekKubesa2021}
+D.~Froncek and M.~Kubesa.
+\newblock Decomposition of complete graphs into connected unicyclic bipartite graphs with seven edges.
+\newblock {\em Bull. Inst. Combin. Appl.}, 93:52--80, 2021.
+
+\bibitem{Rosa1967}
+A.~Rosa.
+\newblock On certain valuations of the vertices of a graph.
+\newblock In {\em Theory of Graphs (Intl. Symp. Rome 1966)}, pages 349--355. Gordon and Breach, Dunod, Paris, 1967.
+
+\bibitem{Kirkman1850}
+T.~P. Kirkman.
+\newblock On a problem in combinations.
+\newblock {\em The Lady's and Gentleman's Diary}, pages 48--50, 1850.
+
+\bibitem{Kirkman1851}
+T.~P. Kirkman.
+\newblock Answer to query vi.
+\newblock {\em The Lady's and Gentleman's Diary}, page~48, 1851.
+
+\end{thebibliography}

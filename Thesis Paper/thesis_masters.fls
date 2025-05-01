@@ -152,6 +152,8 @@ INPUT c:/texlive/2023/texmf-dist/tex/latex/graphics/rotating.sty
 INPUT c:/texlive/2023/texmf-dist/tex/latex/graphics/rotating.sty
 INPUT c:/texlive/2023/texmf-dist/tex/latex/tools/enumerate.sty
 INPUT c:/texlive/2023/texmf-dist/tex/latex/tools/enumerate.sty
+INPUT c:/texlive/2023/texmf-dist/tex/latex/enumitem/enumitem.sty
+INPUT c:/texlive/2023/texmf-dist/tex/latex/enumitem/enumitem.sty
 INPUT c:/texlive/2023/texmf-dist/tex/latex/caption/caption.sty
 INPUT c:/texlive/2023/texmf-dist/tex/latex/caption/caption.sty
 INPUT c:/texlive/2023/texmf-dist/tex/latex/caption/caption3.sty
@@ -347,6 +349,22 @@ INPUT c:/texlive/2023/texmf-dist/tex/latex/filemod/filemod-expmin.sty
 INPUT c:/texlive/2023/texmf-dist/tex/latex/filemod/filemod-expmin.sty
 INPUT c:/texlive/2023/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarymatrix.code.tex
 INPUT c:/texlive/2023/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarymatrix.code.tex
+INPUT c:/texlive/2023/texmf-dist/tex/latex/base/inputenc.sty
+INPUT c:/texlive/2023/texmf-dist/tex/latex/base/inputenc.sty
+INPUT c:/texlive/2023/texmf-dist/tex/latex/base/ansinew.def
+INPUT c:/texlive/2023/texmf-dist/tex/latex/base/ansinew.def
+INPUT c:/texlive/2023/texmf-dist/tex/latex/base/ansinew.def
+INPUT c:/texlive/2023/texmf-dist/tex/latex/listings/listings.sty
+INPUT c:/texlive/2023/texmf-dist/tex/latex/listings/listings.sty
+INPUT c:/texlive/2023/texmf-dist/tex/latex/listings/lstmisc.sty
+INPUT c:/texlive/2023/texmf-dist/tex/latex/listings/lstmisc.sty
+INPUT c:/texlive/2023/texmf-dist/tex/latex/listings/lstmisc.sty
+INPUT c:/texlive/2023/texmf-dist/tex/latex/listings/listings.cfg
+INPUT c:/texlive/2023/texmf-dist/tex/latex/listings/listings.cfg
+INPUT c:/texlive/2023/texmf-dist/tex/latex/listings/listings.cfg
+INPUT c:/texlive/2023/texmf-dist/tex/latex/listings/lstlang1.sty
+INPUT c:/texlive/2023/texmf-dist/tex/latex/listings/lstlang1.sty
+INPUT c:/texlive/2023/texmf-dist/tex/latex/listings/lstlang1.sty
 INPUT c:/texlive/2023/texmf-dist/tex/latex/lm/ot1lmr.fd
 INPUT c:/texlive/2023/texmf-dist/tex/latex/lm/ot1lmr.fd
 INPUT c:/texlive/2023/texmf-dist/tex/latex/lm/ot1lmr.fd
@@ -365,24 +383,24 @@ INPUT Background.aux
 INPUT ./intro.aux
 INPUT ./intro.aux
 INPUT intro.aux
-INPUT ./0,1(mod 14).aux
-INPUT ./0,1(mod 14).aux
-INPUT 0,1(mod 14).aux
-INPUT ./7,8(mod 14).aux
-INPUT ./7,8(mod 14).aux
-INPUT 7,8(mod 14).aux
-INPUT ./special case.aux
-INPUT ./special case.aux
-INPUT special case.aux
-INPUT ./Additional Results.aux
-INPUT ./Additional Results.aux
-INPUT Additional Results.aux
+INPUT ./01mod14.aux
+INPUT ./01mod14.aux
+INPUT 01mod14.aux
+INPUT ./78mod14.aux
+INPUT ./78mod14.aux
+INPUT 78mod14.aux
+INPUT ./specialcase.aux
+INPUT ./specialcase.aux
+INPUT specialcase.aux
+INPUT ./AdditionalResults.aux
+INPUT ./AdditionalResults.aux
+INPUT AdditionalResults.aux
+INPUT ./Programming.aux
+INPUT ./Programming.aux
+INPUT Programming.aux
 INPUT ./conclusion.aux
 INPUT ./conclusion.aux
 INPUT conclusion.aux
-INPUT ./Appendix.aux
-INPUT ./Appendix.aux
-INPUT Appendix.aux
 INPUT ./app_glossary.aux
 INPUT ./app_glossary.aux
 INPUT app_glossary.aux
@@ -583,6 +601,7 @@ OUTPUT intro.aux
 INPUT ./intro.tex
 INPUT ./intro.tex
 INPUT intro.tex
+INPUT c:/texlive/2023/texmf-dist/fonts/tfm/public/lm/ts1-lmr10.tfm
 INPUT c:/texlive/2023/texmf-dist/fonts/tfm/public/lm/rm-lmr5.tfm
 INPUT c:/texlive/2023/texmf-dist/fonts/tfm/public/lm/lmmi5.tfm
 INPUT c:/texlive/2023/texmf-dist/fonts/tfm/public/lm/lmsy5.tfm
@@ -602,12 +621,12 @@ INPUT ./standalone/tree chart.pdf
 INPUT ./standalone/tree chart.pdf
 INPUT c:/texlive/2023/texmf-dist/fonts/tfm/public/lm/rm-lmri8.tfm
 INPUT c:/texlive/2023/texmf-dist/fonts/tfm/public/lm/rm-lmri7.tfm
-INPUT ./0,1(mod 14).tex
-INPUT ./0,1(mod 14).tex
-OUTPUT 0,1(mod 14).aux
-INPUT ./0,1(mod 14).tex
-INPUT ./0,1(mod 14).tex
-INPUT 0,1(mod 14).tex
+INPUT ./01mod14.tex
+INPUT ./01mod14.tex
+OUTPUT 01mod14.aux
+INPUT ./01mod14.tex
+INPUT ./01mod14.tex
+INPUT 01mod14.tex
 INPUT c:/texlive/2023/texmf-dist/fonts/tfm/public/lm/lmmi12.tfm
 INPUT c:/texlive/2023/texmf-dist/fonts/tfm/public/lm/lmmi12.tfm
 INPUT c:/texlive/2023/texmf-dist/fonts/tfm/public/lm/lmsy10.tfm
@@ -641,12 +660,12 @@ INPUT ./standalone/sigma label ex2.pdf
 INPUT ./standalone/0,1(mod 14) long.tex
 INPUT ./standalone/0,1(mod 14) long.tex
 INPUT standalone/0,1(mod 14) long.tex
-INPUT ./7,8(mod 14).tex
-INPUT ./7,8(mod 14).tex
-OUTPUT 7,8(mod 14).aux
-INPUT ./7,8(mod 14).tex
-INPUT ./7,8(mod 14).tex
-INPUT 7,8(mod 14).tex
+INPUT ./78mod14.tex
+INPUT ./78mod14.tex
+OUTPUT 78mod14.aux
+INPUT ./78mod14.tex
+INPUT ./78mod14.tex
+INPUT 78mod14.tex
 INPUT ./standalone/Danny's example/chart.tex
 INPUT ./standalone/Danny's example/chart.tex
 INPUT ./standalone/Danny's example/chart.tex
@@ -772,35 +791,57 @@ INPUT ./standalone/Danny's example/8 mod 14/6-T-(3,1).tex
 INPUT ./standalone/Danny's example/8 mod 14/6-T-(3,1).tex
 INPUT ./standalone/Danny's example/8 mod 14/6-T-(3,1).tex
 INPUT standalone/Danny's example/8 mod 14/6-T-(3,1).tex
-INPUT ./special case.tex
-INPUT ./special case.tex
-OUTPUT special case.aux
-INPUT ./special case.tex
-INPUT ./special case.tex
-INPUT special case.tex
+INPUT ./specialcase.tex
+INPUT ./specialcase.tex
+OUTPUT specialcase.aux
+INPUT ./specialcase.tex
+INPUT ./specialcase.tex
+INPUT specialcase.tex
+INPUT c:/texlive/2023/texmf-dist/fonts/tfm/public/lm/rm-lmr9.tfm
+INPUT c:/texlive/2023/texmf-dist/fonts/tfm/public/lm/lmmi9.tfm
+INPUT c:/texlive/2023/texmf-dist/fonts/tfm/public/lm/lmsy9.tfm
+INPUT c:/texlive/2023/texmf-dist/fonts/tfm/public/rsfs/rsfs10.tfm
+INPUT c:/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
+INPUT c:/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
+INPUT c:/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmbx9.tfm
+INPUT c:/texlive/2023/texmf-dist/fonts/tfm/public/lm/rm-lmbx9.tfm
+INPUT c:/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmmib9.tfm
+INPUT c:/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy9.tfm
+INPUT c:/texlive/2023/texmf-dist/fonts/tfm/public/wasy/wasy9.tfm
+INPUT c:/texlive/2023/texmf-dist/fonts/tfm/public/latex-fonts/lasy9.tfm
 INPUT ./standalone/starpath.tex
 INPUT ./standalone/starpath.tex
 INPUT ./standalone/starpath.tex
 INPUT ./standalone/starpath.tex
 INPUT standalone/starpath.tex
-INPUT ./Additional Results.tex
-INPUT ./Additional Results.tex
-OUTPUT Additional Results.aux
-INPUT ./Additional Results.tex
-INPUT ./Additional Results.tex
-INPUT Additional Results.tex
+OUTPUT AdditionalResults.aux
+INPUT ./Programming.tex
+INPUT ./Programming.tex
+OUTPUT Programming.aux
+INPUT ./Programming.tex
+INPUT ./Programming.tex
+INPUT Programming.tex
+INPUT c:/texlive/2023/texmf-dist/tex/latex/lm/ot1lmtt.fd
+INPUT c:/texlive/2023/texmf-dist/tex/latex/lm/ot1lmtt.fd
+INPUT c:/texlive/2023/texmf-dist/tex/latex/lm/ot1lmtt.fd
+INPUT c:/texlive/2023/texmf-dist/fonts/tfm/public/lm/rm-lmtt10.tfm
+INPUT c:/texlive/2023/texmf-dist/fonts/tfm/public/lm/rm-lmtt10.tfm
+INPUT c:/texlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-rmtt.enc
 INPUT ./conclusion.tex
 INPUT ./conclusion.tex
 OUTPUT conclusion.aux
 INPUT ./conclusion.tex
 INPUT ./conclusion.tex
 INPUT conclusion.tex
-INPUT ./Appendix.tex
-INPUT ./Appendix.tex
-OUTPUT Appendix.aux
-INPUT ./Appendix.tex
-INPUT ./Appendix.tex
-INPUT Appendix.tex
+INPUT ./thesis_masters.bbl
+INPUT ./thesis_masters.bbl
+INPUT thesis_masters.bbl
+INPUT ./app_glossary.tex
+INPUT ./app_glossary.tex
+OUTPUT app_glossary.aux
+INPUT ./app_glossary.tex
+INPUT ./app_glossary.tex
+INPUT app_glossary.tex
 INPUT ./standalone/7m14.tex
 INPUT ./standalone/7m14.tex
 INPUT standalone/7m14.tex
@@ -817,18 +858,6 @@ INPUT ./standalone/K22.tex
 INPUT ./standalone/K22.tex
 INPUT ./standalone/K22.tex
 INPUT standalone/K22.tex
-INPUT c:/texlive/2023/texmf-dist/tex/latex/lm/ot1lmtt.fd
-INPUT c:/texlive/2023/texmf-dist/tex/latex/lm/ot1lmtt.fd
-INPUT c:/texlive/2023/texmf-dist/tex/latex/lm/ot1lmtt.fd
-INPUT c:/texlive/2023/texmf-dist/fonts/tfm/public/lm/rm-lmtt10.tfm
-INPUT c:/texlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-rmtt.enc
-INPUT ./app_glossary.tex
-INPUT ./app_glossary.tex
-OUTPUT app_glossary.aux
-INPUT ./app_glossary.tex
-INPUT ./app_glossary.tex
-INPUT app_glossary.tex
-INPUT c:/texlive/2023/texmf-dist/fonts/tfm/public/lm/ts1-lmr10.tfm
 INPUT thesis_masters.aux
 INPUT ./title.aux
 INPUT ./title.aux
@@ -839,24 +868,24 @@ INPUT Background.aux
 INPUT ./intro.aux
 INPUT ./intro.aux
 INPUT intro.aux
-INPUT ./0,1(mod 14).aux
-INPUT ./0,1(mod 14).aux
-INPUT 0,1(mod 14).aux
-INPUT ./7,8(mod 14).aux
-INPUT ./7,8(mod 14).aux
-INPUT 7,8(mod 14).aux
-INPUT ./special case.aux
-INPUT ./special case.aux
-INPUT special case.aux
-INPUT ./Additional Results.aux
-INPUT ./Additional Results.aux
-INPUT Additional Results.aux
+INPUT ./01mod14.aux
+INPUT ./01mod14.aux
+INPUT 01mod14.aux
+INPUT ./78mod14.aux
+INPUT ./78mod14.aux
+INPUT 78mod14.aux
+INPUT ./specialcase.aux
+INPUT ./specialcase.aux
+INPUT specialcase.aux
+INPUT ./AdditionalResults.aux
+INPUT ./AdditionalResults.aux
+INPUT AdditionalResults.aux
+INPUT ./Programming.aux
+INPUT ./Programming.aux
+INPUT Programming.aux
 INPUT ./conclusion.aux
 INPUT ./conclusion.aux
 INPUT conclusion.aux
-INPUT ./Appendix.aux
-INPUT ./Appendix.aux
-INPUT Appendix.aux
 INPUT ./app_glossary.aux
 INPUT ./app_glossary.aux
 INPUT app_glossary.aux
@@ -876,6 +905,7 @@ INPUT c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmmi10.pfb
 INPUT c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmmi12.pfb
 INPUT c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmmi6.pfb
 INPUT c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmmi8.pfb
+INPUT c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmmi9.pfb
 INPUT c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr10.pfb
 INPUT c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr12.pfb
 INPUT c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr17.pfb

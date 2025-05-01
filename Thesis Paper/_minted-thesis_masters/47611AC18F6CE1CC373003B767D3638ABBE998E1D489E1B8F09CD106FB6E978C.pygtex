@@ -1,0 +1,49 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+  \PYG{k+kn}{from} \PYG{n+nn}{sympy} \PYG{k+kn}{import} \PYG{n}{Matrix}\PYG{p}{,} \PYG{n}{symbols}\PYG{p}{,} \PYG{n}{I}\PYG{p}{,} \PYG{n}{simplify}\PYG{p}{,} \PYG{n}{solve}
+
+\PYG{k}{def} \PYG{n+nf}{def\PYGZus{}var}\PYG{p}{(}\PYG{n}{number}\PYG{p}{,}\PYG{n}{name}\PYG{p}{):}
+    \PYG{n}{varlist}\PYG{o}{=}\PYG{p}{[]}
+    \PYG{k}{for} \PYG{n}{i} \PYG{o+ow}{in} \PYG{n+nb}{range}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{n}{number}\PYG{o}{+}\PYG{l+m+mi}{1}\PYG{p}{):}
+        \PYG{n}{varlist}\PYG{o}{.}\PYG{n}{append}\PYG{p}{(}\PYG{n}{symbols}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s2}{\PYGZdq{}}\PYG{o}{\PYGZpc{}}\PYG{p}{(}\PYG{n}{name}\PYG{p}{)}\PYG{o}{+}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+si}{\PYGZpc{}i}\PYG{l+s+s2}{\PYGZdq{}}\PYG{o}{\PYGZpc{}}\PYG{p}{(}\PYG{n}{i}\PYG{p}{)))}
+    \PYG{k}{return} \PYG{n}{varlist}
+\PYG{k}{def} \PYG{n+nf}{def\PYGZus{}multvar}\PYG{p}{(}\PYG{o}{*}\PYG{n}{names}\PYG{p}{):}
+    \PYG{n}{varlist}\PYG{o}{=}\PYG{p}{[]}
+    \PYG{k}{for} \PYG{n}{s} \PYG{o+ow}{in} \PYG{n}{names}\PYG{p}{:}
+        \PYG{n}{varlist}\PYG{o}{.}\PYG{n}{append}\PYG{p}{(}\PYG{n}{symbols}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+si}{\PYGZpc{}s}\PYG{l+s+s2}{\PYGZdq{}}\PYG{o}{\PYGZpc{}}\PYG{p}{(}\PYG{n}{s}\PYG{p}{)))}
+    \PYG{k}{return} \PYG{n}{varlist}
+\PYG{n}{x} \PYG{o}{=} \PYG{n}{def\PYGZus{}var}\PYG{p}{(}\PYG{l+m+mi}{4}\PYG{p}{,}\PYG{l+s+s2}{\PYGZdq{}x\PYGZdq{}}\PYG{p}{)}
+\PYG{n}{l} \PYG{o}{=} \PYG{n}{symbols}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}l\PYGZdq{}}\PYG{p}{)}
+\PYG{c+c1}{\PYGZsh{}our matrices}
+\PYG{n}{A}\PYG{o}{=} \PYG{n}{Matrix}\PYG{p}{([}
+    \PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{l+m+mi}{1}\PYG{p}{],}
+    \PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{,}\PYG{l+m+mi}{1}\PYG{p}{]}
+\PYG{p}{])}
+
+\PYG{n}{Id} \PYG{o}{=} \PYG{n}{Matrix}\PYG{p}{([}
+    \PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{l+m+mi}{0}\PYG{p}{],}
+    \PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{,}\PYG{l+m+mi}{1}\PYG{p}{]}
+\PYG{p}{])}
+\PYG{n}{X}\PYG{o}{=}\PYG{n}{Matrix}\PYG{p}{([}
+    \PYG{p}{[}\PYG{n}{x}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{],}\PYG{n}{x}\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{]],}
+    \PYG{p}{[}\PYG{n}{x}\PYG{p}{[}\PYG{l+m+mi}{2}\PYG{p}{],}\PYG{n}{x}\PYG{p}{[}\PYG{l+m+mi}{3}\PYG{p}{]],}
+\PYG{p}{])}
+\PYG{c+c1}{\PYGZsh{}Properties of our matrices}
+\PYG{n}{rankId}\PYG{o}{=}\PYG{n}{Id}\PYG{o}{.}\PYG{n}{rank}\PYG{p}{()}
+\PYG{n}{rankA}\PYG{o}{=}\PYG{n}{A}\PYG{o}{.}\PYG{n}{rank}\PYG{p}{()}
+\PYG{n}{traceId} \PYG{o}{=} \PYG{n}{Id}\PYG{o}{.}\PYG{n}{trace}\PYG{p}{()}
+\PYG{n}{traceA} \PYG{o}{=} \PYG{n}{A}\PYG{o}{.}\PYG{n}{trace}\PYG{p}{()}
+\PYG{n}{detId}\PYG{o}{=}\PYG{n}{Id}\PYG{o}{.}\PYG{n}{det}\PYG{p}{()}
+\PYG{n}{detA}\PYG{o}{=}\PYG{n}{A}\PYG{o}{.}\PYG{n}{det}\PYG{p}{()}
+\PYG{n}{charId} \PYG{o}{=} \PYG{p}{(}\PYG{n}{Id}\PYG{o}{\PYGZhy{}}\PYG{n}{l}\PYG{o}{*}\PYG{n}{Id}\PYG{p}{)}\PYG{o}{.}\PYG{n}{det}\PYG{p}{()}
+\PYG{n}{charA} \PYG{o}{=} \PYG{p}{(}\PYG{n}{A}\PYG{o}{\PYGZhy{}}\PYG{n}{l}\PYG{o}{*}\PYG{n}{Id}\PYG{p}{)}\PYG{o}{.}\PYG{n}{det}\PYG{p}{()}
+\PYG{n}{eigenId} \PYG{o}{=} \PYG{n}{solve}\PYG{p}{((}\PYG{n}{Id}\PYG{o}{\PYGZhy{}}\PYG{n}{l}\PYG{o}{*}\PYG{n}{Id}\PYG{p}{)}\PYG{o}{.}\PYG{n}{det}\PYG{p}{())}
+\PYG{n}{eigenA} \PYG{o}{=} \PYG{n}{solve}\PYG{p}{((}\PYG{n}{A}\PYG{o}{\PYGZhy{}}\PYG{n}{l}\PYG{o}{*}\PYG{n}{Id}\PYG{p}{)}\PYG{o}{.}\PYG{n}{det}\PYG{p}{())}
+\PYG{c+c1}{\PYGZsh{}boolean variables. Stores the truth values of f(I)=f(A) where f is rank,trace,..., eigenvalues.}
+\PYG{n}{rankbool} \PYG{o}{=} \PYG{n}{rankId}\PYG{o}{==}\PYG{n}{rankA}
+\PYG{n}{tracebool} \PYG{o}{=} \PYG{n}{traceId}\PYG{o}{==}\PYG{n}{traceA}
+\PYG{n}{detbool} \PYG{o}{=} \PYG{n}{detId}\PYG{o}{==}\PYG{n}{detA}
+\PYG{n}{charbool} \PYG{o}{=} \PYG{n}{charId}\PYG{o}{==}\PYG{n}{charA}
+\PYG{n}{eigenbool} \PYG{o}{=} \PYG{n}{eigenId}\PYG{o}{==}\PYG{n}{eigenA}
+\PYG{c+c1}{\PYGZsh{}prints the truth values}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{rankbool}\PYG{p}{,}\PYG{n}{tracebool}\PYG{p}{,}\PYG{n}{detbool}\PYG{p}{,}\PYG{n}{charbool}\PYG{p}{,}\PYG{n}{eigenbool}\PYG{p}{)}
+\end{Verbatim}

@@ -1,0 +1,38 @@
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {1.1}{\ignorespaces The Petersen graph}}{2}{figure.caption.6}%
+\contentsline {figure}{\numberline {1.2}{\ignorespaces $G\cong H$}}{2}{figure.caption.7}%
+\contentsline {figure}{\numberline {1.3}{\ignorespaces $K$ and subgraphs $\textcolor {magenta}{G}, \textcolor {blue}{H}, \textcolor {red}{M} \subseteq K$}}{3}{figure.caption.8}%
+\contentsline {figure}{\numberline {1.4}{\ignorespaces (above)$\,G\cup H$ and (below)$\,G\sqcup K$}}{4}{figure.caption.9}%
+\contentsline {figure}{\numberline {1.5}{\ignorespaces (above)$\,G\cup H$ and (below)$\,G\sqcup K$}}{4}{figure.caption.10}%
+\contentsline {figure}{\numberline {1.6}{\ignorespaces The Complete Graph $K_{5}$}}{6}{figure.caption.11}%
+\contentsline {figure}{\numberline {1.7}{\ignorespaces The Complete Bipartite Graph \( K_{3,3} \)}}{7}{figure.caption.12}%
+\contentsline {figure}{\numberline {1.8}{\ignorespaces The Complete Multipartite Graph \( K_{3,2,3} \)}}{7}{figure.caption.13}%
+\contentsline {figure}{\numberline {1.9}{\ignorespaces The Cycle Graph \( C_5 \)}}{7}{figure.caption.14}%
+\contentsline {figure}{\numberline {1.10}{\ignorespaces A Tree Graph on 6 vertices}}{8}{figure.caption.15}%
+\contentsline {figure}{\numberline {1.11}{\ignorespaces The Path Graph \( P_4 \)}}{8}{figure.caption.16}%
+\contentsline {figure}{\numberline {1.12}{\ignorespaces The $7$-star (\(K_{1,7}\))}}{8}{figure.caption.17}%
+\contentsline {figure}{\numberline {1.13}{\ignorespaces A forest on 9 vertices}}{9}{figure.caption.18}%
+\contentsline {figure}{\numberline {1.14}{\ignorespaces The $(K_{1,6},K_{1,7})$-Galaxy}}{9}{figure.caption.19}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces $\{G_{1},G_{2}\}$ is a decomposition of $K_{4}$}}{10}{figure.caption.20}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces $\{G_{1},G_{2}\}$ is a $P_{3}$-decomposition of $K_{4}$ or a $P_{3}$-design of order $4$}}{12}{figure.caption.21}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces $K_{5}$ with lengths colored}}{14}{figure.caption.22}%
+\contentsline {figure}{\numberline {2.4}{\ignorespaces A cyclic $P_{3}$-decomposition of $K_{5}$}}{15}{figure.caption.23}%
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Trees with less than seven edges}}{16}{figure.caption.24}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces $K_{14}$ (left) and $K_{15}$ (right) with edges colored by length}}{19}{figure.caption.25}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces $K_{13}\vee K_{1}$ is isomorphic to $K_{14}$}}{20}{figure.caption.26}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces A labeling (left) that gives the $\mathbf {T_{7}^{11}\sqcup T_{2}^{11}}$-decomposition of $K_{14}$ (middle) and $K_{15}$ (right), respectively, when developed by $1$. The leaf $7$ in the pendant edge \textcolor {cyan}{$(0,7)$} (of length \textcolor {cyan}{7} modulo 14 and 15) is relabeled as $\infty $ for $K_{14}$}}{21}{figure.caption.27}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces A single labeling (left) gives four labelings which when developed by $1$ give the $\mathbf {T_{7}^{11}\sqcup T_{2}^{11}}$-decomposition of (middle) $K_{28}$ and (right) $K_{29}$.}}{23}{figure.caption.28}%
+\contentsline {figure}{\numberline {3.5}{\ignorespaces $\sigma ^{+-}$-labeling of $\mathbf {T_{6}^{6}}\sqcup 2\mathbf {T_{2}^{1}}$}}{25}{figure.caption.29}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces $K_{21}$ (left) and $K_{22}$ (right) with edges colored by length.}}{28}{figure.caption.30}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces $K_{21}\vee K_{1}$ is isomorphic to $K_{22}$ (right)}}{29}{figure.caption.31}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Three labelings of $\mathbf {T_{6}^{6}}\sqcup \mathbf {T_{3}^{1}}$ (left column) that generate all edges of lengths $1,2,\text { and }3$ in $K_{21}$ when developed by $7$}}{30}{figure.caption.32}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Labelings for $\mathbf {T_{6}^{6}} \sqcup \mathbf {T_{3}^{1}}$}}{35}{figure.caption.33}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces A $\sigma ^{+-}$-labeling of $F \cong \mathbf {T_{6}^{6}} \sqcup \mathbf {T_{3}^{1}}$ (left) and generating presentations for the $F$-decomposition of $K_{n}$ where $n=35$ (middle) and $n=36$ (right)}}{36}{figure.caption.34}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces A new construction for $K_{14t+7}$ and $K_{14t+8}$}}{37}{figure.caption.35}%
+\contentsline {figure}{\numberline {5.2}{\ignorespaces $G_{0}$ in a generating presentation of the $\mathbf {T_{7}^{11}}\sqcup \mathbf {T_{2}^{1}}-$decomposition of $K_{n,7}$.}}{39}{figure.caption.36}%
+\addvspace {10\p@ }
+\addvspace {10pt}

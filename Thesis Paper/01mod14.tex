@@ -5,6 +5,8 @@ To begin this chapter, we extend intuition developed in the Introduction to pres
 \section{Construction for $n\equiv 0,1 \pmod{14}$}\label{sec:0,1constr}
 $K_{1}$ and $K_{2}$ don't have enough vertices to contain a forest on seven edges. So $K_{14}$ and $K_{15}$ are the base graphs for $K_{n}$ where $n \equiv 0 \textrm{ or } 1 \pmod{14}$, respectively. We first show how to decompose $K_{14}$ and $K_{15}$ in subsection \ref{sec:0,1constr-pt1} and then show how to generalize this to their entire families in subsection \ref{sec:0,1constr-pt2}
 
+To be absolutely clear, \textbf{these are not original ideas as a result of this project}. Rosa and his colleagues developed this decades ago. This is just an explanation from our perspective, of the amazing work of Rosa and his successors in creating graph labelings techniques to solve decomposition problems.
+
 \subsection{$K_{14}$ and $K_{15}$}\label{sec:0,1constr-pt1}
 
 
@@ -321,21 +323,21 @@ Now, notice that if we use this new construction for $K_{14}$, we must ensure th
   \end{itemize}
   There is a way to map labelings at each step to preserve length which is described in Chapter $\ref{chap:Additional Results}$, but it can get ugly. Luckily, there is a way to avoid this problem entirely. If we only use \textit{short edges} $uv$ which have length $|u-v|$ in $K_{13}$ for our labelings, then that edge will have length $|u-v|$ in every complete graph $K_{n}$ where $n>13$. Let $k>2$. We show another example below.
   \begin{itemize}
-    \item[] In $K_{14(1)}$: $\ell((0,6))=\min\{|0-1|,14-|0-1|\}=\min\{1,13\}=1$.
-    \item[] In $K_{14(2)}$: $\ell((0,6))=\min\{|0-1|,28-|0-1|\}=\min\{1,27\}=1$.
+    \item[] In $K_{14(1)}$: $\ell((0,6))=\min\{|0-6|,14-|0-6|\}=\min\{6,8\}=6$.
+    \item[] In $K_{14(2)}$: $\ell((0,6))=\min\{|0-6|,28-|0-6|\}=\min\{6,22\}=6$.
     \item[] $\vdots$
-    \item[] In $K_{14(k)}$: $\ell((0,6))=\min\{|0-6|,14k-|0-1|\}=\min\{1,27+14(k-2)\}=1$.
+    \item[] In $K_{14(k)}$: $\ell((0,6))=\min\{|0-6|,14k-|0-6|\}=\min\{1,22+14(k-2)\}=6$.
   \end{itemize}
 
-  So we see that if we only use short edges, the length of edges in our labeling will be preserved as we scale up. So for that reason, we simply \textit{need} to only use them. However, another important feature is that if we only use short edges $uv$, we know WLOG that $v>u$ and so $|u-v|=v-u$. This introduces another extremely important mechanism at play in the labelings we define in the proceeding section of this chapter.
+  So we see that if we only use short edges, the length of edges in our labeling will be preserved as we scale up. So for that reason, we simply \textit{need} to use them. However, another important feature is that if we only use short edges $uv$, we know WLOG that $v>u$ and so $|u-v|=v-u$. This introduces another extremely important mechanism at play in the labelings we define in the proceeding section of this chapter.
 
-  If we bundle the short edge requirement and the requirement that the maximal edge is a pendant edge with a new ordered bipartition $V(F)=A\sqcup B$ requirement on the vertices of a labeling $F$ such that all vertices $a\in A$ only have neighbors in $B$ which are larger than it, then we get a really nice property. All edges are now of the form $ab$ where $a\in A$ and $b\in B$ so that $a<b$ and so all such edges $ab$ have length $b-a$ modulo $13$. This means that if $\ell(ab)=l$ in $\ZZ_{13}$, then $b-a=l$ and so $(b+c)-a=l+c$. More importantly, if we then add any $c\in \ZZ_{14t}$ to all vertices in the larger partite set $B$ of our labeling, we will simply increase the lengths of all edges in our labeling by $c$ in $\ZZ_{14t}$ and $\ZZ_{14t+1}$ as a result of bundling these restrictions together!! We call the act of adding some constant to all vertices of the larger partite set $B$ of a labeling of this type \textit{stretching}.
+  If we bundle the short edge requirement and the requirement that the maximal edge is a pendant edge with a new ordered bipartition $V(F)=A\sqcup B$ requirement on the vertices of a labeling $F$ such that all vertices $a\in A$ only have neighbors in $B$ which are larger than $a$, then we get a really nice property. All edges are now of the form $ab$ where $a\in A$ and $b\in B$ so that $a<b$ and so all such edges $ab$ have length $b-a$ modulo $13$. This means that if $\ell(ab)=l$ in $\ZZ_{13}$, then $b-a=l$ and so $(b+c)-a=l+c$. More importantly, if we then add any $c\in \ZZ_{14t}$ to all vertices in the larger partite set $B$ of our labeling, we will simply increase the lengths of all edges in our labeling by $c$ in $\ZZ_{14t}$ and $\ZZ_{14t+1}$ as a result of bundling these restrictions together!! We call the act of adding some constant to all vertices of the larger partite set $B$ of a labeling of this type \textit{stretching}.
 
   Let $t>1$. Then for a labeling $F$ for $K_{14t+1}$ we simply develop our original labeling by $1$ to generate lengths in $\{1,\hdots,7\}$, then stretch that labeling by $7i$ and develop it by $1$ for each $0<i<t$, to generate all edges of $K_{14t+1}$. 
   
   Now, in the same labeling $F$ for $K_{14t}$, recall that there are only $7t$ edges of the maximal length $7t$. This means that we want to take it's vertices to be $\ZZ_{14t-1}\cup \{\infty\}$ and so now there are now $14t-1$ edges of length $7$ along with all lengths less than $7t$. So then we simply develop our original labeling by $1$ to generate lengths in $\{1,\hdots,7\}$, then stretch that labeling by $7i$ and develop it by $1$ for each $0<i<t$ \textbf{except} the last labeling which was stretched by $7(t-1)$ with lengths in $\{7t-6,\hdots,7t\}$. Since the pendant edge of length $7$ was stretched to be one of maximal length $7t$, it is still a pendant edge. So now we relabel the leaf as $\infty$ and so it's length becomes $\infty$. We then develop it by $1$ and have collected all edges in $K_{14t}$.
 
-  We show how the labeling from Figure \ref{fig:01decompexample} gives the $\mathbf{T_{7}^{11}\sqcup T_{2}^{11}}$-decomposition of $K_{14(2)}=K_{28}$.
+  We show how the labeling from Figure \ref{fig:01decompexample} gives the $\mathbf{T_{7}^{11}\sqcup T_{2}^{11}}$-decomposition of $K_{14(2)}=K_{28}$ and $K_{14(2)+1}=K_{29}$.
 
   \begin{figure}[H]
     \begin{center}
@@ -398,6 +400,7 @@ Now, notice that if we use this new construction for $K_{14}$, we must ensure th
           \draw[brown, thick] (a0) -- (a6);
           \draw[purple,thick] (a0) -- (a5);
           \draw[red,    thick] (a0) -- (a2);
+          \node[draw=none, fill=none] at (1.25, 0) {$\LARGE \mapsto$};
         \end{scope}
   %--------------------------------------------row 2------------------------------------------------------------
       \begin{scope}[shift={(-3,-3)}]
@@ -439,11 +442,11 @@ Now, notice that if we use this new construction for $K_{14}$, we must ensure th
 
       \end{tikzpicture}
     \end{center}
-    \caption{Left: forest on $K_{29}$, middle: forest on $K_{27}\cup\{\infty\}$, right: forest on $K_{15}$, each with edges colored by minimal cyclic length.}
+    \caption{A single labeling (left) gives four labelings which when developed by $1$ give the $\mathbf{T_{7}^{11}\sqcup T_{2}^{11}}$-decomposition of (middle) $K_{28}$ and (right) $K_{29}$.}
     \label{fig:K29_K27_K15_forests}
   \end{figure}
 
-  We will refer to this act of stretching a labeling in later sections. We now present all of these ideas formally as definitions and theorems in the next section.
+  We will refer to this act of stretching a labeling in later sections. The ideas in this section are now put together formally in the next section.
   
   
 \section{Results for $n\equiv 0,1 \pmod{14}$}\label{sec:0,1results}

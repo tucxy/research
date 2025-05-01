@@ -1,0 +1,6 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{g+go}{PS C:\PYGZbs{}Users\PYGZbs{}baneg\PYGZbs{}OneDrive\PYGZbs{}Desktop\PYGZgt{} \PYGZam{} C:/Users/baneg/AppData/Local/Programs/Python/Python312/python.exe \PYGZdq{}c:/Users/baneg/OneDrive/Desktop/Git/LaTeX/Linear Algebra/HW 8/matrix solver.py\PYGZdq{}}
+\PYG{g+go}{Matrix([[34, 0, 10], [0, 10, 0], [10, 0, 5]])}
+\PYG{g+go}{Matrix([[31], [3], [11]])}
+\PYG{g+go}{\PYGZob{}a: 9/14, b: 3/10, c: 32/35\PYGZcb{}}
+\end{Verbatim}

@@ -16,7 +16,8 @@
 
 \linespread{1.3}
 \begin{document}
-\bibliographystyle{hunsrt} % style of bibliography
+\nocite{*} 
+\bibliographystyle{hunsrt}     % or plain, but ONLY one call         % will read thesis.bib
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -33,23 +34,21 @@
 \include{intro}
 
 %Base Chapters
-\include{0,1(mod 14)}
+\include{01mod14}
 
-\include{7,8(mod 14)}
+\include{78mod14}
 
-\include{special case}
+\include{specialcase}
 
-\include{Additional Results}
+\include{AdditionalResults}
 %Software Chapters
-
+\include{Programming}
 
 %Analysis Chapters
 
 
 %Conclusion
 \include{conclusion}
-
-\include{Appendix}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

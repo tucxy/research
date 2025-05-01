@@ -56,7 +56,7 @@
 \usepackage{float}
 \usepackage{amsfonts,amsmath,amsthm,amssymb,wasysym,latexsym,mathtools}
 \usepackage{verbatim,graphicx,rotating}
-\usepackage{enumerate,multirow,caption,subcaption,tabu,array,tabularx,longtable}
+\usepackage{enumerate,enumitem,multirow,caption,subcaption,tabu,array,tabularx,longtable}
 \usepackage{tikz,tkz-graph}
 %\usetikzlibrary{calc}
 \usepackage{caption}
@@ -109,3 +109,21 @@
 \DeclarePairedDelimiter\ceil{\lceil}{\rceil}
 \DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%code stuff%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage[ansinew]{inputenc}   % ansinew = Windows-1252
+\usepackage{xcolor}
+\usepackage{listings}
+\lstset{
+  inputencoding=ansinew,
+  extendedchars=true,
+  literate={∞}{{\ensuremath{\infty}}}1,
+  language=Python,
+  basicstyle=\ttfamily\small,
+  keywordstyle=\color{blue},
+  commentstyle=\color{gray},
+  stringstyle=\color{red},
+  showstringspaces=false,
+  breaklines=true,
+  inputpath={{code bundle/}}
+}

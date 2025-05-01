@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.24)  30 APR 2025 06:04
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.24)  1 MAY 2025 04:53
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -413,22 +413,30 @@ Package: rotating 2016/08/11 v2.16d rotated objects in LaTeX
 ) (c:/texlive/2023/texmf-dist/tex/latex/tools/enumerate.sty
 Package: enumerate 2023/07/04 v3.00 enumerate extensions (DPC)
 \@enLab=\toks36
+) (c:/texlive/2023/texmf-dist/tex/latex/enumitem/enumitem.sty
+Package: enumitem 2019/06/20 v3.9 Customized lists
+\labelindent=\skip72
+\enit@outerparindent=\dimen178
+\enit@toks=\toks37
+\enit@inbox=\box64
+\enit@count@id=\count308
+\enitdp@description=\count309
 ) (c:/texlive/2023/texmf-dist/tex/latex/caption/caption.sty
 Package: caption 2023/08/05 v3.6o Customizing captions (AR)
  (c:/texlive/2023/texmf-dist/tex/latex/caption/caption3.sty
 Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
-\caption@tempdima=\dimen178
-\captionmargin=\dimen179
-\caption@leftmargin=\dimen180
-\caption@rightmargin=\dimen181
-\caption@width=\dimen182
-\caption@indent=\dimen183
-\caption@parindent=\dimen184
-\caption@hangindent=\dimen185
+\caption@tempdima=\dimen179
+\captionmargin=\dimen180
+\caption@leftmargin=\dimen181
+\caption@rightmargin=\dimen182
+\caption@width=\dimen183
+\caption@indent=\dimen184
+\caption@parindent=\dimen185
+\caption@hangindent=\dimen186
 Package caption Info: Standard document class detected.
 )
-\c@caption@flags=\count308
-\c@continuedfloat=\count309
+\c@caption@flags=\count310
+\c@continuedfloat=\count311
 Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
 Package caption Info: longtable package is loaded.
@@ -439,64 +447,64 @@ Package caption Info: rotating package is loaded.
 ) (c:/texlive/2023/texmf-dist/tex/latex/caption/subcaption.sty
 Package: subcaption 2023/07/28 v1.6b Sub-captions (AR)
 Package caption Info: New subtype `subfigure' on input line 238.
-\c@subfigure=\count310
+\c@subfigure=\count312
 Package caption Info: New subtype `subtable' on input line 238.
-\c@subtable=\count311
+\c@subtable=\count313
 ) (c:/texlive/2023/texmf-dist/tex/latex/tabu/tabu.sty
 Package: tabu 2019/01/11 v2.9 - flexible LaTeX tabulars (FC+tabu-fixed)
  (c:/texlive/2023/texmf-dist/tex/latex/tools/array.sty
 Package: array 2023/10/16 v2.5g Tabular extension package (FMi)
-\col@sep=\dimen186
-\ar@mcellbox=\box64
-\extrarowheight=\dimen187
-\NC@list=\toks37
-\extratabsurround=\skip72
-\backup@length=\skip73
-\ar@cellbox=\box65
+\col@sep=\dimen187
+\ar@mcellbox=\box65
+\extrarowheight=\dimen188
+\NC@list=\toks38
+\extratabsurround=\skip73
+\backup@length=\skip74
+\ar@cellbox=\box66
 ) (c:/texlive/2023/texmf-dist/tex/latex/varwidth/varwidth.sty
 Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
-\@vwid@box=\box66
-\sift@deathcycles=\count312
-\@vwid@loff=\dimen188
-\@vwid@roff=\dimen189
+\@vwid@box=\box67
+\sift@deathcycles=\count314
+\@vwid@loff=\dimen189
+\@vwid@roff=\dimen190
 )
-\c@taburow=\count313
-\tabu@nbcols=\count314
-\tabu@cnt=\count315
-\tabu@Xcol=\count316
-\tabu@alloc=\count317
-\tabu@nested=\count318
-\tabu@target=\dimen190
-\tabu@spreadtarget=\dimen191
-\tabu@naturalX=\dimen192
-\tabucolX=\dimen193
-\tabu@Xsum=\dimen194
-\extrarowdepth=\dimen195
-\abovetabulinesep=\dimen196
-\belowtabulinesep=\dimen197
-\tabustrutrule=\dimen198
-\tabu@thebody=\toks38
-\tabu@footnotes=\toks39
-\tabu@box=\box67
-\tabu@arstrutbox=\box68
-\tabu@hleads=\box69
-\tabu@vleads=\box70
-\tabu@cellskip=\skip74
+\c@taburow=\count315
+\tabu@nbcols=\count316
+\tabu@cnt=\count317
+\tabu@Xcol=\count318
+\tabu@alloc=\count319
+\tabu@nested=\count320
+\tabu@target=\dimen191
+\tabu@spreadtarget=\dimen192
+\tabu@naturalX=\dimen193
+\tabucolX=\dimen194
+\tabu@Xsum=\dimen195
+\extrarowdepth=\dimen196
+\abovetabulinesep=\dimen197
+\belowtabulinesep=\dimen198
+\tabustrutrule=\dimen199
+\tabu@thebody=\toks39
+\tabu@footnotes=\toks40
+\tabu@box=\box68
+\tabu@arstrutbox=\box69
+\tabu@hleads=\box70
+\tabu@vleads=\box71
+\tabu@cellskip=\skip75
 ) (c:/texlive/2023/texmf-dist/tex/latex/tools/tabularx.sty
 Package: tabularx 2023/07/08 v2.11c `tabularx' package (DPC)
-\TX@col@width=\dimen199
-\TX@old@table=\dimen256
-\TX@old@col=\dimen257
-\TX@target=\dimen258
-\TX@delta=\dimen259
-\TX@cols=\count319
-\TX@ftn=\toks40
+\TX@col@width=\dimen256
+\TX@old@table=\dimen257
+\TX@old@col=\dimen258
+\TX@target=\dimen259
+\TX@delta=\dimen260
+\TX@cols=\count321
+\TX@ftn=\toks41
 ) (c:/texlive/2023/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty (c:/texlive/2023/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty (c:/texlive/2023/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty (c:/texlive/2023/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
-\pgfutil@everybye=\toks41
-\pgfutil@tempdima=\dimen260
-\pgfutil@tempdimb=\dimen261
+\pgfutil@everybye=\toks42
+\pgfutil@tempdima=\dimen261
+\pgfutil@tempdimb=\dimen262
 ) (c:/texlive/2023/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
-\pgfutil@abb=\box71
+\pgfutil@abb=\box72
 ) (c:/texlive/2023/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex (c:/texlive/2023/texmf-dist/tex/generic/pgf/pgf.revision.tex)
 Package: pgfrcs 2023-01-15 v3.1.10 (3.1.10)
 ))
@@ -504,31 +512,31 @@ Package: pgf 2023-01-15 v3.1.10 (3.1.10)
  (c:/texlive/2023/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty (c:/texlive/2023/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty (c:/texlive/2023/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
 Package: pgfsys 2023-01-15 v3.1.10 (3.1.10)
  (c:/texlive/2023/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
-\pgfkeys@pathtoks=\toks42
-\pgfkeys@temptoks=\toks43
+\pgfkeys@pathtoks=\toks43
+\pgfkeys@temptoks=\toks44
  (c:/texlive/2023/texmf-dist/tex/generic/pgf/utilities/pgfkeyslibraryfiltered.code.tex
-\pgfkeys@tmptoks=\toks44
+\pgfkeys@tmptoks=\toks45
 ))
-\pgf@x=\dimen262
-\pgf@y=\dimen263
-\pgf@xa=\dimen264
-\pgf@ya=\dimen265
-\pgf@xb=\dimen266
-\pgf@yb=\dimen267
-\pgf@xc=\dimen268
-\pgf@yc=\dimen269
-\pgf@xd=\dimen270
-\pgf@yd=\dimen271
+\pgf@x=\dimen263
+\pgf@y=\dimen264
+\pgf@xa=\dimen265
+\pgf@ya=\dimen266
+\pgf@xb=\dimen267
+\pgf@yb=\dimen268
+\pgf@xc=\dimen269
+\pgf@yc=\dimen270
+\pgf@xd=\dimen271
+\pgf@yd=\dimen272
 \w@pgf@writea=\write3
 \r@pgf@reada=\read4
-\c@pgf@counta=\count320
-\c@pgf@countb=\count321
-\c@pgf@countc=\count322
-\c@pgf@countd=\count323
-\t@pgf@toka=\toks45
-\t@pgf@tokb=\toks46
-\t@pgf@tokc=\toks47
-\pgf@sys@id@count=\count324
+\c@pgf@counta=\count322
+\c@pgf@countb=\count323
+\c@pgf@countc=\count324
+\c@pgf@countd=\count325
+\t@pgf@toka=\toks46
+\t@pgf@tokb=\toks47
+\t@pgf@tokc=\toks48
+\pgf@sys@id@count=\count326
  (c:/texlive/2023/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
 File: pgf.cfg 2023-01-15 v3.1.10 (3.1.10)
 )
@@ -539,8 +547,8 @@ File: pgfsys-pdftex.def 2023-01-15 v3.1.10 (3.1.10)
 File: pgfsys-common-pdf.def 2023-01-15 v3.1.10 (3.1.10)
 ))) (c:/texlive/2023/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.tex
 File: pgfsyssoftpath.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfsyssoftpath@smallbuffer@items=\count325
-\pgfsyssoftpath@bigbuffer@items=\count326
+\pgfsyssoftpath@smallbuffer@items=\count327
+\pgfsyssoftpath@bigbuffer@items=\count328
 ) (c:/texlive/2023/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.tex
 File: pgfsysprotocol.code.tex 2023-01-15 v3.1.10 (3.1.10)
 )) (c:/texlive/2023/texmf-dist/tex/latex/xcolor/xcolor.sty
@@ -562,52 +570,52 @@ Package xcolor Info: Model `wave' substituted by `hsb' on input line 1373.
 ) (c:/texlive/2023/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
 Package: pgfcore 2023-01-15 v3.1.10 (3.1.10)
  (c:/texlive/2023/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex (c:/texlive/2023/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex) (c:/texlive/2023/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
-\pgfmath@dimen=\dimen272
-\pgfmath@count=\count327
-\pgfmath@box=\box72
-\pgfmath@toks=\toks48
-\pgfmath@stack@operand=\toks49
-\pgfmath@stack@operation=\toks50
+\pgfmath@dimen=\dimen273
+\pgfmath@count=\count329
+\pgfmath@box=\box73
+\pgfmath@toks=\toks49
+\pgfmath@stack@operand=\toks50
+\pgfmath@stack@operation=\toks51
 ) (c:/texlive/2023/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex) (c:/texlive/2023/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic.code.tex) (c:/texlive/2023/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigonometric.code.tex) (c:/texlive/2023/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.random.code.tex) (c:/texlive/2023/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.comparison.code.tex) (c:/texlive/2023/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.code.tex) (c:/texlive/2023/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round.code.tex) (c:/texlive/2023/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.code.tex) (c:/texlive/2023/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerarithmetics.code.tex) (c:/texlive/2023/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex) (c:/texlive/2023/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
-\c@pgfmathroundto@lastzeros=\count328
+\c@pgfmathroundto@lastzeros=\count330
 )) (c:/texlive/2023/texmf-dist/tex/generic/pgf/math/pgfint.code.tex) (c:/texlive/2023/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.tex
 File: pgfcorepoints.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgf@picminx=\dimen273
-\pgf@picmaxx=\dimen274
-\pgf@picminy=\dimen275
-\pgf@picmaxy=\dimen276
-\pgf@pathminx=\dimen277
-\pgf@pathmaxx=\dimen278
-\pgf@pathminy=\dimen279
-\pgf@pathmaxy=\dimen280
-\pgf@xx=\dimen281
-\pgf@xy=\dimen282
-\pgf@yx=\dimen283
-\pgf@yy=\dimen284
-\pgf@zx=\dimen285
-\pgf@zy=\dimen286
+\pgf@picminx=\dimen274
+\pgf@picmaxx=\dimen275
+\pgf@picminy=\dimen276
+\pgf@picmaxy=\dimen277
+\pgf@pathminx=\dimen278
+\pgf@pathmaxx=\dimen279
+\pgf@pathminy=\dimen280
+\pgf@pathmaxy=\dimen281
+\pgf@xx=\dimen282
+\pgf@xy=\dimen283
+\pgf@yx=\dimen284
+\pgf@yy=\dimen285
+\pgf@zx=\dimen286
+\pgf@zy=\dimen287
 ) (c:/texlive/2023/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconstruct.code.tex
 File: pgfcorepathconstruct.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgf@path@lastx=\dimen287
-\pgf@path@lasty=\dimen288
+\pgf@path@lastx=\dimen288
+\pgf@path@lasty=\dimen289
 ) (c:/texlive/2023/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage.code.tex
 File: pgfcorepathusage.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgf@shorten@end@additional=\dimen289
-\pgf@shorten@start@additional=\dimen290
+\pgf@shorten@end@additional=\dimen290
+\pgf@shorten@start@additional=\dimen291
 ) (c:/texlive/2023/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.code.tex
 File: pgfcorescopes.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfpic=\box73
-\pgf@hbox=\box74
-\pgf@layerbox@main=\box75
-\pgf@picture@serial@count=\count329
+\pgfpic=\box74
+\pgf@hbox=\box75
+\pgf@layerbox@main=\box76
+\pgf@picture@serial@count=\count331
 ) (c:/texlive/2023/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.code.tex
 File: pgfcoregraphicstate.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgflinewidth=\dimen291
+\pgflinewidth=\dimen292
 ) (c:/texlive/2023/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransformations.code.tex
 File: pgfcoretransformations.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgf@pt@x=\dimen292
-\pgf@pt@y=\dimen293
-\pgf@pt@temp=\dimen294
+\pgf@pt@x=\dimen293
+\pgf@pt@y=\dimen294
+\pgf@pt@temp=\dimen295
 ) (c:/texlive/2023/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
 File: pgfcorequick.code.tex 2023-01-15 v3.1.10 (3.1.10)
 ) (c:/texlive/2023/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.code.tex
@@ -616,17 +624,17 @@ File: pgfcoreobjects.code.tex 2023-01-15 v3.1.10 (3.1.10)
 File: pgfcorepathprocessing.code.tex 2023-01-15 v3.1.10 (3.1.10)
 ) (c:/texlive/2023/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.code.tex
 File: pgfcorearrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfarrowsep=\dimen295
+\pgfarrowsep=\dimen296
 ) (c:/texlive/2023/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
 File: pgfcoreshade.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgf@max=\dimen296
-\pgf@sys@shading@range@num=\count330
-\pgf@shadingcount=\count331
+\pgf@max=\dimen297
+\pgf@sys@shading@range@num=\count332
+\pgf@shadingcount=\count333
 ) (c:/texlive/2023/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
 File: pgfcoreimage.code.tex 2023-01-15 v3.1.10 (3.1.10)
 ) (c:/texlive/2023/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.code.tex
 File: pgfcoreexternal.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfexternal@startupbox=\box76
+\pgfexternal@startupbox=\box77
 ) (c:/texlive/2023/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.code.tex
 File: pgfcorelayers.code.tex 2023-01-15 v3.1.10 (3.1.10)
 ) (c:/texlive/2023/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransparency.code.tex
@@ -637,51 +645,51 @@ File: pgfcorepatterns.code.tex 2023-01-15 v3.1.10 (3.1.10)
 File: pgfcorerdf.code.tex 2023-01-15 v3.1.10 (3.1.10)
 ))) (c:/texlive/2023/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
 File: pgfmoduleshapes.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfnodeparttextbox=\box77
+\pgfnodeparttextbox=\box78
 ) (c:/texlive/2023/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.tex
 File: pgfmoduleplot.code.tex 2023-01-15 v3.1.10 (3.1.10)
 ) (c:/texlive/2023/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65.sty
 Package: pgfcomp-version-0-65 2023-01-15 v3.1.10 (3.1.10)
-\pgf@nodesepstart=\dimen297
-\pgf@nodesepend=\dimen298
+\pgf@nodesepstart=\dimen298
+\pgf@nodesepend=\dimen299
 ) (c:/texlive/2023/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18.sty
 Package: pgfcomp-version-1-18 2023-01-15 v3.1.10 (3.1.10)
 )) (c:/texlive/2023/texmf-dist/tex/latex/pgf/utilities/pgffor.sty (c:/texlive/2023/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty (c:/texlive/2023/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex)) (c:/texlive/2023/texmf-dist/tex/latex/pgf/math/pgfmath.sty (c:/texlive/2023/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)) (c:/texlive/2023/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
 Package: pgffor 2023-01-15 v3.1.10 (3.1.10)
-\pgffor@iter=\dimen299
-\pgffor@skip=\dimen300
-\pgffor@stack=\toks51
-\pgffor@toks=\toks52
+\pgffor@iter=\dimen300
+\pgffor@skip=\dimen301
+\pgffor@stack=\toks52
+\pgffor@toks=\toks53
 )) (c:/texlive/2023/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
 Package: tikz 2023-01-15 v3.1.10 (3.1.10)
  (c:/texlive/2023/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers.code.tex
 File: pgflibraryplothandlers.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgf@plot@mark@count=\count332
-\pgfplotmarksize=\dimen301
+\pgf@plot@mark@count=\count334
+\pgfplotmarksize=\dimen302
 )
-\tikz@lastx=\dimen302
-\tikz@lasty=\dimen303
-\tikz@lastxsaved=\dimen304
-\tikz@lastysaved=\dimen305
-\tikz@lastmovetox=\dimen306
-\tikz@lastmovetoy=\dimen307
-\tikzleveldistance=\dimen308
-\tikzsiblingdistance=\dimen309
-\tikz@figbox=\box78
-\tikz@figbox@bg=\box79
-\tikz@tempbox=\box80
-\tikz@tempbox@bg=\box81
-\tikztreelevel=\count333
-\tikznumberofchildren=\count334
-\tikznumberofcurrentchild=\count335
-\tikz@fig@count=\count336
+\tikz@lastx=\dimen303
+\tikz@lasty=\dimen304
+\tikz@lastxsaved=\dimen305
+\tikz@lastysaved=\dimen306
+\tikz@lastmovetox=\dimen307
+\tikz@lastmovetoy=\dimen308
+\tikzleveldistance=\dimen309
+\tikzsiblingdistance=\dimen310
+\tikz@figbox=\box79
+\tikz@figbox@bg=\box80
+\tikz@tempbox=\box81
+\tikz@tempbox@bg=\box82
+\tikztreelevel=\count335
+\tikznumberofchildren=\count336
+\tikznumberofcurrentchild=\count337
+\tikz@fig@count=\count338
  (c:/texlive/2023/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
 File: pgfmodulematrix.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfmatrixcurrentrow=\count337
-\pgfmatrixcurrentcolumn=\count338
-\pgf@matrix@numberofcolumns=\count339
+\pgfmatrixcurrentrow=\count339
+\pgfmatrixcurrentcolumn=\count340
+\pgf@matrix@numberofcolumns=\count341
 )
-\tikz@expandcount=\count340
+\tikz@expandcount=\count342
  (c:/texlive/2023/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarytopaths.code.tex
 File: tikzlibrarytopaths.code.tex 2023-01-15 v3.1.10 (3.1.10)
 ))) (c:/texlive/2023/texmf-dist/tex/latex/tkz-graph/tkz-graph.sty
@@ -690,34 +698,34 @@ Package: tkz-graph 2021/01/20 2.00 base for graphs
 (c:/texlive/2023/texmf-dist/tex/latex/xkeyval/xkeyval.sty
 Package: xkeyval 2022/06/16 v2.9 package option processing (HA)
  (c:/texlive/2023/texmf-dist/tex/generic/xkeyval/xkeyval.tex (c:/texlive/2023/texmf-dist/tex/generic/xkeyval/xkvutils.tex
-\XKV@toks=\toks53
-\XKV@tempa@toks=\toks54
+\XKV@toks=\toks54
+\XKV@tempa@toks=\toks55
 )
-\XKV@depth=\count341
+\XKV@depth=\count343
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 )) (c:/texlive/2023/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryarrows.code.tex
 File: tikzlibraryarrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
  (c:/texlive/2023/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.code.tex
 File: pgflibraryarrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\arrowsize=\dimen310
+\arrowsize=\dimen311
 ))
-\c@tkz@gr@a=\count342
-\c@tkz@gr@b=\count343
-\c@tkz@gr@c=\count344
-\c@tkz@gr@e=\count345
-\c@tkz@gr@d=\count346
-\c@tkz@gr@p=\count347
-\c@tkz@gr@i=\count348
-\c@tkz@gr@n=\count349
-\c@tkz@gr@ta=\count350
-\c@tkz@gr@tb=\count351
+\c@tkz@gr@a=\count344
+\c@tkz@gr@b=\count345
+\c@tkz@gr@c=\count346
+\c@tkz@gr@e=\count347
+\c@tkz@gr@d=\count348
+\c@tkz@gr@p=\count349
+\c@tkz@gr@i=\count350
+\c@tkz@gr@n=\count351
+\c@tkz@gr@ta=\count352
+\c@tkz@gr@tb=\count353
 ) (c:/texlive/2023/texmf-dist/tex/latex/cancel/cancel.sty
 Package: cancel 2013/04/12 v2.2 Cancel math terms
 ) (c:/texlive/2023/texmf-dist/tex/latex/colortbl/colortbl.sty
 Package: colortbl 2022/06/20 v1.0f Color table columns (DPC)
-\everycr=\toks55
-\minrowclearance=\skip75
-\rownum=\count352
+\everycr=\toks56
+\minrowclearance=\skip76
+\rownum=\count354
 ) (c:/texlive/2023/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.code.tex
 File: tikzlibraryshapes.code.tex 2023-01-15 v3.1.10 (3.1.10)
  (c:/texlive/2023/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.geometric.code.tex
@@ -740,29 +748,29 @@ File: pgflibraryshapes.arrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
 File: tikzlibraryshapes.multipart.code.tex 2023-01-15 v3.1.10 (3.1.10)
  (c:/texlive/2023/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshapes.multipart.code.tex
 File: pgflibraryshapes.multipart.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfnodepartlowerbox=\box82
-\pgfnodeparttwobox=\box83
-\pgfnodepartthreebox=\box84
-\pgfnodepartfourbox=\box85
-\pgfnodeparttwentybox=\box86
-\pgfnodepartnineteenbox=\box87
-\pgfnodeparteighteenbox=\box88
-\pgfnodepartseventeenbox=\box89
-\pgfnodepartsixteenbox=\box90
-\pgfnodepartfifteenbox=\box91
-\pgfnodepartfourteenbox=\box92
-\pgfnodepartthirteenbox=\box93
-\pgfnodeparttwelvebox=\box94
-\pgfnodepartelevenbox=\box95
-\pgfnodeparttenbox=\box96
-\pgfnodepartninebox=\box97
-\pgfnodeparteightbox=\box98
-\pgfnodepartsevenbox=\box99
-\pgfnodepartsixbox=\box100
-\pgfnodepartfivebox=\box101
+\pgfnodepartlowerbox=\box83
+\pgfnodeparttwobox=\box84
+\pgfnodepartthreebox=\box85
+\pgfnodepartfourbox=\box86
+\pgfnodeparttwentybox=\box87
+\pgfnodepartnineteenbox=\box88
+\pgfnodeparteighteenbox=\box89
+\pgfnodepartseventeenbox=\box90
+\pgfnodepartsixteenbox=\box91
+\pgfnodepartfifteenbox=\box92
+\pgfnodepartfourteenbox=\box93
+\pgfnodepartthirteenbox=\box94
+\pgfnodeparttwelvebox=\box95
+\pgfnodepartelevenbox=\box96
+\pgfnodeparttenbox=\box97
+\pgfnodepartninebox=\box98
+\pgfnodeparteightbox=\box99
+\pgfnodepartsevenbox=\box100
+\pgfnodepartsixbox=\box101
+\pgfnodepartfivebox=\box102
 )))
-\c@thm=\count353
-\c@case=\count354
+\c@thm=\count355
+\c@case=\count356
  (c:/texlive/2023/texmf-dist/tex/latex/standalone/standalone.sty
 Package: standalone 2022/10/10 v1.3b Package to include TeX sub-files with preambles
  (c:/texlive/2023/texmf-dist/tex/latex/tools/shellesc.sty
@@ -775,7 +783,7 @@ Package: filehook 2022/10/25 v0.8b Hooks for input files
  (c:/texlive/2023/texmf-dist/tex/latex/filehook/filehook-2020.sty
 Package: filehook-2020 2022/10/25 v0.8b Hooks for input files
 ))
-\c@currfiledepth=\count355
+\c@currfiledepth=\count357
 ) (c:/texlive/2023/texmf-dist/tex/latex/gincltex/gincltex.sty (c:/texlive/2023/texmf-dist/tex/latex/svn-prov/svn-prov.sty
 Package: svn-prov 2010/04/24 v3.1862 Package Date/Version from SVN Keywords
 )
@@ -788,42 +796,72 @@ Package: adjcalc 2012/05/16 v1.1 Provides advanced setlength with multiple back-
 Package: trimclip 2020/08/19 v1.2 Trim and clip general TeX material
  (c:/texlive/2023/texmf-dist/tex/latex/collectbox/collectbox.sty
 Package: collectbox 2022/10/17 v0.4c Collect macro arguments as boxes
-\collectedbox=\box102
+\collectedbox=\box103
 )
-\tc@llx=\dimen311
-\tc@lly=\dimen312
-\tc@urx=\dimen313
-\tc@ury=\dimen314
+\tc@llx=\dimen312
+\tc@lly=\dimen313
+\tc@urx=\dimen314
+\tc@ury=\dimen315
 Package trimclip Info: Using driver 'tc-pdftex.def'.
  (c:/texlive/2023/texmf-dist/tex/latex/adjustbox/tc-pdftex.def
 File: tc-pdftex.def 2019/01/04 v2.2 Clipping driver for pdftex
 ))
-\adjbox@Width=\dimen315
-\adjbox@Height=\dimen316
-\adjbox@Depth=\dimen317
-\adjbox@Totalheight=\dimen318
-\adjbox@pwidth=\dimen319
-\adjbox@pheight=\dimen320
-\adjbox@pdepth=\dimen321
-\adjbox@ptotalheight=\dimen322
+\adjbox@Width=\dimen316
+\adjbox@Height=\dimen317
+\adjbox@Depth=\dimen318
+\adjbox@Totalheight=\dimen319
+\adjbox@pwidth=\dimen320
+\adjbox@pheight=\dimen321
+\adjbox@pdepth=\dimen322
+\adjbox@ptotalheight=\dimen323
  (c:/texlive/2023/texmf-dist/tex/latex/ifoddpage/ifoddpage.sty
 Package: ifoddpage 2022/10/18 v1.2 Conditionals for odd/even page detection
-\c@checkoddpage=\count356
+\c@checkoddpage=\count358
 ))
-\gincltex@box=\box103
+\gincltex@box=\box104
 ) (c:/texlive/2023/texmf-dist/tex/latex/filemod/filemod-expmin.sty
 Package: filemod-expmin 2011/09/19 v1.2 Get and compare file modification times (expandable; minimal)
 )) (c:/texlive/2023/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarymatrix.code.tex
 File: tikzlibrarymatrix.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (c:/texlive/2023/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2021/02/14 v1.3d Input encoding file
+\inpenc@prehook=\toks57
+\inpenc@posthook=\toks58
+ (c:/texlive/2023/texmf-dist/tex/latex/base/ansinew.def
+File: ansinew.def 2021/02/14 v1.3d Input encoding file
+)) (c:/texlive/2023/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count359
+\lst@gtempboxa=\box105
+\lst@token=\toks59
+\lst@length=\count360
+\lst@currlwidth=\dimen324
+\lst@column=\count361
+\lst@pos=\count362
+\lst@lostspace=\dimen325
+\lst@width=\dimen326
+\lst@newlines=\count363
+\lst@lineno=\count364
+\lst@maxwidth=\dimen327
+ (c:/texlive/2023/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2023/02/27 1.9 (Carsten Heinz)
+\c@lstnumber=\count365
+\lst@skipnumbers=\count366
+\lst@framebox=\box106
+) (c:/texlive/2023/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2023/02/27 1.9 listings configuration
+))
+Package: listings 2023/02/27 1.9 (Carsten Heinz)
+ (c:/texlive/2023/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2023/02/27 1.9 listings language file
 ))
 LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 18.
  (c:/texlive/2023/texmf-dist/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ) (c:/texlive/2023/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count357
-\l__pdf_internal_box=\box104
-) (./thesis_masters.aux (./title.aux) (./Background.aux) (./intro.aux) (./0,1(mod 14).aux) (./7,8(mod 14).aux) (./special case.aux) (./Additional Results.aux) (./conclusion.aux) (./Appendix.aux) (./app_glossary.aux))
+\l__color_backend_stack_int=\count367
+\l__pdf_internal_box=\box107
+) (./thesis_masters.aux (./title.aux) (./Background.aux) (./intro.aux) (./01mod14.aux) (./78mod14.aux) (./specialcase.aux) (./AdditionalResults.aux) (./Programming.aux) (./conclusion.aux) (./app_glossary.aux))
 \openout1 = `thesis_masters.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 18.
@@ -846,17 +884,17 @@ LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 18.
 LaTeX Font Info:    ... okay on input line 18.
  (c:/texlive/2023/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count358
-\scratchdimen=\dimen323
-\scratchbox=\box105
-\nofMPsegments=\count359
-\nofMParguments=\count360
-\everyMPshowfont=\toks56
-\MPscratchCnt=\count361
-\MPscratchDim=\dimen324
-\MPnumerator=\count362
-\makeMPintoPDFobject=\count363
-\everyMPtoPDFconversion=\toks57
+\scratchcounter=\count368
+\scratchdimen=\dimen328
+\scratchbox=\box108
+\nofMPsegments=\count369
+\nofMParguments=\count370
+\everyMPshowfont=\toks60
+\MPscratchCnt=\count371
+\MPscratchDim=\dimen329
+\MPnumerator=\count372
+\makeMPintoPDFobject=\count373
+\everyMPtoPDFconversion=\toks61
 ) (c:/texlive/2023/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
@@ -869,7 +907,9 @@ Package hyperref Info: Link coloring OFF on input line 18.
 \openout4 = `thesis_masters.out'.
 
 Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
+\c@lstlisting=\count374
 \openout2 = `title.aux'.
 
  (./title.tex
@@ -1003,11 +1043,22 @@ Chapter 2.
 
 
 ]
+
+LaTeX Warning: Citation `bib:Kirkman' on page 11 undefined on input line 59.
+
+
+LaTeX Warning: Citation `bib:Kirkman1851' on page 11 undefined on input line 68.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 89--91
 
  []
 
-[11] [12] [13]
+[11] [12]
+
+LaTeX Warning: Citation `bib:Peters' on page 13 undefined on input line 164.
+
+[13]
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <5> on input line 235.
  [14] [15]
@@ -1021,10 +1072,17 @@ Overfull \hbox (7.7555pt too wide) in paragraph at lines 357--358
 []\OT1/lmr/m/n/10.95 The next the-o-rem gives the nec-es-sary con-di-tions for the ex-is-tence of a $\OML/lmm/m/it/10.95 G$\OT1/lmr/m/n/10.95 -decomposition
  []
 
-[16 <./standalone/tree chart.pdf>]) [17]
-\openout2 = `"0,1(mod 14).aux"'.
+[16 <./standalone/tree chart.pdf>]
 
- (./0,1(mod 14).tex
+LaTeX Warning: Reference `chap:Additional Results' on page 17 undefined on input line 370.
+
+
+LaTeX Warning: Reference `chap:Additional Results' on page 17 undefined on input line 372.
+
+) [17]
+\openout2 = `01mod14.aux'.
+
+ (./01mod14.tex
 Chapter 3.
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
@@ -1072,27 +1130,27 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 8.
+(hyperref)                removing `math shift' on input line 10.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 8.
+(hyperref)                removing `subscript' on input line 10.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 8.
+(hyperref)                removing `math shift' on input line 10.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 8.
+(hyperref)                removing `math shift' on input line 10.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 8.
+(hyperref)                removing `subscript' on input line 10.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 8.
+(hyperref)                removing `math shift' on input line 10.
 
 [18
 
@@ -1100,13 +1158,13 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 86--87
+Underfull \hbox (badness 10000) in paragraph at lines 88--89
 
  []
 
 [19]
 
-LaTeX Font Warning: Command \LARGE invalid in math mode on input line 149.
+LaTeX Font Warning: Command \LARGE invalid in math mode on input line 151.
 
 Missing character: There is no ( in font nullfont!
 Missing character: There is no 0 in font nullfont!
@@ -1120,52 +1178,81 @@ Missing character: There is no 0 in font nullfont!
 Missing character: There is no ) in font nullfont!
 Missing character: There is no ; in font nullfont!
 
-LaTeX Font Warning: Command \LARGE invalid in math mode on input line 302.
+LaTeX Font Warning: Command \LARGE invalid in math mode on input line 304.
 
-[20] [21] [22]
+[20]
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 449.
+LaTeX Warning: Reference `chap:Additional Results' on page 21 undefined on input line 324.
 
+[21] [22]
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\equiv' on input line 449.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mkern' on input line 449.
+LaTeX Font Warning: Command \LARGE invalid in math mode on input line 403.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mathgroup' on input line 449.
+(hyperref)                removing `math shift' on input line 452.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\symoperators' on input line 449.
+(hyperref)                removing `\equiv' on input line 452.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mkern' on input line 449.
+(hyperref)                removing `\mkern' on input line 452.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 449.
+(hyperref)                removing `\mathgroup' on input line 452.
 
-[23] [24]
-<standalone/sigma label ex1.pdf, id=497, 97.03452pt x 94.66064pt>
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\symoperators' on input line 452.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\mkern' on input line 452.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 452.
+
+[23]
+
+LaTeX Warning: Citation `bib:rosa' on page 24 undefined on input line 456.
+
+
+LaTeX Warning: Citation `bib:rosa' on page 24 undefined on input line 466.
+
+
+LaTeX Warning: Citation `bib:rosa' on page 24 undefined on input line 470.
+
+
+LaTeX Warning: Citation `cyclicbipart' on page 24 undefined on input line 474.
+
+
+LaTeX Warning: Citation `cyclicbipart' on page 24 undefined on input line 478.
+
+
+LaTeX Warning: Citation `tran' on page 24 undefined on input line 482.
+
+
+LaTeX Warning: Citation `tran' on page 24 undefined on input line 486.
+
+[24]
+<standalone/sigma label ex1.pdf, id=484, 97.03452pt x 94.66064pt>
 File: standalone/sigma label ex1.pdf Graphic file (type pdf)
 <use standalone/sigma label ex1.pdf>
-Package pdftex.def Info: standalone/sigma label ex1.pdf  used on input line 492.
+Package pdftex.def Info: standalone/sigma label ex1.pdf  used on input line 495.
 (pdftex.def)             Requested size: 97.03427pt x 94.6604pt.
-<standalone/sigma label ex2.pdf, id=498, 52.66878pt x 45.03726pt>
+<standalone/sigma label ex2.pdf, id=485, 52.66878pt x 45.03726pt>
 File: standalone/sigma label ex2.pdf Graphic file (type pdf)
 <use standalone/sigma label ex2.pdf>
-Package pdftex.def Info: standalone/sigma label ex2.pdf  used on input line 493.
+Package pdftex.def Info: standalone/sigma label ex2.pdf  used on input line 496.
 (pdftex.def)             Requested size: 52.66864pt x 45.03712pt.
  [25 <./standalone/sigma label ex1.pdf> <./standalone/sigma label ex2.pdf>] (./standalone/0,1(mod 14) long.tex [26])) [27]
-\openout2 = `"7,8(mod 14).aux"'.
+\openout2 = `78mod14.aux'.
 
- (./7,8(mod 14).tex
+ (./78mod14.tex
 Chapter 4.
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
@@ -1179,6 +1266,30 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1.
 
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 71.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 71.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 71.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 71.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 71.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 71.
+
 [28
 
 
@@ -1186,17 +1297,55 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 
 ]
 
-LaTeX Font Warning: Command \Large invalid in math mode on input line 139.
+LaTeX Font Warning: Command \Large invalid in math mode on input line 141.
 
-[29] [30] [31] [32] [33] [34]
-Underfull \hbox (badness 10000) in paragraph at lines 565--566
+[29] [30]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 456.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 456.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 456.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 456.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 456.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 456.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 456.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 456.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 460--461
+
+ []
+
+[31] [32] [33] [34]
+Underfull \hbox (badness 10000) in paragraph at lines 566--567
 
  []
 
 (./standalone/Danny's example/chart.tex) [35] (./standalone/Danny's example/Sigma/T-(6,6).tex) (./standalone/Danny's example/Sigma/T-(3,1).tex) (./standalone/Danny's example/7 mod 14/1-T-(6,6).tex) (./standalone/Danny's example/7 mod 14/1-T-(3,1).tex) (./standalone/Danny's example/7 mod 14/2-T-(6,6).tex) (./standalone/Danny's example/7 mod 14/2-T-(3,1).tex) (./standalone/Danny's example/7 mod 14/3-T-(6,6).tex) (./standalone/Danny's example/7 mod 14/3-T-(3,1).tex) (./standalone/Danny's example/7 mod 14/4-T-(6,6).tex) (./standalone/Danny's example/7 mod 14/4-T-(3,1).tex) (./standalone/Danny's example/7 mod 14/5-T-(6,6).tex) (./standalone/Danny's example/7 mod 14/5-T-(3,1).tex) (./standalone/Danny's example/8 mod 14/1-T-(6,6).tex) (./standalone/Danny's example/8 mod 14/1-T-(3,1).tex) (./standalone/Danny's example/8 mod 14/2-T-(6,6).tex) (./standalone/Danny's example/8 mod 14/2-T-(3,1).tex) (./standalone/Danny's example/8 mod 14/3-T-(6,6).tex) (./standalone/Danny's example/8 mod 14/3-T-(3,1).tex) (./standalone/Danny's example/8 mod 14/4-T-(6,6).tex) (./standalone/Danny's example/8 mod 14/4-T-(3,1).tex) (./standalone/Danny's example/8 mod 14/5-T-(6,6).tex) (./standalone/Danny's example/8 mod 14/5-T-(3,1).tex) (./standalone/Danny's example/8 mod 14/6-T-(6,6).tex) (./standalone/Danny's example/8 mod 14/6-T-(3,1).tex)) [36]
-\openout2 = `"special case.aux"'.
+\openout2 = `specialcase.aux'.
 
- (./special case.tex
+ (./specialcase.tex
 Chapter 5.
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
@@ -1226,67 +1375,72 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1.
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 6--7
-
- []
-
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <9> on input line 13.
 [37
 
 
 
 
-] (./standalone/starpath.tex)
-Overfull \hbox (2.43118pt too wide) detected at line 33
+]
+Underfull \hbox (badness 10000) in paragraph at lines 167--168
+
+ []
+
+
+LaTeX Warning: Citation `bib:Cain' on page 38 undefined on input line 169.
+
+
+LaTeX Warning: Citation `bib:Cain' on page 38 undefined on input line 177.
+
+[38] (./standalone/starpath.tex)
+Overfull \hbox (2.43118pt too wide) detected at line 196
 [] \OML/lmm/m/it/10.95 E[] \OT1/lmr/m/n/10.95 = [[]\OMS/lmsy/m/n/10.95 f\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 i; \OT1/lmr/m/n/10.95 0)\OMS/lmsy/m/n/10.95 g\OT1/lmr/m/n/10.95 ] \OMS/lmsy/m/n/10.95 t \OT1/lmr/m/n/10.95 [[](\OMS/lmsy/m/n/10.95 f\OML/lmm/m/it/10.95 i \OT1/lmr/m/n/10.95 + 1\OMS/lmsy/m/n/10.95 g ^^B f\OT1/lmr/m/n/10.95 1\OML/lmm/m/it/10.95 ; [] ; \OT1/lmr/m/n/10.95 6\OMS/lmsy/m/n/10.95 g\OT1/lmr/m/n/10.95 )] = [\U/msb/m/n/10.95 Z[] \OMS/lmsy/m/n/10.95 ^^B f\OT1/lmr/m/n/10.95 0\OMS/lmsy/m/n/10.95 g\OT1/lmr/m/n/10.95 ] \OMS/lmsy/m/n/10.95 t \OT1/lmr/m/n/10.95 [\U/msb/m/n/10.95 Z[] \OMS/lmsy/m/n/10.95 ^^B f\OT1/lmr/m/n/10.95 1\OML/lmm/m/it/10.95 ; [] ; \OT1/lmr/m/n/10.95 6\OMS/lmsy/m/n/10.95 g\OT1/lmr/m/n/10.95 ] = \U/msb/m/n/10.95 Z[] \OMS/lmsy/m/n/10.95 ^^B \U/msb/m/n/10.95 Z[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 62--65
+Underfull \hbox (badness 10000) in paragraph at lines 225--228
 
  []
 
-[38]) [39]
-\openout2 = `"Additional Results.aux"'.
+[39]) [40]
+\openout2 = `AdditionalResults.aux'.
 
- (./Additional Results.tex
+
+No file AdditionalResults.tex.
+\openout2 = `Programming.aux'.
+
+(./Programming.tex
 Chapter 6.
-) [40
+LaTeX Font Info:    Trying to load font information for OT1+lmtt on input line 2.
+(c:/texlive/2023/texmf-dist/tex/latex/lm/ot1lmtt.fd
+File: ot1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)) [41
 
 
 
 
-]
+
+
+
+{c:/texlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-rmtt.enc}]
 \openout2 = `conclusion.aux'.
 
  (./conclusion.tex
 Chapter 7.
-) [41
+) [42
 
+
+
+
+] (./thesis_masters.bbl) [43
 
 
 
 ]
-\openout2 = `Appendix.aux'.
-
- (./Appendix.tex
-Chapter 8.
-(./standalone/7m14.tex [42
-
-
-
-
-] [43] [44] [45] [46] [47]) [48] (./standalone/8m14.tex [49] [50] [51] [52] [53] [54] [55]) [56] (./standalone/K21.tex) (./standalone/K22.tex [57]) [58]
-LaTeX Font Info:    Trying to load font information for OT1+lmtt on input line 21.
- (c:/texlive/2023/texmf-dist/tex/latex/lm/ot1lmtt.fd
-File: ot1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)) [59
-
-{c:/texlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-rmtt.enc}]
-No file thesis_masters.bbl.
 \openout2 = `app_glossary.aux'.
 
-(./app_glossary.tex
+ (./app_glossary.tex
 Appendix A.
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
@@ -1304,58 +1458,88 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `\hbox' on input line 4.
 
-
-Overfull \hbox (25.19998pt too wide) in alignment at lines 38--44
- [] [] 
- []
+(./standalone/7m14.tex [44
 
 
-Overfull \hbox (25.19998pt too wide) in alignment at lines 44--51
- [] [] 
- []
+] [45] [46] [47] [48] [49]) [50] (./standalone/8m14.tex [51] [52] [53] [54] [55] [56] [57]) [58]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 20.
 
 
-Overfull \hbox (25.19998pt too wide) in alignment at lines 51--54
- [] [] 
- []
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 20.
 
 
-Overfull \hbox (25.19998pt too wide) in alignment at lines 54--57
- [] [] 
- []
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `superscript' on input line 20.
 
 
-Overfull \hbox (25.19998pt too wide) in alignment at lines 57--61
- [] [] 
- []
-
-) [60
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\sqcup' on input line 20.
 
 
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 20.
 
 
-] (./thesis_masters.aux (./title.aux) (./Background.aux) (./intro.aux) (./0,1(mod 14).aux) (./7,8(mod 14).aux) (./special case.aux) (./Additional Results.aux) (./conclusion.aux) (./Appendix.aux) (./app_glossary.aux))
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `superscript' on input line 20.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 20.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 20.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 20.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 20.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 20.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 20.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 20.
+
+(./standalone/K21.tex) (./standalone/K22.tex [59])) [60] (./thesis_masters.aux (./title.aux) (./Background.aux) (./intro.aux) (./01mod14.aux) (./78mod14.aux) (./specialcase.aux) (./AdditionalResults.aux) (./Programming.aux) (./conclusion.aux) (./app_glossary.aux))
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
  ***********
+
+
+LaTeX Warning: There were undefined references.
+
 Package rerunfilecheck Info: File `thesis_masters.out' has not changed.
-(rerunfilecheck)             Checksum: 65C24AEEBBDF0627EB92D12AAEB80082;4051.
+(rerunfilecheck)             Checksum: 5D448714395ED0551192DD1DA5301A2A;4409.
  )
-(\end occurred when \ifnum on line 25 was incomplete) 
+(\end occurred when \ifnum on line 26 was incomplete) 
 Here is how much of TeX's memory you used:
- 32321 strings out of 474221
- 614937 string characters out of 5750188
- 2031978 words of memory out of 5000000
- 53584 multiletter control sequences out of 15000+600000
- 664394 words of font info for 176 fonts, out of 8000000 for 9000
+ 34754 strings out of 474221
+ 648578 string characters out of 5750188
+ 2029978 words of memory out of 5000000
+ 55981 multiletter control sequences out of 15000+600000
+ 673074 words of font info for 189 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 100i,19n,96p,1121b,1323s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmbx10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmbx12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmbx8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmex10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmmi10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmmi12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmmi6.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmmi8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr17.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr6.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmri10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmsy10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmsy8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmtt10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on thesis_masters.pdf (70 pages, 637618 bytes).
+ 100i,19n,96p,1087b,1323s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmbx10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmbx12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmbx8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmex10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmmi10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmmi12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmmi6.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmmi8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmmi9.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr17.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr6.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmri10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmsy10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmsy8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmtt10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on thesis_masters.pdf (70 pages, 653024 bytes).
 PDF statistics:
- 860 PDF objects out of 1000 (max. 8388607)
- 723 compressed objects within 8 object streams
- 190 named destinations out of 1000 (max. 500000)
- 260 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 866 PDF objects out of 1000 (max. 8388607)
+ 727 compressed objects within 8 object streams
+ 194 named destinations out of 1000 (max. 500000)
+ 268 words of extra memory for PDF output out of 10000 (max. 10000000)
 
