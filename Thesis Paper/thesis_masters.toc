@@ -21,10 +21,15 @@
 \contentsline {subsection}{\numberline {4.1.2}Generalizing to $K_{14t+7}$ and $K_{14t+8}$ where $t>1$}{31}{subsection.4.1.2}%
 \contentsline {section}{\numberline {4.2}Results}{32}{section.4.2}%
 \contentsline {chapter}{\numberline {5}$\mathbf {T_{7}^{11}\sqcup T_{2}^{1}}$}{37}{chapter.5}%
-\contentsline {chapter}{\numberline {6}Programming}{41}{chapter.6}%
-\contentsline {chapter}{\numberline {7}Conclusion and Discussion}{43}{chapter.7}%
-\contentsline {chapter}{References}{44}{chapter*.37}%
-\contentsline {chapter}{\appnumberline {A}Labelings}{45}{appendix.A}%
-\contentsline {section}{\numberline {A.1}(1-2-3)-labelings}{45}{section.A.1}%
-\contentsline {section}{\numberline {A.2}1-rotational (1-2-3)-labelings}{52}{section.A.2}%
-\contentsline {section}{\numberline {A.3}$\mathbf {T_{7}^{11}}\sqcup \mathbf {T_{2}^{1}}$-decompositions of $K_{21}$ and $K_{22}$}{60}{section.A.3}%
+\contentsline {chapter}{\numberline {6}Additional Results}{41}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Wraparound edge mappings that preserve lengths}{41}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Galaxy Decompositions of Complete Multipartite Graphs}{45}{section.6.2}%
+\contentsline {chapter}{\numberline {7}Programming}{46}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Tikzgrapher}{47}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Labeling Solvers}{49}{section.7.2}%
+\contentsline {chapter}{\numberline {8}Conclusion and Discussion}{51}{chapter.8}%
+\contentsline {chapter}{References}{52}{chapter*.40}%
+\contentsline {chapter}{\appnumberline {A}Labelings}{53}{appendix.A}%
+\contentsline {section}{\numberline {A.1}(1-2-3)-labelings}{53}{section.A.1}%
+\contentsline {section}{\numberline {A.2}1-rotational (1-2-3)-labelings}{60}{section.A.2}%
+\contentsline {section}{\numberline {A.3}$\mathbf {T_{7}^{11}}\sqcup \mathbf {T_{2}^{1}}$-decompositions of $K_{21}$ and $K_{22}$}{68}{section.A.3}%

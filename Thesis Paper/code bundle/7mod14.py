@@ -641,7 +641,7 @@ G3 = merge(path([6,5,7,10]), path([5,3]), path([15,17,20]),path([1,4]))
 G4 = merge(path([16,8,15,9]), path([8,12]),  path([2,11,1]),path([0,5]))
 
 F_421_2 = [ G1, G2, G3, G4]
-#visualize(14*t+7, F_421_2,  '(421)-2',  output_dir)
+visualize(14*t+7, F_421_2,  '(421)-2',  output_dir)
 
 #*(421)-3
 G1 = merge(star(15, [13,14,16,18]), path([7,6,9]),path([2,4]))

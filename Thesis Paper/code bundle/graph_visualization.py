@@ -106,7 +106,7 @@ def draw_graph(mod, screen, G, pos, show_vertex_labels, show_vertex_sublabels, s
                 screen.blit(sub_text, sub_text_rect.topleft)
 
     for node in G.nodes():
-        pygame.draw.circle(screen, (0, 0, 255), (int(pos[node][0]), int(pos[node][1])), int(5 * vertex_scale))  # BLUE
+        pygame.draw.circle(screen, (0, 0, 0), (int(pos[node][0]), int(pos[node][1])), int(5 * vertex_scale))  # BLACK
         # Draw custom node labels with subscript
         node_label = "∞" if node == math.inf else str(node % mod)
         sub_label = "" if node == math.inf else str(node % 7)
