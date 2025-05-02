@@ -22,9 +22,9 @@
 \contentsline {section}{\numberline {4.2}Results}{32}{section.4.2}%
 \contentsline {chapter}{\numberline {5}$\mathbf {T_{7}^{11}\sqcup T_{2}^{1}}$}{37}{chapter.5}%
 \contentsline {chapter}{\numberline {6}Programming}{41}{chapter.6}%
-\contentsline {chapter}{\numberline {7}Conclusion and Discussion}{42}{chapter.7}%
-\contentsline {chapter}{References}{43}{chapter*.37}%
-\contentsline {chapter}{\appnumberline {A}Labelings}{44}{appendix.A}%
-\contentsline {section}{\numberline {A.1}(1-2-3)-labelings}{44}{section.A.1}%
-\contentsline {section}{\numberline {A.2}1-rotational (1-2-3)-labelings}{51}{section.A.2}%
-\contentsline {section}{\numberline {A.3}$\mathbf {T_{7}^{11}}\sqcup \mathbf {T_{2}^{1}}$-decompositions of $K_{21}$ and $K_{22}$}{59}{section.A.3}%
+\contentsline {chapter}{\numberline {7}Conclusion and Discussion}{43}{chapter.7}%
+\contentsline {chapter}{References}{44}{chapter*.37}%
+\contentsline {chapter}{\appnumberline {A}Labelings}{45}{appendix.A}%
+\contentsline {section}{\numberline {A.1}(1-2-3)-labelings}{45}{section.A.1}%
+\contentsline {section}{\numberline {A.2}1-rotational (1-2-3)-labelings}{52}{section.A.2}%
+\contentsline {section}{\numberline {A.3}$\mathbf {T_{7}^{11}}\sqcup \mathbf {T_{2}^{1}}$-decompositions of $K_{21}$ and $K_{22}$}{60}{section.A.3}%

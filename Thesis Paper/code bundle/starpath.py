@@ -1,18 +1,10 @@
 import networkx as nx
-import sys
-def gvpath(i):
-    if i == 0:
-        return 'C:\\Users\\baneg\\OneDrive\\Desktop\\Git\\Python\\Research\\Graph Theory'
-    if i == 1:
-        return 'C:\\Users\\Danny\\Desktop\\Git\\research'
-    if i == 2:
-        return r'C:\Users\baneg\Desktop\git\research'
-    else: 
-        return False
-sys.path.append(gvpath(2)) # here is the path with GVIS
 from graph_visualization import visualize
 from itertools import combinations
 import math
+
+import os
+output_dir = os.path.dirname(os.path.abspath(__file__)) #PATH string this file is contained in
 
 # how to merge two graphs:
 '''
@@ -400,7 +392,7 @@ def generate_two_column_longtable(designs, names):
 
 K21 = nx.complete_graph(21,create_using=None)
 K22 = nx.complete_graph(22,create_using=None)
-#visualize(21,[K21], 'control', 'C:\\Users\\baneg\\OneDrive\\Desktop\\Git\\Python\\Research')
+#visualize(21,[K21], 'control', output_dir)
 
 #arbirarily taking vertices from Pauline Cain's construction to be Z_21 
 x1,x2,x3,x4,x5,x6,x7 = 0,1,2,3,4,5,6
@@ -442,7 +434,7 @@ Y4 = merge(star(w4,[w6,w7,x1,x4,v4,v5]),path([v7,x2]))
 K21_611_11 = [V1,V2,V3,V4,V5,V6,X2,X3,X4,X5,X6,X7,W1,W2,W3,W4,W5,W6,W7,U1,U2,U3,U4,U5,U6,U7,Y1,Y2,Y3,Y4]
 F_61_11_7mod14 = merge(V1,V2,V3,V4,V5,V6,X2,X3,X4,X5,X6,X7,W1,W2,W3,W4,W5,W6,W7,U1,U2,U3,U4,U5,U6,U7,Y1,Y2,Y3,Y4)
 
-#visualize(21,[F_61_11_7mod14], 'K21', 'C:\\Users\\baneg\\OneDrive\\Desktop\\Git\\Python\\Research')
+#visualize(21,[F_61_11_7mod14], 'K21', output_dir)
 #! (61)-11 for K_22
 #modified forests:
 
@@ -456,14 +448,14 @@ infw = merge(star(math.inf,[w1,w2,w3,w4,w5,w6]),path([v1,x1]))
 
 K22_611_11 = [V1,V2,V3,V4,V5,V6,nX2,X3,X4,X5,X6,X7,nW1,W2,W3,W4,W5,W6,W7,U1,U2,U3,U4,U5,U6,U7,nY1,Y2,Y3,Y4,infx,infv,infw]
 F_61_11_8mod14 = merge(V1,V2,V3,V4,V5,V6,nX2,X3,X4,X5,X6,X7,nW1,W2,W3,W4,W5,W6,W7,U1,U2,U3,U4,U5,U6,U7,nY1,Y2,Y3,Y4,infx,infv,infw)
-#visualize(21,[F_61_11_8mod14], 'K22', 'C:\\Users\\baneg\\OneDrive\\Desktop\\Git\\Python\\Research')
+#visualize(21,[F_61_11_8mod14], 'K22', output_dir)
 
 #& check cumulative list of stars in both decompositions
 
 stars = [V1,V2,V3,V4,V5,V6,nX2,X2,X3,X4,X5,X6,X7,nW1,W1,W2,W3,W4,W5,W6,W7,U1,U2,U3,U4,U5,U6,U7,nY1,Y1,Y2,Y3,Y4,infx,infv,infw]
 
 '''for star in stars:
-    visualize(21,[star], 'whatever', 'C:\\Users\\baneg\\OneDrive\\Desktop\\Git\\Python\\Research')'''
+    visualize(21,[star], 'whatever', output_dir)'''
 
 #&last check for isomorphism
 

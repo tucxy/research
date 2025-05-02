@@ -1,17 +1,9 @@
 import networkx as nx
-import sys
-def gvpath(i):
-    if i == 0:
-        return 'C:\\Users\\baneg\\OneDrive\\Desktop\\Git\\Python\\Research\\Graph Theory'
-    if i == 1:
-        return 'C:\\Users\\Danny\\Desktop\\Git\\research'
-    else: 
-        return False
-sys.path.append(gvpath(0)) # here is the path with GVIS
-import graph_visualization
 from graph_visualization import visualize
 from itertools import combinations
-import math
+
+import os
+output_dir = os.path.dirname(os.path.abspath(__file__)) #PATH string this file is contained in
 
 # how to merge two graphs:
 '''
@@ -350,7 +342,6 @@ def generate_latex_table(designs, names):
 #notebook
 t = 2
 inc = 14*(t-1)
-graph_path = 'C:/Users/baneg/OneDrive/Desktop/Git/Python/Research/Graph Theory/sigmas/sigmatex'
 #? 8 (mod 14)
 
 #! (61)
@@ -360,7 +351,7 @@ graph_path = 'C:/Users/baneg/OneDrive/Desktop/Git/Python/Research/Graph Theory/s
 G = merge(path([ 0, 6, 1, 5,  2,  9,  7]),  path([ 3, 4]))
 
 F_61_1 = [ G] #defines the decomposition 'object' a list of graph labelings
-#visualize(14*t+7, F_61_1,  '(61)-1',  graph_path)
+#visualize(14*t+7, F_61_1,  '(61)-1',  output_dir)
 
 
 #*(61)-2
@@ -368,70 +359,70 @@ F_61_1 = [ G] #defines the decomposition 'object' a list of graph labelings
 G  = merge(path([ 0, 6, 1, 5, 2, 9]), path([ 5, 3]),  path([ 7, 8]))
 
 F_61_2 = [ G]
-#visualize(14*t+7, F_61_2,  '(61)-2',  graph_path)
+#visualize(14*t+7, F_61_2,  '(61)-2',  output_dir)
 
 #*(61)-3
 
 G  = merge(path([ 0, 6, 1, 5, 2, 9]), path([ 2, 4]),  path([ 7, 8]))
 
 F_61_3 = [ G]
-#visualize(14*t+7, F_61_3,  '(61)-3',  graph_path)
+#visualize(14*t+7, F_61_3,  '(61)-3',  output_dir)
 
 #*(61)-4
 
 G = merge(star(1, [ 5, 6, 7, 4]), path([ 9, 2, 4]),  path([ 11, 10]))
 
 F_61_4 = [ G]
-#visualize(14*t+7, F_61_4,  '(61)-4',  graph_path)
+#visualize(14*t+7, F_61_4,  '(61)-4',  output_dir)
 
 #*(61)-5
 
 G = merge(path([ 3, 8, 1, 4, 2]), path([ 5, 1, 7]),  path([ 9, 10]))
 
 F_61_5 = [ G]
-#visualize(14*t+7, F_61_5,  '(61)-5',  graph_path)
+#visualize(14*t+7, F_61_5,  '(61)-5',  output_dir)
 
 #*(61)-6
 
 G = merge(star(8, [ 7, 4, 1]), star(6, [ 1, 0, 3]), path([ 9, 11]))
 
 F_61_6 = [ G]
-#visualize(14*t+7, F_61_6,  '(61)-6',  graph_path)
+#visualize(14*t+7, F_61_6,  '(61)-6',  output_dir)
 
 #*(61)-7
 
 G = merge(star(1, [ 8, 5, 6, 7]), path([ 3, 6, 4]), path([ 9, 10]))
 
 F_61_7 = [ G]
-#visualize(14*t+7, F_61_7,  '(61)-7',  graph_path)
+#visualize(14*t+7, F_61_7,  '(61)-7',  output_dir)
 
 #*(61)-8
 
 G = merge(star(1, [ 5, 6, 7, 8, 4]), path([ 3, 5, 1]), path([ 9, 10]))
 
 F_61_8 = [ G]
-#visualize(14*t+7, F_61_8,  '(61)-8',  graph_path)
+#visualize(14*t+7, F_61_8,  '(61)-8',  output_dir)
 
 #*(61)-9
 
 G = merge(path([ 5, 11, 9, 12, 7]), path([ 9, 10, 6]), path([ 1, 8]))
 
 F_61_9 = [ G]
-#visualize(14*t+7, F_61_9,  '(61)-9',  graph_path)
+#visualize(14*t+7, F_61_9,  '(61)-9',  output_dir)
 
 #*(61)-10
 
 G = merge(star(8, [ 1, 4, 5]),  path([ 3, 1, 6, 0]), path([ 9, 10]))
 
 F_61_10 = [ G]
-#visualize(14*t+7, F_61_10,  '(61)-10',  graph_path)
+#visualize(14*t+7, F_61_10,  '(61)-10',  output_dir)
 
 #*(61)-11
 
 G = merge(star(1, [ 3 ,4, 5, 6, 7, 8]), path([ 10, 9]))
 
 F_61_11 = [ G]
-visualize(14*t+7, F_61_11,  '(61)-11',  graph_path)
+visualize(14*t+7, F_61_11,  '(61)-11',  output_dir)
 
 
 #! (52)
@@ -441,42 +432,42 @@ visualize(14*t+7, F_61_11,  '(61)-11',  graph_path)
 G = merge(path([ 0, 6, 1, 5, 2, 9]), path([ 12, 10, 11]))
 
 F_52_1 = [ G]
-#visualize(14*t+7, F_52_1,  '(52)-1',  graph_path)
+#visualize(14*t+7, F_52_1,  '(52)-1',  output_dir)
 
 #*(52)-2
 
 G = merge(path([ 3, 6, 1, 8, 4]), path([ 0, 6]), path([ 10, 9, 11]))
 
 F_52_2 = [ G]
-#visualize(14*t+7, F_52_2,  '(52)-2',  graph_path)
+#visualize(14*t+7, F_52_2,  '(52)-2',  output_dir)
 
 #*(52)-3
 
 G = merge(path([ 5, 11, 9, 12, 7]), path([ 9, 10]), path([ 1, 8, 4]))
 
 F_52_3 = [ G]
-#visualize(14*t+7, F_52_3,  '(52)-3',  graph_path)
+#visualize(14*t+7, F_52_3,  '(52)-3',  output_dir)
 
 #*(52)-4
 
 G = merge(path([ 3, 8, 1, 7]), path([ 4, 8, 1, 6]),  path([ 10, 9, 11]))
 
 F_52_4 = [ G]
-#visualize(14*t+7, F_52_4,  '(52)-4',  graph_path)
+#visualize(14*t+7, F_52_4,  '(52)-4',  output_dir)
 
 #*(52)-5
 
 G = merge(star(1, [ 8, 5, 4, 7]), path([ 8, 3]), path([ 10, 9, 11]))
 
 F_52_5 = [ G]
-#visualize(14*t+7, F_52_5,  '(52)-5',  graph_path)
+#visualize(14*t+7, F_52_5,  '(52)-5',  output_dir)
 
 #*(52)-6
 
 G = merge(star(1, [ 4, 5, 6, 7, 8]), path([ 10, 9, 11]))
 
 F_52_6 = [ G]
-#visualize(14*t+7, F_52_6,  '(52)-6',  graph_path)
+#visualize(14*t+7, F_52_6,  '(52)-6',  output_dir)
 
 #! (43)
 
@@ -485,42 +476,42 @@ F_52_6 = [ G]
 G = merge(path([ 0, 6, 1, 5, 2]), path([ 3, 10, 8, 9]))
 
 F_43_1 = [ G]
-#visualize(14*t+7, F_43_1,  '(43)-1',  graph_path)
+#visualize(14*t+7, F_43_1,  '(43)-1',  output_dir)
 
 #*(43)-2
 
 G = merge(path([ 5, 8, 1, 7]), path([ 1, 6]),  path([ 0, 4, 2, 3]))
 
 F_43_2 = [ G]
-#visualize(14*t+7, F_43_2,  '(43)-2',  graph_path)
+#visualize(14*t+7, F_43_2,  '(43)-2',  output_dir)
 
 #*(43)-3
 
 G = merge(path([ 4, 8, 1, 7]), path([ 1, 6]), star(9, [ 10, 12, 11]))
 
 F_43_3 = [ G]
-#visualize(14*t+7, F_43_3,  '(43)-3',  graph_path)
+#visualize(14*t+7, F_43_3,  '(43)-3',  output_dir)
 
 #*(43)-4
 
 G = merge(star(0, [ 6, 5, 4, 3]), path([ 2, 9, 7, 8]))
 
 F_43_4 = [ G]
-#visualize(14*t+7, F_43_4,  '(43)-4',  graph_path)
+#visualize(14*t+7, F_43_4,  '(43)-4',  output_dir)
 
 #*(43)-5
 
 G = merge(star(9, [ 12, 11, 10]), path([ 4, 8, 1, 7, 2]))
 
 F_43_5 = [ G]
-#visualize(14*t+7, F_43_5,  '(43)-5',  graph_path)
+#visualize(14*t+7, F_43_5,  '(43)-5',  output_dir)
 
 #*(43)-6
 
 G = merge(star(0, [ 6, 5, 4, 3]), star(9, [ 8, 7, 2]))
 
 F_43_6 = [ G]
-#visualize(14*t+7, F_43_6,  '(43)-6',  graph_path)
+#visualize(14*t+7, F_43_6,  '(43)-6',  output_dir)
 
 #! (511)
 
@@ -529,7 +520,7 @@ F_43_6 = [ G]
 G = merge(path([ 0, 6, 1, 5, 2, 9]), path([ 8, 10]), path([ 3, 4]))
 
 F_511_1 = [ G]
-#visualize(14*t+7, F_511_1,  '(511)-1',  graph_path)
+#visualize(14*t+7, F_511_1,  '(511)-1',  output_dir)
 
 
 #*(511)-2
@@ -537,35 +528,35 @@ F_511_1 = [ G]
 G = merge(path([ 4, 8, 1, 6, 3]), path([ 6, 0]), path([ 5, 7]), path([ 9, 10]))
 
 F_511_2 = [ G]
-#visualize(14*t+7, F_511_2,  '(511)-2',  graph_path)
+#visualize(14*t+7, F_511_2,  '(511)-2',  output_dir)
 
 #*(511)-3
 
 G = merge(star(1, [ 4, 5, 8, 7]), path([ 8, 3]), path([ 0, 2]), path([ 9, 10]))
 
 F_511_3 = [ G]
-#visualize(14*t+7, F_511_3,  '(511)-3',  graph_path)
+#visualize(14*t+7, F_511_3,  '(511)-3',  output_dir)
 
 #*(511)-4
 
 G = merge(path([ 5, 8, 1, 7]), path([ 4, 8, 1, 6]),  path([ 0, 2]), path([ 9, 10]))
 
 F_511_4 = [ G]
-#visualize(14*t+7, F_511_4,  '(511)-4',  graph_path)
+#visualize(14*t+7, F_511_4,  '(511)-4',  output_dir)
 
 #*(511)-5
 
 G = merge(path([ 5, 11, 9, 12, 7]), path([ 9, 10]), path([ 1, 8]), path([ 0, 4]))
 
 F_511_5 = [ G]
-#visualize(14*t+7, F_511_5,  '(511)-5',  graph_path)
+#visualize(14*t+7, F_511_5,  '(511)-5',  output_dir)
 
 #*(511)-6
 
 G = merge(star(1, [ 4, 5, 6, 7, 8]), path([ 2, 3]), path([ 9, 11]))
 
 F_511_6 = [ G]
-#visualize(14*t+7, F_511_6,  '(511)-6',  graph_path)
+#visualize(14*t+7, F_511_6,  '(511)-6',  output_dir)
 
 #! (421)
 
@@ -574,21 +565,21 @@ F_511_6 = [ G]
 G = merge(path([ 0, 6, 1, 5, 2]), path([ 8, 10, 9]), path([ 4, 11]))
 
 F_421_1 = [ G]
-#visualize(14*t+7, F_421_1,  '(421)-1',  graph_path)
+#visualize(14*t+7, F_421_1,  '(421)-1',  output_dir)
 
 #*(421)-2
 
 G = merge(path([ 5, 8, 1, 7]), path([ 1, 6]), path([ 10, 9, 11]), path([ 0, 4]))
 
 F_421_2 = [ G]
-#visualize(14*t+7, F_421_2,  '(421)-2',  graph_path)
+#visualize(14*t+7, F_421_2,  '(421)-2',  output_dir)
 
 #*(421)-3
 
 G = merge(star(0, [ 6, 5, 4, 3]), path([ 1, 8, 7]), path([ 9, 11]))
 
 F_421_3 = [ G]
-#visualize(14*t+7, F_421_3,  '(421)-3',  graph_path)
+#visualize(14*t+7, F_421_3,  '(421)-3',  output_dir)
 
 #! (331)
 
@@ -597,21 +588,21 @@ F_421_3 = [ G]
 G = merge(path([ 0, 6, 1, 5]), path([ 2, 9, 7, 10]), path([ 3, 4]))
 
 F_331_1 = [ G]
-#visualize(14*t+7, F_331_1,  '(331)-1',  graph_path)
+#visualize(14*t+7, F_331_1,  '(331)-1',  output_dir)
 
 #*(331)-2
 
 G = merge(star(0, [ 4, 5, 6]), path([ 11, 9, 10, 7]), path([ 1, 8]))
 
 F_331_2 = [ G]
-#visualize(14*t+7, F_331_2,  '(331)-2',  graph_path)
+#visualize(14*t+7, F_331_2,  '(331)-2',  output_dir)
 
 #*(331)-3
 
 G = merge(star(0, [ 4, 5, 6]), star(9, [ 10, 11, 12]), path([ 1, 8]))
 
 F_331_3 = [ G]
-#visualize(14*t+7, F_331_3,  '(331)-3',  graph_path)
+#visualize(14*t+7, F_331_3,  '(331)-3',  output_dir)
 
 #! (322)
 
@@ -620,14 +611,14 @@ F_331_3 = [ G]
 G = merge(path([ 0, 6, 1, 5]), path([ 8, 10, 9]), path([ 11, 4, 7]))
 
 F_322_1 = [ G]
-#visualize(14*t+7, F_322_1,  '(322)-1',  graph_path)
+#visualize(14*t+7, F_322_1,  '(322)-1',  output_dir)
 
 #*(322)-2
 
 G = merge(star(0, [ 6, 5, 4]), path([ 1, 8, 7]), path([ 11, 9, 12]))
 
 F_322_2 = [ G]
-#visualize(14*t+7, F_322_2,  '(322)-2',  graph_path)
+#visualize(14*t+7, F_322_2,  '(322)-2',  output_dir)
 
 #! (3211)
 
@@ -636,14 +627,14 @@ F_322_2 = [ G]
 G = merge(path([ 0, 6, 1, 5]), path([ 8, 10, 7]), path([ 4, 11]), path([ 2, 3]))
 
 F_3211_1 = [ G]
-#visualize(14*t+7, F_3211_1,  '(3211)-1',  graph_path)
+#visualize(14*t+7, F_3211_1,  '(3211)-1',  output_dir)
 
 #*(3211)-2
 
 G = merge(star(0, [ 4, 5, 6]), path([ 11, 9, 12]), path([ 2, 3]), path([ 1, 8]))
 
 F_3211_2 = [ G]
-#visualize(14*t+7, F_3211_2,  '(3211)-2',  graph_path)
+#visualize(14*t+7, F_3211_2,  '(3211)-2',  output_dir)
 
 #! (4111)
 
@@ -652,21 +643,21 @@ F_3211_2 = [ G]
 G = merge(path([ 0, 6, 1, 5, 2]), path([ 3, 10]), path([ 7, 9]), path([ 11, 12]))
 
 F_4111_1 = [ G]
-#visualize(14*t+7, F_4111_1,  '(4111)-1',  graph_path)
+#visualize(14*t+7, F_4111_1,  '(4111)-1',  output_dir)
 
 #*(4111)-2
 
 G = merge(path([ 4, 8, 1, 7]), path([ 1, 6]), path([ 3, 5]), path([ 9, 12]), path([ 10, 11]))
 
 F_4111_2 = [ G]
-#visualize(14*t+7, F_4111_2,  '(4111)-2',  graph_path)
+#visualize(14*t+7, F_4111_2,  '(4111)-2',  output_dir)
 
 #*(4111)-3
 
 G = merge(star(0, [ 6, 5, 4, 3]), path([ 1, 8]), path([ 10, 11]), path([ 7, 9]))
 
 F_4111_3 = [ G]
-#visualize(14*t+7, F_4111_3,  '(4111)-3',  graph_path)
+#visualize(14*t+7, F_4111_3,  '(4111)-3',  output_dir)
 
 #! (2221)
 
@@ -675,7 +666,7 @@ F_4111_3 = [ G]
 G = merge(path([ 0, 6, 1]), path([ 4, 8, 5]), path([ 2, 9, 7]), path([ 10, 11]))
 
 F_2221_1 = [ G]
-#visualize(14*t+7, F_2221_1,  '(2221)-1',  graph_path)
+#visualize(14*t+7, F_2221_1,  '(2221)-1',  output_dir)
 
 
 #! (31111)
@@ -685,14 +676,14 @@ F_2221_1 = [ G]
 G = merge(path([ 0, 6, 1, 5]), path([ 2, 9]), path([ 8, 10]), path([ 4, 7]), path([ 11, 12]))
 
 F_31111_1 = [ G]
-#visualize(14*t+7, F_31111_1,  '(31111)-1',  graph_path)
+#visualize(14*t+7, F_31111_1,  '(31111)-1',  output_dir)
 
 #*(31111)-2
 
 G = merge(star(0, [ 6, 5, 4]), path([ 2, 3]), path([ 9, 11]), path([ 1, 8]), path([ 7, 10]))
 
 F_31111_2 = [ G]
-#visualize(14*t+7, F_31111_2,  '(31111)-2',  graph_path)
+#visualize(14*t+7, F_31111_2,  '(31111)-2',  output_dir)
 
 
 #! (22111)
@@ -702,7 +693,7 @@ F_31111_2 = [ G]
 G = merge(path([ 0, 6, 1]), path([ 4, 8, 5]), path([ 3, 10]), path([ 7, 9]), path([ 11, 12]))
 
 F_22111_1 = [ G]
-#visualize(14*t+7, F_22111_1,  '(22111)-1',  graph_path)
+#visualize(14*t+7, F_22111_1,  '(22111)-1',  output_dir)
 
 #! (211111)
 
@@ -711,7 +702,7 @@ F_22111_1 = [ G]
 G = merge(path([ 0, 6, 1]), path([ 4, 8]), path([ 2, 5]), path([ 3, 10]), path([ 7, 9]), path([ 11, 12]))
 
 F_211111_1 = [ G]
-#visualize(14*t+7, F_211111_1,  '(211111)-1',  graph_path)
+#visualize(14*t+7, F_211111_1,  '(211111)-1',  output_dir)
 #& above here is generalized
 
 designs = [

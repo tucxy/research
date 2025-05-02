@@ -1,9 +1,16 @@
 \chapter{Programming}\label{chap:programming}
+By the end of my research I found around $600$ labelings of various forests, essentially by hand. I realized $200$ labelings in that just due to the sheer number of labelings I was doing I was bound to (1) have typos (2) compute incorrectly (3) violate some constraint of the labeling I was doing just like probablistically.
 
-\begin{lstlisting}
-    def foo(x):
-        # comment
-        return x*2
-\end{lstlisting}
+So I started all this programming because I just wanted some sort of local program that could display my labelings, so I could check with some level of certainty that they were isomorphic to the forest I was working with. However, everything I found displayed graphs but didn't allow for dragging nodes and interacting with graphs. So I decided to make my own program that did exactly what I wanted.
 
-%\lstinputlisting[caption={Graph visualization}]{graph_visualization.py}
+In total there are $7$ programs I will add links for in this Chapter. However, some of these projects have 
+
+In order, these are the features I added to \textit{graph\_visualization.py}:
+\setlist[enumerate,1]{label=(\arabic*)}
+\begin{enumerate}
+  \item Outputs a list of NetworkX graphs together on one page, starting from top to bottom.
+  \item Reduces vertices modulo $n$ and computes the standard edge length for each edge modulo $n$, and has the subscript as the additive edge length $\ell{7}^{+}$.
+  \item Uses longest path search algorithm and by default displays the longest path of graph in the center row of a grid of coordinates, then displays nodes coming off of that row.
+  \item Has a tab on the left that displays all standard edge lengths $\ell$ and a chart for the subscript labels of the labelings in order. The window with the tab open looks similar to Figure \ref{fig:K21labelingex} except it doesn't have colored edges.
+  \item Allows user to save displayed graphs as a tikz graph in a standalone \LaTeX file to a specified path
+\end{enumerate}
