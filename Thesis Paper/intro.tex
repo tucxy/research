@@ -56,7 +56,7 @@ Let $K$ be a simple graph. We call a collection $\GG=\{G_{1},\hdots,G_{n}\}$ of 
   \label{fig:simpledecompex}
 \end{figure}
 
-\newpage Graph decompositions are an important topic combinatorics, graph theory, and design theory, with origins dating back to the 1800s. Notably, in 1850 Reverend Thomas Kirkman, a full-time clergyman and legendary mathematician, posed an important problem in \textit{The Lady's and Gentleman's Diary}~\cite{bib:Kirkman} now known as \textit{the school girl problem}. It goes
+\newpage Graph decompositions are an important topic combinatorics, graph theory, and design theory, with origins dating back to the 1800s. Notably, in 1850 Reverend Thomas Kirkman, a full-time clergyman and legendary mathematician, posed an important problem in \textit{The Lady's and Gentleman's Diary}~\cite{Kirkman1850} now known as \textit{the school girl problem}. It goes
 
 \begin{center}
 \begin{minipage}{0.7\textwidth}
@@ -65,7 +65,7 @@ Let $K$ be a simple graph. We call a collection $\GG=\{G_{1},\hdots,G_{n}\}$ of 
 \end{minipage}
 \end{center}
 
-The problem asks if we can form five distinct rows of three school girls on each day of the week so that no two school girls walk in the same row more than once in a week. This is equivalent to finding a decomposition of $K_{15}$ whose members are all triangles; whose members are isomorphic to $C_{3}$ or $K_{3}$. Both Kirkman and Arthur Cayley independently solved the the schoolgirl problem and published their solutions in the 1851 edition of \textit{The Lady's and Gentleman's Diary}~\cite{bib:Kirkman1851}. Kirkman's solution is provided below.
+The problem asks if we can form five distinct rows of three school girls on each day of the week so that no two school girls walk in the same row more than once in a week. This is equivalent to finding a decomposition of $K_{15}$ whose members are all triangles; whose members are isomorphic to $C_{3}$ or $K_{3}$. Both Kirkman and Arthur Cayley independently solved the the schoolgirl problem and published their solutions in the 1851 edition of \textit{The Lady's and Gentleman's Diary}~\cite{Kirkman1851}. Kirkman's solution is provided below.
 
   \vspace{1em}
   \itshape
@@ -161,7 +161,7 @@ By the previous theorem, any graph on $m$ edges decomposes $K_{n}$ only if $n$ i
 \begin{center}
 For what $n$ is $K_{n}$ $G$-decomposable?
 \end{center}
-This question is known as the \textit{spectrum problem} for graph decompositions. Pioneering work by Rosa and Kotzig in the 1960s-especially in the development of graph labeling helped shape the modern treatment of $G$-decomposition problems. Since then, labeling-based techniques and tools from design theory have driven significant progress. In particular, graph labeling methods have played a central role in addressing the spectrum problem for small graphs. This directly continues contributions by Freyberg and Peters, who recently solved the spectrum problem for forests with six edges~\cite{bib:Peters}. Their paper provides a comprehensive summary of known decompositions for graphs $G$ with fewer than seven edges.
+This question is known as the \textit{spectrum problem} for graph decompositions. Pioneering work by Rosa and Kotzig in the 1960s-especially in the development of graph labeling helped shape the modern treatment of $G$-decomposition problems. Since then, labeling-based techniques and tools from design theory have driven significant progress. In particular, graph labeling methods have played a central role in addressing the spectrum problem for small graphs. This directly continues contributions by Freyberg and Peters, who recently solved the spectrum problem for forests with six edges~\cite{Peters}. Their paper provides a comprehensive summary of known decompositions for graphs $G$ with fewer than seven edges.
 
 Using graph labelings to solve $G$-decomposition problems is basically about doing algebra on graphs in order to generate edge-disjoint subgraphs. If we take the vertices of a graph $K$ to be elements of a group, we can use the structure of the group to our advantage. Specifically, when $K\cong K_{n}$, and we take it's vertices to be $\ZZ_{n}$, and then we label the vertices of $G$ with some subset of $\ZZ_{n}$. There are various labeling techniques of this kind stemming from Rosa's work in the 1960s that that allow us permute or act on the labels of the vertices of $G$ with subgroups of $\ZZ_{n}$ to generate new isomorphic copies of $G$ which are pairwise edge-disjoint. In the next section, we provide a example which outlines in some detail how this machinery works for $G$-decompositions of Complete Graphs.
 \section{Graph labeling}

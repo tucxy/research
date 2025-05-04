@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.24)  2 MAY 2025 05:17
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.24)  3 MAY 2025 08:26
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -976,9 +976,13 @@ File: uwasy.fd 2020/01/19 v2.4 Wasy-2 symbol font definitions
 LaTeX Font Info:    Trying to load font information for U+lasy on input line 5.
  (c:/texlive/2023/texmf-dist/tex/latex/base/ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
+)
+LaTeX Font Info:    Trying to load font information for OT1+lmtt on input line 5.
+ (c:/texlive/2023/texmf-dist/tex/latex/lm/ot1lmtt.fd
+File: ot1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ))
 Abstract
-[3{c:/texlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{c:/texlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}] (./thesis_masters.toc [4
+[3{c:/texlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{c:/texlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{c:/texlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-rmtt.enc}] (./thesis_masters.toc [4
 
 ])
 \tf@toc=\write5
@@ -1047,26 +1051,19 @@ Chapter 2.
 
 
 ]
-
-LaTeX Warning: Citation `bib:Kirkman' on page 11 undefined on input line 59.
-
-
-LaTeX Warning: Citation `bib:Kirkman1851' on page 11 undefined on input line 68.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 89--91
 
  []
 
 [11] [12]
 
-LaTeX Warning: Citation `bib:Peters' on page 13 undefined on input line 164.
+LaTeX Warning: Citation `Peters' on page 13 undefined on input line 164.
 
 [13]
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <5> on input line 235.
  [14] [15]
-<standalone/tree chart.pdf, id=431, 365.01169pt x 408.23819pt>
+<standalone/tree chart.pdf, id=438, 365.01169pt x 408.23819pt>
 File: standalone/tree chart.pdf Graphic file (type pdf)
 <use standalone/tree chart.pdf>
 Package pdftex.def Info: standalone/tree chart.pdf  used on input line 351.
@@ -1209,35 +1206,13 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 452.
 
-[23]
-
-LaTeX Warning: Citation `bib:rosa' on page 24 undefined on input line 456.
-
-
-LaTeX Warning: Citation `bib:rosa' on page 24 undefined on input line 466.
-
-
-LaTeX Warning: Citation `bib:rosa' on page 24 undefined on input line 470.
-
-
-LaTeX Warning: Citation `cyclicbipart' on page 24 undefined on input line 474.
-
-
-LaTeX Warning: Citation `cyclicbipart' on page 24 undefined on input line 478.
-
-
-LaTeX Warning: Citation `tran' on page 24 undefined on input line 482.
-
-
-LaTeX Warning: Citation `tran' on page 24 undefined on input line 486.
-
-[24]
-<standalone/sigma label ex1.pdf, id=518, 97.03452pt x 94.66064pt>
+[23] [24]
+<standalone/sigma label ex1.pdf, id=535, 97.03452pt x 94.66064pt>
 File: standalone/sigma label ex1.pdf Graphic file (type pdf)
 <use standalone/sigma label ex1.pdf>
 Package pdftex.def Info: standalone/sigma label ex1.pdf  used on input line 495.
 (pdftex.def)             Requested size: 97.03427pt x 94.6604pt.
-<standalone/sigma label ex2.pdf, id=519, 52.66878pt x 45.03726pt>
+<standalone/sigma label ex2.pdf, id=536, 52.66878pt x 45.03726pt>
 File: standalone/sigma label ex2.pdf Graphic file (type pdf)
 <use standalone/sigma label ex2.pdf>
 Package pdftex.def Info: standalone/sigma label ex2.pdf  used on input line 496.
@@ -1381,10 +1356,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 167--168
  []
 
 
-LaTeX Warning: Citation `bib:Cain' on page 38 undefined on input line 169.
+LaTeX Warning: Citation `Cain' on page 38 undefined on input line 169.
 
 
-LaTeX Warning: Citation `bib:Cain' on page 38 undefined on input line 177.
+LaTeX Warning: Citation `Cain' on page 38 undefined on input line 177.
 
 [38] (./standalone/starpath.tex)
 Overfull \hbox (2.43118pt too wide) detected at line 196
@@ -1407,34 +1382,56 @@ Chapter 6.
 
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 46--47
+Underfull \hbox (badness 10000) in paragraph at lines 52--53
 
  []
 
 [42]
-Underfull \hbox (badness 10000) in paragraph at lines 48--49
+Underfull \hbox (badness 10000) in paragraph at lines 54--55
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 55--56
+Underfull \hbox (badness 10000) in paragraph at lines 59--60
 
  []
 
-[43] [44]
-Overfull \hbox (20.96844pt too wide) in paragraph at lines 83--83
-[]\OT1/lmr/bx/n/14.4 Galaxy De-com-po-si-tions of Com-plete Mul-ti-par-tite Graphs 
+[43]
+Underfull \hbox (badness 10000) in paragraph at lines 65--66
+
  []
 
-) [45]
+
+Underfull \hbox (badness 10000) in paragraph at lines 69--70
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 71--72
+
+ []
+
+[44]
+Underfull \hbox (badness 10000) in paragraph at lines 86--87
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 88--89
+
+ []
+
+[45] (./standalone/galaxydecomp.tex)
+Underfull \hbox (badness 10000) in paragraph at lines 111--112
+
+ []
+
+[46]) [47]
 \openout2 = `Programming.aux'.
 
  (./Programming.tex
 Chapter 7.
-LaTeX Font Info:    Trying to load font information for OT1+lmtt on input line 17.
-(c:/texlive/2023/texmf-dist/tex/latex/lm/ot1lmtt.fd
-File: ot1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-) [46
+[48
 
 
 
@@ -1444,7 +1441,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 28--31
 
  []
 
-[47{c:/texlive/2023/texmf-dist/fonts/enc/dvips/lm/lm-rmtt.enc}]
+[49]
 Overfull \hbox (13.05391pt too wide) in paragraph at lines 39--40
 []$\OML/lmm/m/it/10.95 ^^[[]$\OT1/lmr/m/n/10.95 -labelings: []$\OT1/lmtt/m/n/10.95 https : / / github . com / tucxy / Thesis-[]Programs / blob / main / sigma .
  []
@@ -1459,7 +1456,7 @@ Overfull \hbox (45.65048pt too wide) in paragraph at lines 42--43
 []$[]$\OT1/lmr/m/n/10.95 -decomposition of $\OML/lmm/m/it/10.95 K[]$ \OT1/lmr/m/n/10.95 and $\OML/lmm/m/it/10.95 K[]$\OT1/lmr/m/n/10.95 : []$\OT1/lmtt/m/n/10.95 https : / / github . com / tucxy / Thesis-[]Programs /
  []
 
-<standalone/Images/snippet_long.JPG, id=716, 1927.2pt x 1051.67906pt>
+<standalone/Images/snippet_long.JPG, id=746, 1927.2pt x 1051.67906pt>
 File: standalone/Images/snippet_long.JPG Graphic file (type jpg)
 <use standalone/Images/snippet_long.JPG>
 Package pdftex.def Info: standalone/Images/snippet_long.JPG  used on input line 48.
@@ -1469,38 +1466,38 @@ Underfull \hbox (badness 10000) in paragraph at lines 54--55
 
  []
 
-[48 <./standalone/Images/snippet_long.JPG>]
-Overfull \hbox (7.25168pt too wide) in paragraph at lines 64--65
+[50 <./standalone/Images/snippet_long.JPG>]
+Overfull \hbox (7.25168pt too wide) in paragraph at lines 62--63
 []\OT1/lmr/m/n/10.95 Labeling Solvers: []$\OT1/lmtt/m/n/10.95 https : / / github . com / tucxy / Thesis-[]Programs / blob / main / CP .
  []
 
-<standalone/Images/CPsnippetlong.JPG, id=733, 1927.2pt x 1053.9375pt>
+<standalone/Images/CPsnippetlong.JPG, id=763, 1927.2pt x 1053.9375pt>
 File: standalone/Images/CPsnippetlong.JPG Graphic file (type jpg)
 <use standalone/Images/CPsnippetlong.JPG>
-Package pdftex.def Info: standalone/Images/CPsnippetlong.JPG  used on input line 70.
+Package pdftex.def Info: standalone/Images/CPsnippetlong.JPG  used on input line 68.
 (pdftex.def)             Requested size: 332.44325pt x 181.80441pt.
 
-Overfull \hbox (46.94334pt too wide) in paragraph at lines 77--78
+Overfull \hbox (46.94334pt too wide) in paragraph at lines 75--76
 []\OT1/lmr/m/n/10.95 These are set up so that if you visit this link: []$\OT1/lmtt/m/n/10.95 https : / / github . com / tucxy / Thesis-[]Programs /
  []
 
-[49 <./standalone/Images/CPsnippetlong.JPG>]
-<standalone/Images/guide.JPG, id=743, 693.34032pt x 423.83344pt>
+[51 <./standalone/Images/CPsnippetlong.JPG>]
+<standalone/Images/guide.JPG, id=774, 693.34032pt x 423.83344pt>
 File: standalone/Images/guide.JPG Graphic file (type jpg)
 <use standalone/Images/guide.JPG>
-Package pdftex.def Info: standalone/Images/guide.JPG  used on input line 81.
+Package pdftex.def Info: standalone/Images/guide.JPG  used on input line 79.
 (pdftex.def)             Requested size: 332.44325pt x 203.2243pt.
-) [50 <./standalone/Images/guide.JPG>]
+) [52 <./standalone/Images/guide.JPG>]
 \openout2 = `conclusion.aux'.
 
  (./conclusion.tex
 Chapter 8.
-) [51
+) [53
 
 
 
 
-] (./thesis_masters.bbl) [52
+] (./thesis_masters.bbl) [54
 
 
 
@@ -1525,10 +1522,10 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `\hbox' on input line 4.
 
-(./standalone/7m14.tex [53
+(./standalone/7m14.tex [55
 
 
-] [54] [55] [56] [57] [58]) [59] (./standalone/8m14.tex [60] [61] [62] [63] [64] [65] [66]) [67]
+] [56] [57] [58] [59] [60]) [61] (./standalone/8m14.tex [62] [63] [64] [65] [66] [67] [68]) [69]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 20.
@@ -1581,7 +1578,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 20.
 
-(./standalone/K21.tex) (./standalone/K22.tex [68])) [69] (./thesis_masters.aux (./title.aux) (./Background.aux) (./intro.aux) (./01mod14.aux) (./78mod14.aux) (./specialcase.aux) (./AdditionalResults.aux) (./Programming.aux) (./conclusion.aux) (./app_glossary.aux))
+(./standalone/K21.tex) (./standalone/K22.tex [70])) [71] (./thesis_masters.aux (./title.aux) (./Background.aux) (./intro.aux) (./01mod14.aux) (./78mod14.aux) (./specialcase.aux) (./AdditionalResults.aux) (./Programming.aux) (./conclusion.aux) (./app_glossary.aux))
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
@@ -1594,22 +1591,22 @@ LaTeX Warning: There were undefined references.
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `thesis_masters.out' has not changed.
-(rerunfilecheck)             Checksum: 9B02B0D5A1BA01C6C8C95F4599BA68AB;5429.
+(rerunfilecheck)             Checksum: 4DAD99B12060EA8AB09D9B1E947321EA;5414.
  )
 (\end occurred when \ifnum on line 26 was incomplete) 
 Here is how much of TeX's memory you used:
- 34421 strings out of 474221
- 646545 string characters out of 5750188
+ 34456 strings out of 474221
+ 647146 string characters out of 5750188
  2031978 words of memory out of 5000000
- 55612 multiletter control sequences out of 15000+600000
+ 55637 multiletter control sequences out of 15000+600000
  672398 words of font info for 187 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  100i,19n,96p,1119b,1323s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmbx10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmbx12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmbx8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmex10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmmi10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmmi12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmmi6.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmmi8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmmi9.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr17.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr6.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmri10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmsy10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmsy6.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmsy8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmtt10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on thesis_masters.pdf (79 pages, 1535954 bytes).
+Output written on thesis_masters.pdf (81 pages, 1546054 bytes).
 PDF statistics:
- 996 PDF objects out of 1000 (max. 8388607)
- 843 compressed objects within 9 object streams
- 229 named destinations out of 1000 (max. 500000)
+ 1022 PDF objects out of 1200 (max. 8388607)
+ 867 compressed objects within 9 object streams
+ 236 named destinations out of 1000 (max. 500000)
  323 words of extra memory for PDF output out of 10000 (max. 10000000)
 

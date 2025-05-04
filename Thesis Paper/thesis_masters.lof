@@ -12,7 +12,7 @@
 \contentsline {figure}{\numberline {1.11}{\ignorespaces The Path Graph \( P_4 \)}}{8}{figure.caption.16}%
 \contentsline {figure}{\numberline {1.12}{\ignorespaces The $7$-star (\(K_{1,7}\))}}{8}{figure.caption.17}%
 \contentsline {figure}{\numberline {1.13}{\ignorespaces A forest on 9 vertices}}{9}{figure.caption.18}%
-\contentsline {figure}{\numberline {1.14}{\ignorespaces The $(K_{1,6},K_{1,7})$-Galaxy}}{9}{figure.caption.19}%
+\contentsline {figure}{\numberline {1.14}{\ignorespaces The $(K_{1,5},K_{1,6})$-Galaxy}}{9}{figure.caption.19}%
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {2.1}{\ignorespaces $\{G_{1},G_{2}\}$ is a decomposition of $K_{4}$}}{10}{figure.caption.20}%
 \contentsline {figure}{\numberline {2.2}{\ignorespaces $\{G_{1},G_{2}\}$ is a $P_{3}$-decomposition of $K_{4}$ or a $P_{3}$-design of order $4$}}{12}{figure.caption.21}%
@@ -35,9 +35,10 @@
 \contentsline {figure}{\numberline {5.1}{\ignorespaces A new construction for $K_{14t+7}$ and $K_{14t+8}$}}{37}{figure.caption.35}%
 \contentsline {figure}{\numberline {5.2}{\ignorespaces $G_{0}$ in a generating presentation of the $\mathbf {T_{7}^{11}}\sqcup \mathbf {T_{2}^{1}}-$decomposition of $K_{n,7}$.}}{39}{figure.caption.36}%
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {6.1}{\ignorespaces $\ensuremath {\mathcal {G}}_{0}$ in a generating presentation of the $C$-galaxy decomposition of $K_{N,m}$.}}{46}{figure.caption.41}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {7.1}{\ignorespaces A snippet of \textit {tikzgrapher}}}{48}{figure.caption.37}%
-\contentsline {figure}{\numberline {7.2}{\ignorespaces A snippet of the $\sigma ^{+-}$-labeling solver}}{49}{figure.caption.38}%
-\contentsline {figure}{\numberline {7.3}{\ignorespaces click on the code button to download the zip file. Then extract the folder and set it as your working directory.}}{50}{figure.caption.39}%
+\contentsline {figure}{\numberline {7.1}{\ignorespaces A snippet of \textit {tikzgrapher}}}{50}{figure.caption.42}%
+\contentsline {figure}{\numberline {7.2}{\ignorespaces A snippet of the $\sigma ^{+-}$-labeling solver}}{51}{figure.caption.43}%
+\contentsline {figure}{\numberline {7.3}{\ignorespaces click on the code button to download the zip file. Then extract the folder and set it as your working directory.}}{52}{figure.caption.44}%
 \addvspace {10\p@ }
 \addvspace {10pt}

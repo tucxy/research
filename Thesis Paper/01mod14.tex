@@ -453,7 +453,7 @@ Now, notice that if we use this new construction for $K_{14}$, we must ensure th
 
 We begin with the original $\rho$-labeling of a bipartite graph $G$ on $m$ edges which uses lengths modulo $2m$ (in $K_{2m}$). 
 
-\begin{definition}[(Rosa \cite{bib:rosa})] \label{def:rho} 
+\begin{definition}[(Rosa \cite{Rosa1967})] \label{def:rho} 
  Let $G$ be a graph with $m$ edges.  A \textit{$\rho$-labeling} of $G$ is an injection $f: V(G) \rightarrow \{0,1,2, \dots, 2m\}$ that induces a bijective \textit{length function $\ell: E(G) \rightarrow \{1,2, \dots, m\}$} where 
     $$
     \ell(uv) = \text{min}\{|f(u)-f(v)|,2m+1-|f(u)-f(v)|\},
@@ -463,27 +463,27 @@ for all  $uv \in E(G)$.
 
 Rosa showed that if a $\rho$-labeling of a graph $G$ with $m$ edges exists, then a cyclic $G$-decomposition of $K_{2m+1}$ exists, which is presented formally later. Later, Rosa and his peers began studying more restrictive types of $\rho$-labelings to decompose more complete graphs. Next, we define some of these labelings and theorems associated with them.
 
-\begin{thm}[(Rosa \cite{bib:rosa})]\label{thm:Rhosa}  
+\begin{thm}[(Rosa \cite{Rosa1967})]\label{thm:Rhosa}  
 Let $G$ be a graph with $m$ edges.  There exists a cyclic $G$-decomposition of $K_{2m+1}$ if and only if $G$ admits a $\rho$-labeling.
 \end{thm}
 
-\begin{definition}[(Rosa \cite{bib:rosa})] \label{def:sigma} 
+\begin{definition}[(Rosa \cite{Rosa1967})] \label{def:sigma} 
 A $\sigma$-labeling of a graph $G$ is a $\rho$-labeling such that $\ell(uv) = |f(u) - f(v)|$ for all $uv \in E(G).$
 \end{definition}
 
-\begin{definition}[(El-Zanati, Vanden Eynden \cite{cyclicbipart})] \label{def:rho and sigma ordered def} 
+\begin{definition}[(El-Zanati, Vanden Eynden \cite{FroncekKubesa2021})] \label{def:rho and sigma ordered def} 
 A $\rho$- or $\sigma$-labeling of a bipartite graph $G$ with bipartition $(A,B)$ is called an \emph{ordered} $\rho$- or $\sigma$-labeling and denoted $\rho^+,\sigma^+$, respectively, if $f(a) < f(b)$ for each edge $ab$ with $a \in A$ and $b \in B$.
 \end{definition}
 
-\begin{thm}[(El-Zanati, Vanden Eynden \cite{cyclicbipart})] \label{thm:rho plus}
+\begin{thm}[(El-Zanati, Vanden Eynden \cite{FroncekKubesa2021})] \label{thm:rho plus}
 Let $G$ be a graph with $m$ edges which has a $\rho^+$-labeling. Then $G$ decomposes $K_{2mk+1}$ for all positive integers $k$.
 \end{thm}
 
-\begin{definition}[(Freyberg, Tran \cite{tran})] \label{def:sigma plus minus} 
+\begin{definition}[(Freyberg, Tran \cite{FreybergTran2020})] \label{def:sigma plus minus} 
 A $\sigma^{+-}$-\emph{labeling} of a bipartite graph $G$ with $m$ edges and bipartition $(A,B)$ is a $\sigma^+$-labeling with the property that $f(a) - f(b) \neq m$ for all $a \in A$ and $b \in B$, and $f(v) \not\in \{2m,2m-1\}$ for any $v\in V(G)$.
 \end{definition}
 
-\begin{thm}[(Freyberg, Tran \cite{tran})] \label{thm:sigma plus minus}
+\begin{thm}[(Freyberg, Tran \cite{FreybergTran2020})] \label{thm:sigma plus minus}
 Let $G$ be a graph with $m$ edges and a $\sigma^{+-}$-labeling such that the edge of length $m$ is a pendant. Then there exists a $G$-decomposition of both $K_{2mk}$ and $K_{2mk+1}$ for every positive integer $k$.
 \end{thm}
 

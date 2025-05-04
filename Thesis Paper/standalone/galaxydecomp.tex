@@ -1,0 +1,35 @@
+\documentclass{standalone}
+\usepackage{amsmath,mathabx}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\begin{document}
+    \begin{tikzpicture}[scale=0.5]
+        %white
+        \node[fill=white,draw =black, circle, inner sep=2pt, label=left:{\textcolor{black}{$0$}}] (w0) at (0,0) {};
+        \node[fill=white,draw = black, circle, inner sep=2pt, label=left:{\textcolor{black}{$1$}}] (w1) at (0,-1) {};
+        \node at (0,-2) {\large $\vdots$};
+        \node[fill=white,draw = black, circle, inner sep=2pt, label=left:{\small \textcolor{black}{$n-1$}}] (wn-1) at (0,-3.5) {};
+        \node at (0,-4.5) {\large $\vdots$};
+
+
+        %\node[draw=black, fill=white, circle, inner sep=1pt] (circ) at (-1.5,-0.5) {};
+        \node (p1) at (-3,-0.5) {\scriptsize +1};
+        \draw[->] ([yshift=0pt] p1.south) -- ++(0, -0.75);
+        %black nodes
+        \node[fill=black, circle, inner sep=2pt, label=right:{\textcolor{black}{$L_{0}$}}] (b0) at (2,0) {};
+        \node[fill=black, circle, inner sep=2pt, label=right:{\textcolor{black}{$L_{1}$}}] (b1) at (2,-1) {};
+        \node at (2,-2) {\large $\vdots$};
+        \node[fill=black, circle, inner sep=2pt, label=right:{\textcolor{black}{$L_{n-1}$}}] (bn-1) at (2,-3.5) {};
+
+        %brackets stuff
+        \node at (5.5,0) {\normalsize $\}\cong G_{0}$ };
+        \node at (5.5,-1) {\normalsize $\}\cong G_{1}$ };
+
+        \node at (5.9,-3.5) {\normalsize $\}\cong G_{n-1}$ };
+
+
+        \draw[draw=black, shorten >=0pt, shorten <=0pt] (w0) -- (b0);
+        \draw[draw=black, shorten >=0pt, shorten <=0pt] (w1) -- (b1);
+        \draw[draw=black, shorten >=0pt, shorten <=0pt] (wn-1) -- (bn-1);
+    \end{tikzpicture}
+\end{document}

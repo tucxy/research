@@ -4,9 +4,9 @@ We present two main additional results produced by work done on this project. (1
 
 \section{Wraparound edge mappings that preserve lengths}
 
-\textbf{These mappings only apply to $K_{2mt+m}$ and $K_{2mt+(m+1)}$ where $m>1$ is odd. It is also strongly advised to use them sparingly, they are pretty invasive ways to deal with wraparound edges.} This is merely a barebones sort of framework to begin dealing with wraparound edges in labelings. From personal experience, the 'new' short edge mappings are much nicer to deal with, because they will be fixed after the first step. If one has a choice, it is reccomended to use them instead of the 'new' wraparound edges which will change at every step.
+These mappings only apply to vertices in $K_{2mt+m}$ and $K_{2mt+(m+1)}$ where $m>1$ is odd. Also, these are meant to be used in labelings which will be developed by $m$, such as our (1-2-3)-labelings and 1-rotational (1-2-3)-labelings, otherwise you could just map them anywhere really. Anyways, this is a somewhat invasive way to deal with wraparound edges, and it should be noted that this is a barebones sort of framework to begin dealing with wraparound edges in labelings. From personal experience, the 'new' short edge mappings are much nicer to deal with, because they will be fixed after the first step. If one has a choice, it is reccomended to use them instead of the 'new' wraparound edges which will change at every step.
 
-A wraparound edge $uv$ in $K_{2mt+m}$, WLOG $u<v$. Now, if $uv$ is a wraparound edge of length $l$ in $K_{3m}$, it's length eventually won't be preserved at some step $t\mapsto t+c$ for $c\geq 1$ in the infinite family $K_{2mt+m}$. So the idea is, maybe we can map the wraparound edge to a (1) a short edge of length $l$ at each step $t\mapsto t+1$ or (2) a wraparound edge of length $l$ at each step $t\mapsto t+1$. The next theorem is something we have alluded to previously, but we prove it anyways.\newpage
+If $uv$ is a wraparound edge of length $l$ in $K_{3m}$, it's length eventually won't be preserved at some step $t\mapsto t+c$ for $c\geq 1$ in the infinite family $K_{2mt+m}$. So the idea is, maybe we can map the wraparound edge to a (1) a short edge of length $l$ at each step $t\mapsto t+1$ or (2) a wraparound edge of length $l$ at each step $t\mapsto t+1$. The next theorem is something we have alluded to previously, but we prove it anyways.\newpage
 \begin{thm} \label{thm:wraplarger}
     In $K_{n}$, $uv$ is a wraparound edge if and only if the absolute difference of its endpoints is greater than the maximal length in $K_{n};\floor{\frac{n}{2}}<|u-v|$. 
     \begin{proof}
@@ -34,10 +34,16 @@ Let us define the following edge length functions
         v\mathbf{\,mod\,}n,   & v=\infty.
       \end{cases}
     \end{align*}
-\noindent Now, let $t>1$,$c>0$, and let $m>1$ be odd. Lastlly, let $h =2m(t-1)$. For any wraparound edge $(a,b)$ in $K_{21}$ such that $a<b$, we have
+\noindent Now, let $t>1$, and let $m>1$ be odd. Lastly, let $h =2m(t-1)$. For any wraparound edge $(a,b)$ in $K_{21}$ such that $a<b$, we have
 \begin{align}
-&\ell_{3m}(a,b)=\ell_{2mt+m}(a-ch,b-(c-1)h)=\ell_{2mt+m}(a+(c-1)h,b+ch)\\
-&\ell_{3m}(a,b)=\ell_{m}^{+}(a-ch,b-(c-1)h)=\ell_{m}^{+}(a+(c-1)h,b+ch).
+  \ell_{3m}(a,b)
+    &=\ell_{2mt+m}(a-h,b-h)
+     =\ell_{2mt+m}(a+h,b+h)
+  \tag{short}\label{eq:short}\\
+  \ell_{3m}(a,b)
+    &=\ell_{m}^{+}(a-h,b-h)
+     =\ell_{m}^{+}(a+h,b+h)
+  \tag{wraparound}\label{eq:wraparound}
 \end{align}
 That is, these mappings preserve the standard length $\ell$ and additive length $\ell_{m}^{+}$ modulo $m$ of $ab\in E(K_{3m})$ in $K_{2mt+m}$ and in $K_{2mt+(m+1)}$ where we take $K_{2mt+(m+1)}$ to be $\ZZ_{2mt+m}\cup \{\infty\}$.
 \end{thm}
@@ -45,46 +51,77 @@ That is, these mappings preserve the standard length $\ell$ and additive length 
 \begin{proof}
 Since $uv$ is a wraparound edge where $u<v$, $\ell_{3m}(u,v)=3m-|u-v|=3m-(v-u)=3m+u-v$. Let us simply denote this via $\ell_{ab}=3m+a-b$. Now, let $k=\floor{\frac{m}{2}}=\frac{m-1}{2}$ so the maximal length in $K_{3m}$ is $\floor{\frac{3m}{2}}=\floor{\frac{2m+m}{2}}=\floor{\frac{2m}{2}+\frac{m}{2}}=m+\floor{\frac{m}{2}}=m+k$ since $k,m\geq 1$. Suppose $a\geq 2m$. Then, $(2m\geq a<b<3m)\implies (1\leq b-a<m<m+k).$ But then $|a-b|<m+k$, the maximal length and so $ab$ is not a wraparound edge, a contradiction. So $a<b<2m$.\newline
 
-\noindent [Short]: Let $\alpha= a-h,\beta=b\in \ZZ_{2mt+m}$. Note: $2mt+m-h\equiv 2mt+m-2m(t-1)=2m+m=3m$. Therefore, $3m+a\equiv (2mt+m-h)+a\equiv a-h \pmod{2mt+m}$. So then since $1<t$, we have that $3m+a<3m+2m=2m(2)+m\leq 2mt+m$, and so in fact $\alpha = 3m+a$. Recall that $\beta=b<3m<3m+a=\alpha$. So then we have that $|\alpha-\beta|=\alpha-\beta=(3m+a)-b$. Well, $3m<2mt+m$ for $t>1$. So then $\ell_{2mt+m}(\alpha\beta)=\min\{|\alpha-\beta|,2mt+m-|\alpha-\beta|\}=\min\{3m+a-b, 2mt+m+a-b\}=3m+a-b=\ell_{ab}$.\newline
+\noindent (short): Let $\alpha= a-h,\beta=b\in \ZZ_{2mt+m}$. Note: $2mt+m-h\equiv 2mt+m-2m(t-1)=2m+m=3m$. Therefore, $3m+a\equiv (2mt+m-h)+a\equiv a-h \pmod{2mt+m}$. So then since $1<t$, we have that $3m+a<3m+2m=2m(2)+m\leq 2mt+m$, and so in fact $\alpha = 3m+a$. Recall that $\beta=b<3m<3m+a=\alpha$. So then we have that $|\alpha-\beta|=\alpha-\beta=(3m+a)-b$. Well, $3m<2mt+m$ for $t>1$. So then $\ell_{2mt+m}(\alpha\beta)=\min\{|\alpha-\beta|,2mt+m-|\alpha-\beta|\}=\min\{3m+a-b, 2mt+m+a-b\}=3m+a-b=\ell_{ab}$.\newline
 
-\noindent [Wraparound]: Instead, let $\alpha =a,\beta=b+h\in \ZZ_{2mt+m}$. Clearly, $\alpha=a<b+h=\beta$. So $|\alpha-\beta|=\beta-\alpha=b+h-a$. Recall that $ab$ is a wraparound edge in $K_{3m}$ with $a<b$. So then $|a-b|=b-a>m+k$, the maximal length in $K_{3m}$. So then $|\alpha-\beta|=b-a+h>m+k+h=m+k+2m(t-1)$. Now, the maximal length in $K_{2mt+m}$ is $\floor{\frac{2mt+m}{2}}=mt+k=m+k+m(t-1)$. Well, (i) $(2m(t^{*}-1))_{t^{*}\geq 2}$ and (ii) $(m(t^{*}-1))_{t^{*}\geq 2}$ are both arithmetic sequences with increments $2m$ and $m$, respectively. Both expressions are only equal at $t^{*}=1$, and then afterwards $(i)$ increases faster than $(ii)$. So then we see that $2m(t-1)>m(t-1)$ for all $t>1$, and thus, $|\alpha-\beta|=b-a+h>m+k+h=m+k+2m(t-1)>m+k+m(t-1)$, the maximal length in $K_{2mt+m}$ for $t>1$. So then $\alpha\beta$ is a wraparound edge in $K_{2mt+m}$ of length $2mt-m-|\alpha-\beta|=2mt+m-\beta-\alpha=2mt+m - (b-a+h)= 2mt+m-2m(t-1)+a-b=3m+a-b=\ell_{ab}$.
-
-Now, if we develop the mapped endpoints in [Short] and [Wraparound] by $c-1$, edge lengths $\ell_{2mt+m},\ell_{m}^{+}$ are preserved. Thus, $(6.1)$ and $(6.2)$ are proven.
+\noindent (wraparound): Instead, let $\alpha =a,\beta=b+h\in \ZZ_{2mt+m}$. Clearly, $\alpha=a<b+h=\beta$. So $|\alpha-\beta|=\beta-\alpha=b+h-a$. Recall that $ab$ is a wraparound edge in $K_{3m}$ with $a<b$. So then $|a-b|=b-a>m+k$, the maximal length in $K_{3m}$. So then $|\alpha-\beta|=b-a+h>m+k+h=m+k+2m(t-1)$. Now, the maximal length in $K_{2mt+m}$ is $\floor{\frac{2mt+m}{2}}=mt+k=m+k+m(t-1)$. Well, (i) $(2m(t^{*}-1))_{t^{*}\geq 2}$ and (ii) $(m(t^{*}-1))_{t^{*}\geq 2}$ are both arithmetic sequences with increments $2m$ and $m$, respectively. Both expressions are only equal at $t^{*}=1$, and then afterwards $(i)$ increases faster than $(ii)$. So then we see that $2m(t-1)>m(t-1)$ for all $t>1$, and thus, $|\alpha-\beta|=b-a+h>m+k+h=m+k+2m(t-1)>m+k+m(t-1)$, the maximal length in $K_{2mt+m}$ for $t>1$. So then $\alpha\beta$ is a wraparound edge in $K_{2mt+m}$ of length $2mt-m-|\alpha-\beta|=2mt+m-\beta-\alpha=2mt+m - (b-a+h)= 2mt+m-2m(t-1)+a-b=3m+a-b=\ell_{ab}$.
 
 \end{proof}
-Now, although we don't provide any kind of labeling to extend this theorem, we do provide a sort of guardrail that one can implement in their labeling to avoid certain problems. As long as one only applies this mapping to pendant edges, the only thing to worry about is the possibility that an endpoint mapped in a higher order complete graph actually collides with another label(since most labels will presumably not be mapped). This can happen. However the next theorem and corollary are sort of gaurdrails or guides to avoid this issue. The conditions are very terse in their current form, and it would be the goal of future work to simplify these ideas.\newline
+Note that if we develop the mapped endpoints in (Short) and (Wraparound) by $c\in \NN$, edge lengths $\ell_{2mt+m},\ell_{m}^{+}$ are still preserved. Now, we don't provide any kind of labeling to extend this theorem, but we do provide some guardrails that one can implement in their labeling to avoid certain problems. Besides changing lengths of edges incident to vertices mapped this way in higher order family members, the only thing to worry about is the possibility that an endpoint mapped in a higher order complete graph actually collides with another vertex incident to a short edge (since most labels will presumably not be mapped). This can happen. However the next theorem gives way to a corollary that guarantees this won't happen given certain conditions as met.\newline
 \begin{thm}
-    Let $t>1,m>1, h = 2m(t-1)$ and $a,b$ be distinct vertices in $K_{3m+m}$ with $a<b$. Next let $\alpha = a-h,\beta = b+h\in V(K_{2mt+m})$, then:
-    $$b-a\neq m\text{ or }b\not\equiv a\Mod{m}\Rightarrow \alpha\neq\beta.$$
+  Let $m>1\text{ be odd},t>1,\text{ and } h = 2m(t-1)$. Now take the vertices of $K_{3m}$ and $K_{2mt+m}$ to be $\ZZ_{3m}$ and $\ZZ_{2mt+m}$, respectively, and let $a,b$ be distinct vertices in $K_{3m}$ with $a<b$. Next let $\alpha = a-h,\beta = b+h\in V(K_{2mt+m})$, then:
+    $$b-a\neq m\text{ or }b\not\equiv a\Mod{m}\Rightarrow \alpha\neq\beta\in V(2mt+m)$$
 
     \begin{proof}
-        Recall that since $a,b\in \ZZ_{2m+m}$ and are distinct, $1\leq b-a<3m$. If $b-a\neq m,$ suppose $\alpha = \beta = a-h=b+h$. Then $b-a\equiv -2h\equiv -4m(t-1)\Mod{2mt+m}$. Well,  $-4m \equiv 2mt+m-4m\equiv 2mt-3m\equiv m(2t-3)\Mod{2mt+m}$. So if $t=2$, $b-a\equiv m(2((2)-3)((2)-1))\equiv m\Mod{2m(2)+m}$ and so $b-a = 7$ or $b-a= m+2m(2)+m = 5m>3m$, both contradictions. So $\alpha\neq \beta$.
+        Recall that since $a,b\in \ZZ_{2m+m}$ and are distinct, $1\leq b-a<3m$.\newline 
         
-        If $t>2$, since $t=3\Rightarrow -4m\equiv m(2(2)-3) = 7m-4m\equiv 3m\Mod{2m(3)+m}$ and the sequence $(\floor{m(2n-3)})_{n>2}$ is strictly increasing, $b-a\geq 5m>3m$ for all $t>2$, a contradiction. So $\alpha\neq \beta$.
+        \noindent If $b-a\neq m,$ suppose $\alpha = \beta = a-h=b+h$. Then $b-a\equiv -2h\equiv -4m(t-1)\Mod{2mt+m}$. Well,  $-4m \equiv 2mt+m-4m\equiv 2mt-3m\equiv m(2t-3)\Mod{2mt+m}$. So we have that $$b-a\equiv [m(2t-3)][(t-1)]\Mod{2mt+m}.$$
+        
+        \noindent If $t=2$, $b-a\equiv m(2(2-3)(2-1))\equiv m\Mod{2m(2)+m}$ and so for $k\geq 1$, we have $b-a = m$ or $b-a= k(m+2m(2))+m = 5mk>3m$, both contradictions. So $\alpha\neq \beta$.\newline
+        
+        \noindent If $t>2$, $b-a\equiv [m(2t-3)][(t-1)] \equiv m(2t^{2}-5t+3)\Mod{2mt+m}$. So then $b-a=m(2t^{2}-5t+3)$ or $b-a=m(2t^{2}-5t+3) + k(2mt+m)$ for $t\geq 3$ and $k\geq 1$. Well, since $t\geq 3$, we have $m(2t^{2}-5t+3)\geq m(2(3)^{2}-5(3)+3)=6m$ and $2mt+m\geq 2m(3)+m=7m$ since both are strictly increasing for $t>2$. So then $b-a\geq 6m$ or $b-a\geq 6m+7mk$ for $t>2$, both contradictions since $1<b-a<3m$.\newline
 
-        Finally, if $b\not\equiv a\Mod{m}$, suppose $\alpha = \beta$. Then $a-h\equiv b-h \Mod{2mt+m}$ and $b-a\equiv -2h\equiv -4m(t-1)\Mod{2mt+m}$. so then $b-a\equiv 0\Mod{m}$ since $m|-4m(t-1)$ and $m|2mt+m.$ But then $b\equiv a\Mod{m}$, a contradiction. So $\alpha\neq \beta$, and the statement is proven.
+        \noindent Finally, on the other hand if $b\not\equiv a\Mod{m}$, suppose $\alpha = \beta$. Then $a-h\equiv b-h \Mod{2mt+m}$ and $b-a\equiv -2h\equiv -4m(t-1)\Mod{2mt+m}$. So then $b-a\equiv 0\Mod{m}$ since $m|-4m(t-1)$ and $m|2mt+m.$ But then $b\equiv a\Mod{m}$, a contradiction. So $\alpha\neq \beta$, and the statement is proven.
         
     \end{proof}
 \end{thm}
 
 \begin{corollary}\label{thm:gennewvertices}
-    Let $t>1,m>1,h=2m(t-1)$ and $ab$ be a wraparound edge in $K_{2m+m}$ such that $a<b$. Then in $K_{2mt+m}:\;a-h\geq 3m$ and $b+h>3m$. Next, let $u,v\in V(K_{2m+m})$ with $v\in [u]_{m}$. If $t=2$, then $|u-v|\neq 2m\Longleftrightarrow u\pm h\neq v$ and $v\pm h \neq u$. If $t>2$, $u\pm h\neq v$ and $v\pm h\neq u$ in $K_{2mt+m}$.
+    Let $m>1\text{ be odd},\,t>1\text{ and }h=2m(t-1)$ and take the vertices of $K_{3m}$ and $K_{2mt+m}$ to be $\ZZ_{3m}$ and $\ZZ_{2mt+m}$, respectively. Next, let $a,b$ be distinct vertices in $K_{3m}$ such that $a<b$ and $a\equiv b\Mod{m}$. Then,
+    \begin{align}
+    &t=2\text{ and }|a-b|\neq 2m\iff a\pm h\neq b\text{ and }b\pm h \neq a\text{ in }K_{2mt+m}\\
+    &t>2\implies a\pm h\neq b\text{ and }b\pm h \neq a\text{ in }K_{2mt+m}
+    \end{align}
 \end{corollary}
 \begin{proof}
-    Let $k=\frac{m}{2}$ if $m$ is even and $k=\frac{m-1}{2}$ if $m$ is odd. In the proof of Theorem \ref{thm:genwrapmap} it is shown that $a-h=3m+a$, so then since $0\leq a<3m$, $3m\leq 3m+a=a-h$ in $K_{2mt+m}$. Now, suppose $b\leq m$. Then since $a<b\leq m$ and $|a-b|=b-a$, necessarily $1\leq |a-b|\leq m<m+k$, the maximal length in $K_{3m}$. But then by Theorem \ref{thm:wraplarger}, $ab$ is not a wraparound edge, a contradiction. So $b>m$. Therefore $b+h>m+h\geq 3m$.
+    Let $k=\floor{\frac{m}{2}}$. In the proof of Theorem \ref{thm:genwrapmap} it is shown that $a-h=3m+a$, so then since $0\leq a<3m$, $3m\leq 3m+a=a-h$ in $K_{2mt+m}$. Now, suppose $b\leq m$. Then since $a<b\leq m$ and $|a-b|=b-a$, necessarily $1\leq |a-b|\leq m<m+k$, the maximal length in $K_{3m}$. But then by Theorem \ref{thm:wraplarger}, $ab$ is not a wraparound edge, a contradiction. So $b>m$. Therefore $b+h>m+h\geq 3m$.\newline
 
-    Next if $t=2$, then $h=2m$. So if $u+h = v$ or $u-h=v$, $|u-v|=h$. On the other hand if $|u-v|=h$, then $u-v=h$ or $u-v=-h$ so $u+h = v$ or $u-h=v$. So the contrapositive holds and the statement is proven for $t=2.$
+    \noindent We prove $(6.1)$ by contrapositive. For $t=2$, $h=2m$ and if $a+h = b$ or $a-h=b$, then $|a-b|=h=2m$. On the other hand if $|a-b|=h$, then $a-b=h$ or $a-b=-h$ and then $a+h = b$ or $a-h=b$. Thus, the contrapositive holds and $(6.1)$ is proven.\newline
 
-    Lastly if $t>2$, then recall that $2mt+m=3m+2m(t-1)=3m+h$ so then since $0\leq u,v<3m$, $u+h,v+h<3m+h=2mt+m$. So then $u+h,v+h\not\in \ZZ_{3m}$ and so necessarily $u+h\neq v$ and $v+ h\neq u$. Now, since $2mt+m-h=3m$, $2mt+m+(v-h)\equiv 3m+v\Mod{2mt+m}$ and similarly $2mt+m+(u-h)\equiv 3m+u\Mod{2mt+m}$, we have that $u-h,v-h$ are simply $3m+u$ and $3m+v$ in $K_{2mt+m}$. Well, since $0\leq u,v<3m$ and $2m(3)+m=7m\leq 2mt+m$ we must have that $3m\leq 3m+u,3m+v<3m+3m=6m<7m\leq 2mt+m$. So then $u-h,v-h\not\in V(K_{3m})$ and therefore necessarily $u-h\neq v$ and $v-h\neq u$ and the statement is proven.
+    \noindent If $t>2$, then recall that $2mt+m=3m+2m(t-1)=3m+h$. So then since $0\leq u<v<3m$, we have that $h\leq u+h<v+h<3m+h=2mt+m$. Now, $h=2m(t-1)\geq 2m(3-1)=4m$ for $t>2$. So, $$0\leq u<v<3m<4m \leq u+h<v+h<3m+h=2mt+m\text{ for }t>2.$$ Therefore, $u+h\neq v$ and $v+ h\neq u$. Now, since $2mt+m-h=3m$, $2mt+m+(v-h)\equiv 3m+v\Mod{2mt+m}$ and similarly $2mt+m+(u-h)\equiv 3m+u\Mod{2mt+m}$, we have that $u-h$ and $v-h$ are simply $3m+u$ and $3m+v$, respectively, in $K_{2mt+m}$. Well, $$0\leq u<v<3m<4m\leq 3m+u<3m+v<5m\leq 2mt+m\text{ for }t>2.$$
+    Therefore, $u-h\neq v$ and $v-h\neq u$ in $K_{2mt+m}$, and $(6.2)$ is proven.
 
 \end{proof}
     This concludes the results of this section. The next section is a fun result that came as a result of dealing with the exceptional graph in Chapter \ref{chap:special case}.
 
-\section{Galaxy Decompositions of Complete Multipartite Graphs}
+\section{Galaxy Decompositions of Complete Bipartite Graphs}
 
-Chapter \ref{chap:special case}, we deal with
+Chapter \ref{chap:special case}, we address $\mathbf{T_{7}^{11}}\sqcup\mathbf{T_{2}^{1}}$ in the context of our forest decompositions but it is also a galaxy. After finding the labeling in \ref{fig:starpathbip}, it became clear we could generalize this idea to all galaxies. We begin with galaxy decompositions of complete bipartites.
 
+\begin{thm}\label{thm:galdecomp}
+Let $N\text{ and }m$ be positive integers and consider the complete bipartite $K_{N,m}$ with a finite collection $C=\{G_{i}\mid i\in \ZZ_{n}\}$ of vertex disjoint stars where $n\leq N$. If $m=\sum_{i\in \ZZ_{n}}|E(G_{i})|$, then there exists a $C$-galaxy decomposition of $K_{N,m}$.
+\end{thm}
+\begin{proof}
+  Take the partite set of $N$ vertices to be $\ZZ_{N}$ and color them white. Similarly, take the partite set of $m$ vertices to be $\ZZ_{m}$ and color them black. Note that we will be using vertices as group elements. Naturally, we refer to \text{white-black} vertices $uv$ in $K_{N,m}$ via $(u,v)\in \ZZ_{N}\times \ZZ_{m}$ and vice versa. Next, let $\GG=\bigsqcup_{i\in \ZZ_{n}}G_{i}$, a $C$-galaxy. Lastly, let $L_{0}=\{0,\hdots,|E(G_{0})|\}$, $L_{i}=\{|E(G_{i-1})|,\hdots,|E(G_{i})|-1\}$ for $i\in \ZZ^{*}_{n}$ and $\GG_{j}\subseteq K_{N,m}$ be the subgraph induced by $E_{j}=\sqcup_{i\in \ZZ_{n}} (\{i+j\}\times L_{i})$ for each $j\in \ZZ_{N}$ and note that these subgraphs are all isomorphic to $\GG$.
+\begin{figure}[H]
+    \centering
+    \input{standalone/galaxydecomp}
+    \caption{$\GG_{0}$ in a generating presentation of the $C$-galaxy decomposition of $K_{N,m}$.}
+    \label{fig:galdecomp}
+\end{figure}
+\noindent Consider any edge $(u,v)\in K_{N,m}$. Well, $\ZZ_{m}=L_{0}\sqcup \cdots \sqcup L_{n-1}$, so $v\in L_{a}$ for exactly one $a\in \ZZ_{n}$. So then $(u,v)\in \{u\}\times V_{a}=\{a+b\}\times V_{a}\subseteq \sqcup_{i\in \ZZ_{n}} (\{i+b\}\times L_{a})=E_{b}$ where $b=u-a\in \ZZ_{m}$. There is only one such $b\in \ZZ_{N}$. Therefore, $(u,v)$ belongs to exactly one isomorphic copy $\GG_{b}$ of $\GG$ in $\{\GG_{i}\mid i\in \ZZ_{N}\}$.\newline
 
+Thus,
+\begin{center}
+$\{\GG_{i}\mid i\in \ZZ_{N}\}$ is a $C$-galaxy decomposition of $K_{N,m}$.
+\end{center}
+  
+\end{proof}
+Next, we extend this idea to complete multipartite graphs.
+\begin{corollary}
+Let $m$ be a positive integer and $N_{0},\hdots,N_{k-1}$ be positive integers which are divisible by $m$. If $C=\{G_{i}\mid i\in \ZZ_{n}\}$ is a collection of vertex disjoint stars where $0<n\leq \min\{N_{1},\hdots,N_{k}\}$ and $m=\sum_{i\in \ZZ_{n}} |E(G_{i})|$, then there exists a $C$-galaxy decomposition of the complete $k$-partite graph $K_{N_{1},\hdots,N_{k}}$.
+\end{corollary}
+\begin{proof}
+Let $d_{i}=\frac{n_{i}}{m}$ for each $i\in \ZZ_{k}$. $K_{N_{1},\hdots,N_{k}}$ can be viewed as the union of $\sum\limits_{0\leq i<j<k} d_{i}d_{j}$ copies of $K_{m,m}$. Well, $m=\sum_{i\in \ZZ_{n}} |E(G_{i})|$ so the maximal number of stars $n$ in $C$ is $m$, so $n\leq m$ and by Theorem \ref{thm:galdecomp} the $C$-galaxy decomposes $K_{m,m}$. Therefore the $C$-galaxy decomposes any number of copies of $K_{m,m}$ and so it decomposes $K_{N_{1},\hdots,N_{k}}$.
 
-
-
+\end{proof}
+This corollary concludes this chapter and the results of this thesis project. We hope to extend this galaxy idea in future work. The next section contains \verb|Python| programs made for this project.

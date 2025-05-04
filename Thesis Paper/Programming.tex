@@ -7,34 +7,34 @@ There are $3$ groups of programs in a dedicated github repository that we provid
 
 \setlist[enumerate,1]{label=(\arabic*)}
 \begin{enumerate}
-  \item A Python 3.13 installation
-  \item The NetworkX python library
-  \item the pygame or pygame-ce python library
-  \item the itertools python library
-  \item the z3 python library
+  \item A \verb|Python| 3.13 installation
+  \item The \verb|NetworkX| library for \verb|Python|
+  \item the \verb|pygame| or \verb|pygame-ce| library for \verb|Python|
+  \item the \verb|itertools| library for \verb|Python|
+  \item the \verb|z3| library for \verb|Python|
 \end{enumerate}
-It should be clear when looking at the code what the dependencies are. If you use pip in vscode, you may simply input: 
+It should be clear when looking at the code what the dependencies are. If you use \verb|pip| in \verb|vscode|, you may simply input into your terminal: 
 \begin{verbatim}
 py -m pip install #enter library name here
 # OR
 python -m pip install #enter library name here
 \end{verbatim}
-depending on how you installed python installing packages may not work this way. Anaconda is a popular python IDE/installation that comes with some of these most likely.
+depending on how you installed \verb|Python| installing packages may not work this way. \verb|Anaconda| is a popular \verb|Python| bundle that likely comes with these.
 
 \section{Tikzgrapher}
 
-This is an earlier version of a program named \textit{tikzgrapher} that was specifically build with displaying (1-2-3)-labelings and 1-rotational (1-2-3)-labelings. There is a less restrictive version where arguments are optional and customizable (custom edge and vertex labelings, colorings of vertices, no side tab for squares containing lengths). Here is a link to this project: \url{https://github.com/tucxy/Thesis-Programs/blob/main/graph_visualization.py}
+The file shared here is an earlier version of a program named \verb|tikzgrapher| that was specifically built to displaying (1-2-3)-labelings and 1-rotational (1-2-3)-labelings. There is a less restrictive version where arguments are optional and customizable (custom edge and vertex labelings, colorings of vertices, no side tab for squares containing lengths). Here is a link to this project: \url{https://github.com/tucxy/Thesis-Programs/blob/main/graph_visualization.py}
 
-These are the features added, ordered earliest to latest to this older build of tikzgrapher:\newline
+These are the features ordered earliest to latest in this older build of \verb|tikzgrapher|:\newline
 \setlist[enumerate,1]{label=(\arabic*)}
 \begin{enumerate}
-  \item Outputs a list of NetworkX graphs together on one page, starting from top to bottom.
-  \item Reduces vertices modulo $n$ and computes the standard edge length for each edge modulo $n$, and has the subscript as the additive edge length $\ell{7}^{+}$.
+  \item Displays a list of \verb|NetworkX| graphs together on one page, starting from top to bottom.
+  \item Reduces vertices modulo $n$ and computes the standard edge length for each edge modulo $n$, and has the subscript as the additive edge length $\ell_{7}^{+}$.
   \item Uses longest path search algorithm and by default displays the longest path of graph in the center row of a grid of coordinates, then displays nodes coming off of that row.
   \item Has a tab on the left that displays all standard edge lengths $\ell$ and a chart for the subscript labels of the labelings in order. The window with the tab open looks similar to Figure \ref{fig:K21labelingex} except it doesn't have colored edges.
-  \item Allows user to save displayed graphs as a tikz graph in a standalone \LaTeX file to a specified path
+  \item Allows user to save displayed graphs as a \verb|Tikz| graph in a standalone \LaTeX$\,$file to a specified path.
 \end{enumerate}
-We have every single forest labeling in notebooks that import tikzgrapher. If you simply uncomment below a forest, a pygame will pop out and display the labeling. Here are links to those notebooks:
+We have every single forest labeling in files that import tikzgrapher. If you simply uncomment below a forest, a \verb|pygame| window will pop out and display the labeling. Here are links to those files.
 \begin{enumerate}
   \item $\sigma^{+-}$-labelings: \url{https://github.com/tucxy/Thesis-Programs/blob/main/sigma.py}
   \item (1-2-3)-labelings: \url{https://github.com/tucxy/Thesis-Programs/blob/main/7mod14.py}
@@ -54,11 +54,9 @@ We have every single forest labeling in notebooks that import tikzgrapher. If yo
 Once again, this version is no longer being updated, the following link will take you to the latest version: \url{https://github.com/tucxy/Programming/tree/main/Python/tikzgrapher} \newline
 
 \section{Labeling Solvers}
-This next program is a bit more ambitious. After all labelings were found (of course) we thought, "Hey what if we didn't have to find these by hand?" Initially, we tried to use a genetic learning algorithm but found that the fitness function was too rigid, and realized that reinforcement learning was not the way to go. We found much more success using constraint programming. Using the \text{z3} SAT solver, we created (1) a solver that outputs a $\sigma^{+-}$-labeling of a graph (if it exists) (2) a graceful labeling of a graph (3) a solver that oututs a more generalized version of the (1-2-3)-labeling for a graph on $m$ edges in $K_{2mt+r}$ where $r$ is idempotent modulo $2m$.
+This next program is a bit more ambitious. After all labelings were found (of course) we thought, "Hey what if we didn't have to find these by hand?" Initially, we tried to use a genetic learning algorithm but found that the fitness function was too rigid, and realized that reinforcement learning was not the way to go. We found much more success using constraint programming. Using the \verb|z3| SAT solver, we created (1) a solver that outputs a $\sigma^{+-}$-labeling of a graph (if it exists) (2) a graceful labeling of a graph (3) a solver that oututs a more generalized version of the (1-2-3)-labeling for a graph on $m$ edges in $K_{2mt+r}$ where $r$ is an odd idempotent modulo $2m$.
 
-
-
-The $\sigma^{+-}$-labeling is quite fast, but the other labelings can take up to five minutes or so. I the future, we hope to translate this code to C++, to hopefully speed up the process. As of now, it does work however, but the beefier the processor, the better since it is in Python. Here are the links to this project:
+The $\sigma^{+-}$-labeling is quite fast, but the other labelings can take up to five minutes or so. In the future, we hope to translate this code to \verb|C++|, to hopefully speed up the process. As of now, it does work however, but the beefier the processor, the better since it is in \verb|Python|. Here are the links to this project:
 
 \begin{enumerate}
   \item  Labeling Solvers: \url{https://github.com/tucxy/Thesis-Programs/blob/main/CP.py}
