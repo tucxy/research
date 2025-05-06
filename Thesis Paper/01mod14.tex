@@ -3,7 +3,7 @@
 To begin this chapter, we extend intuition developed in the Introduction to present some machinery specific to $K_{n}$ where $n\equiv 0,1\pmod{14}$. This informs the formal definitions and theorems we use for this case.
 
 \section{Construction for $n\equiv 0,1 \pmod{14}$}\label{sec:0,1constr}
-$K_{1}$ and $K_{2}$ don't have enough vertices to contain a forest on seven edges. So $K_{14}$ and $K_{15}$ are the base graphs for $K_{n}$ where $n \equiv 0 \textrm{ or } 1 \pmod{14}$, respectively. We first show how to decompose $K_{14}$ and $K_{15}$ in subsection \ref{sec:0,1constr-pt1} and then show how to generalize this to their entire families in subsection \ref{sec:0,1constr-pt2}
+$K_{0}$ and $K_{1}$ don't have enough vertices to contain a forest on seven edges. So $K_{14}$ and $K_{15}$ are the base graphs for $K_{n}$ where $n \equiv 0 \textrm{ or } 1 \pmod{14}$, respectively. We first show how to decompose $K_{14}$ and $K_{15}$ in subsection \ref{sec:0,1constr-pt1} and then show how to generalize this to their entire families in subsection \ref{sec:0,1constr-pt2}
 
 To be absolutely clear, \textbf{these are not original ideas as a result of this project}. Rosa and his colleagues developed this decades ago. This is just an explanation from our perspective, of the amazing work of Rosa and his successors in creating graph labelings techniques to solve decomposition problems.
 
@@ -83,25 +83,25 @@ To be absolutely clear, \textbf{these are not original ideas as a result of this
 \label{fig:K14K15colored}
 \end{figure}
 
-Both $K_{14}$ and $K_{15}$ both only have edges with lengths \textcolor{blue}{1} through \textcolor{cyan}{7}, however, there is important distinction in counting edges of one length $K_{14}$ versus counting them in $K_{15}$. The \textcolor{cyan}{cyan} edges have length \textcolor{cyan}{7}, and convieniently because of the way these graphs are drawn in the figure above, we can easily count them as they form the innermost spoke of the graphs. Because these graphs are so similar we can use one labeling to deal with both at the same time! However, we must be very careful.
+Both $K_{14}$ and $K_{15}$ both only have edges with lengths \textcolor{blue}{1} through \textcolor{cyan}{7}, however, there is important distinction in counting edges of one length $K_{14}$ versus counting them in $K_{15}$. The \textcolor{cyan}{cyan} edges have length \textcolor{cyan}{7}, and convieniently because of the way these graphs are drawn in the figure above, we can easily count them as they form the innermost spoke of the graphs. Because these graphs are so similar we can use one labeling to deal with both at the same time! However, we must be very careful in doing so.
 
-In $K_{14}$ there are only 7 edges of length \textcolor{cyan}{7} and 14 edges of all other lengths, yet in $K_{15}$ there are 15 edges of length \textcolor{cyan}{7} along with 15 edges of all other lengths. it turns out this pattern generalizes. For $K_{n}$ where\newline
+In $K_{14}$ there are only 7 edges of length \textcolor{cyan}{7} and 14 edges of all other lengths, yet in $K_{15}$ there are 15 edges of length \textcolor{cyan}{7} along with 15 edges of all other lengths. it turns out this pattern generalizes. For $K_{n}$,
 
-\textbf{n is odd:} There are $n$ edges of lengths 1 through $\frac{n-1}{2}$
+\textbf{If n is odd:} There are $n$ edges of lengths 1 through $\frac{n-1}{2}$.
 
-\textbf{n is even:} There are $n$ edges of lengths 1 up to $\frac{n}{2}$, and then $\frac{n}{2}$ edges of length $\frac{n}{2}\newline$.
+\textbf{If n is even:} There are $n$ edges of lengths 1 up to $\frac{n}{2}$, and then $\frac{n}{2}$ edges of length $\frac{n}{2}.$
 
-This is why the labeling of $P_{3}$ in Figure \ref{fig:P3K5colordecomp} used to decompose $K_{5}$ in the Introduction worked so easily. $K_{5}$ has odd order, so there are $5$ edges of each length in $\{1,2\}$. The same applies here for $K_{15}$, we just label each $7$-edge forest $F$ so that it contains all seven lengths in $K_{15}$, and then developing the vertices by $1$ repeatedly generates the entire $F$-decomposition of $K_{15}$. 
+\noindent This is why the labeling of $P_{3}$ in Figure \ref{fig:P3K5colordecomp} used to decompose $K_{5}$ in the Introduction worked so easily. $K_{5}$ has odd order, so there are $5$ edges of each length in $\{1,2\}$. The same applies here for $K_{15}$, we just label each $7$-edge forest $F$ so that it contains all seven lengths in $K_{15}$, and then developing the vertices by $1$ repeatedly generates the entire $F$-decomposition of $K_{15}$. 
 
 But notice that if we repeatedly develop nodes of the same labeling of $F$ in $K_{14}$ (assuming we don't use the vertex $14$) we would \textit{overcount} length \textcolor{cyan}{7} edges. There is a simple remedy for this, but it requires a shift in perspective.
 
-Take $V(K_{14})$ to be $\ZZ_{13}\cup \{\infty\}$, and label all edges via the length function modulo $13$ except for edges incident to $\infty$ which will refer to as length $\infty$. Now redefine developing nodes by $1$ only to effectively fix the $\infty$ vertex so that $\infty\mapsto \infty+1=\infty$. Formally, let:
+Take $V(K_{14})$ to be $\ZZ_{13}\cup \{\infty\}$, and label all edges via the length function modulo $13$ except for edges incident to $\infty$ which will refer to as length $\infty$. We do this so that intuitively, developing nodes by $1$ fix the $\infty$ vertex so that $\infty\mapsto \infty+1=\infty$. Formally:
 $$\ell(uv)=\begin{cases}\min\{|u-v|,13-|u-v|\}, & u,v\neq \infty, \\ \infty, & u\text{ or }v=\infty \end{cases} \text{ and }v\mapsto 
 \begin{cases}
   v+1,&v\in\mathbb{Z}_{13},\\
   \infty,        &v=\infty.
   \end{cases}$$
-The reason for doing this is that we will now have $13$ edges of lengths $1$ through $6$ as well as $\infty$, since the infinity node will have all $13$ edges of length $\infty$ to nodes in $\ZZ_{13}$ incident to it. Now if we develop the endpoints of an edge with length $i$ by $1$ repeatedly, we will get all $13$ of a distinct edges of length $i$.
+Another reason for doing this is that we will now have $13$ edges of lengths $1$ through $6$ as well as of length $\infty$, since the infinity node will have all $13$ edges of length $\infty$ to nodes in $\ZZ_{13}$ incident to it. Now if we develop the endpoints of an edge with any length by $1$ repeatedly, we will get all $13$ of a distinct edges of that length. So we can hopefully cyclically generate $F$-decompositions with this new construction for $K_{14}$ for each forest.
 
 \begin{figure}[H]
   \begin{center}
@@ -191,9 +191,9 @@ The reason for doing this is that we will now have $13$ edges of lengths $1$ thr
   \label{fig:K13infty}
 \end{figure}
 
-  
+\noindent It is important to note that we \textbf{must} use edges $uv$ of length $|u-v|$ in $K_{13}$ so they will also have length $|u-v|$ in $K_{14}$ and $K_{15}$. If we only use edges of this type, we don't have to think about $\ZZ_{13}$ at all except when we label the vertices in the first place. We can just compute edge lengths modulo $14$. This is explained in depth in the next section. 
 
-Now, notice that if we use this new construction for $K_{14}$, we must ensure that we only use nodes in $\ZZ_{13}$. Here is an example.
+Putting this all together: if we can just use vertex labels from $\ZZ_{13}$ for a labeling of a forest $F$ but only use edges $uv$ of lengths $|u-v|$ modulo $14$, and then include all lengths from $1$ to $7$ in it: we can (1) simply develop the labeling by $1$ to get the $F$-decomposition of $K_{15}$, then (2) just relabel an endpoint of the length seven edge to $\infty$, and then once more develop by $1$ to get the $F$-decomposition of $K_{14}$. Note that this requires the length $7$ edge to have an endpoint with only one neighbor, as to not mess with other edge lengths. We show an example on the following page.
 
 \begin{figure}[H]
   \begin{center}
@@ -310,18 +310,20 @@ Now, notice that if we use this new construction for $K_{14}$, we must ensure th
   \caption{A labeling (left) that gives the $\mathbf{T_{7}^{11}\sqcup T_{2}^{11}}$-decomposition of $K_{14}$ (middle) and $K_{15}$ (right), respectively, when developed by $1$. The leaf $7$ in the pendant edge \textcolor{cyan}{$(0,7)$} (of length \textcolor{cyan}{7} modulo 14 and 15) is relabeled as $\infty$ for $K_{14}$}
   \label{fig:01decompexample}
 \end{figure}
+
+We will explain another reason edges $uv$ of lengths $|u-v|$
 \subsection{Stretching a labeling}\label{sec:0,1constr-pt2}
 
   Now, we have learned how to decompose $K_{14}$ and $K_{15}$, but what about the rest of the family? Well, $K_{14t}$ and $K_{14t+1}$ actually contain edges of lengths in 
   $$\bigcup_{0\leq i< t} \{1+7i,\hdots,7+7i\}\text{ for }t\geq 1$$
-  This is because the maximal length in $K_{14t}$ and $K_{14t+1}$ is $\floor{\frac{14t+1}{2}}=7t$. Luckily, it turns out that we can actually just replicate this process we did for lengths $1$ through $7$ for each step $t\mapsto t+1$ for $K_{14t}$ and $K_{14t+1}$ for the new lengths that come $7$ at a time if we add some restrictions.
+  This makes sense because the maximal length in $K_{14t}$ and $K_{14t+1}$ is $\floor{\frac{14t+1}{2}}=7t$. Luckily, it turns out that we can actually just replicate this process we did for lengths $1$ through $7$ for each step $t\mapsto t+1$ for $K_{14t}$ and $K_{14t+1}$ for the new lengths that come $7$ at a time if we add some restrictions.
 
-  There are two types of edges in complete graphs. We call edges $uv$ of length $n-|u-v|$ \textit{wraparound edges}, and edges $ab$ of length $|a-b|$ \textit{short edges}. If we want to build a labeling that can generalize to an entire family of complete graphs, we need to understand how they would generalize as the order of the complete graph increases. Observe.
+  There are two types of edges in complete graphs. We call edges $uv$ of length $n-|u-v|$ \textit{wraparound edges}, and edges $ab$ of length $|a-b|$ \textit{short edges}. If we want to build a labeling that can generalize to an entire family of complete graphs, we need to understand how these types of edges would generalize as the order of the complete graph increases.
   \begin{itemize}
     \item[] In $K_{14(1)}$: $\ell((0,8))=\min\{|0-8|,14-|0-8|\}=\min\{8,6\}=6$.
     \item[] In $K_{14(2)}$: $\ell((0,8))=\min\{|0-8|,28-|0-8|\}=\min\{8,20\}=8$.
   \end{itemize}
-  There is a way to map labelings at each step to preserve length which is described in Chapter $\ref{chap:Additional Results}$, but it can get ugly. Luckily, there is a way to avoid this problem entirely. If we only use \textit{short edges} $uv$ which have length $|u-v|$ in $K_{13}$ for our labelings, then that edge will have length $|u-v|$ in every complete graph $K_{n}$ where $n>13$. Let $k>2$. We show another example below.
+  There is a way to map labelings at each step to preserve length which is described in Chapter $\ref{chap:Additional Results}$, but it can get ugly. Luckily, there is a way to avoid this problem entirely. If we only use \textit{short edges} $uv$ which have length $|u-v|$ in $K_{14}$ for our labelings, then that edge will have length $|u-v|$ in every complete graph $K_{n}$ where $n>14$. Let $k>2$. We show another example below.
   \begin{itemize}
     \item[] In $K_{14(1)}$: $\ell((0,6))=\min\{|0-6|,14-|0-6|\}=\min\{6,8\}=6$.
     \item[] In $K_{14(2)}$: $\ell((0,6))=\min\{|0-6|,28-|0-6|\}=\min\{6,22\}=6$.

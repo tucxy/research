@@ -2,11 +2,11 @@
 
 \section{Fundamentals of Graph Theory}
 
-Graph Theory is the study of objects called \textit{vertices} or \textit{nodes} and their relationships which we call \textit{edges}. An edge between vertices $u$ and $v$ is typically denoted $uv$ or $(u,v)$. A graph $G$ is formally defined as an ordered pair $G = (V,E)$ where $V$ is the set of all vertices in $G$ and $E$ is the set of all edges between vertices in $G$. These sets are sometimes refered to as $V(G)$ and $E(G)$, respectively.
+Graph Theory is the study of objects called \textit{vertices} or \textit{nodes} and their relationships which we call \textit{edges}. An edge between vertices $u$ and $v$ is typically denoted $uv$ or $(u,v)$. A graph $G$ is formally defined as an ordered pair $G = (V,E)$ where $V$ is the set of all vertices in $G$ and $E$ is the set of all edges between vertices in $G$. These sets are sometimes referred to as $V(G)$ and $E(G)$, respectively.
 
-$G$ is called a \textit{simple graph} if: (1) there is at most 1 edge between any two vertices, (2) there are no edges from a vertex to itself and (3) all edges have no directionality to them, meaning $uv=vu$ for any edge $uv\in E(G)$. For the rest of this paper all graphs are finite simple graphs, but note that unions and subgraphs are defined the same way for directed graphs and infinite graphs.
+$G$ is called a \textit{simple graph} if: (1) there is at most one edge between any two vertices, (2) there are no edges from a vertex to itself and (3) all edges have no directionality to them, meaning $uv=vu$ for any edge $uv\in E(G)$. For the rest of this paper all graphs we work with are finite simple graphs, but note that many of the proceeding definitions are defined in the same or very similar ways for infinite and directed graphs.
 
-Graphs are more intuitive to work with through their visual representations instead of their formal definitions. Let the simple graph $G$ where $V(G)=\{A,B,C,D,E,a,b,c,\newline d, e\}$ and $E(G)=\{Aa,Bb,Cc,Dd,Ee,AB,BC,CD,DE,EA,ac,ce,eb,bd,da\}$. G is often called the \textit{Petersen} graph. It's unwieldy when described formally, yet its visual representation is very easy to understand.
+Graphs are more intuitive to work with through their visual representations instead of their formal definitions. Let $G$ be a simple graph where $V(G)=\{A,B,C,D,E,a,b,c,\newline d, e\}$ and $E(G)=\{Aa,Bb,Cc,Dd,Ee,AB,BC,CD,DE,EA,ac,ce,eb,bd,da\}$. G is often called the \textit{Petersen} graph. It's a bit unwieldy when described formally, yet its visual representation is very easy to understand.
 
 \begin{figure}[H]
 \begin{center}
@@ -53,7 +53,7 @@ Graphs are more intuitive to work with through their visual representations inst
     \label{fig:petersen graph}
     \end{figure}
 
-We say two graphs $G$ and $H$ are \textit{isomorphic} if there exists a bijection from $V(G)$ to $V(H)$ that induces a bijection from $E(G)$ to $E(H)$ and we denote this relationship via $G\equiv H$. In other words, we consider two graphs $G,H$ to be the 'same' if we can relabel and/or move vertices in some fashion (without adding/removing vertices edges) in a visual representations of $G$ and $H$ to go back and forth between the two.
+We say two graphs $G$ and $H$ are \textit{isomorphic} if there exists a bijection from $V(G)$ to $V(H)$ called an \textit{isomorphism} that induces a bijection from $E(G)$ to $E(H)$ and we denote this relationship via $G\cong H$. In other words, we consider two graphs $G,H$ to be the 'same' if we can relabel and move vertices in some fashion (without adding/removing vertices and edges) in visual representations of $G$ and $H$ to go back and forth between the two.
 
 \begin{figure}[H]
     \begin{center}
@@ -133,12 +133,12 @@ We say two graphs $G$ and $H$ are \textit{isomorphic} if there exists a bijectio
 
     \end{tikzpicture}
 \end{center}
-    \caption{$G\cong H$}
+    \caption{$\text{(Left) }G\cong H \text{ (Right)}$}
     \label{fig:isomorphismexample}
 
 \end{figure}
 
-Graph theorists casually refer to two graphs as the 'same' graph if they are in the same isomorphism class. We will wrap up the fundamentals with a few mdefinitions and some algebraic tools.
+Graph theorists generally consider two graphs to be the same if they are isomorphic because an isomorphism preserves all meaningful structural properties of a graph. We will wrap up the fundamentals with a few definitions and some important operations.
 
 \begin{definition}[Subgraph] A subgraph $G\subseteq K$ is a graph whose vertices and edges are subsets of the vertices and edges of $K$; $G\subseteq K$ if $V(G)\subseteq V(K)$ and $E(G)\subseteq E(K)$.
 \end{definition}
@@ -147,7 +147,7 @@ Graph theorists casually refer to two graphs as the 'same' graph if they are in 
 \begin{definition}[Vertex-induced Subgraph] A \textit{vertex-induced} subgraph $G\subseteq K$ is one whose vertices are some subset of $V(K)$ and whose edges are all edges between those vertices in $K$; $V(G)\subseteq V(K)$ and $E(G)=\{uv\in E(K)\mid u,v\in E(G)\}$. If $G$ is such a subgraph we say that $G$ is induced by $S=V(G)\subseteq V(K)$.
 \end{definition}
 
-\begin{definition}[Edge-induced Subgraph] A \textit{edge-induced} subgraph $G\subseteq K$ is one whose edges are some subset of $E(K)$ and whose vertices are all those who appear as an endpoint in that subset of edges; $E(G)\subseteq E(K)$ and $V(G)=\{v\in V(K)\mid vu\in E(G) \text{or }uv\in E(G)\text{ for some }u\in V(K)\}$. If $G$ is such a subgraph we say that $G$ is induced by $S=E(G)\subset E(K)$
+\begin{definition}[Edge-induced Subgraph] A \textit{edge-induced} subgraph $G\subseteq K$ is one whose edges are some subset of $E(K)$ and whose vertices are all those who appear as an endpoint in that subset of edges; $E(G)\subseteq E(K)$ and $V(G)=\{v\in V(K)\mid vu\in E(G) \text{ or }uv\in E(G)\text{ for some }u\in V(K)\}$. If $G$ is such a subgraph we say that $G$ is induced by $S=E(G)\subset E(K)$
 \end{definition}
 
 Here is a visual example of these types of graphs: Let $K$ be the Petersen graph from Figure \ref{fig:petersen graph}. Now, let
@@ -399,7 +399,7 @@ Here is an example. Let $G=(\{a,b,c\},\{ab,bc,ca\})$ and $H=(\{A,B,C\},\{AB,BC,C
 
 Lastly, we define a few characteristics of graphs and their components. These may or may not be used frequently in this paper, but are important concepts to know in order to be able to talk about graphs comfortably.
 
-Let $G$ be a simple graph. We say two vertices $u,v\in V(G)$ are \textit{adjacent} or \textit{neighbors} if they share an edge $uv\in E(G)$. Similarly, we say a vertex is \textit{incident} with an edge if it is one of it's endpoints; $u\in V(G)$ is incident with $e\in E(G)$ if $e=uv$ for some $v\in V(G)$. The set of all vertices adjacent to $u$ in $G$  is called the \textit{neighborhood} of $v$ denoted $N_{G}(v)$ or simply $N(v)$. Sometimes this is refered to as the open neighborhood of $v$ in $G$ and then the closed neighborhood is defined via $N_{G}[v]=N_{G}(v)\cup \{v\}$. The \textit{degree} of a vertex $v\in V(G)$ is the number of vertices adjacent to it and is denoted via $deg_{G}(v)=|N_{G}(v)|$ or simply $deg(v)$. Equivalently, the degree is the number or edges incident to it or the number of neighbors that $G$ has.
+Let $G$ be a simple graph. We say two vertices $u,v\in V(G)$ are \textit{adjacent} or \textit{neighbors} if they share an edge $uv\in E(G)$. Similarly, we say a vertex is \textit{incident} with an edge if it is one of it's endpoints; $u\in V(G)$ is incident with $e\in E(G)$ if $e=uv$ for some $v\in V(G)$. The set of all vertices adjacent to $u$ in $G$  is called the \textit{neighborhood} of $v$ denoted $N_{G}(v)$ or simply $N(v)$. Sometimes this is refered to as the open neighborhood of $v$ in $G$ and then the closed neighborhood is defined via $N_{G}[v]=N_{G}(v)\cup \{v\}$. The \textit{degree} of a vertex $v\in V(G)$ is the number of vertices adjacent to it and is denoted via $deg_{G}(v)=|N_{G}(v)|$ or simply $deg(v)$. Equivalently, the degree of a vertex $v$ is the number of edges incident with it or the number of neighbors that $v$ has.
 
 The following are three similar types of objects we can form from graphs.
 
@@ -415,15 +415,15 @@ Let $G$ be a graph on $n$ vertices. A \textit{path} in $G$ is a sequence $(v_{0}
 Let $G$ be a graph on $n$ vertices. A \textit{cycle} in $G$ is a sequence $(v_{0},v_{1},\hdots,v_{k},v_{0})$ of internally distinct vertices (distinct except on the endpoints) that begins and terminates at the same vertex $v_{0}$. Often such a cycle is denoted via $(v_{0}v_{1}\cdots v_{k})$ and it is understood that the sequence wraps back around to $v_{0}$ after $v_{k}$. Additionally, the cycle $(v_{0}v_{1}\cdots v_{k})$ is equivalent to $(v_{1}\cdots v_{k}v_{0})$, $(v_{2}\cdots v_{k}v_{0}v_{1}),\hdots$ and so on. 
 \end{definition}
 
-let $G$ be a simple graph. We call $G$ \textit{acyclic} if it contains no cycles. If there exists a path from any vertex to every other vertex in $G$, then we call $G$ \textit{connected}. If not, we call $G$ \textit{disconnected}. We call the set of connected subgraphs of $G$ whose disjoint union equals $G$ the \textit{connected components} of $G$.
+We call a simple graph $G$ \textit{acyclic} if it contains no cycles. If there exists a path from any vertex to every other vertex in $G$, then we call $G$ \textit{connected}. If not, we call $G$ \textit{disconnected}. We call the set of connected subgraphs of $G$ whose disjoint union equals $G$ the \textit{connected components} of $G$.
 
 This concludes the fundamental concepts needed to understand this project. The next and final section of this chapter will introduce all the fundamental families of graphs we refer to in the proceeding chapters.
 
 \section{Fundamental Families of Graphs}
 
-In this section introduce some fundamental families of graphs which we refer to throughout this paper. Often instead of fully defining the graphs being worked with, we simply refer to it as a member of a larger family of graphs. These families are not completely distinct, but sometimes it is helpful to view graphs as a member of one family or another depending on the context.
+In this section we introduce some fundamental families of graphs which we refer to throughout this paper. Often instead of fully defining the graphs being worked with, we simply refer to it as a member of a larger family of graphs or as isomorphic to a family member. Some of these families overlap. It may be helpful to view a graph as a member of one family or another depending on the context. 
 
-Recall that a graph is acyclic if it contains no cycles. Similarly, we call a graph \textit{$k$-cyclic} if it contains exactly $k$ distinct cycles. If $k=2\text{ or }3$ we call it \textit{bicyclic} or \textit{tricyclic}, respectively. In a similar vein, we call a graph \textit{$k$-partite} if we can partition it's vertices into $k$ disjoint sets.If $k=2\text{ or }3$, we call it \textit{bipartite} or \textit{tripartite}, respectively. These are all very broad families of graphs often used to characterize graphs within another family. The following are more nuanced, and more popular families of graphs to work with.
+Recall that a graph is acyclic if it contains no cycles. Similarly, we call a graph \textit{$k$-cyclic} if it contains exactly $k$ distinct cycles. If $k=2\text{ or }3$ we call it \textit{bicyclic} or \textit{tricyclic}, respectively. In a similar vein, we call a graph \textit{$k$-partite} if we can partition it's vertices into $k$ disjoint sets. If $k=2\text{ or }3$, we call it \textit{bipartite} or \textit{tripartite}, respectively. These are very broad families of graphs often used to characterize subsets of graphs within another family. The following are some more important families of graphs.
 
 \begin{definition}[Complete Graph]
     The \textit{complete graph} on $n$ vertices, denoted $K_n$, is the
@@ -687,7 +687,7 @@ Any disjoint union of tree graphs is called a \textit{forest} graph. These graph
     
 
 \begin{definition}[Galaxy Graph]
-    Any disjoint union of star graphs is called a \textit{galaxy} graph. We refer to $G=G_{1}\sqcup \cdots \sqcup G_{k}$ as the \textit{$(G_{1},\hdots,G_{k})$-galaxy} graph if $G_{1},\hdots,G_{k}$ are all stars. This family is a subset of the forest family.
+    Any disjoint union of star graphs is called a \textit{galaxy} graph. We refer to $G=G_{1}\sqcup \cdots \sqcup G_{k}$ as the \textit{$\{G_{1},\hdots,G_{k}\}$-galaxy} graph if $G_{1},\hdots,G_{k}$ are all stars. This family is a subset of the forest family.
 \end{definition}
 
 \begin{figure}[H]
@@ -728,11 +728,11 @@ Any disjoint union of tree graphs is called a \textit{forest} graph. These graph
     
     \end{tikzpicture}
     \end{center}
-    \caption{The $(K_{1,5},K_{1,6})$-Galaxy}
+\caption{The $\{K_{1,5},K_{1,6}\}$-Galaxy}
     \label{fig:galaxy_close}
     \end{figure}
     
-We have now defined a few important families of graphs which we will refer to throughout the rest of this paper. We generally don't explicitly define every graph by its vertices and edges and simply refer to it as some member of one family or say that it is isomorphic to a member of a family. This is much more efficient and concise than listing out all vertices and edges as we did in the beginning of this chapter.
+We have now defined a few important families of graphs which we will refer to throughout the rest of this paper. Again, we generally don't explicitly define every graph by its vertex and edge sets and simply refer to it as some member of one family or say that it is isomorphic to a member of a family. This is much more efficient and concise than listing out all vertices and edges as we did in the beginning of this chapter.
 
 We are now ready to move on and introduce graph decompositions, the objects which are the subject of this project.
   
