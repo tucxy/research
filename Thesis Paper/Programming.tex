@@ -3,7 +3,7 @@ This project required over $450$ labelings of various forests, all of which were
 
 All this programming began because we wanted some sort of local program that could display the labelings, so we could check with some level of certainty that they were isomorphic to the forest being worked with. Everything we found that displayed graphs didn't allow for dragging vertices and/or interacting with graphs at a high level. So we decided to make our own programs.
 
-There are three groups of programs in a dedicated github repository that we provide links for, for the sake of space. Note: the dependencies required to run these are:
+There are three groups of programs in a dedicated github repository that we provide links to, for the sake of space. Note: the dependencies required to run these are:
 
 \setlist[enumerate,1]{label=(\arabic*)}
 \begin{enumerate}
@@ -19,7 +19,7 @@ py -m pip install #enter library name here
 # OR
 python -m pip install #enter library name here
 \end{verbatim}
-depending on how you installed \verb|python| installing packages may not work this way. \verb|Anaconda| is a popular \verb|python| bundle that likely comes with some of these.
+depending on how you install and work with \verb|python|, installing packages may not work this way. \verb|Anaconda| is a popular \verb|python| bundle that likely comes with some of these.
 
 \section{Tikzgrapher}
 
@@ -28,13 +28,13 @@ The file shared here is an earlier version of a program named \verb|tikzgrapher|
 These are the features ordered earliest to latest in this older build of \verb|tikzgrapher|:
 \setlist[enumerate,1]{label=(\arabic*)}
 \begin{enumerate}
-  \item Displays a list of \verb|NetworkX| graphs together on one \verb|Pygame| window, starting from top to bottom.
+  \item Displays a list of \verb|NetworkX| graphs together on one \verb|pygame| window, starting from top to bottom.
   \item Reduces vertices modulo $n$ and computes the standard edge length for each edge modulo $n$, and has the subscript as the additive edge length $\ell_{7}^{+}$.
   \item For each graph in the list given as input: uses a longest path search algorithm and by default displays the longest path of a graph in the center row of a grid of coordinates, then displays vertices coming off of that row.
   \item Has a tab on the left that displays all standard edge lengths $\ell$ and a chart for the subscript labels of the labelings in order. The window with the tab open looks similar to Figure \ref{fig:K21labelingex} except it doesn't have colored edges.
   \item Allows user to save displayed graphs as a \verb|Tikz| graph in a standalone \LaTeX$\,$file to a specified path.
 \end{enumerate}
-We have every single forest labeling in files that import tikzgrapher. If you simply uncomment below a forest, a \verb|pygame| window will pop out and display the labeling. Here are links to those files.
+We have every single forest labeling in files that import this version \verb|tikzgrapher|. If you simply uncomment below a forest, a \verb|pygame| window will pop out and display the labeling. Here are links to those files.
 \begin{enumerate}
   \item $\sigma^{+-}$-labelings: $\newline$\url{https://github.com/tucxy/Thesis-Programs/blob/main/sigma.py}
   \item (1-2-3)-labelings: $\newline$\url{https://github.com/tucxy/Thesis-Programs/blob/main/7mod14.py}
@@ -54,9 +54,9 @@ We have every single forest labeling in files that import tikzgrapher. If you si
 Once again, this version is no longer being updated, the following link will take you to the latest version: $\newline$\url{https://github.com/tucxy/Programming/tree/main/Python/tikzgrapher} \newline
 
 \section{Labeling Solvers}
-This next program is a bit more ambitious. After all labelings were found (of course) we thought, "Hey what if we didn't have to find these by hand?" Initially, we tried to use a genetic learning algorithm but found that the fitness function was too rigid, and realized that reinforcement learning was not the way to go. We found much more success using constraint programming. Using the \verb|z3| SAT solver, we created (1) a solver that outputs a $\sigma^{+-}$-labeling of a graph (if it exists) (2) a graceful labeling of a graph (3) a solver that oututs a more generalized version of the (1-2-3)-labeling for a graph on $m$ edges in $K_{2mt+r}$ where $r$ is an odd idempotent modulo $2m$.
+This next program is a bit more ambitious. After all labelings were found (of course) we thought, "Hey what if we didn't have to find these by hand?" Initially, we tried to use a genetic learning algorithm but found that the fitness function was too rigid, and realized that reinforcement learning was not the way to go. We found much more success using constraint programming. Using the \verb|z3| SAT solver, we created (1) a solver that outputs a $\sigma^{+-}$-labeling of a graph (2) a graceful labeling of a graph (3) a solver that oututs a more generalized version of the (1-2-3)-labeling for a graph on $m$ edges in $K_{2mt+r}$ where $r$ is an odd idempotent modulo $2m$.
 
-The $\sigma^{+-}$-labeling is quite fast, but the other labelings can take up to five minutes or so. In the future, we hope to translate this code to \verb|C++|, to hopefully speed up the process. As of now, it does work however, but the beefier the processor, the better since it is in \verb|python|. Here are the links to this project:
+The $\sigma^{+-}$-labeling is quite fast, but the other labelings can take up to five minutes or so. In the future, we hope to translate this code to \verb|C++|, to hopefully speed up the process. As of now, it does work and the beefier the processor the better. Here are the links to this project:
 
 \begin{enumerate}
   \item  Labeling Solvers: $\newline$\url{https://github.com/tucxy/Thesis-Programs/blob/main/CP.py}
@@ -72,7 +72,7 @@ The $\sigma^{+-}$-labeling is quite fast, but the other labelings can take up to
 \end{figure}
 
 
-These are set up so that if you visit this link: $\newline$\url{https://github.com/tucxy/Thesis-Programs/tree/main} and click the code button: the .zip file installed will when extracted will give you a folder. Make that folder your working directory, and everything should just work.
+These are set up so that if you visit this link: $\newline$\url{https://github.com/tucxy/Thesis-Programs/tree/main} and click the code button: the .zip file installed will give a folder when extracted. Make that folder your working directory, and everything should just work.
 
 \begin{figure}[H]
   \begin{center}

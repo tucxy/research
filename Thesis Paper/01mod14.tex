@@ -3,9 +3,9 @@
 To begin this chapter, we extend intuition developed in the Introduction to present some machinery specific to $K_{n}$ where $n\equiv 0,1\pmod{14}$. This informs the formal definitions and theorems we use for this case.
 
 \section{Construction for $n\equiv 0,1 \pmod{14}$}\label{sec:0,1constr}
-$K_{0}$ and $K_{1}$ don't have enough vertices to contain a forest on seven edges. So $K_{14}$ and $K_{15}$ are the base graphs for $K_{n}$ where $n \equiv 0 \textrm{ or } 1 \pmod{14}$, respectively. We first show how to decompose $K_{14}$ and $K_{15}$ in Subsection \ref{sec:0,1constr-pt1} and then show how to generalize this to their entire families in Subsection \ref{sec:0,1constr-pt2}
+$K_{0}$ and $K_{1}$ don't have enough vertices to contain a forest on seven edges. So $K_{14}$ and $K_{15}$ are the base graphs for $K_{n}$ where $n \equiv 0 \textrm{ or } 1 \pmod{14}$, respectively. We first show how to decompose $K_{14}$ and $K_{15}$ in Subsection \ref{sec:0,1constr-pt1} and then show how to generalize this to their respective families in Subsection \ref{sec:0,1constr-pt2}
 
-To be absolutely clear, \textbf{these are not original ideas as a result of this project}. Rosa and his colleagues developed this decades ago. This is just an explanation from our perspective, of the amazing work of Rosa and his successors in creating graph labelings techniques to solve decomposition problems.
+To be absolutely clear, \textbf{these are not original ideas as a result of this project}. Rosa and his colleagues, developed these labeling ideas decades ago. Other mathematicians since also have also helped in developing labeling techniques since. This is just an explanation from our perspective, of the amazing work of Rosa and his successors in creating graph labelings techniques to solve decomposition problems.
 
 \subsection{$K_{14}$ and $K_{15}$}\label{sec:0,1constr-pt1}
 
@@ -83,7 +83,7 @@ To be absolutely clear, \textbf{these are not original ideas as a result of this
 \label{fig:K14K15colored}
 \end{figure}
 
-Both $K_{14}$ and $K_{15}$ both only have edges with lengths \textcolor{blue}{1} through \textcolor{cyan}{7}, however, there is important distinction in counting edges of one length in $K_{14}$ versus counting them in $K_{15}$. The \textcolor{cyan}{cyan} edges have length \textcolor{cyan}{7}, and convieniently because of the way these graphs are drawn in the figure above, we can easily count them as they form the innermost spoke of the graphs. Because these graphs are so similar we can use one labeling to deal with both at the same time! However, we must be very careful in doing so.
+Both $K_{14}$ and $K_{15}$ only have edges with lengths \textcolor{blue}{1} through \textcolor{cyan}{7}, however, there is important distinction in counting edges of one length in $K_{14}$ versus counting them in $K_{15}$. The \textcolor{cyan}{cyan} edges have length \textcolor{cyan}{7}, and convieniently because of the way these graphs are drawn in the figure above, we can easily count them as they form the innermost spoke of the graphs. Because these graphs are so similar, we can use one labeling to deal with both at the same time! However, we must be very careful in doing so.
 
 In $K_{14}$ there are only 7 edges of length \textcolor{cyan}{7} and 14 edges of all other lengths, yet in $K_{15}$ there are 15 edges of length \textcolor{cyan}{7} along with 15 edges of all other lengths. It turns out this pattern generalizes. For $K_{n}$,
 
@@ -193,7 +193,7 @@ Another reason for doing this is that we will now have $13$ edges of lengths $1$
 
 \noindent It is important to note that we \textbf{must} use edges $uv$ of length $|u-v|$ in $K_{13}$ so they will also have length $|u-v|$ in $K_{14}$ and $K_{15}$ if we want to use one labeling for both cases. We also must ensure that the edge of length $7$ is a pendant edge, so that we can relabel a leaf incident with that edge as $\infty$ without disturbing other edge lengths.
 
-Putting this all together: if we can just use vertex labels from $\ZZ_{13}$ for a labeling of a forest $F$ but only use edges $uv$ of lengths $|u-v|=l$ modulo $14$ for each length $l\in \{1,\hdots,7\}$, ensuring that the edge of length $7$ is a pendant edge: we can (1) simply develop the labeling by $1$ to get the $F$-decomposition of $K_{15}$, then (2) just relabel an endpoint of the length seven edge to $\infty$, and then once more develop by $1$ to get the $F$-decomposition of $K_{14}$. We show an example on the next page.
+Putting this all together: if we can just use vertex labels from $\ZZ_{13}$ for a labeling of a forest $F$ but only use edges $uv$ of lengths $|u-v|=l$ modulo $14$ for each length $l\in \{1,\hdots,7\}$, ensuring that the edge of length $7$ is a pendant edge: we can (1) simply develop the labeling by $1$ to get the $F$-decomposition of $K_{15}$, then (2) just relabel a leaf incident with the length seven edge with $\infty$, and then once more develop by $1$ to get the $F$-decomposition of $K_{14}$. We show an example on the next page.
 
 \begin{figure}[H]
   \begin{center}
@@ -307,7 +307,7 @@ Putting this all together: if we can just use vertex labels from $\ZZ_{13}$ for 
   \end{tikzpicture}
   \end{center}
 
-  \caption{A labeling (left) that gives the $\mathbf{T_{7}^{11}\sqcup T_{2}^{11}}$-decomposition of $K_{14}$ (middle) and $K_{15}$ (right), respectively, when developed by $1$. The leaf $7$ in the pendant edge \textcolor{cyan}{$(0,7)$} (of length \textcolor{cyan}{7} modulo 14 and 15) is relabeled as $\infty$ for $K_{14}$}
+  \caption{A labeling (left) that gives the $\mathbf{T_{7}^{11}\sqcup T_{2}^{11}}$-decomposition of $K_{14}$ (middle) and $K_{15}$ (right), respectively, when developed by $1$. The leaf $7$ in the pendant edge \textcolor{cyan}{$(0,7)$} (of length \textcolor{cyan}{7} modulo 14) is relabeled as $\infty$ for $K_{14}$}
   \label{fig:01decompexample}
 \end{figure}
 \subsection{Stretching a labeling and generalizing to $K_{14t}$ and $K_{14t+1}$ for $t>1$}\label{sec:0,1constr-pt2}
@@ -459,7 +459,7 @@ We begin with the original $\rho$-labeling of a bipartite graph $G$ on $m$ edges
 for all  $uv \in E(G)$.
 \end{definition}
 
-Rosa showed that if a $\rho$-labeling of a graph $G$ with $m$ edges exists, then a cyclic $G$-decomposition of $K_{2m+1}$ exists, which is presented formally later. Later, Rosa and his peers began studying more restrictive types of $\rho$-labelings to decompose more complete graphs. Next, we define some of these labelings and theorems associated with them.
+Rosa showed that if a $\rho$-labeling of a graph $G$ with $m$ edges exists, then a cyclic $G$-decomposition of $K_{2m+1}$ exists, which is the next theorem. Later, Rosa and his peers began studying more restrictive types of $\rho$-labelings to decompose more complete graphs. Next, we define some of these labelings and theorems associated with them.
 
 \begin{thm}[(Rosa \cite{Rosa1967})]\label{thm:Rhosa}  
 Let $G$ be a graph with $m$ edges.  There exists a cyclic $G$-decomposition of $K_{2m+1}$ if and only if $G$ admits a $\rho$-labeling.

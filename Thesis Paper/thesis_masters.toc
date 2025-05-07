@@ -19,7 +19,7 @@
 \contentsline {section}{\numberline {4.1}Construction for $n\equiv 7,8 \pmod {14}$}{28}{section.4.1}%
 \contentsline {subsection}{\numberline {4.1.1}$K_{21}$ and $K_{22}$}{29}{subsection.4.1.1}%
 \contentsline {subsection}{\numberline {4.1.2}Generalizing to $K_{14t+7}$ and $K_{14t+8}$ for $t>1$}{32}{subsection.4.1.2}%
-\contentsline {section}{\numberline {4.2}Results for $n\equiv 7,8 \pmod {14}$}{32}{section.4.2}%
+\contentsline {section}{\numberline {4.2}Results for $n\equiv 7,8 \pmod {14}$}{33}{section.4.2}%
 \contentsline {chapter}{\numberline {5}$\mathbf {T_{7}^{11}\sqcup T_{2}^{1}}$}{38}{chapter.5}%
 \contentsline {chapter}{\numberline {6}Additional Results}{42}{chapter.6}%
 \contentsline {section}{\numberline {6.1}Wraparound edge mappings that preserve lengths}{42}{section.6.1}%
