@@ -2,9 +2,9 @@
 
 \section{Fundamentals of Graph Theory}
 
-Graph Theory is the study of objects called \textit{vertices} or \textit{nodes} and their relationships which we call \textit{edges}. An edge between vertices $u$ and $v$ is typically denoted $uv$ or $(u,v)$. A graph $G$ is formally defined as an ordered pair $G = (V,E)$ where $V$ is the set of all vertices in $G$ and $E$ is the set of all edges between vertices in $G$. These sets are sometimes referred to as $V(G)$ and $E(G)$, respectively.
+Graph Theory is the study of objects called \textit{vertices} or \textit{nodes} and their relationships which we call \textit{edges}. An edge between vertices $u$ and $v$ is typically denoted $uv$ or $(u,v)$. A graph $G$ is formally defined as an ordered pair $G = (V,E)$ where $V$ is the set of all vertices in $G$ and $E$ is the set of all edges between vertices in $G$. These sets are sometimes denoted $V(G)$ and $E(G)$, respectively.
 
-$G$ is called a \textit{simple graph} if: (1) there is at most one edge between any two vertices, (2) there are no edges from a vertex to itself and (3) all edges have no directionality to them, meaning $uv=vu$ for any edge $uv\in E(G)$. For the rest of this paper all graphs we work with are finite simple graphs, but note that many of the proceeding definitions are defined in the same or very similar ways for infinite and directed graphs.
+$G$ is called a \textit{simple graph} if (1) there is at most one edge between any two vertices, (2) there are no edges from a vertex to itself and (3) all edges have no directionality to them, meaning $uv=vu$ for any edge $uv\in E(G)$. For the rest of this paper all graphs we work with are finite simple graphs, but note that many of the proceeding definitions are defined in the same or very similar ways for infinite and directed graphs.
 
 Graphs are more intuitive to work with through their visual representations instead of their formal definitions. Let $G$ be a simple graph where $V(G)=\{A,B,C,D,E,a,b,c,\newline d, e\}$ and $E(G)=\{Aa,Bb,Cc,Dd,Ee,AB,BC,CD,DE,EA,ac,ce,eb,bd,da\}$. G is often called the \textit{Petersen} graph. It's a bit unwieldy when described formally, yet its visual representation is very easy to understand.
 
@@ -53,7 +53,7 @@ Graphs are more intuitive to work with through their visual representations inst
     \label{fig:petersen graph}
     \end{figure}
 
-We say two graphs $G$ and $H$ are \textit{isomorphic} if there exists a bijection from $V(G)$ to $V(H)$ called an \textit{isomorphism} that induces a bijection from $E(G)$ to $E(H)$ and we denote this relationship via $G\cong H$. In other words, we consider two graphs $G,H$ to be the 'same' if we can relabel and move vertices in some fashion (without adding/removing vertices and edges) in visual representations of $G$ and $H$ to go back and forth between the two.
+We say two graphs $G$ and $H$ are \textit{isomorphic} if there exists a bijection from $V(G)$ to $V(H)$ called an \textit{isomorphism} that induces a bijection from $E(G)$ to $E(H)$ and we denote this relationship via $G\cong H$. In other words, we consider two graphs $G\text{ and }H$ to be the `same' if we can relabel and move vertices in some fashion (without adding/removing vertices and edges) in visual representations of $G$ and $H$ to go between the two.
 
 \begin{figure}[H]
     \begin{center}
@@ -133,7 +133,7 @@ We say two graphs $G$ and $H$ are \textit{isomorphic} if there exists a bijectio
 
     \end{tikzpicture}
 \end{center}
-    \caption{$\text{(Left) }G\cong H \text{ (Right)}$}
+    \caption{$\text{(left) }G\cong H \text{ (right)}$}
     \label{fig:isomorphismexample}
 
 \end{figure}
@@ -144,13 +144,12 @@ Graph theorists generally consider two graphs to be the same if they are isomorp
 \end{definition}
 
 
-\begin{definition}[Vertex-induced Subgraph] A \textit{vertex-induced} subgraph $G\subseteq K$ is one whose vertices are some subset of $V(K)$ and whose edges are all edges between those vertices in $K$; $V(G)\subseteq V(K)$ and $E(G)=\{uv\in E(K)\mid u,v\in E(G)\}$. If $G$ is such a subgraph we say that $G$ is induced by $S=V(G)\subseteq V(K)$.
+\begin{definition}[Vertex-induced Subgraph] A \textit{vertex-induced} subgraph $G\subseteq K$ is one whose vertices are some subset of $V(K)$ and whose edges are all edges between those vertices in $K$; $V(G)\subseteq V(K)$ and $E(G)=\{uv\in E(K)\mid u,v\in V(G)\}$. If $G$ is such a subgraph we say that $G$ is induced by $S=V(G)\subseteq V(K)$.
+\end{definition}
+\begin{definition}[Edge-induced Subgraph] A \textit{edge-induced} subgraph $G\subseteq K$ is one whose edges are some subset of $E(K)$ and whose vertices are all those who appear as an endpoint in that subset of edges; $E(G)\subseteq E(K)$ and $V(G)=\{u\in V(K)\mid uv\in E(G)\text{ for some }v\in V(K)\}$. If $G$ is such a subgraph we say that $G$ is induced by $S=E(G)\subseteq E(K)$
 \end{definition}
 
-\begin{definition}[Edge-induced Subgraph] A \textit{edge-induced} subgraph $G\subseteq K$ is one whose edges are some subset of $E(K)$ and whose vertices are all those who appear as an endpoint in that subset of edges; $E(G)\subseteq E(K)$ and $V(G)=\{v\in V(K)\mid vu\in E(G) \text{ or }uv\in E(G)\text{ for some }u\in V(K)\}$. If $G$ is such a subgraph we say that $G$ is induced by $S=E(G)\subset E(K)$
-\end{definition}
-
-Here is a visual example of these types of graphs: Let $K$ be the Petersen graph from Figure \ref{fig:petersen graph}. Now, let
+Here is a visual example of these types of graphs: Let $K$ be the Petersen graph from Figure \ref{fig:petersen graph}.
 \begin{align*}
     &\textbf{Subgraph: } \textcolor{magenta}{G} \subseteq K \text{ where }\textcolor{magenta}{V(G)} = \textcolor{magenta}{\{E, e, b\}},\; \textcolor{magenta}{E(G)} = \textcolor{magenta}{\{Ee\}}.\\
     &\textbf{Vertex-induced Subgraph: } \textcolor{blue}{H} \subseteq K \text{ is induced by } \textcolor{blue}{\{a, A, B\}}\subseteq V(K)\\
@@ -235,13 +234,11 @@ The figure below shows $K$ and it's color-coded subgraphs.
 Next, we will talk about two important operations done on graphs.
 
 \begin{definition}[Graph Union]
-The union of two graphs $G$ and $H$ is simply the graph resulting from the union of their vertices and the union of their edges and is denoted $G\cup H$; $G\cup H=(V(G)\cup V(H),E(G)\cup E(H))$. If $G$ and $H$ are edge-disjoint, we denote their union via $G\sqcup H$ and call it a \textit{disjoint union} of $G$ and $H$.
-\end{definition}
-
-Here is an example of a union and a disjoint union of graphs. Let $G=(\{a,b,c,d\},\{ab,\newline bc,cd,da\}),H=(\{a,b,c\},\{ab,bc,ca\}),\text{ and }K=(\{A,B,C\},\{AB,BC,CA\})$ Then:
+The union of two graphs $G$ and $H$ is simply the graph resulting from the union of their vertices and the union of their edges and is denoted $G\cup H$; $G\cup H=(V(G)\cup V(H),E(G)\cup E(H))$. If $G$ and $H$ are vertex-disjoint, we may denote their union via $G\sqcup H$ and call it a \textit{disjoint union} of $G$ and $H$. If they are only edge-disjoint, we may call it an \textit{edge-disjoint union}. We also use $\sqcup$ in general to denote a union between disjoint sets; $A\sqcup B$ to denotes a union between sets $A$ and $B$ where $A\cap B=\emptyset$.
+\end{definition} Here is an example of a union and a disjoint union of graphs. Let $G=(\{a,b,c,d\},\{ab,\newline bc,cd,da\}),H=(\{a,b,c\},\{ab,bc,ca\}),\text{ and }K=(\{A,B,C\},\{AB,BC,CA\})$ Then:
 \begin{align*}
 &G\cup H = (\{a,b,c,d\},\{ab,bc,cd,da,ca\})\\
-&G\sqcup K=V(G\sqcup K)=(\{a,b,c,d,A,B,C\},\{ab,bc,cd,da,AB,BC,CA\})
+&G\sqcup K=(\{a,b,c,d,A,B,C\},\{ab,bc,cd,da,AB,BC,CA\})
 \end{align*}
 These unions are depicted in the following figure.
 \begin{figure}[H]
@@ -333,11 +330,11 @@ These unions are depicted in the following figure.
     \label{fig:unions}
 \end{figure}
 
-Next, we define another very important operation that combines two graphs in a different manner.
+Next, we define another very important operation that combines two vertex disjoint graphs in a different manner.
 
 \begin{definition}[Join]
     Let $G$ and $H$ be vertex disjoint graphs. Their
-    \textit{join}, denoted via $G \vee H$, is the graph obtained by
+    \textit{join}, denoted $G \vee H$, is the graph obtained by
     taking the disjoint union of $G$ and $H$ and adding all
     possible edges between every vertex in $G$ and every vertex
     in $H$. Formally:
@@ -393,22 +390,22 @@ Here is an example. Let $G=(\{a,b,c\},\{ab,bc,ca\})$ and $H=(\{A,B,C\},\{AB,BC,C
             \end{scope}
         \end{tikzpicture}
     \end{center}
-    \caption{(above)$\,G\cup H$ and (below)$\,G\sqcup K$}
+    \caption{$\,G\vee H$}
     \label{fig:join}
 \end{figure}
 
 Lastly, we define a few characteristics of graphs and their components. These may or may not be used frequently in this paper, but are important concepts to know in order to be able to talk about graphs comfortably.
 
-Let $G$ be a simple graph. We say two vertices $u,v\in V(G)$ are \textit{adjacent} or \textit{neighbors} if they share an edge $uv\in E(G)$. Similarly, we say a vertex is \textit{incident} with an edge if it is one of it's endpoints; $u\in V(G)$ is incident with $e\in E(G)$ if $e=uv$ for some $v\in V(G)$. The set of all vertices adjacent to $u$ in $G$  is called the \textit{neighborhood} of $v$ denoted $N_{G}(v)$ or simply $N(v)$. Sometimes this is refered to as the open neighborhood of $v$ in $G$ and then the closed neighborhood is defined via $N_{G}[v]=N_{G}(v)\cup \{v\}$. The \textit{degree} of a vertex $v\in V(G)$ is the number of vertices adjacent to it and is denoted via $deg_{G}(v)=|N_{G}(v)|$ or simply $deg(v)$. Equivalently, the degree of a vertex $v$ is the number of edges incident with it or the number of neighbors that $v$ has.
+Let $G$ be a simple graph. We say two vertices $u,v\in V(G)$ are \textit{adjacent} or \textit{neighbors} if they share an edge $uv\in E(G)$. Similarly, we say a vertex is \textit{incident} with an edge if it is one of it's endpoints; $u\in V(G)$ is incident with $e\in E(G)$ if $e=uv$ for some $v\in V(G)$. The set of all vertices adjacent to $u$ in $G$  is called the \textit{neighborhood} of $v$ denoted $N_{G}(v)$ or simply $N(v)$. Sometimes this is refered to as the open neighborhood of $v$ in $G$ and then the closed neighborhood is defined via $N_{G}[v]=N_{G}(v)\cup \{v\}$. The \textit{degree} of a vertex $v\in V(G)$ is the number of vertices adjacent to it and is denoted $deg_{G}(v)=|N_{G}(v)|$ or simply $deg(v)$. Equivalently, the degree of a vertex $v$ is the number of edges incident with it or the number of neighbors that $v$ has. We call a vertex of degree $1$ a \textit{leaf} and an edge incident with a leaf a \textit{pendant} edge.
 
-The following are three similar types of objects we can form from graphs.
+The following are three similar types of objects found in graphs.
 
 \begin{definition}[Walk]
-Let $G$ be a graph on $n$ vertices. A \textit{walk} in $G$ is a sequence $(w_{0},w_{1},\hdots,w_{k})$ of vertices in $G$ whose adjacent elements must be adjacent in $G$. Adjacent elements in a walk much be distinct vertices but a vertex may be repeated multiple times.
+Let $G$ be a graph on $n$ vertices. A \textit{walk} in $G$ is a sequence $(w_{0},w_{1},\hdots,w_{k})$ of vertices in $G$ whose adjacent elements must be adjacent in $G$. Adjacent elements in a walk must be distinct vertices but a vertex may be repeated multiple times throughout the sequence.
 \end{definition}
 
 \begin{definition}[Path]
-Let $G$ be a graph on $n$ vertices. A \textit{path} in $G$ is a sequence $(v_{0},v_{1},\hdots,v_{k})$ of distinct vertices in $G$ whose adjacent elements must be adjacent in $G$, and where no vertex is repeated. This sequence gives the subgraph of $G$ induced by $\{v_{0}v_{1},v_{1}v_{2},\hdots,v_{k-1}v_{k}\}$.
+Let $G$ be a graph on $n$ vertices. A \textit{path} in $G$ is a sequence $(v_{0},v_{1},\hdots,v_{k})$ of distinct vertices in $G$ whose adjacent elements must be adjacent in $G$, and where no vertex is repeated throughout the sequence. This sequence gives the subgraph of $G$ induced by $\{v_{0}v_{1},v_{1}v_{2},\hdots,v_{k-1}v_{k}\}$.
 \end{definition}
 
 \begin{definition}[Cycle]
@@ -553,7 +550,7 @@ If all partite sets are the same size $n$ we call this graph the \textit{complet
        
 
 \begin{definition}[Cycle Graph]
-The \textit{cycle graph} on $n$ vertices denoted $C_{n}$ is a graph with exactly one cycle containing all of it's edges.
+The \textit{cycle graph} on $n$ vertices denoted $C_{n}$ is a graph with exactly one cycle containing all of it's vertices.
 \end{definition}
 
 \begin{figure}[H]
@@ -601,12 +598,12 @@ A \textit{tree} is any connected acyclic graph. Trees on $n$ vertices have $n-1$
     
     \end{tikzpicture}
     \end{center}
-    \caption{A Tree Graph on 6 vertices}
+    \caption{A tree on 6 vertices}
     \label{fig:tree_lobster_style}
     \end{figure}
     
 \begin{definition}[Path Graph]
-The \textit{path} graph on $n$ vertices, denoted $P_n$, is an acyclic graph with exactly one path containing all of it's edges. All paths are trees.
+The \textit{path} graph on $n$ vertices, denoted $P_n$, is an acyclic graph with exactly one path containing all of it's vertices. All paths are trees.
 \end{definition}
 
 \begin{figure}[H]
@@ -624,12 +621,12 @@ The \textit{path} graph on $n$ vertices, denoted $P_n$, is an acyclic graph with
     
     \end{tikzpicture}
     \end{center}
-    \caption{The Path Graph \( P_4 \)}
+    \caption{The path \( P_4 \)}
     \label{fig:path-p4}
     \end{figure}
 
 \begin{definition}[Star Graph]
-The \textit{star graph} on $n+1$ vertices, denoted $K_{1,n}$ (or $S_{n+1}$ which we never use in this paper) consisting of one central \textit{hub} vertex adjacent to $n$ \textit{outer} vertices, with no other edges. All stars are trees. Sometimes this graph is refered to as an \textit{n-star}.
+The \textit{star graph} on $n+1$ vertices, denoted $K_{1,n}$ (or $S_{n+1}$ which we never use in this paper) consisting of one central \textit{hub} vertex adjacent to $n$ \textit{outer} vertices, with no other edges. All stars are trees. Sometimes this graph is refered to as an \textit{n-star} or \textit{n-edge star}.
 \end{definition}
 
 \begin{figure}[H]
@@ -649,7 +646,7 @@ The \textit{star graph} on $n+1$ vertices, denoted $K_{1,n}$ (or $S_{n+1}$ which
     
     \end{tikzpicture}
     \end{center}
-    \caption{The $7$-star (\(K_{1,7}\))}
+    \caption{The $7$-star $K_{1,7}$}
     \label{fig:star-7}
     \end{figure}
     
@@ -687,7 +684,7 @@ Any disjoint union of tree graphs is called a \textit{forest} graph. These graph
     
 
 \begin{definition}[Galaxy Graph]
-    Any disjoint union of star graphs is called a \textit{galaxy} graph. We refer to $G=G_{1}\sqcup \cdots \sqcup G_{k}$ as the \textit{$\{G_{1},\hdots,G_{k}\}$-galaxy} graph if $G_{1},\hdots,G_{k}$ are all stars. This family is a subset of the forest family.
+    Any disjoint union of star graphs is called a \textit{galaxy} graph. We refer to $G=G_{1}\sqcup \cdots \sqcup G_{k}$ as the \textit{$\{G_{1},\hdots,G_{k}\}$-galaxy} graph if $G_{1},\hdots,G_{k}$ are all stars. All galaxies are forests.
 \end{definition}
 
 \begin{figure}[H]

@@ -13,23 +13,23 @@
 \contentsline {chapter}{\numberline {3}$\mathbf {n\equiv 0,1\textbf {(mod 14)}}$}{18}{chapter.3}%
 \contentsline {section}{\numberline {3.1}Construction for $n\equiv 0,1 \pmod {14}$}{18}{section.3.1}%
 \contentsline {subsection}{\numberline {3.1.1}$K_{14}$ and $K_{15}$}{19}{subsection.3.1.1}%
-\contentsline {subsection}{\numberline {3.1.2}Stretching a labeling}{21}{subsection.3.1.2}%
+\contentsline {subsection}{\numberline {3.1.2}Stretching a labeling and generalizing to $K_{14t}$ and $K_{14t+1}$ for $t>1$}{21}{subsection.3.1.2}%
 \contentsline {section}{\numberline {3.2}Results for $n\equiv 0,1 \pmod {14}$}{24}{section.3.2}%
 \contentsline {chapter}{\numberline {4}$\mathbf {n\equiv 7,8\textbf {(mod 14)}}$}{28}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Construction}{28}{section.4.1}%
+\contentsline {section}{\numberline {4.1}Construction for $n\equiv 7,8 \pmod {14}$}{28}{section.4.1}%
 \contentsline {subsection}{\numberline {4.1.1}$K_{21}$ and $K_{22}$}{29}{subsection.4.1.1}%
-\contentsline {subsection}{\numberline {4.1.2}Generalizing to $K_{14t+7}$ and $K_{14t+8}$ where $t>1$}{31}{subsection.4.1.2}%
-\contentsline {section}{\numberline {4.2}Results}{32}{section.4.2}%
-\contentsline {chapter}{\numberline {5}$\mathbf {T_{7}^{11}\sqcup T_{2}^{1}}$}{37}{chapter.5}%
-\contentsline {chapter}{\numberline {6}Additional Results}{41}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Wraparound edge mappings that preserve lengths}{41}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Galaxy Decompositions of Complete Bipartite Graphs}{46}{section.6.2}%
-\contentsline {chapter}{\numberline {7}Programming}{48}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Tikzgrapher}{49}{section.7.1}%
-\contentsline {section}{\numberline {7.2}Labeling Solvers}{51}{section.7.2}%
-\contentsline {chapter}{\numberline {8}Conclusion and Discussion}{53}{chapter.8}%
-\contentsline {chapter}{References}{54}{chapter*.45}%
-\contentsline {chapter}{\appnumberline {A}Labelings}{55}{appendix.A}%
-\contentsline {section}{\numberline {A.1}(1-2-3)-labelings}{55}{section.A.1}%
-\contentsline {section}{\numberline {A.2}1-rotational (1-2-3)-labelings}{62}{section.A.2}%
-\contentsline {section}{\numberline {A.3}$\mathbf {T_{7}^{11}}\sqcup \mathbf {T_{2}^{1}}$-decompositions of $K_{21}$ and $K_{22}$}{70}{section.A.3}%
+\contentsline {subsection}{\numberline {4.1.2}Generalizing to $K_{14t+7}$ and $K_{14t+8}$ for $t>1$}{32}{subsection.4.1.2}%
+\contentsline {section}{\numberline {4.2}Results for $n\equiv 7,8 \pmod {14}$}{32}{section.4.2}%
+\contentsline {chapter}{\numberline {5}$\mathbf {T_{7}^{11}\sqcup T_{2}^{1}}$}{38}{chapter.5}%
+\contentsline {chapter}{\numberline {6}Additional Results}{42}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Wraparound edge mappings that preserve lengths}{42}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Galaxy Decompositions of Complete Bipartite Graphs}{47}{section.6.2}%
+\contentsline {chapter}{\numberline {7}Programming}{49}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Tikzgrapher}{50}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Labeling Solvers}{52}{section.7.2}%
+\contentsline {chapter}{\numberline {8}Conclusion}{54}{chapter.8}%
+\contentsline {chapter}{References}{55}{chapter*.45}%
+\contentsline {chapter}{\appnumberline {A}Labelings}{56}{appendix.A}%
+\contentsline {section}{\numberline {A.1}(1-2-3)-labelings}{56}{section.A.1}%
+\contentsline {section}{\numberline {A.2}1-rotational (1-2-3)-labelings}{63}{section.A.2}%
+\contentsline {section}{\numberline {A.3}$\mathbf {T_{7}^{11}}\sqcup \mathbf {T_{2}^{1}}$-decompositions of $K_{21}$ and $K_{22}$}{71}{section.A.3}%

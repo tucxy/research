@@ -159,22 +159,23 @@ To begin we construct $K_{14t+7}$ and $K_{14t+8}$ using joined copies of $K_{22}
   
       \end{tikzpicture}
     \end{center}
-    \caption{A new construction for $K_{14t+7}$ and $K_{14t+8}$}
+    \caption{A different construction for $K_{14t+7}$ and $K_{14t+8}$}
     \label{fig:newconstrK21K22}
   \end{figure}
-Equivalently, We can view $K_{14t+7}$ as $K_{t}$ whose 'vertices' are $K_{14}$ except one which is $K_{21}$, and whose edges are the join between them. We will refer to these 'vertices' as nodes. Similarly, we can view $K_{14t+8}$ as $K_{t}$ whose nodes are are $K_{14}$ except one which is $K_{22}$, and whose edges are the join between them. Notice in Figure \ref{fig:newconstrK21K22} that all edges in the $K_{t}$ constructions of these families are then the edges of $K_{14,14}$, $K_{21,14}$, and $K_{22,14}$.
+Equivalently, We can view $K_{14t+7}$ as $K_{t}$ whose `vertices' are $K_{14}$ except one which is $K_{21}$, and whose edges are the join between them. We will refer to these `vertices' as nodes. Similarly, we can view $K_{14t+8}$ as $K_{t}$ whose nodes are are $K_{14}$ except one which is $K_{22}$, and whose edges are the join between them. Notice in Figure \ref{fig:newconstrK21K22} that all edges in the $K_{t}$ constructions of these families are then the edges of $K_{14,14}$, $K_{21,14}$, and $K_{22,14}$.
 
-We show that $\mathbf{T_{7}^{11}}\sqcup\mathbf{T_{2}^{1}}$ decomposes $K_{n}$ for $n\equiv7 \textrm{ or }8\pmod{14}$ where $n\geq 21$ by proving that $K_{22}$, $K_{21}$, $K_{14}$, $K_{22,14}$, $K_{21,14}$, and $K_{14,14}$ can each be decomposed by $\mathbf{T_{7}^{11}}\sqcup\mathbf{T_{2}^{1}}$ since these six graphs make up the nodes and edges of the $K_{t}$ representations of $K_{14t+7}$ and $K_{14t+8}$ where $t\geq t$.\newline
+We show that $\mathbf{T_{7}^{11}}\sqcup\mathbf{T_{2}^{1}}$ decomposes $K_{n}$ for $n\equiv7 \textrm{ or }8\pmod{14}$ where $n\geq 21$ by proving that $K_{22}$, $K_{21}$, $K_{14}$, $K_{22,14}$, $K_{21,14}$, and $K_{14,14}$ can each be decomposed by $\mathbf{T_{7}^{11}}\sqcup\mathbf{T_{2}^{1}}$ since these six graphs make up the nodes and edges of the $K_{t}$ representations of $K_{14t+7}$ and $K_{14t+8}$ where $t\geq t$.
 
-We begin with $K_{21}$ and $K_{22}$. The proof of the next theorem was obtained by manipulating a $K_{1,7}$-decomposition of $K_{21}$ by Cain in \cite{Cain}. We 'plucked' edges off of every $7$-edge star in the decomposition, put them to the side, and then sent them to $6$-edge stars that they were vertex disjoint from. This gave us a $\mathbf{T_{7}^{11}}\sqcup\mathbf{T_{2}^{1}}$-decomposition of $K_{21}$ which can be found in Figure \ref{tab:starpathK21}. Then, we just added three $6$-edge stars centered at $\infty$, and three distinct paths from $\infty$ to the remaining three neighbors of $\infty$ in $K_{22}$. We once again put all the lone paths aside, and sent them to $6$-edge stars that they were vertex disjoint from them. This gave us a $\mathbf{T_{7}^{11}}\sqcup\mathbf{T_{2}^{1}}$-decomposition of $K_{22}$ which can be found in Figure \ref{tab:starpathK22}.
+We begin with $K_{21}$ and $K_{22}$. The proof of the next theorem was obtained by manipulating a $K_{1,7}$-decomposition of $K_{21}$ by Cain in \cite{Cain1974}. We `plucked edges off' of every $7$-edge star in the decomposition, put them to the side, and then sent them to $6$-edge stars that they were vertex disjoint from. This gave us a $\mathbf{T_{7}^{11}}\sqcup\mathbf{T_{2}^{1}}$-decomposition of $K_{21}$ which can be found in Table \ref{tab:starpathK21}. Then, we just added three $6$-edge stars centered at $\infty$, and three distinct single edge paths from $\infty$ to the remaining three neighbors of $\infty$ in $K_{22}$ not covered in the stars. We once again put all the lone paths aside, and sent them to $6$-edge stars that they were vertex disjoint from them. This gave us a $\mathbf{T_{7}^{11}}\sqcup\mathbf{T_{2}^{1}}$-decomposition of $K_{22}$ which can be found in Table \ref{tab:starpathK22}.
 \begin{thm}\label{thm:PCstarpath}
     $\mathbf{T_{7}^{11}}\sqcup\mathbf{T_{2}^{1}}$ decomposes $K_{21}$ and $K_{22}$.
 \end{thm}
 
 \begin{proof}
      Figures 8 and 9 give $\mathbf{T_{7}^{11}}\sqcup\mathbf{T_{2}^{1}}$-decompositions of $K_{21}$ and $K_{22}$, respectively.%The table will contain ad-hoc decompositions of $K_{21}$ and $K_{22}$. The construction for $K_{21}$ results from plucking edges off of Pauline Cain's $7$-star decomposition of $K_{21}$ and mixing them around, and The construction for $K_{22}$ results from adding three stars centered at $\infty$ and three lone paths beginning at $\infty$. Once again, edges are plucked off and mixed around to make this work.
+
 \end{proof}
-We didn't need to develop anything formally to do this as we only performed this process once for the given $7$-edge star decomposition of $K_{21}$. Initially, we were interested in proving a more stronger statement resulting from Cain's work, but found it difficult. Investigating implications of Cain's work \cite{Cain} from 1974 is something we are interested in for future work.
+We didn't need to develop anything formally to do this as we only performed this process once for the given $7$-edge star decomposition of $K_{21}$. Initially, we were interested in proving a more stronger statement resulting from Cain's work, but found it difficult. Investigating implications of Cain's work \cite{Cain1974} from 1974 is something we are interested in for future work.
 
 Next, we address $K_{22,14}$, $K_{21,14}$, and $K_{14,14}$. 
 \newpage
@@ -195,7 +196,7 @@ Next, we address $K_{22,14}$, $K_{21,14}$, and $K_{14,14}$.
     \noindent Notice that $E_{i}\cap E_{j}=\emptyset$ if $i\neq j$, so by definition all distinct $G_{i}$'s are pairwise edge disjoint. Lastly,
     $$\bigcup_{i\in \ZZ_{n}} E_{i}=[\bigcup_{i\in \ZZ_{n}} \{(i,0)\}]\sqcup [\bigcup_{i\in \ZZ_{n}} (\{i+1\}\times \{1,\hdots, 6\})]=[\ZZ_{n}\times \{0\}]\sqcup [\ZZ_{n}\times \{1,\hdots, 6\}]=\ZZ_{n}\times \ZZ_{7}$$
     
-    \noindent So $G_{0}\sqcup \cdots \sqcup G_{n-1}=K_{n,7}$ and $\{G_{i}\mid i\in \ZZ_{n}\}$ is a $\mathbf{T_{7}^{11}}\sqcup\mathbf{T_{2}^{1}}-$decomposition of $K_{n,7}$. Furthermore, it is generated by developing the white nodes of $G_{0}$ by $1$.
+    \noindent So $G_{0}\cup \cdots \cup G_{n-1}=K_{n,7}$ and $\{G_{i}\mid i\in \ZZ_{n}\}$ is a $\mathbf{T_{7}^{11}}\sqcup\mathbf{T_{2}^{1}}-$decomposition of $K_{n,7}$. Furthermore, it is generated by developing the white vertices of $G_{0}$ by $1$.
 \end{proof}
 
 %old proof:
