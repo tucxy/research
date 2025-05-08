@@ -4,9 +4,9 @@ We present two main additional results produced by work done on this project. (1
 
 \section{Wraparound edge mappings that preserve lengths}
 
-These mappings only apply to vertices in $K_{2mt+m}$ and $K_{2mt+(m+1)}$ where $m>1$ is odd. Also, these are meant to be used in labelings which will be developed by $m$, such as our (1-2-3)-labelings and 1-rotational (1-2-3)-labelings, otherwise you could just map them anywhere really. Anyways, this is a somewhat invasive way to deal with wraparound edges, and it should be noted that this is a barebones sort of framework to begin dealing with wraparound edges in labelings. Note that `new' short edge mappings will be fixed after the first step from the base graphs. However the `new' wraparound edges will change at every step.
+These mappings only apply to vertices in $K_{2mt+m}$ and $K_{2mt+(m+1)}$ where $m>1$ is odd. Also, these are meant to be used in labelings which will be developed by $m$, such as our (1-2-3)-labelings and 1-rotational (1-2-3)-labelings, otherwise one could just map them anywhere really. Anyways, this is a somewhat invasive way to deal with wraparound edges, and it should be noted that this is a barebones sort of framework to begin dealing with wraparound edges in labelings. Note that `new' short edge mappings will be fixed after the first step from the base graphs. However the `new' wraparound edges will change at every step.
 
-If $uv$ is a wraparound edge of length $l$ in $K_{3m}$, it's length eventually won't be preserved at some step $t\mapsto t+c$ for $c\geq 1$ in the infinite family of graphs of the form $K_{2mt+m}$. So the idea is, maybe we can map the wraparound edge to a (1) a short edge of length $l$ at each step $t\mapsto t+1$ or (2) a wraparound edge of length $l$ at each step $t\mapsto t+1$ so that lengths will be preserved. The next theorem is something alluded to as an observation to previously, but we prove it anyways.\newpage
+If $uv$ is a wraparound edge of length $l$ in $K_{3m}$, its length eventually will not be preserved at some step $t\mapsto t+c$ for $c\geq 1$ in the infinite family of graphs of the form $K_{2mt+m}$. So the idea is, maybe we can map the wraparound edge to a (1) a short edge of length $l$ at each step $t\mapsto t+1$ or (2) a wraparound edge of length $l$ at each step $t\mapsto t+1$ so that lengths will be preserved. The next theorem is something alluded to as an observation to previously, but we prove it anyways.\newpage
 \begin{thm} \label{thm:wraplarger}
     In $K_{n}$ whose vertices we take to be $\ZZ_{n}$, $uv$ is a wraparound edge if and only if the absolute difference of its endpoints is greater than the maximal length in $K_{n};\floor{\frac{n}{2}}<|u-v|$. 
     \begin{proof}
@@ -56,9 +56,9 @@ Since $uv$ is a wraparound edge where $u<v$, $\ell_{3m}(u,v)=3m-|u-v|=3m-(v-u)=3
 \noindent (wraparound): Instead, let $\alpha =a,\beta=b+h\in \ZZ_{2mt+m}$. Clearly, $\alpha=a<b+h=\beta$. So $|\alpha-\beta|=\beta-\alpha=b+h-a$. Recall that $ab$ is a wraparound edge in $K_{3m}$ with $a<b$. So then $|a-b|=b-a>m+k$, the maximal length in $K_{3m}$. So then $|\alpha-\beta|=b-a+h>m+k+h=m+k+2m(t-1)$. Now, the maximal length in $K_{2mt+m}$ is $\floor{\frac{2mt+m}{2}}=mt+k=m+k+m(t-1)$. Well, (i) $(2m(t^{*}-1))_{t^{*}\geq 2}$ and (ii) $(m(t^{*}-1))_{t^{*}\geq 2}$ are both arithmetic sequences with increments $2m$ and $m$, respectively. Both expressions are only equal at $t^{*}=1$, and then afterwards $(i)$ increases faster than $(ii)$. So then we see that $2m(t-1)>m(t-1)$ for all $t>1$, and thus, $|\alpha-\beta|=b-a+h>m+k+h=m+k+2m(t-1)>m+k+m(t-1)$, the maximal length in $K_{2mt+m}$ for $t>1$. So then $\alpha\beta$ is a wraparound edge in $K_{2mt+m}$ of length $2mt-m-|\alpha-\beta|=2mt+m-\beta-\alpha=2mt+m - (b-a+h)= 2mt+m-2m(t-1)+a-b=3m+a-b=\ell_{ab}$.
 
 \end{proof}
-Note that if we develop the mapped endpoints in (Short) and (Wraparound) by $c\in \NN$, edge lengths $\ell_{2mt+m},\ell_{m}^{+}$ are still preserved. Now, we don't provide any kind of labeling to extend this theorem, but we do provide some `guardrails' that one can implement in their labeling to avoid certain problems. Besides changing lengths of edges incident to vertices mapped this way in higher order family members, the only thing to worry about is the possibility that an endpoint mapped in a higher order complete graph actually collides with another vertex incident to a short edge (since most labels will presumably not be mapped). This can happen. However the next theorem gives way to a corollary that guarantees this won't happen given certain conditions as met.\newline
+Note that if we develop the mapped endpoints in (short) and (wraparound) by $c\in \NN$, edge lengths $\ell_{2mt+m},\ell_{m}^{+}$ are still preserved. Now, we don't provide any kind of labeling to extend this theorem, but we do provide some `guardrails' that one can implement in their labeling to avoid certain problems. Besides changing lengths of edges incident to vertices mapped this way in higher order family members, the only thing to worry about is the possibility that an endpoint mapped in a higher order complete graph actually collides with another vertex incident to a short edge (since most labels will presumably not be mapped). This can happen. However the next theorem gives way to a corollary that guarantees this will not happen given certain conditions are met.\newline
 \begin{thm}
-  Let $m>1\text{ be odd},t>1,\text{ and } h = 2m(t-1)$. Now take the vertices of $K_{3m}$ and $K_{2mt+m}$ to be $\ZZ_{3m}$ and $\ZZ_{2mt+m}$, respectively, and let $a,b$ be distinct vertices in $K_{3m}$ with $a<b$. Then,
+  Let $m>1\text{ be odd},t>1,\text{ and } h = 2m(t-1)$. Now let the vertices of $K_{3m}$ and $K_{2mt+m}$ to be $\ZZ_{3m}$ and $\ZZ_{2mt+m}$, respectively, and let $a,b$ be distinct vertices in $K_{3m}$ with $a<b$. Then,
     $$b-a\neq m\text{ or }b\not\equiv a\Mod{m}\Rightarrow a-h \neq b+h\text{ in }\ZZ_{2mt+m}$$
 
     \begin{proof}
@@ -95,7 +95,7 @@ Note that if we develop the mapped endpoints in (Short) and (Wraparound) by $c\i
 
 \section{Galaxy Decompositions of Complete Bipartite Graphs}
 
-In Chapter \ref{chap:special case}, we address $\mathbf{T_{7}^{11}}\sqcup\mathbf{T_{2}^{1}}$ in the context of our forest decompositions but it is also a galaxy. After finding the labeling in \ref{fig:starpathbip}, it became clear we could generalize this idea to all galaxies. We begin with galaxy decompositions of complete bipartites.
+In Chapter \ref{chap:special case}, we view $\mathbf{T_{7}^{11}}\sqcup\mathbf{T_{2}^{1}}$ as a forest, but it is also a galaxy. After finding the labeling in Figure \ref{fig:starpathbip}, it became clear we could generalize this idea to all galaxies. We begin with galaxy decompositions of complete bipartite graphs.
 
 \begin{thm}\label{thm:galdecomp}
 Let $N\text{ and }m$ be positive integers and consider the complete bipartite $K_{N,m}$ with a finite collection $C=\{G_{i}\mid i\in \ZZ_{n}\}$ of vertex disjoint stars. If $0<n\leq N$ and $m=\sum_{i\in \ZZ_{n}}|E(G_{i})|$, then there exists a $C$-galaxy decomposition of $K_{N,m}$.
@@ -122,6 +122,5 @@ Let $m$ be a positive integer and $N_{0},\hdots,N_{k-1}$ be positive integers wh
 \end{corollary}
 \begin{proof}
 Let $d_{i}=\frac{n_{i}}{m}$ for each $i\in \ZZ_{k}$. $K_{N_{1},\hdots,N_{k}}$ can be viewed as the union of $\sum\limits_{0\leq i<j<k} d_{i}d_{j}$ copies of $K_{m,m}$. Well, $m=\sum_{i\in \ZZ_{n}} |E(G_{i})|$ so the maximal number of stars $n$ in $C$ is $m$, so $n\leq m$ and by Theorem \ref{thm:galdecomp} the $C$-galaxy decomposes $K_{m,m}$. Therefore the $C$-galaxy decomposes any number of copies of $K_{m,m}$ and so it decomposes $K_{N_{1},\hdots,N_{k}}$.
-
 \end{proof}
 This corollary concludes this chapter and the results of this thesis project. We hope to extend this galaxy idea in future work. The next section contains \verb|python| programs made for this project.

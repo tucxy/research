@@ -1,7 +1,7 @@
 \chapter{Programming}\label{chap:programming}
 This project required over $450$ labelings of various forests, all of which were found by hand. At around $200$ labelings it became clear that due to the sheer number of labelings being done, just probablistically some labelings would (1) have typos (2) have incorrect computations and (3) violate some constraint of the labeling.
 
-All this programming began because we wanted some sort of local program that could display the labelings, so we could check with some level of certainty that they were isomorphic to the forest being worked with. Everything we found that displayed graphs didn't allow for dragging vertices and/or interacting with graphs at a high level. So we decided to make our own programs.
+All this programming began because we wanted some sort of local program that could display the labelings, so we could check with some level of certainty that they were isomorphic to the forest being worked with. Everything we found that displayed graphs did not allow for dragging vertices and/or interacting with graphs at a high level. So we decided to make our own programs.
 
 There are three groups of programs in a dedicated github repository that we provide links to, for the sake of space. Note: the dependencies required to run these are:
 
@@ -54,7 +54,7 @@ We have every single forest labeling in files that import this version \verb|tik
 Once again, this version is no longer being updated, the following link will take you to the latest version: $\newline$\url{https://github.com/tucxy/Programming/tree/main/Python/tikzgrapher} \newline
 
 \section{Labeling Solvers}
-This next program is a bit more ambitious. After all labelings were found (of course) we thought, "Hey what if we didn't have to find these by hand?" Initially, we tried to use a genetic learning algorithm but found that the fitness function was too rigid, and realized that reinforcement learning was not the way to go. We found much more success using constraint programming. Using the \verb|z3| SAT solver, we created (1) a solver that outputs a $\sigma^{+-}$-labeling of a graph (2) a graceful labeling of a graph (3) a solver that oututs a more generalized version of the (1-2-3)-labeling for a graph on $m$ edges in $K_{2mt+r}$ where $r$ is an odd idempotent modulo $2m$.
+This next program is a bit more ambitious. After all labelings were found (of course) we thought, "Hey what if we didn't have to find these by hand?" Initially, we tried to use a genetic learning algorithm but found that the fitness function was too rigid, and realized that reinforcement learning was not the way to go. We found much more success using constraint programming. Using the \verb|z3| SAT solver, we created (1) a solver that outputs a $\sigma^{+-}$-labeling of a graph (2) a graceful labeling of a graph (3) a solver that outputs a more generalized version of the (1-2-3)-labeling for a graph on $m$ edges in $K_{2mt+r}$ where $r$ is an odd idempotent modulo $2m$.
 
 The $\sigma^{+-}$-labeling is quite fast, but the other labelings can take up to five minutes or so. In the future, we hope to translate this code to \verb|C++|, to hopefully speed up the process. As of now, it does work and the beefier the processor the better. Here are the links to this project:
 

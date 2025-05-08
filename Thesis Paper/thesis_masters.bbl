@@ -1,4 +1,4 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 
 \bibitem{Cain1974}
 P.~Cain.
@@ -45,5 +45,10 @@ T.~P. Kirkman.
 T.~P. Kirkman.
 \newblock Answer to query vi.
 \newblock {\em The Lady's and Gentleman's Diary}, page~48, 1851.
+
+\bibitem{deWerra1970}
+D.~de~Werra.
+\newblock On some combinatorial problems arising in scheduling.
+\newblock {\em INFOR}, 8:165--175, 1970.
 
 \end{thebibliography}
