@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.24)  8 MAY 2025 07:44
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.24)  22 MAY 2025 00:53
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -861,7 +861,11 @@ File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count367
 \l__pdf_internal_box=\box107
-) (./thesis_masters.aux (./title.aux) (./Background.aux) (./intro.aux) (./01mod14.aux) (./78mod14.aux) (./specialcase.aux) (./AdditionalResults.aux) (./Programming.aux
+) (./thesis_masters.aux (./title.aux) (./Background.aux) (./intro.aux) (./01mod14.aux
+
+LaTeX Warning: Label `tab:sigmapm' multiply defined.
+
+) (./78mod14.aux) (./specialcase.aux) (./AdditionalResults.aux) (./Programming.aux
 
 LaTeX Warning: Label `fig:CPsnippet' multiply defined.
 
@@ -1062,7 +1066,7 @@ LaTeX Font Info:    External font `lmex10' loaded for size
  [15] [16]
 
 pdfTeX warning: pdflatex.exe (file ./standalone/tree-chart.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<standalone/tree-chart.pdf, id=448, 342.31891pt x 408.32549pt>
+<standalone/tree-chart.pdf, id=451, 342.31891pt x 408.32549pt>
 File: standalone/tree-chart.pdf Graphic file (type pdf)
 <use standalone/tree-chart.pdf>
 Package pdftex.def Info: standalone/tree-chart.pdf  used on input line 350.
@@ -1084,6 +1088,15 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `\equiv' on input line 1.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\leavevmode@ifvmode' on input line 1.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \kern 1.82538pt
+(hyperref)                removed on input line 1.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
@@ -1203,47 +1216,47 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 
 [22] [23]
 
-LaTeX Font Warning: Command \LARGE invalid in math mode on input line 405.
+LaTeX Font Warning: Command \LARGE invalid in math mode on input line 406.
 
 [24]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 452.
+(hyperref)                removing `math shift' on input line 453.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\equiv' on input line 452.
+(hyperref)                removing `\equiv' on input line 453.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mkern' on input line 452.
+(hyperref)                removing `\mkern' on input line 453.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mathgroup' on input line 452.
+(hyperref)                removing `\mathgroup' on input line 453.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\symoperators' on input line 452.
+(hyperref)                removing `\symoperators' on input line 453.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mkern' on input line 452.
+(hyperref)                removing `\mkern' on input line 453.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 452.
+(hyperref)                removing `math shift' on input line 453.
 
 [25]
-<standalone/sigma label ex1.pdf, id=527, 97.03452pt x 94.66064pt>
+<standalone/sigma label ex1.pdf, id=532, 97.03452pt x 94.66064pt>
 File: standalone/sigma label ex1.pdf Graphic file (type pdf)
 <use standalone/sigma label ex1.pdf>
-Package pdftex.def Info: standalone/sigma label ex1.pdf  used on input line 495.
+Package pdftex.def Info: standalone/sigma label ex1.pdf  used on input line 498.
 (pdftex.def)             Requested size: 97.03427pt x 94.6604pt.
-<standalone/sigma label ex2.pdf, id=528, 52.66878pt x 45.03726pt>
+<standalone/sigma label ex2.pdf, id=533, 52.66878pt x 45.03726pt>
 File: standalone/sigma label ex2.pdf Graphic file (type pdf)
 <use standalone/sigma label ex2.pdf>
-Package pdftex.def Info: standalone/sigma label ex2.pdf  used on input line 496.
+Package pdftex.def Info: standalone/sigma label ex2.pdf  used on input line 499.
 (pdftex.def)             Requested size: 52.66864pt x 45.03712pt.
  [26 <./standalone/sigma label ex1.pdf> <./standalone/sigma label ex2.pdf>] (./standalone/0,1(mod 14) long.tex [27])) [28]
 \openout2 = `78mod14.aux'.
@@ -1257,6 +1270,15 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `\equiv' on input line 1.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\leavevmode@ifvmode' on input line 1.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \kern 1.82538pt
+(hyperref)                removed on input line 1.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
@@ -1436,12 +1458,17 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 
 
 ] [40] (./standalone/starpath.tex)
-Overfull \hbox (2.43118pt too wide) detected at line 197
-[] \OML/lmm/m/it/10.95 E[] \OT1/lmr/m/n/10.95 = [[]\OMS/lmsy/m/n/10.95 f\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 i; \OT1/lmr/m/n/10.95 0)\OMS/lmsy/m/n/10.95 g\OT1/lmr/m/n/10.95 ] \OMS/lmsy/m/n/10.95 t \OT1/lmr/m/n/10.95 [[](\OMS/lmsy/m/n/10.95 f\OML/lmm/m/it/10.95 i \OT1/lmr/m/n/10.95 + 1\OMS/lmsy/m/n/10.95 g ^^B f\OT1/lmr/m/n/10.95 1\OML/lmm/m/it/10.95 ; [] ; \OT1/lmr/m/n/10.95 6\OMS/lmsy/m/n/10.95 g\OT1/lmr/m/n/10.95 )] = [\U/msb/m/n/10.95 Z[] \OMS/lmsy/m/n/10.95 ^^B f\OT1/lmr/m/n/10.95 0\OMS/lmsy/m/n/10.95 g\OT1/lmr/m/n/10.95 ] \OMS/lmsy/m/n/10.95 t \OT1/lmr/m/n/10.95 [\U/msb/m/n/10.95 Z[] \OMS/lmsy/m/n/10.95 ^^B f\OT1/lmr/m/n/10.95 1\OML/lmm/m/it/10.95 ; [] ; \OT1/lmr/m/n/10.95 6\OMS/lmsy/m/n/10.95 g\OT1/lmr/m/n/10.95 ] = \U/msb/m/n/10.95 Z[] \OMS/lmsy/m/n/10.95 ^^B \U/msb/m/n/10.95 Z[]
+Overfull \hbox (5.47285pt too wide) detected at line 197
+[] \OML/lmm/m/it/10.95 E[] \OT1/lmr/m/n/10.95 = [[]\OMS/lmsy/m/n/10.95 f\OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 i; \OT1/lmr/m/n/10.95 0)\OMS/lmsy/m/n/10.95 g\OT1/lmr/m/n/10.95 ] \OMS/lmsy/m/n/10.95 t \OT1/lmr/m/n/10.95 [[](\OMS/lmsy/m/n/10.95 f\OML/lmm/m/it/10.95 i \OT1/lmr/m/n/10.95 + 1\OMS/lmsy/m/n/10.95 g ^^B f\OT1/lmr/m/n/10.95 1\OML/lmm/m/it/10.95 ; [] ; \OT1/lmr/m/n/10.95 6\OMS/lmsy/m/n/10.95 g\OT1/lmr/m/n/10.95 )] = [\U/msb/m/n/10.95 Z[] \OMS/lmsy/m/n/10.95 ^^B f\OT1/lmr/m/n/10.95 0\OMS/lmsy/m/n/10.95 g\OT1/lmr/m/n/10.95 ] \OMS/lmsy/m/n/10.95 t \OT1/lmr/m/n/10.95 [\U/msb/m/n/10.95 Z[] \OMS/lmsy/m/n/10.95 ^^B f\OT1/lmr/m/n/10.95 1\OML/lmm/m/it/10.95 ; [] ; \OT1/lmr/m/n/10.95 6\OMS/lmsy/m/n/10.95 g\OT1/lmr/m/n/10.95 ] = \U/msb/m/n/10.95 Z[] \OMS/lmsy/m/n/10.95 ^^B \U/msb/m/n/10.95 Z[]\OML/lmm/m/it/10.95 :
  []
 
 [41]
-Underfull \hbox (badness 10000) in paragraph at lines 227--230
+Overfull \hbox (15.27753pt too wide) in paragraph at lines 228--231
+[]\OT1/lmr/m/n/10.95 We have that $[] \OMS/lmsy/m/n/10.95 t []$ \OT1/lmr/m/n/10.95 de-com-poses $\OML/lmm/m/it/10.95 K[]$ \OT1/lmr/m/n/10.95 by The-o-rem []3.2.7[]; $\OML/lmm/m/it/10.95 K[]$\OT1/lmr/m/n/10.95 , $\OML/lmm/m/it/10.95 K[]; []K[]$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 228--231
 
  []
 
@@ -1511,7 +1538,7 @@ Chapter 7.
 
 
 ] [51]
-<standalone/Images/snippet_long.JPG, id=752, 1927.2pt x 1051.67906pt>
+<standalone/Images/snippet_long.JPG, id=759, 1927.2pt x 1051.67906pt>
 File: standalone/Images/snippet_long.JPG Graphic file (type jpg)
 <use standalone/Images/snippet_long.JPG>
 Package pdftex.def Info: standalone/Images/snippet_long.JPG  used on input line 48.
@@ -1522,13 +1549,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 54--55
  []
 
 [52 <./standalone/Images/snippet_long.JPG>]
-<standalone/Images/CPsnippetlong.JPG, id=764, 1927.2pt x 1053.9375pt>
+<standalone/Images/CPsnippetlong.JPG, id=771, 1927.2pt x 1053.9375pt>
 File: standalone/Images/CPsnippetlong.JPG Graphic file (type jpg)
 <use standalone/Images/CPsnippetlong.JPG>
 Package pdftex.def Info: standalone/Images/CPsnippetlong.JPG  used on input line 68.
 (pdftex.def)             Requested size: 332.44325pt x 181.80441pt.
  [53 <./standalone/Images/CPsnippetlong.JPG>]
-<standalone/Images/guide.JPG, id=772, 693.34032pt x 423.83344pt>
+<standalone/Images/guide.JPG, id=780, 693.34032pt x 423.83344pt>
 File: standalone/Images/guide.JPG Graphic file (type jpg)
 <use standalone/Images/guide.JPG>
 Package pdftex.def Info: standalone/Images/guide.JPG  used on input line 79.
@@ -1571,7 +1598,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (./standalone/7m14.tex [58
 
 
-] [59] [60] [61] [62] [63]) [64] (./standalone/8m14.tex [65] [66] [67] [68] [69] [70] [71]) [72]
+] [59] [60] [61] [62] [63] [64]) [65] (./standalone/8m14.tex [66] [67] [68] [69] [70] [71] [72] [73] [74]) [75]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 20.
@@ -1624,7 +1651,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 20.
 
-(./standalone/K21.tex) (./standalone/K22.tex [73])) [74] (./thesis_masters.aux (./title.aux) (./Background.aux) (./intro.aux) (./01mod14.aux) (./78mod14.aux) (./specialcase.aux) (./AdditionalResults.aux) (./Programming.aux) (./conclusion.aux) (./app_glossary.aux))
+(./standalone/K21.tex) (./standalone/K22.tex [76])) [77] (./thesis_masters.aux (./title.aux) (./Background.aux) (./intro.aux) (./01mod14.aux) (./78mod14.aux) (./specialcase.aux) (./AdditionalResults.aux) (./Programming.aux) (./conclusion.aux) (./app_glossary.aux))
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
@@ -1634,22 +1661,22 @@ L3 programming layer <2024-01-22>
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `thesis_masters.out' has not changed.
-(rerunfilecheck)             Checksum: BE89B5277C5DD042706CD3A4C8523289;5832.
+(rerunfilecheck)             Checksum: 45CEEDBCE0450CEC29567E68AA88D5CE;5832.
  )
 (\end occurred when \ifnum on line 28 was incomplete) 
 Here is how much of TeX's memory you used:
- 34472 strings out of 474221
- 647397 string characters out of 5750188
+ 34475 strings out of 474221
+ 647402 string characters out of 5750188
  2046978 words of memory out of 5000000
  55647 multiletter control sequences out of 15000+600000
  672398 words of font info for 187 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 100i,19n,96p,1119b,1323s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 100i,19n,96p,1113b,1323s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmbx10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmbx12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmbx8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmex10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmmi10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmmi12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmmi6.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmmi8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmmi9.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr12.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr17.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr6.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmr8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmri10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmsy10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmsy6.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmsy8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/lm/lmtt10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on thesis_masters.pdf (84 pages, 1581413 bytes).
+Output written on thesis_masters.pdf (87 pages, 1582982 bytes).
 PDF statistics:
- 1018 PDF objects out of 1200 (max. 8388607)
- 866 compressed objects within 9 object streams
- 242 named destinations out of 1000 (max. 500000)
+ 1038 PDF objects out of 1200 (max. 8388607)
+ 883 compressed objects within 9 object streams
+ 245 named destinations out of 1000 (max. 500000)
  323 words of extra memory for PDF output out of 10000 (max. 10000000)
 

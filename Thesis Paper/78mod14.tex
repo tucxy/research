@@ -1,7 +1,7 @@
-\chapter{$\mathbf{n\equiv 7,8\textbf{(mod 14)}}$} \label{chap:7,8 (mod 14)}
-In this chapter, we will use our own constructions based on edge lengths in $K_{n}$ where $n \equiv 7\text{ or }8 \pmod{14}$. We first describe our construction in the context of $K_{21}$ and $K_{22}$ in Subsection \ref{sec:7,8constrK21K22}, and generalize our construction in Subsection \ref{sec:7,8constrgen}. We then formalize these ideas in Section \ref{sec:7,8result}.
+\chapter{$\mathbf{n\equiv 7,8\,\textbf{(mod 14)}}$} \label{chap:7,8 (mod 14)}
+In this chapter, we will use our own constructions based on edge lengths in $K_{n}$ where $n \equiv 7\text{ or }8 \pmod{14}$. We first describe our construction in the context of $K_{21}$ and $K_{22}$ in Subsection \ref{sec:7,8constrK21K22}, and generalize our construction in Subsection \ref{sec:7,8constrgen}. We formalize these ideas in Section \ref{sec:7,8result}.
 \section{Construction for $n\equiv 7,8 \pmod{14}$}\label{sec:7,8constr}
- The number of vertices in $K_{7}$ and $K_{8}$ is less than $9$, the minimum number of vertices of a seven edge forest. So neither are decomposable by seven edge forests and our base graphs are $K_{21}$ and $K_{22}$ for $n\equiv 7\text{ and }8\pmod{14}$, respectively. We show these base graphs in the figure on the following page.
+ Because the number of vertices in $K_{7}$ and $K_{8}$ is less than $9$, the minimum number of vertices of a seven edge forest, neither $K_{7}$ nor $K_{8}$ are decomposable by seven edge forests. So, our base graphs are $K_{21}$ and $K_{22}$ for $n\equiv 7\text{ and }8\pmod{14}$, respectively. We show these base graphs in the figure on the following page.
 \begin{figure}[H]
     \begin{center}
       \begin{tikzpicture}[scale=2,
@@ -69,21 +69,21 @@ In this chapter, we will use our own constructions based on edge lengths in $K_{
     \label{fig:K21K22colored}
   \end{figure}
   \subsection{$K_{21}$ and $K_{22}$}\label{sec:7,8constrK21K22}
-  We have lost some luxuries present in the $n\equiv 0,1\pmod{14}$ case. There are two main problems in this case that we need to solve:
+  We have lost some luxuries present in the $n\equiv 0,1\pmod{14}$ case. There are two main problems in this case that we need to solve.
   \setlist[enumerate,1]{label=(\arabic*)}
   \begin{enumerate}
     \item In $K_{22}$ there are 11 total maximal length \textcolor{cyan}{11} edges but $22$ of every other length.
     \item $K_{21}$ and $K_{22}$ have lengths $\{\textcolor{blue}{1},\hdots,\textcolor{cyan}{10}\}$ and $\{\textcolor{blue}{1},\hdots,\textcolor{cyan}{11}\}$, respectively.
   \end{enumerate}
-  (1) is a problem because we want to be able to develop the vertices of our labelings to collect all edges of $K_{22}$ in the same number of steps. (2) is a problem because this means we cannot just fit $7$ distinct lengths on a single labeling and collect all edges when we develop the vertices by $1$. Furthermore, since $K_{22}$ has one more length than $K_{21}$, we do not have a single labeling strategy in this project that takes care of both cases where $n\equiv 7\text{ and }8\pmod{14}$ at once like $\sigma^{+-}$-labelings did for $n\equiv 0\text{ and }1\pmod{14}$. We address these problems in order.
+  (1) is a problem because we want to be able to develop the vertices of our labelings to collect all edges of $K_{22}$ in the same number of steps and (2) is a problem because then we cannot just fit $7$ distinct lengths on a single labeling and collect all edges when we develop the vertices by $1$. Furthermore, since $K_{22}$ has one more length than $K_{21}$, we do not have a single labeling strategy that takes care of both cases where $n\equiv 7\text{ or }8\pmod{14}$ at once like $\sigma^{+-}$-labelings did for $n\equiv 0\text{ and }1\pmod{14}$. We address these problems in order.
   
-  We have a remedy for length \textcolor{cyan}{11} edges in $K_{22}$ which is similar to what we did for $K_{14}$. We take the vertices of $K_{22}$ to be $\ZZ_{21}\cup\{\infty\}$ and redefine length of edges and development for vertices in $K_{22}$:
+  We have a remedy for length \textcolor{cyan}{11} edges in $K_{22}$ that is similar to what we did for $K_{14}$. We take the vertices of $K_{22}$ to be $\ZZ_{21}\cup\{\infty\}$ and redefine length of edges and development for vertices in $K_{22}$:
   $$\ell(uv)=\begin{cases}\min\{|u-v|,21-|u-v|\}, & u,v\neq \infty, \\ \infty, & u\text{ or }v=\infty \end{cases} \text{ and }v\mapsto 
   \begin{cases}
     v+1,&v\in\mathbb{Z}_{n-1},\\
     \infty,        &v=\infty.
   \end{cases}$$
-  Now, we have $21$ edges of lengths $1$ through $10$ as well as $\infty$, since the $\infty$ vertex will have all $21$ edges of length $\infty$ to vertices in $\ZZ_{21}$ adjacent to it. Now we can theoretically cyclically generate edges of every length in $K_{21}$ in the same number of steps, as well as all edges of every length in $K_{22}$ in the same number of steps, but we just cannot generate them all on one labeling for either case since the number of edges on our forests does not divide the number of distinct lengths in $K_{21}$ or $K_{22}$.
+  Now, we have $21$ edges of lengths $1$ through $10$ as well as $\infty$, since the $\infty$ vertex will have all $21$ edges of length $\infty$ to vertices in $\ZZ_{21}$ adjacent to it. Now we can cyclically generate edges of every length in $K_{21}$ in the same number of steps, as well as all edges of every length in $K_{22}$ in the same number of steps, but we just cannot generate them all on one labeling for either case since the number of edges on our forests does not divide the number of distinct lengths in $K_{21}$ or $K_{22}$.
 
   \begin{figure}[H]
     \begin{center}
@@ -176,12 +176,12 @@ In this chapter, we will use our own constructions based on edge lengths in $K_{
   
       \end{tikzpicture}
     \end{center}
-    \caption{$K_{21}\vee K_{1}$ is isomorphic to $K_{22}$ (right)}
+    \caption{$K_{21}\vee K_{1}$ is isomorphic to $K_{22}$ (right).}
     \label{fig:K21K22infty}
   \end{figure}
 
-  Let us begin solving $(2)$ by just looking at $K_{21}$. If we can generate all $21$ distinct edges of lengths $1,2\text{ and }3$ seperately, then we can generate the remaining $7$ lengths with one labeling. But how can we collect $21$ edges of length $1,2,\text{ and }3$ in isomorphic copies? By imposing a new edge length on top of the standard length $\ell$, we can can achieve this. We define $\ell_{7}^{+}$ from $\ZZ_{21}\cup\{\infty\}\text{ to }\ZZ_{7}$ as follows
-  $$\ell_{7}^{+}(uv)=\begin{cases} u+v\textbf{ mod }14, & u,v\neq \infty\\ v, &u=\infty \end{cases}$$
+  Let us begin solving $(2)$ by just looking at $K_{21}$. If we can generate all $21$ distinct edges of lengths $1,2\text{ and }3$ seperately, then we can generate the remaining $7$ lengths with one labeling. But how can we collect $21$ edges of length $1,2,\text{ and }3$ in isomorphic copies? By imposing a new edge length on top of the standard length $\ell$, we can can achieve this. We define $\ell_{7}^{+}$ from $\ZZ_{21}\cup\{\infty\}\text{ to }\ZZ_{7}$ as follows:
+  $$\ell_{7}^{+}(uv)=\begin{cases} u+v\textbf{ mod }14, & u,v\neq \infty,\\ v, &u=\infty. \end{cases}$$
   Now, every edge has a standard length $\ell$ and an additive length $\ell_{7}^{+}$ modulo $7$. Previously, we partitioned the edges into sets $E_{i}$ of edges of length $i$ for each length $i\in \{1,\hdots, 10\}$ via the standard length function $\ell$. Now, within each partite set $E_{i}$, we have further partitioned the edges into sets $E_{i,j}$ of standard length $i$ and additive length $j$ modulo $7$. For example: the edge $(1,8)$ has length $\ell((1,8))=7$ and $\ell_{7}^{+}((1,8))=8+1 \textbf{ mod }7=2$, so $(1,8)\in E_{7,2}$. We show a bundle of labelings of $\mathbf{T_{6}^{6}}\sqcup \mathbf{T_{3}^{1}}$ that utilizes this new partition on the next page.
 
   \begin{figure}[H]
@@ -362,7 +362,7 @@ In this chapter, we will use our own constructions based on edge lengths in $K_{
                 \draw[green, thick]   (C3) -- (L36);
         
                 \node[dot,label=below:18] (P311) at (-0.5,-1) {};
-                \node[dot,label=below:16]  (P38)  at ( 0  ,-1) {};
+                \node[dot,label=below:15]  (P38)  at ( 0  ,-1) {};
                 \node[dot,label=below:14]  (P37)  at ( 0.5,-1) {};
         
                 \draw[green, thick] (P311) -- (P38);
@@ -433,7 +433,7 @@ In this chapter, we will use our own constructions based on edge lengths in $K_{
                     \draw[green, thick]   (C3) -- (L36);
             
                     \node[dot,label=below:4] (P311) at (-0.5,-1) {};
-                    \node[dot,label=below:2]  (P38)  at ( 0  ,-1) {};
+                    \node[dot,label=below:1]  (P38)  at ( 0  ,-1) {};
                     \node[dot,label=below:0]  (P37)  at ( 0.5,-1) {};
             
                     \draw[green, thick] (P311) -- (P38);
@@ -444,15 +444,15 @@ In this chapter, we will use our own constructions based on edge lengths in $K_{
 
       \end{tikzpicture}
     \end{center}
-    \caption{Three labelings of $\mathbf{T_{6}^{6}}\sqcup \mathbf{T_{3}^{1}}$ (left column) that generate all edges of lengths $1,2,\text{ and }3$ in $K_{21}$ when developed by $7$}
+    \caption{Three labelings of $\mathbf{T_{6}^{6}}\sqcup \mathbf{T_{3}^{1}}$ (left column) that generate all edges of lengths $1,2,\text{ and }3$ in $K_{21}$ when developed by $7$.}
     \label{fig:K21labelingex}
   \end{figure}
 
-   Each square in the figure above contains the edge length pairs of the edges in the labelings to it's right. Standard lengths $\ell$ are colored in the same manner as in Figure \ref{fig:K21labelingex} and the new length $\ell_{7}^{+}$ appears in black as the subscript for each of these lengths. Across all three labelings, there is exactly one representative for all $7$ distinct equivalence classes modulo $\ell_{7}^{+}$ for each each length in $\{\textcolor{blue}{1},\textcolor{red}{2},\textcolor{green}{3}\}$. Now, we already know developing the vertices by $7$ preserves $\ell$, but it also preserves $\ell_{7}^{+}$ since $u+7+v+7\textbf{ mod }7=u+v\textbf{ mod }7$. So then developing all labelings by $7$ will give us all edges of lengths in $\{\textcolor{blue}{1},\textcolor{red}{2},\textcolor{green}{3}\}$ across $9$ isomorphic copies of $\mathbf{T_{6}^{6}}\sqcup \mathbf{T_{3}^{1}}$.
+   Each square in the figure above contains the edge length pairs of the edges in the labelings to its right. Standard lengths $\ell$ are colored in the same manner as in Figure \ref{fig:K21labelingex} and the new length $\ell_{7}^{+}$ appears in black as the subscript for each of these lengths. Across all three labelings, there is exactly one representative for all $7$ distinct equivalence classes modulo $\ell_{7}^{+}$ for each length in $\{\textcolor{blue}{1},\textcolor{red}{2},\textcolor{green}{3}\}$. Now, we already know developing the vertices by $7$ preserves $\ell$, but it also preserves $\ell_{7}^{+}$ since $u+7+v+7\textbf{ mod }7=u+v\textbf{ mod }7$. So then developing all labelings by $7$ will give us all edges of lengths in $\{\textcolor{blue}{1},\textcolor{red}{2},\textcolor{green}{3}\}$ across $9$ isomorphic copies of $\mathbf{T_{6}^{6}}\sqcup \mathbf{T_{3}^{1}}$.
   
-  An equivalent way of understanding development is through \textit{group actions}. Let $S$ be the set of all labelings in Figure \ref{fig:K21labelingex}. The cyclic subgroup $\langle 7\rangle=\{0,7,14\}\subseteq \ZZ_{21}$ acts on $S$; $\langle 7\rangle\curvearrowright S$ via developing the vertices by $7$. Then if we call the labelings in column $1$: $F_{1},F_{2},F_{3}$ from top to bottom, the set of labelings in Row $1$ is simply $\mathrm{Orb}_{\langle 7\rangle}(F_{1})$, Row $2$ is $\mathrm{Orb}_{\langle 7\rangle}(F_{2})$ and Row $3$ is $\mathrm{Orb}_{\langle 7 \rangle}(F_{3})$. We employ the same technique for $K_{22}$, we just need four labelings $F_{1},F_{2},F_{3},F_{4}$ with lengths $1,2,3,\infty$.
+  An equivalent way of understanding development is through \textit{group actions}. Let $S$ be the set of all labelings in Figure \ref{fig:K21labelingex}. The cyclic subgroup $\langle 7\rangle=\{0,7,14\}\subseteq \ZZ_{21}$ acts on $S$; $\langle 7\rangle\curvearrowright S$ via developing the vertices by $7$. Then, if we call the labelings in column $1$: $F_{1},F_{2},F_{3}$ from top to bottom, the set of labelings in Row $1$ is simply $\mathrm{Orb}_{\langle 7\rangle}(F_{1})$, Row $2$ is $\mathrm{Orb}_{\langle 7\rangle}(F_{2})$ and Row $3$ is $\mathrm{Orb}_{\langle 7 \rangle}(F_{3})$. We employ the same technique for $K_{22}$, we just need four labelings $F_{1},F_{2},F_{3},F_{4}$ with lengths $1,2,3,\infty$.
 
-  Now have a technique to collect all edges of lengths $\{\textcolor{blue}{1},\textcolor{red}{2},\textcolor{green}{3}\}$ and $\{\textcolor{blue}{1},\textcolor{red}{2},\textcolor{green}{3},\infty\}$ in $K_{21}$ and $K_{22}$, respectively, in isomorphic copies of graphs. So we just need to collect edges of lengths in $\{4,\hdots 10\}$. Well, if we just stretch our $\sigma^{+-}$-labelings by $3$, we will now have lengths $\{4,\hdots,10\}$ instead of $\{1,\hdots,7\}$. So developing those stretched labelings by $1$ will give us the remaining edges of both $K_{21}$ and $K_{22}$ in isomorphic copies of our forests.
+  Now, we have a technique to collect all edges of lengths $\{\textcolor{blue}{1},\textcolor{red}{2},\textcolor{green}{3}\}$ and $\{\textcolor{blue}{1},\textcolor{red}{2},\textcolor{green}{3},\infty\}$ in $K_{21}$ and $K_{22}$, respectively, in isomorphic copies of graphs. So, we just need to collect edges of lengths in $\{4,\hdots 10\}$. Well, if we just stretch our $\sigma^{+-}$-labelings by $3$, we will now have lengths $\{4,\hdots,10\}$ instead of $\{1,\hdots,7\}$. So, developing those stretched labelings by $1$ will give us the remaining edges of both $K_{21}$ and $K_{22}$ in isomorphic copies of our forests.
   \subsection{Generalizing to $K_{14t+7}$ and $K_{14t+8}$ for $t>1$}\label{sec:7,8constrgen}
 
   Recall our labeling constructions for collecting edges of lengths $\{\textcolor{blue}{1},\textcolor{red}{2},\textcolor{green}{3}\}$ and $\{\textcolor{blue}{1},\textcolor{red}{2},\textcolor{green}{3},\infty\}$ in $K_{21}$ and $K_{22}$, respectively. As long as we only use short edges, we can actually just generate all edges of these lengths for the entire families with the same set of labelings we used for $K_{14t+7}$ and $K_{14t+8}$ where $t>1$. The only thing that changes at each step $t\mapsto t+1$ is that more steps of development are needed to collect all the edges, and therefore the number of isomorphic copies.
@@ -464,7 +464,7 @@ In this chapter, we will use our own constructions based on edge lengths in $K_{
 
  We formalize these constructions in the next section.
 \section{Results for $n\equiv 7,8 \pmod{14}$}\label{sec:7,8result}
-We begin with a formal definition for the set of labelings used to generate edges in $K_{14t+7}$ of lengths in $\{1,2,3\}$ in isomorphic copies of a graph $G$ on seven edges for $t\geq 1$. Then we prove that if a graph $G$ admits such a labeling and a $\rho^{+}$-labeling, then it decomposes $K_{14t+7}$ for $t\geq 1$.
+We begin with a formal definition for the set of labelings used to generate edges in $K_{14t+7}$ of lengths in $\{1,2,3\}$ in isomorphic copies of a graph $G$ on seven edges for $t\geq 1$. We prove that if a graph $G$ admits such a labeling and a $\rho^{+}$-labeling, then it decomposes $K_{14t+7}$ for $t\geq 1$.
 \begin{definition}\label{def:1-2-3}
     Let $G$ be a graph with $7$ edges. A (1-2-3)-\emph{labeling} of $3G$ is an assignment $f$ of the integers $\{0,\dots,20\}$ to the vertices of $3G$ such that
     \begin{enumerate}
@@ -492,8 +492,8 @@ Notice that the second condition of a (1-2-3)-labeling \textbf{demands} that $3G
     \[
     \ell(v)=
     \begin{cases}
-        f_2(v), & \textrm{if } v \in A \\
-        f_2(v)+3+7(i-1), & \textrm{if } v \in B
+        f_2(v), & \textrm{if } v \in A, \\
+        f_2(v)+3+7(i-1), & \textrm{if } v \in B.
     \end{cases}
     \]
     Notice that the $i^{\textrm{th}}$ block contains exactly one edge of each length $7i-3,7i-2, \dots,$ and $ 7i+3.$ This is because every edge $ab$ has length 
@@ -513,7 +513,7 @@ Notice that the second condition of a (1-2-3)-labeling \textbf{demands} that $3G
 
 \end{proof}
 
-Next we formalize the set of labelings used to generate edges in $K_{14t+8}$ of lengths in $\{1,2,3,\infty\}$ in isomorphic copies of a graph $G$ on seven edges for $t\geq 1$. Then we prove that if a graph $G$ admits such a labeling and a $\rho^{+}$-labeling, then it decomposes $K_{14t+8}$ for $t\geq 1$.
+Next we formalize the set of labelings used to generate edges in $K_{14t+8}$ of lengths in $\{1,2,3,\infty\}$ in isomorphic copies of a graph $G$ on seven edges for $t\geq 1$. Then, we prove that if a graph $G$ admits such a labeling and a $\rho^{+}$-labeling, then it decomposes $K_{14t+8}$ for $t\geq 1$.
 
 \begin{definition}\label{def:1-2-3-1-rot}
     Let $G$ be a graph with $7$ edges. A \emph{1-rotational $(1$-$2$-$3)$-labeling} of $4G$ is an assignment $f$ of $\{0,\dots,20\} \cup \infty$ to the vertices of $4G$ such that
@@ -533,14 +533,14 @@ Notice that the second condition of a 1-rotational (1-2-3)-labeling demands that
 \begin{proof}
     Let $n=14k+8$ and notice that $K_n$ has $|E(K_n)|=(7k+4)(14k+7)$ edges, which can be partitioned into $14k+7$ edges of each of the lengths in $\{1,2,\dots,7k+3,\infty\}.$  We will construct the $G$-decomposition in two steps. First, we use the 1-rotational (1-2-3)-labeling to identify all the edges of lengths $1,2,3,$ and $\infty$ accounting for $4(2k+1)$ copies of $G$. Then, we use the $\rho^{+}$-labeling to identify edges of the remaining lengths in $7k(2k+1)$ copies of $G$. In total, the decomposition consists of $|E(K_n)|/7=(7k+4)(2k+1)$ copies of $G.$
 %left off here 1/27
-    Let $f_1$ be a 1-rotational (1-2-3)-labeling of $4G$ and identify this graph as a block $B_0$. Then develop $B_0$ by 7 modulo $n-1$. Since the order of the development is $\frac{n-1}{7}=2k+1$ and there are 7 edges of each of the lengths $1,2,3$ and $\infty$ in $B_0$, we have identified $4(2k+1)$ copies of $G$ containing all $14k+7=n-1$ edges of each length $1,2,3$ and $\infty$. Notice (2) of Definition \ref{def:1-2-3-1-rot} ensures no edge has been counted more than once in the development.
+    Let $f_1$ be a 1-rotational (1-2-3)-labeling of $4G$ and identify this graph as a block $B_0$. Then, develop $B_0$ by 7 modulo $n-1$. Since the order of the development is $\frac{n-1}{7}=2k+1$ and there are 7 edges of each of the lengths $1,2,3$ and $\infty$ in $B_0$, we have identified $4(2k+1)$ copies of $G$ containing all $14k+7=n-1$ edges of each length $1,2,3$ and $\infty$. Notice (2) of Definition \ref{def:1-2-3-1-rot} ensures no edge has been counted more than once in the development.
 
     Let $f_2:V(G) \rightarrow \{0,\dots,14\}$ be a $\rho^{+}$-labeling of $G$ with associated vertex partition $(A,B).$ For $i=1,2,\dots,k,$ identify blocks $B_i \cong G$ with vertex labels $\ell$ such that
     \[
     \ell(v)=
     \begin{cases}
-        f_2(v), & \textrm{if } v \in A \\
-        f_2(v)+3+7(i-1), & \textrm{if } v \in B
+        f_2(v), & \textrm{if } v \in A, \\
+        f_2(v)+3+7(i-1), & \textrm{if } v \in B.
     \end{cases}
     \]
     Notice that the $i^{\textrm{th}}$ block contains exactly one edge of each length $7i-3,7i-2, \dots,$ and $ 7i+3.$ This is because every edge $ab$ has length 
@@ -566,14 +566,14 @@ We are now able to state the main theorem of this chapter.
     If $n \equiv 7 \pmod{14},$ a (1-2-3)-labeling of $3F$ can be found in Table \ref{tab:(1-2-3)}. On the other hand, if $n \equiv 8 \pmod{14}$, then a 1-rotational (1-2-3)-labeling of $4F$ can be found in Table \ref{tab:1-rot(1-2-3)}. In either case, a $\rho^{+}$-labeling of $F$ can be found in Table \ref{tab:sigmapm} (recall that a $\sigma^{+-}$-labeling is a $\rho^{+}$-labeling). The result now follows from Theorems \ref{thm:1-2-3 plus rho} and \ref{thm:1-2-3 1-rot plus rho}.
 \end{proof}
 %%
-We illustrate how how to interpret the tables of labelings and realize the constructions from the last two chapters by building an $F$-decomposition of $K_{35}$ and $K_{36}$ for the forest graph $\mathbf{T_{6}^{6}} \sqcup \mathbf{T_{3}^{1}}$.\newline
+We illustrate how to interpret the tables of labelings and realize the constructions from the last two chapters by building an $F$-decomposition of $K_{35}$ and $K_{36}$ for the forest graph $\mathbf{T_{6}^{6}} \sqcup \mathbf{T_{3}^{1}}$.\newline
 \begin{example}
 \noindent Here are excerpts from Tables \ref{tab:sigmapm},\ref{tab:(1-2-3)}, and \ref{tab:1-rot(1-2-3)} for $\mathbf{T_{6}^{6}} \sqcup \mathbf{T_{3}^{1}}$
 
 \begin{figure}[H]
 \centering
         \scalebox{0.6}{\input{standalone/Danny's example/chart}}
-        \caption{Labelings for $\mathbf{T_{6}^{6}} \sqcup \mathbf{T_{3}^{1}}$}
+        \caption{Labelings for $\mathbf{T_{6}^{6}} \sqcup \mathbf{T_{3}^{1}}$.}
         \label{fig:example chart}
 \end{figure}
 \newpage
@@ -696,8 +696,8 @@ The $\rho^{+}$ labelings obtained by stretching the $\sigma^{+-}$ labeling are b
 
     \end{scope}
     \end{tikzpicture}
-    \caption{A $\sigma^{+-}$-labeling of $F \cong\mathbf{T_{6}^{6}} \sqcup \mathbf{T_{3}^{1}}$ (left) and generating presentations for the $F$-decomposition of $K_{n}$ where $n=35$ (middle) and $n=36$ (right)}
+    \caption{A $\sigma^{+-}$-labeling of $F \cong\mathbf{T_{6}^{6}} \sqcup \mathbf{T_{3}^{1}}$ (left) and generating presentations for the $F$-decomposition of $K_{n}$ where $n=35$ (middle) and $n=36$ (right).}
     \label{fig:7mod14example}
 \end{figure}
 
-We have now proven that every seven edge forest except $\mathbf{T_{7}^{11}}\sqcup\mathbf{T_{2}^{1}}$ decomposes $K_{n}$ if and only if $n\equiv 0,1,7,\text{ or }8\pmod{14}$. As stated earlier, we deal with the this exceptional forest $\mathbf{T_{7}^{11}}\sqcup\mathbf{T_{2}^{1}}$ in the next chapter. 
+We have now proved that every seven edge forest except $\mathbf{T_{7}^{11}}\sqcup\mathbf{T_{2}^{1}}$ decomposes $K_{n}$ if and only if $n\equiv 0,1,7,\text{ or }8\pmod{14}$. As stated earlier, we deal with the this exceptional forest $\mathbf{T_{7}^{11}}\sqcup\mathbf{T_{2}^{1}}$ in the next chapter. 

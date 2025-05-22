@@ -1,11 +1,11 @@
-\chapter{$\mathbf{n\equiv 0,1\textbf{(mod 14)}}$} \label{chap:0,1(mod 14)}
+\chapter{$\mathbf{n\equiv 0,1\,\textbf{(mod 14)}}$} \label{chap:0,1(mod 14)}
 
 To begin this chapter, we extend intuition developed in the Chapter \ref{chap:intro} to present some machinery specific to $K_{n}$ where $n\equiv 0,1\pmod{14}$. This informs the formal definitions and theorems we use for this case.
 
 \section{Construction for $n\equiv 0,1 \pmod{14}$}\label{sec:0,1constr}
 $K_{0}$ and $K_{1}$ do not have enough vertices to contain a forest on seven edges. So $K_{14}$ and $K_{15}$ are the base graphs for $K_{n}$ where $n \equiv 0 \textrm{ or } 1 \pmod{14}$, respectively. We first show how to decompose $K_{14}$ and $K_{15}$ in Subsection \ref{sec:0,1constr-pt1} and then show how to generalize this to their respective families in Subsection \ref{sec:0,1constr-pt2}
 
-To be absolutely clear, \textbf{these are not original ideas as a result of this project}. Rosa and his colleagues, developed these labeling ideas decades ago. Other mathematicians since also have helped in developing labeling techniques. This is just an explanation from our perspective, of the amazing work of Rosa and his successors in creating graph labelings techniques to solve decomposition problems.
+To be absolutely clear, the concepts found in this section are \textbf{not our own original ideas}. Rosa and his colleagues, developed these labeling ideas decades ago. Other mathematicians since also have helped in developing labeling techniques. This is just an explanation from our perspective, of the amazing work of Rosa and his successors in creating graph labelings techniques to solve decomposition problems.
 
 \subsection{$K_{14}$ and $K_{15}$}\label{sec:0,1constr-pt1}
 
@@ -79,29 +79,29 @@ To be absolutely clear, \textbf{these are not original ideas as a result of this
             
     \end{tikzpicture}
     \end{center}
-\caption{$K_{14}$ (left) and $K_{15}$ (right) with edges colored by length}
+\caption{$K_{14}$ (left) and $K_{15}$ (right) with edges colored by length.}
 \label{fig:K14K15colored}
 \end{figure}
 
-Both $K_{14}$ and $K_{15}$ only have edges with lengths \textcolor{blue}{1} through \textcolor{cyan}{7}, however, there is important distinction in counting edges of one length in $K_{14}$ versus counting them in $K_{15}$. The \textcolor{cyan}{cyan} edges have length \textcolor{cyan}{7}, and convieniently because of the way these graphs are drawn in the figure above, we can easily count them as they form the innermost spoke of the graphs. Because these graphs are so similar, we can use one labeling to deal with both at the same time! However, we must be very careful in doing so.
+Both $K_{14}$ and $K_{15}$ only have edges with lengths \textcolor{blue}{1} through \textcolor{cyan}{7}, however, there is important distinction in counting edges of one length in $K_{14}$ versus counting them in $K_{15}$. The \textcolor{cyan}{cyan} edges have length \textcolor{cyan}{7}, and convieniently, because of the way these graphs are drawn in the figure above, we can easily count them as they form the innermost spoke of the graphs. Because these graphs are so similar, we can use one labeling to deal with both at the same time! However, we must be very careful in doing so.
 
-In $K_{14}$ there are only 7 edges of length \textcolor{cyan}{7} and 14 edges of all other lengths, yet in $K_{15}$ there are 15 edges of length \textcolor{cyan}{7} along with 15 edges of all other lengths. It turns out this pattern generalizes. For $K_{n}$,
+In $K_{14}$ there are only 7 edges of length \textcolor{cyan}{7} and 14 edges of all other lengths, yet in $K_{15}$ there are 15 edges of length \textcolor{cyan}{7} along with 15 edges of all other lengths. It turns out this pattern generalizes. In $K_{n}$,
 
 \textbf{If n is odd:} There are $n$ edges of lengths 1 through $\frac{n-1}{2}$.
 
 \textbf{If n is even:} There are $n$ edges of lengths 1 up to $\frac{n}{2}$, and then $\frac{n}{2}$ edges of length $\frac{n}{2}.$
 
-\noindent This is why the labeling of $P_{3}$ in Figure \ref{fig:P3K5colordecomp} used to decompose $K_{5}$ in the Chapter \ref{chap:intro} worked so easily. $K_{5}$ has odd order, so there are $5$ edges of each length in $\{1,2\}$. The same applies here for $K_{15}$, we just label each seven edge forest $F$ so that they contain all seven lengths in $K_{15}$, and then develop the labelings by $1$ to generate the entire $F$-decomposition of $K_{15}$. 
+\noindent This is why the labeling of $P_{3}$ in Figure \ref{fig:P3K5colordecomp} used to decompose $K_{5}$ in the Chapter \ref{chap:intro} worked so easily. Because $K_{5}$ has odd order, there are $5$ edges of each length in $\{1,2\}$. The same applies here for $K_{15}$, we just label each seven edge forest $F$ so that they contain all seven lengths in $K_{15}$, and then develop the labelings by $1$ to generate the entire $F$-decomposition of $K_{15}$. 
 
 But notice that if we develop the same labeling of $F$ in $K_{14}$ (assuming we do not use the vertex $14$) we would overcount length \textcolor{cyan}{7} edges. There is a simple remedy for this, but it requires a shift in perspective.
 
-Take $V(K_{14})$ to be $\ZZ_{13}\cup \{\infty\}$, and label all edges via the length function modulo $13$ except for edges incident to $\infty$ which will refer to as length $\infty$. We do this so that intuitively, developing vertices by $1$ fixes the $\infty$ vertex so that $\infty\mapsto \infty+1=\infty$. Formally:
+Take $V(K_{14})$ to be $\ZZ_{13}\cup \{\infty\}$, and label all edges via the length function modulo $13$ except for edges incident to $\infty$ which will refer to as length $\infty$. We do this so that, intuitively, developing vertices by $1$ fixes the $\infty$ vertex so that $\infty\mapsto \infty+1=\infty$. Formally:
 $$\ell(uv)=\begin{cases}\min\{|u-v|,13-|u-v|\}, & u,v\neq \infty, \\ \infty, & u\text{ or }v=\infty \end{cases} \text{ and }v\mapsto 
 \begin{cases}
   v+1,&v\in\mathbb{Z}_{13},\\
   \infty,        &v=\infty.
   \end{cases}$$
-Another reason for doing this is that we will now have $13$ edges of lengths $1$ through $6$ as well as of length $\infty$, since the $\infty$ vertex will have all $13$ edges of length $\infty$ to vertices in $\ZZ_{13}$ adjacent to it. Now if we develop the endpoints of an edge with any length by $1$ repeatedly, we will get all $13$ distinct edges of that length. So we can hopefully cyclically generate $F$-decompositions with this new construction for $K_{14}$ for each forest.
+Another reason for doing this is that we will now have $13$ edges of lengths $1$ through $6$ as well as of length $\infty$, since the $\infty$ vertex will have all $13$ edges of length $\infty$ to vertices in $\ZZ_{13}$ adjacent to it. Now, if we develop the endpoints of an edge with any length by $1$ repeatedly, we will get all $13$ distinct edges of that length. So we can cyclically generate $F$-decompositions with this new construction for $K_{14}$ for each forest.
 
 \begin{figure}[H]
   \begin{center}
@@ -187,13 +187,13 @@ Another reason for doing this is that we will now have $13$ edges of lengths $1$
   
   \end{tikzpicture}
   \end{center}
-  \caption{$K_{13}\vee K_{1}$ is isomorphic to $K_{14}$}
+  \caption{$K_{13}\vee K_{1}$ is isomorphic to $K_{14}$.}
   \label{fig:K13infty}
 \end{figure}
 
 \noindent It is important to note that we \textbf{must} use edges $uv$ of length $|u-v|$ in $K_{13}$ so they will also have length $|u-v|$ in $K_{14}$ and $K_{15}$ if we want to use one labeling for both cases. We also must ensure that the edge of length $7$ is a pendant edge, so that we can relabel a leaf incident with that edge as $\infty$ without disturbing other edge lengths.
 
-Putting this all together: if we can just use vertex labels from $\ZZ_{13}$ for a labeling of a forest $F$ but only use edges $uv$ of lengths $|u-v|=l$ modulo $14$ for each length $l\in \{1,\hdots,7\}$, ensuring that the edge of length $7$ is a pendant edge: we can (1) simply develop the labeling by $1$ to get the $F$-decomposition of $K_{15}$, then (2) just relabel a leaf incident with the length seven edge with $\infty$, and then once more develop by $1$ to get the $F$-decomposition of $K_{14}$. We show an example on the next page.
+Putting this all together: if we can just use vertex labels from $\ZZ_{13}$ for a labeling of a forest $F$ but only use edges $uv$ of lengths $|u-v|=l$ modulo $14$ for each length $l\in \{1,\hdots,7\}$, ensuring that the edge of length $7$ is a pendant edge, we can simply develop the labeling by $1$ to get the $F$-decomposition of $K_{15}$, relabel a leaf incident with the length seven edge with $\infty$, and then once more develop by $1$ to get the $F$-decomposition of $K_{14}$. We show an example on the next page.
 
 \begin{figure}[H]
   \begin{center}
@@ -307,37 +307,38 @@ Putting this all together: if we can just use vertex labels from $\ZZ_{13}$ for 
   \end{tikzpicture}
   \end{center}
 
-  \caption{A labeling (left) that gives the $\mathbf{T_{7}^{11}\sqcup T_{2}^{11}}$-decomposition of $K_{14}$ (middle) and $K_{15}$ (right), respectively, when developed by $1$. The leaf $7$ in the pendant edge \textcolor{cyan}{$(0,7)$} (of length \textcolor{cyan}{7} modulo 14) is relabeled as $\infty$ for $K_{14}$}
+  \caption{A labeling (left) that gives the $\mathbf{T_{7}^{11}\sqcup T_{2}^{11}}$-decomposition of $K_{14}$ (middle) and $K_{15}$ (right), respectively, when developed by $1$. The leaf $7$ in the pendant edge \textcolor{cyan}{$(0,7)$} (of length \textcolor{cyan}{7} modulo 14) is relabeled as $\infty$ for $K_{14}$.}
   \label{fig:01decompexample}
 \end{figure}
 \subsection{Stretching a labeling and generalizing to $K_{14t}$ and $K_{14t+1}$ for $t>1$}\label{sec:0,1constr-pt2}
 
-  Now, we have learned how to decompose $K_{14}$ and $K_{15}$, but what about the rest of the family? Well, $K_{14t}$ and $K_{14t+1}$ actually contain edges of lengths in 
-  $$\bigsqcup_{0\leq i< t} \{1+7i,\hdots,7+7i\}\text{ for }t\geq 1$$
-  This makes sense because the maximal length in $K_{14t}$ and $K_{14t+1}$ is $\floor{\frac{14t+1}{2}}=7t$. Luckily, it turns out that we can actually just replicate the process we did for lengths $1$ through $7$ for each step $t\mapsto t+1$ for $K_{14t}$ and $K_{14t+1}$ for the new lengths that come $7$ at a time if we add some more restrictions.
+  Now, that we have learned how to decompose $K_{14}$ and $K_{15}$, what about the rest of the family? Well, $K_{14t}$ and $K_{14t+1}$ actually contain edges of lengths in 
+  $$\bigsqcup_{0\leq i< t} \{1+7i,\hdots,7+7i\}\text{ for }t\geq 1.$$
+  This makes sense because the maximal length in $K_{14t}$ and $K_{14t+1}$ is $\floor{\frac{14t+1}{2}}=7t$. It turns out that we can actually just replicate the process we did for lengths $1$ through $7$ for each step $t\mapsto t+1$ for $K_{14t}$ and $K_{14t+1}$ for the new lengths that come $7$ at a time if we add some more restrictions.
 
   There are two types of edges in complete graphs. In $K_{n}$, we call edges $uv$ of length $n-|u-v|$ \textit{wraparound edges}, and edges $ab$ of length $|a-b|$ \textit{short edges}. 
   \begin{itemize}
     \item[] In $K_{14}$: $\ell((0,8))=\min\{|0-8|,14-|0-8|\}=\min\{8,6\}=6$.
     \item[] In $K_{28}$: $\ell((0,8))=\min\{|0-8|,28-|0-8|\}=\min\{8,20\}=8$.
   \end{itemize} 
-  For example, $(0,8)$ is a wraparound edge in $K_{14}$ but a short edge in $K_{28}$. If we want to build a labeling that can generalize to an entire family of complete graphs, we need to understand how these types of edges would generalize as the order of the complete graph increases.
+  For example, $(0,8)$ is a wraparound edge in $K_{14}$ but a short edge in $K_{28}$. If we want to build a labeling that will generalize to an entire family of complete graphs, we need to understand how these types of edges would generalize as the order of the complete graph increases.
 
-  There is a way to map wraparound edges at each step to preserve length which is described in Chapter $\ref{chap:Additional Results}$, but it can get ugly. Luckily, there is a way to avoid this problem entirely. If we only use \textit{short edges} $uv$ which have length $|u-v|$ in $K_{14}$ for our labelings, then that edge will have length $|u-v|$ in every complete graph $K_{n}$ where $n>14$. We show another example below for $t>2$. 
+  There is a way to map wraparound edges at each step to preserve length which is described in Chapter $\ref{chap:Additional Results}$, but it can get ugly. However, there is a way to avoid this problem entirely. If we only use \textit{short edges} $uv$ that have length $|u-v|$ in $K_{14}$ for our labelings, then that edge will have length $|u-v|$ in every complete graph $K_{n}$ where $n>14$. We show another example below for $t>2$.
+\begin{center}
   \begin{itemize}
     \item[] In $K_{14\cdot 1}$: $\ell((0,6))=\min\{|0-6|,14-|0-6|\}=\min\{6,8\}=6$.
     \item[] In $K_{28}$: $\ell((0,6))=\min\{|0-6|,28-|0-6|\}=\min\{6,22\}=6$.
-    \item[] $\vdots$
+    \item[] \makebox[\linewidth]{$\vdots$}
     \item[] In $K_{14\cdot t}$: $\ell((0,6))=\min\{|0-6|,14t-|0-6|\}=\min\{1,22+14(t-2)\}=6$.
   \end{itemize}
+\end{center}
+  So we see that if we only use short edges, the length of edges in our labeling will be preserved as we scale up. So, for that reason, we use them. However, another important feature is that if we only use short edges $uv$, we know that without loss of generality $v>u$ and so $|u-v|=v-u$. This introduces another extremely important mechanism we can exploit to generalize labelings.
 
-  So we see that if we only use short edges, the length of edges in our labeling will be preserved as we scale up. So for that reason, we simply \textbf{need} to use them. However, another important feature is that if we only use short edges $uv$, we know that WLOG $v>u$ and so $|u-v|=v-u$. This introduces another extremely important mechanism we can exploit to generalize labelings.
+  If we bundle the short edge requirement and the requirement that the maximal edge is a pendant edge with a new ordered bipartition $V(G)=A\sqcup B$ requirement on the vertices of a labeling $G$ of $F$ such that all vertices $a\in A$ only have neighbors in $B$ that are larger than $a$, then we get a really nice property. All edges are now of the form $ab$ where $a\in A$ and $b\in B$ so that $a<b$ and so all such edges $ab$ have length $b-a$ modulo $14$. This means that if $\ell(ab)=l$ in $K_{14}$, then $b-a=l$ and so $(b+c)-a=l+c$. More importantly, if we then add any $c\in \ZZ_{14t}$ to all vertices in the larger partite set $B$ of our labeling, we will simply increase the lengths of all edges in our labeling by $c$ in $\ZZ_{14t}$ and $\ZZ_{14t+1}$ for $t\geq 1$ as a result of bundling these restrictions together! We call the act of adding some constant $c$ to all vertices of the larger partite set $B$ in a labeling of this type \textit{stretching}.
 
-  If we bundle the short edge requirement and the requirement that the maximal edge is a pendant edge with a new ordered bipartition $V(G)=A\sqcup B$ requirement on the vertices of a labeling $G$ of $F$ such that all vertices $a\in A$ only have neighbors in $B$ which are larger than $a$, then we get a really nice property. All edges are now of the form $ab$ where $a\in A$ and $b\in B$ so that $a<b$ and so all such edges $ab$ have length $b-a$ modulo $14$. This means that if $\ell(ab)=l$ in $K_{14}$, then $b-a=l$ and so $(b+c)-a=l+c$. More importantly, if we then add any $c\in \ZZ_{14t}$ to all vertices in the larger partite set $B$ of our labeling, we will simply increase the lengths of all edges in our labeling by $c$ in $\ZZ_{14t}$ and $\ZZ_{14t+1}$ for $t\geq 1$ as a result of bundling these restrictions together! We call the act of adding some constant $c$ to all vertices of the larger partite set $B$ in a labeling of this type \textit{stretching}.
-
-  Let $t>1$, and consider $K_{14t+1}$. If we label a seven edge graph $F$ to contain lengths $1$ through $7$ modulo $14$ and adhere to the restrictions summarized above, developing by $1$ will generate all edges of lengths in $1$ through $7$ in $K_{14t+1}$. Then if we stretch that labeling by $7i$ for each $0<i<t$ and develop by $1$ repeatedly at each step, we will generate all edges of the remaining lengths in $K_{14t+1}$ and therefore generate all edges in $K_{14t+1}$ in isomorphic copies of $F$ to get an $F$-design of order $14t+1$. 
+  Let $t>1$, and consider $K_{14t+1}$. If we label a seven edge graph $F$ to contain lengths $1$ through $7$ modulo $14$ and adhere to the restrictions summarized above, developing by $1$ will generate all edges of lengths in $1$ through $7$ in $K_{14t+1}$. Then, if we stretch that labeling by $7i$ for each $0<i<t$ and develop by $1$ repeatedly at each step, we will generate all edges of the remaining lengths in $K_{14t+1}$ and therefore generate all edges in $K_{14t+1}$ in isomorphic copies of $F$ to get an $F$-design of order $14t+1$. 
   
-  Now, in the same labeling of $F$ in $K_{14t}$, recall that there are only $7t$ edges of the maximal length $7t$. This means that we want to take its vertices to be $\ZZ_{14t-1}\cup \{\infty\}$ and so there are now $14t-1$ edges of length $7$ along with all lengths less than $7t$. So then we simply develop $G$ by $1$ to generate lengths in $\{1,\hdots,7\}$, then stretch that labeling by $7i$ and develop by $1$ for each $0<i<t$ \textbf{except in the last labeling} which was stretched by $7(t-1)$ with lengths in $\{7t-6,\hdots,7t\}$. Since the pendant edge of length $7$ was stretched to be one of maximal length $7t$, it is still a pendant edge. So now we relabel the leaf as $\infty$ and so it's length becomes $\infty$. We then develop it by $1$ and have collected all edges in $K_{14t}$ while generating an $F$-design of order $14t$.
+  Now, in the same labeling of $F$ in $K_{14t}$, recall that there are only $7t$ edges of the maximal length $7t$. This means that we want to take its vertices to be $\ZZ_{14t-1}\cup \{\infty\}$ and so there are now $14t-1$ edges of length $7$ along with all lengths less than $7t$. T we simply develop $G$ by $1$ to generate lengths in $\{1,\hdots,7\}$, then stretch that labeling by $7i$ and develop by $1$ for each $0<i<t$ \textbf{except in the last labeling}, which was stretched by $7(t-1)$ with lengths in $\{7t-6,\hdots,7t\}$. Since the pendant edge of length $7$ was stretched to be one of maximal length $7t$, it is still a pendant edge. So now we relabel the leaf as $\infty$ and so it's length becomes $\infty$. We then develop it by $1$ and have collected all edges in $K_{14t}$ while generating an $F$-design of order $14t$.
 
   We show how the labeling from Figure \ref{fig:01decompexample} gives the $\mathbf{T_{7}^{11}\sqcup T_{2}^{11}}$-decomposition of $K_{14(2)}=K_{28}$ and $K_{14(2)+1}=K_{29}$ below.
 
@@ -448,7 +449,7 @@ Putting this all together: if we can just use vertex labels from $\ZZ_{13}$ for 
     \label{fig:K29_K27_K15_forests}
   \end{figure}
 
-  We will refer to this act of stretching a labeling for the next construction, but first the ideas in this section are now put together formally in the next section.
+  We will refer to this act of stretching a labeling for the next construction, but first we put the ideas in this section together formally in the next section.
 \section{Results for $n\equiv 0,1 \pmod{14}$}\label{sec:0,1results}
 
 We begin with Rosa's original labeling of a bipartite graph $G$ on $m$ edges which uses lengths modulo $2m$ (in $K_{2m+1}$). 
@@ -461,29 +462,31 @@ We begin with Rosa's original labeling of a bipartite graph $G$ on $m$ edges whi
 for all  $uv \in E(G)$.
 \end{definition}
 
-Rosa showed that if a $\rho$-labeling of a graph $G$ with $m$ edges exists, then a cyclic $G$-decomposition of $K_{2m+1}$ exists, and the converse also holds. This is the next theorem. Later, Rosa and his peers began studying more restrictive types of $\rho$-labelings to decompose more complete graphs. Next, we define some of these labelings and theorems associated with them.
+Rosa showed that if a $\rho$-labeling of a graph $G$ with $m$ edges exists, then a cyclic $G$-decomposition of $K_{2m+1}$ exists, and the converse also holds. This is the next theorem. Later, Rosa and others began studying more restrictive types of $\rho$-labelings to decompose more complete graphs. 
 
-\begin{thm}[(Rosa \cite{Rosa1967})]\label{thm:Rhosa}  
+Next, we define some of these labelings and theorems associated with them.
+
+\begin{thm}[Rosa \cite{Rosa1967}]\label{thm:Rhosa}  
 Let $G$ be a graph with $m$ edges.  There exists a cyclic $G$-decomposition of $K_{2m+1}$ if and only if $G$ admits a $\rho$-labeling.
 \end{thm}
 
-\begin{definition}[(Rosa \cite{Rosa1967})] \label{def:sigma} 
+\begin{definition}[Rosa \cite{Rosa1967}] \label{def:sigma} 
 A $\sigma$-labeling of a graph $G$ is a $\rho$-labeling such that $\ell(uv) = |f(u) - f(v)|$ for all $uv \in E(G).$
 \end{definition}
 
-\begin{definition}[(El-Zanati, Vanden Eynden \cite{FroncekKubesa2021})] \label{def:rho and sigma ordered def} 
+\begin{definition}[El-Zanati, Vanden Eynden \cite{ElZanati2001}] \label{def:rho and sigma ordered def} 
 A $\rho$- or $\sigma$-labeling of a bipartite graph $G$ with bipartition $(A,B)$ is called an \emph{ordered} $\rho$- or $\sigma$-labeling and denoted $\rho^+,\sigma^+$, respectively, if $f(a) < f(b)$ for each edge $ab$ with $a \in A$ and $b \in B$.
 \end{definition}
 
-\begin{thm}[(El-Zanati, Vanden Eynden \cite{FroncekKubesa2021})] \label{thm:rho plus}
-Let $G$ be a graph with $m$ edges which has a $\rho^+$-labeling. Then $G$ decomposes $K_{2mk+1}$ for all positive integers $k$.
+\begin{thm}[El-Zanati, Vanden Eynden \cite{ElZanati2001}] \label{thm:rho plus}
+Let $G$ be a graph with $m$ edges which has a $\rho^+$-labeling. Then, $G$ decomposes $K_{2mk+1}$ for all positive integers $k$.
 \end{thm}
 
-\begin{definition}[(Freyberg, Tran \cite{FreybergTran2020})] \label{def:sigma plus minus} 
+\begin{definition}[Freyberg, Tran \cite{FreybergTran2020}] \label{def:sigma plus minus} 
 A $\sigma^{+-}$-\emph{labeling} of a bipartite graph $G$ with $m$ edges and bipartition $(A,B)$ is a $\sigma^+$-labeling with the property that $f(a) - f(b) \neq m$ for all $a \in A$ and $b \in B$, and $f(v) \not\in \{2m,2m-1\}$ for any $v\in V(G)$.
 \end{definition}
 
-\begin{thm}[(Freyberg, Tran \cite{FreybergTran2020})] \label{thm:sigma plus minus}
+\begin{thm}[Freyberg, Tran \cite{FreybergTran2020}] \label{thm:sigma plus minus}
 Let $G$ be a graph with $m$ edges and a $\sigma^{+-}$-labeling such that the edge of length $m$ is a pendant. Then there exists a $G$-decomposition of both $K_{2mk}$ and $K_{2mk+1}$ for every positive integer $k$.
 \end{thm}
 
@@ -494,12 +497,20 @@ Table \ref{tab:sigmapm} gives $\sigma^{+-}$-labelings of all forests on 7 edges 
         \centering
         \includegraphics[scale=1.0]{standalone/sigma label ex1.pdf}
          \includegraphics[scale=1.0]{standalone/sigma label ex2.pdf}
-        \caption{$\sigma^{+-}$-labeling of $\mathbf{T_{6}^{6}}\sqcup 2\mathbf{T_{2}^{1}}$}
+        \caption{$\sigma^{+-}$-labeling of $\mathbf{T_{6}^{6}}\sqcup 2\mathbf{T_{2}^{1}}$.}
         \label{fig:sigma label ex}
     \end{figure}
 \end{example}
 \newpage
  The labelings given in Table \ref{tab:sigmapm} along with Theorem \ref{thm:sigma plus minus} are enough to conclude this case.
+
+ \begin{thm}\label{thm:0 or 1 mod 14}
+    Let $F$ be a forest with $7$ edges. There exists an $F$-decomposition of $K_n$ whenever $n \equiv 0 \; \textrm{or} \; 1 \pmod{14}.$
+\end{thm}
+\begin{proof}
+    The matching $7\mathbf{T^{1}_{2}}$ has been solved by de Werra in \cite{deWerra1970}. The rest of the proof follows from Theorem \ref{thm:sigma plus minus} and the labelings given in Table \ref{tab:sigmapm}.
+
+\end{proof}
 
  %\begin{figure}[H]
  %   \centering
@@ -509,10 +520,3 @@ Table \ref{tab:sigmapm} gives $\sigma^{+-}$-labelings of all forests on 7 edges 
 %\end{figure}
 % or
 \input{standalone/0,1(mod 14) long.tex}
-
-\begin{thm}\label{thm:0 or 1 mod 14}
-    Let $F$ be a forest with $7$ edges. There exists an $F$-decomposition of $K_n$ whenever $n \equiv 0 \; \textrm{or} \; 1 \pmod{14}.$
-\end{thm}
-\begin{proof}
-    The matching $7\mathbf{T^{1}_{2}}$ has been solved \cite{deWerra1970}, and then the rest of the proof follows from Theorem \ref{thm:sigma plus minus} and the labelings given in Table \ref{tab:sigmapm}.
-\end{proof}
