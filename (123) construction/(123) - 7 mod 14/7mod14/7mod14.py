@@ -7,10 +7,12 @@ def gvpath(i):
         return 'C:\\Users\\Danny\\Desktop\\Git\\research'
     if i == 2:
         return r'C:\Users\baneg\Desktop\git\research'
+    if i==3:
+        return r'C:\Users\baneg\OneDrive\Desktop\git\research\graph_visualization.py'
     else: 
         return False
     
-sys.path.append(gvpath(2)) # here is the path with GVIS
+sys.path.append(gvpath(3)) # here is the path with GVIS
 import graph_visualization
 from graph_visualization import visualize
 from itertools import combinations
@@ -380,7 +382,7 @@ G4 = merge(path([0,4,9,15,8,16,7]),  path([1,11]))
 
 F_61_1 = [ G1, G2, G3, G4] #defines the decomposition 'object' a list of graph labelings
 
-#visualize(14*t+7, F_61_1,  '(61)-1',  'C:\\Users\\baneg\\OneDrive\\Desktop\\Git\\Python\\Research\\7 (mod 14)\\texgraph')
+visualize(14*t+7, F_61_1,  '(61)-1',  r'C:\Users\baneg\OneDrive\Desktop\git\research\graph_visualization.py')
 
 #*(61)-2
 G1 = merge(path([1,2,4,6,9,12]), path([6,7]),  path([ 14,15]))

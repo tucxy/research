@@ -5,7 +5,7 @@ def gvpath(i):
         return 'C:\\Users\\baneg\\OneDrive\\Desktop\\Git\\Python\\Research\\Graph Theory'
     if i == 1:
         return 'C:\\Users\\Danny\\Desktop\\Git\\research'
-    else: 
+    else:
         return False
 sys.path.append(gvpath(1)) # here is the path with GVIS
 from pygtikz import viz

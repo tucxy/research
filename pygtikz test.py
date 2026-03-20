@@ -134,6 +134,6 @@ def custom_edge_length(node1, node2):
             return " "
         return abs(node1 *node2)
 
-G1  = path(["a",3,"sigma male grindset",6,9])
+G1  = path(["a",3,"meow",6,9])
 viz([G1])
 

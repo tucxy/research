@@ -1,33 +1,23 @@
 \documentclass{standalone}
-\usepackage{amsmath,mathabx}
+\usepackage{amsmath}
 \usepackage{tikz}
-\usetikzlibrary{positioning}
 \begin{document}
-    \begin{tikzpicture}[scale=0.5]
-        %white
-        \node[fill=white,draw =black, circle, inner sep=2pt, label=left:{\textcolor{black}{$0$}}] (w0) at (0,0) {};
-        \node[fill=white,draw = black, circle, inner sep=2pt, label=left:{\textcolor{black}{$1$}}] (w1) at (0,-1) {};
-        \node at (0,-2) {\large $\vdots$};
-
-        \node[draw=black, fill=white, circle, inner sep=1pt] (circ) at (-1.5,-0.5) {};
-        \node at ([yshift=6pt] circ.north) {\tiny +1};
-        \draw[->] ([yshift=-6pt] circ.south) -- ++(0, -0.75);
-        %black nodes
-        \node[fill=black, circle, inner sep=2pt, label=right:{\textcolor{black}{$0$}}] (b0) at (2,0) {};
-        \node[fill=black, circle, inner sep=2pt, label=right:{\textcolor{black}{$1$}}] (b1) at (2,-1) {};
-        \node[fill=black, circle, inner sep=2pt, label=right:{\textcolor{black}{$2$}}] (b2) at (2,-2) {};
-        \node[fill=black, circle, inner sep=2pt, label=right:{\textcolor{black}{$3$}}] (b3) at (2,-3) {};
-        \node[fill=black, circle, inner sep=2pt, label=right:{\textcolor{black}{$4$}}] (b4) at (2,-4) {};
-        \node[fill=black, circle, inner sep=2pt, label=right:{\textcolor{black}{$5$}}] (b5) at (2,-5) {};
-        \node[fill=black, circle, inner sep=2pt, label=right:{\textcolor{black}{$6$}}] (b6) at (2,-6) {};
-        \node at (0,-2) {\large $\vdots$};
-
-        \draw[draw=black, shorten >=0pt, shorten <=0pt] (w0) -- (b0);
-        \draw[draw=black, shorten >=0pt, shorten <=0pt] (w1) -- (b1);
-        \draw[draw=black, shorten >=0pt, shorten <=0pt] (w1) -- (b2);
-        \draw[draw=black, shorten >=0pt, shorten <=0pt] (w1) -- (b3);
-        \draw[draw=black, shorten >=0pt, shorten <=0pt] (w1) -- (b4);
-        \draw[draw=black, shorten >=0pt, shorten <=0pt] (w1) -- (b5);
-        \draw[draw=black, shorten >=0pt, shorten <=0pt] (w1) -- (b6);
-    \end{tikzpicture}
+\begin{tikzpicture}
+\node[fill=black, circle, inner sep=2pt, label=above:{\textcolor{black}{$2_{2}$}}] (G1N2) at (3.7,-0.2) {};
+\node[fill=orange, circle, inner sep=2pt, label=above:{\textcolor{orange}{$11_{11}$}}] (G1N11) at (6.48,-1.44) {};
+\node[fill=black, circle, inner sep=2pt, label=above:{\textcolor{black}{$1_{1}$}}] (G1N1) at (4.7,-0.2) {};
+\node[fill=black, circle, inner sep=2pt, label=above:{\textcolor{black}{$3_{3}$}}] (G1N3) at (4.2,-0.7) {};
+\node[fill=black, circle, inner sep=2pt, label=above:{\textcolor{black}{$4_{4}$}}] (G1N4) at (4.2,-1.2) {};
+\node[fill=black, circle, inner sep=2pt, label=above:{\textcolor{black}{$5_{5}$}}] (G1N5) at (4.2,-1.7) {};
+\node[fill=black, circle, inner sep=2pt, label=above:{\textcolor{black}{$6_{6}$}}] (G1N6) at (4.2,-2.2) {};
+\draw[draw=black, shorten >=0pt, shorten <=0pt] (G1N11) -- (G1N1) node[midway, above] {\textcolor{black}{$10_{2}$}};
+\draw[draw=black, shorten >=0pt, shorten <=0pt] (G1N11) -- (G1N2) node[midway, above] {\textcolor{black}{$9_{3}$}};
+\draw[draw=black, shorten >=0pt, shorten <=0pt] (G1N11) -- (G1N3) node[midway, above] {\textcolor{black}{$8_{4}$}};
+\draw[draw=black, shorten >=0pt, shorten <=0pt] (G1N11) -- (G1N4) node[midway, above] {\textcolor{black}{$7_{0}$}};
+\draw[draw=black, shorten >=0pt, shorten <=0pt] (G1N11) -- (G1N5) node[midway, above] {\textcolor{black}{$6_{1}$}};
+\draw[draw=black, shorten >=0pt, shorten <=0pt] (G1N11) -- (G1N6) node[midway, above] {\textcolor{black}{$5_{2}$}};
+\node[fill=black, circle, inner sep=2pt, label=above:{\textcolor{black}{$10_{10}$}}] (G2N10) at (3.7,-0.2) {};
+\node[fill=black, circle, inner sep=2pt, label=above:{\textcolor{black}{$0_{0}$}}] (G2N0) at (7.19,-5.03) {};
+\draw[draw=black, shorten >=0pt, shorten <=0pt] (G2N10) -- (G2N0) node[midway, above] {\textcolor{black}{$10_{0}$}};
+\end{tikzpicture}
 \end{document}
